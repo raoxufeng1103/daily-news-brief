@@ -5,6 +5,9 @@ on:
     - cron: '0 23 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -14,9 +17,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Fetch all news sources
-        run: python news_scraper.py > news_$(date +%Y%m%d).json
-      - name: Upload news data
-        uses: actions/upload-artifact@v4
-        with:
-          name: news-$(date +%Y%m%d)
-          path: news_*.json
+        run: python news_scraper.py > docs/news_latest.json
+      - name: Commit news data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/news_latest.json
+          git diff --cached --quiet || git commit -m "📰 News update $(date +%Y-%m-%d)"
+          git push
