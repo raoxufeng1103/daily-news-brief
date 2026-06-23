@@ -7,11 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: {token: '${{ secrets.PAT }}'}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - name: Scrape
-        run: python news_scraper.py > news.json
-      - name: Auto-commit
-        run: |
-          curl -X PUT             -H "Authorization: token ${{ secrets.PAT }}"             -H "Accept: application/vnd.github.v3+json"             -d "{\"message\":\"Daily update\",\"content\":\"$(base64 -w0 news.json)\""             "https://api.github.com/repos/${{ github.repository }}/contents/news_latest.json"
+      - run: python news_scraper.py > news_latest.json
+      - run: |
+          git config user.name bot
+          git config user.email bot@n
+          git add news_latest.json
+          git commit -m "Update $(date +%Y-%m-%d)" || true
+          git push
 
