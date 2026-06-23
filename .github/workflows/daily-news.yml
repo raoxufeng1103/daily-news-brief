@@ -8,13 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python news_scraper.py > news_latest.json 2>&1
-      - run: |
+      - name: Scrape news
+        run: python news_scraper.py > news_latest.json 2>&1
+      - name: Commit to repo
+        run: |
           git config user.name "NewsBot"
-          git config user.email "bot@news.local"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git config user.email "bot@news"
           git add news_latest.json
-          if git diff --cached --quiet; then echo "No changes"; else git commit -m "News $(date +%Y-%m-%d)" && git push; fi
+          git commit -m "Update $(date +%Y-%m-%d)" --allow-empty
+          git pull --rebase origin main
+          git push origin main
 
