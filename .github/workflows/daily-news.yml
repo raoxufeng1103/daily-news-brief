@@ -1,27 +1,20 @@
-name: Daily News Brief
-
+name: Daily News
 on:
-  schedule:
-    - cron: '0 23 * * *'
+  schedule: [{cron: '0 23 * * *'}]
   workflow_dispatch:
-
-permissions:
-  contents: write
-
+permissions: {contents: write}
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Fetch all news sources
-        run: python news_scraper.py > docs/news_latest.json
-      - name: Commit news data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/news_latest.json
-          git diff --cached --quiet || git commit -m "📰 News update $(date +%Y-%m-%d)"
-          git push
+        with: {python-version: '3.12'}
+      - run: python news_scraper.py > news_latest.json 2>&1
+      - run: |
+          git config user.name "NewsBot"
+          git config user.email "bot@news.local"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git add news_latest.json
+          if git diff --cached --quiet; then echo "No changes"; else git commit -m "News $(date +%Y-%m-%d)" && git push; fi
+
