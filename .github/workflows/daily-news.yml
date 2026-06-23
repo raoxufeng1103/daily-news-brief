@@ -5,19 +5,15 @@ on:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    permissions: {contents: write}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - name: Scrape
-        run: python news_scraper.py > news_latest.json
-      - name: Push to repo
+      - name: Scrape news
+        run: python news_scraper.py > news.json
+      - name: Commit result
+        run: |
+          gh api repos/${{ github.repository }}/contents/news_latest.json -f message="Daily update" -f content="$(base64 -w0 news.json)" -f sha="$(gh api repos/${{ github.repository }}/contents/news_latest.json --jq .sha 2>/dev/null || echo '')" || true
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          git config user.name bot
-          git config user.email bot@n
-          git add news_latest.json
-          git commit -m "Update $(date +%Y-%m-%d)" && git push || echo "no changes"  
 
