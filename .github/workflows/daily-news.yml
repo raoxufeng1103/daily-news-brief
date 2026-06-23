@@ -9,11 +9,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - name: Scrape news
+      - name: Scrape
         run: python news_scraper.py > news.json
-      - name: Commit result
+      - name: Auto-commit
         run: |
-          gh api repos/${{ github.repository }}/contents/news_latest.json -f message="Daily update" -f content="$(base64 -w0 news.json)" -f sha="$(gh api repos/${{ github.repository }}/contents/news_latest.json --jq .sha 2>/dev/null || echo '')" || true
-        env:
-          GH_TOKEN: ${{ github.token }}
+          curl -X PUT             -H "Authorization: token ${{ secrets.PAT }}"             -H "Accept: application/vnd.github.v3+json"             -d "{\"message\":\"Daily update\",\"content\":\"$(base64 -w0 news.json)\""             "https://api.github.com/repos/${{ github.repository }}/contents/news_latest.json"
 
