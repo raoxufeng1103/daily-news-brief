@@ -7,12 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {token: '${{ secrets.PAT }}'}
+        with:
+          token: ${{ secrets.PAT }}
       - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
+        with:
+          python-version: '3.12'
       - name: Scrape news
         run: python news_scraper.py > news_latest.json
-      - name: Screenshot
+      - name: Screenshot BBC/Reuters/Bloomberg
         run: |
           pip install playwright -q
           python -c "
@@ -26,10 +28,13 @@ for n,u in [('bbc','https://www.bbc.com/news'),('reuters','https://www.reuters.c
  except Exception as e:print(f'{n}:{e}')
 "
       - uses: actions/upload-artifact@v4
-        with: {name: screenshots, path: '*.png'}
+        with:
+          name: screenshots
+          path: '*.png'
       - name: Commit
         run: |
-          git config user.name bot; git config user.email bot@n
+          git config user.name bot
+          git config user.email bot@n
           git add news_latest.json || true
           git commit -m "Update $(date +%Y-%m-%d)" --allow-empty
           git push
