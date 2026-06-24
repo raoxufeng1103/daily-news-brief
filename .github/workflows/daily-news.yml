@@ -1,4 +1,4 @@
-name: Daily News
+name: Daily News + Screenshots
 on:
   schedule: [{cron: '0 23 * * *'}]
   workflow_dispatch:
@@ -10,11 +10,38 @@ jobs:
         with: {token: '${{ secrets.PAT }}'}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python news_scraper.py > news_latest.json
-      - run: |
-          git config user.name bot
-          git config user.email bot@n
-          git add news_latest.json
-          git commit -m "Update $(date +%Y-%m-%d)" || true
+      - name: Scrape news
+        run: python news_scraper.py > news_latest.json
+      - name: Screenshot BBC/Reuters/Bloomberg
+        run: |
+          npm install puppeteer 2>/dev/null
+          node -e "
+            const puppeteer = require('puppeteer');
+            (async () => {
+              const browser = await puppeteer.launch({headless: 'new', args: ['--no-sandbox']});
+              for (const [name, url] of [['bbc','https://www.bbc.com/news'],['reuters','https://www.reuters.com'],['bloomberg','https://www.bloomberg.com']]) {
+                try {
+                  const page = await browser.newPage();
+                  await page.setViewport({width:1280,height:900});
+                  await page.goto(url, {waitUntil:'networkidle2',timeout:20000});
+                  await page.screenshot({path: name+'.png', fullPage: false});
+                  console.log(name+': OK');
+                } catch(e) { console.log(name+': '+e.message); }
+              }
+              await browser.close();
+            })();
+          "
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: |
+            bbc.png
+            reuters.png
+            bloomberg.png
+      - name: Push news data
+        run: |
+          git config user.name bot; git config user.email bot@n
+          git add news_latest.json *.png || true
+          git commit -m "Update $(date +%Y-%m-%d)" --allow-empty
           git push
 
