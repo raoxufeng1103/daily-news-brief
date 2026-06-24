@@ -1,39 +1,35 @@
 name: News + Screenshots
 on:
+  schedule: [{cron: '0 23 * * *'}]
   workflow_dispatch:
 jobs:
-  fetch:
+  run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with: {token: '${{ secrets.PAT }}'}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python news_scraper.py > news_latest.json
-      - name: Screenshot with system Chrome
+      - name: Scrape news
+        run: python news_scraper.py > news_latest.json
+      - name: Screenshot
         run: |
-          pip install playwright
+          pip install playwright -q
           python -c "
-import os
 from playwright.sync_api import sync_playwright
-sites = [('bbc','https://www.bbc.com/news'),('reuters','https://www.reuters.com'),('bloomberg','https://www.bloomberg.com')]
-with sync_playwright() as p:
-    b = p.chromium.launch(channel='chrome', headless=True)
-    for name, url in sites:
-        try:
-            page = b.new_page()
-            page.goto(url, wait_until='commit', timeout=10000)
-            page.screenshot(path=f'{name}.png')
-            print(f'{name}: OK')
-        except Exception as e:
-            print(f'{name}: {e}')
-    b.close()
+for n,u in [('bbc','https://www.bbc.com/news'),('reuters','https://www.reuters.com'),('bloomberg','https://www.bloomberg.com')]:
+ try:
+  with sync_playwright() as p:
+   b=p.chromium.launch(channel='chrome',headless=True)
+   page=b.new_page();page.goto(u,wait_until='commit',timeout=10000)
+   page.screenshot(path=f'{n}.png');b.close();print(f'{n}:OK')
+ except Exception as e:print(f'{n}:{e}')
 "
       - uses: actions/upload-artifact@v4
         with: {name: screenshots, path: '*.png'}
-      - run: |
+      - name: Commit
+        run: |
           git config user.name bot; git config user.email bot@n
           git add news_latest.json || true
-          git commit -m "Update" --allow-empty
+          git commit -m "Update $(date +%Y-%m-%d)" --allow-empty
           git push
-
