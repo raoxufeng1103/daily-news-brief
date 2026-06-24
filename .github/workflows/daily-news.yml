@@ -1,6 +1,5 @@
 name: News + Screenshots
 on:
-  schedule: [{cron: '0 23 * * *'}]
   workflow_dispatch:
 jobs:
   run:
@@ -9,26 +8,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
+      - uses: browser-actions/setup-chrome@v1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Scrape news
-        run: python news_scraper.py > news_latest.json
-      - name: Screenshot (Chrome headless - no install needed)
+      - run: python news_scraper.py > news_latest.json
+      - name: Screenshot via Chrome
         run: |
-          for site in bbc:https://www.bbc.com/news reuters:https://www.reuters.com bloomberg:https://www.bloomberg.com; do
-            name="${site%%:*}"
-            url="${site#*:}"
-            google-chrome --headless --disable-gpu --no-sandbox --screenshot="$name.png" --window-size=1280,900 "$url" 2>/dev/null
-            if [ -f "$name.png" ]; then echo "$name: OK ($(wc -c < $name.png) bytes)"; else echo "$name: FAILED"; fi
-          done
+          chrome --headless --disable-gpu --no-sandbox --screenshot=bbc.png --window-size=1280,900 "https://www.bbc.com/news"
+          chrome --headless --disable-gpu --no-sandbox --screenshot=reuters.png --window-size=1280,900 "https://www.reuters.com"
+          chrome --headless --disable-gpu --no-sandbox --screenshot=bloomberg.png --window-size=1280,900 "https://www.bloomberg.com"
+          ls -la *.png
       - uses: actions/upload-artifact@v4
         with:
           name: screenshots
           path: '*.png'
-      - name: Commit
-        run: |
-          git config user.name bot; git config user.email bot@n
-          git add news_latest.json || true
-          git commit -m "Update $(date +%Y-%m-%d)" --allow-empty
-          git push
