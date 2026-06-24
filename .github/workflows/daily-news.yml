@@ -6,20 +6,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT }}
+        with: {token: '${{ secrets.PAT }}'}
       - uses: browser-actions/setup-chrome@v1
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+        with: {python-version: '3.12'}
       - run: python news_scraper.py > news_latest.json
-      - name: Screenshot via Chrome
+      - name: Screenshot
         run: |
           chrome --headless --disable-gpu --no-sandbox --screenshot=bbc.png --window-size=1280,900 "https://www.bbc.com/news"
           chrome --headless --disable-gpu --no-sandbox --screenshot=reuters.png --window-size=1280,900 "https://www.reuters.com"
           chrome --headless --disable-gpu --no-sandbox --screenshot=bloomberg.png --window-size=1280,900 "https://www.bloomberg.com"
+          chrome --headless --disable-gpu --no-sandbox --screenshot=nyt.png --window-size=1280,900 "https://www.nytimes.com"
           ls -la *.png
       - uses: actions/upload-artifact@v4
-        with:
-          name: screenshots
-          path: '*.png'
+        with: {name: screenshots, path: '*.png'}
+      - run: |
+          git config user.name bot; git config user.email bot@n
+          git add news_latest.json || true
+          git commit -m "Update" --allow-empty; git push
