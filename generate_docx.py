@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate bilingual China News Briefing Word doc with translations"""
-import json, os, re, time, urllib.request, ssl
+import json, os, re, sys, time, urllib.request, ssl
 from docx import Document
 from docx.shared import Pt, RGBColor, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
