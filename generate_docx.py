@@ -161,5 +161,10 @@ if __name__ == "__main__":
         data = json.load(f)
     print(f"Building doc ({data['total']} articles)...", flush=True)
     doc = build(data)
+    # Use Chinese date naming convention
+    from datetime import datetime
+    dt = datetime.now()
+    cn_date = f"{dt.year}年{dt.month}月{dt.day}日"
+    out = f"{cn_date}_涉华新闻日报.docx"
     doc.save(out)
     print(f"Saved: {out}", flush=True)
