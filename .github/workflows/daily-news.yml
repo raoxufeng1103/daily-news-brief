@@ -20,7 +20,7 @@ jobs:
       - name: Generate Word doc with translations
         run: python generate_docx.py china_news_raw.json China_News_Briefing.docx
         env:
-          GLM_API_KEY: $${{ secrets.GLM_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
       - uses: actions/upload-artifact@v4
         with:
           name: china-briefing
