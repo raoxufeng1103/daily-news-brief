@@ -2,255 +2,125 @@
 """Generate beautiful Word doc from China news JSON"""
 import json, sys
 from docx import Document
-from docx.shared import Inches, Pt, RGBColor, Cm
+from docx.shared import Pt, RGBColor, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-# Source color mapping
 SRC_COLORS = {
-    "BBC": RGBColor(0xBB, 0x19, 0x1F),
-    "Reuters": RGBColor(0xFF, 0x80, 0x00),
-    "Bloomberg": RGBColor(0x00, 0x53, 0xA0),
-    "AP": RGBColor(0x00, 0x00, 0x00),
-    "AFP": RGBColor(0x00, 0x3D, 0x7A),
-    "Nikkei Asia": RGBColor(0x8B, 0x00, 0x00),
-    "APP (Pakistan)": RGBColor(0x01, 0x4B, 0x1A),
-    "IRNA (Iran)": RGBColor(0x23, 0x9B, 0x56),
-    "Tanjug (Serbia)": RGBColor(0x00, 0x43, 0x7C),
-    "SAnews (S.Africa)": RGBColor(0x00, 0x66, 0x33),
+    "BBC":"BB191F","Reuters":"FF8000","Bloomberg":"0053A0","AP":"000000",
+    "AFP":"003D7A","Nikkei Asia":"8B0000","APP (Pakistan)":"014B1A",
+    "IRNA (Iran)":"239B56","Tanjug (Serbia)":"00437C","SAnews (S.Africa)":"006633",
 }
 SRC_NAMES = {
-    "BBC": "BBC News (UK)",
-    "Reuters": "Reuters (UK)",
-    "Bloomberg": "Bloomberg (US)",
-    "AP": "Associated Press (US)",
-    "AFP": "Agence France-Presse (France)",
-    "Nikkei Asia": "Nikkei Asia (Japan)",
-    "APP (Pakistan)": "Assoc. Press of Pakistan",
-    "IRNA (Iran)": "IRNA (Iran)",
-    "Tanjug (Serbia)": "Tanjug (Serbia)",
-    "SAnews (S.Africa)": "SAnews (South Africa)",
+    "BBC":"BBC News (UK)","Reuters":"Reuters (UK)","Bloomberg":"Bloomberg (US)",
+    "AP":"Associated Press (US)","AFP":"Agence France-Presse (France)",
+    "Nikkei Asia":"Nikkei Asia (Japan)","APP (Pakistan)":"Assoc. Press of Pakistan",
+    "IRNA (Iran)":"IRNA (Iran)","Tanjug (Serbia)":"Tanjug (Serbia)",
+    "SAnews (S.Africa)":"SAnews (South Africa)",
 }
-
-def set_cell_shading(cell, color):
-    shading = OxmlElement('w:shd')
-    shading.set(qn('w:fill'), color)
-    shading.set(qn('w:val'), 'clear')
-    cell._tc.get_or_add_tcPr().append(shading)
 
 def add_hyperlink(paragraph, text, url):
     part = paragraph.part
-    r_id = part.relate_to(url, 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink', is_external=True)
-    hyperlink = OxmlElement('w:hyperlink')
-    hyperlink.set(qn('r:id'), r_id)
-    new_run = OxmlElement('w:r')
-    rPr = OxmlElement('w:rPr')
-    color = OxmlElement('w:color')
-    color.set(qn('w:val'), '0563C1')
-    rPr.append(color)
-    u = OxmlElement('w:u')
-    u.set(qn('w:val'), 'single')
-    rPr.append(u)
-    sz = OxmlElement('w:sz')
-    sz.set(qn('w:val'), '20')
-    rPr.append(sz)
-    new_run.append(rPr)
-    new_run.text = text
-    hyperlink.append(new_run)
-    paragraph._p.append(hyperlink)
-    return paragraph
+    r_id = part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", is_external=True)
+    hl = OxmlElement("w:hyperlink")
+    hl.set(qn("r:id"), r_id)
+    rn = OxmlElement("w:r")
+    rPr = OxmlElement("w:rPr")
+    c = OxmlElement("w:color"); c.set(qn("w:val"), "0563C1"); rPr.append(c)
+    u = OxmlElement("w:u"); u.set(qn("w:val"), "single"); rPr.append(u)
+    sz = OxmlElement("w:sz"); sz.set(qn("w:val"), "20"); rPr.append(sz)
+    rn.append(rPr); rn.text = text; hl.append(rn); paragraph._p.append(hl)
 
-def from_cn_news(data):
+def make_doc(data):
     doc = Document()
+    sec = doc.sections[0]
+    sec.page_width = Cm(21); sec.page_height = Cm(29.7)
+    sec.top_margin = Cm(2.5); sec.bottom_margin = Cm(2)
+    sec.left_margin = Cm(2.5); sec.right_margin = Cm(2.5)
     
-    # Page setup
-    section = doc.sections[0]
-    section.page_width = Cm(21)
-    section.page_height = Cm(29.7)
-    section.top_margin = Cm(2.5)
-    section.bottom_margin = Cm(2)
-    section.left_margin = Cm(2.5)
-    section.right_margin = Cm(2.5)
+    for _ in range(4): doc.add_paragraph("")
+    t = doc.add_paragraph(); t.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r = t.add_run("China News Briefing"); r.font.size = Pt(32)
+    r.font.color.rgb = RGBColor(0xBB,0x19,0x1F); r.bold = True
     
-    # ===== Title Page =====
-    for _ in range(4):
-        doc.add_paragraph("")
-    
-    title = doc.add_paragraph()
-    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = title.add_run("China News Briefing")
-    run.font.size = Pt(32)
-    run.font.color.rgb = RGBColor(0xBB, 0x19, 0x1F)
-    run.bold = True
-    run.font.name = 'Arial'
-    
-    sub = doc.add_paragraph()
-    sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = sub.add_run("涉华新闻日报")
-    run.font.size = Pt(24)
-    run.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
-    run.font.name = 'SimSun'
+    t2 = doc.add_paragraph(); t2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r2 = t2.add_run("涉华新闻日报"); r2.font.size = Pt(24)
+    r2.font.color.rgb = RGBColor(0x33,0x33,0x33)
     
     doc.add_paragraph("")
-    
-    info = doc.add_paragraph()
-    info.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = info.add_run(data.get("generated_at", ""))
-    run.font.size = Pt(14)
-    run.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
+    info = doc.add_paragraph(); info.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r3 = info.add_run(data.get("generated_at","")); r3.font.size = Pt(14)
+    r3.font.color.rgb = RGBColor(0x66,0x66,0x66)
     
     doc.add_paragraph("")
-    total = doc.add_paragraph()
-    total.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = total.add_run(f"Total: {data.get('total', 0)} China-related articles")
-    run.font.size = Pt(16)
-    run.font.color.rgb = RGBColor(0xBB, 0x19, 0x1F)
-    run.bold = True
-    
-    # Sources
-    sources = doc.add_paragraph()
-    sources.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    src_text = "Sources: " + " | ".join(SRC_NAMES.values())
-    run = sources.add_run(src_text)
-    run.font.size = Pt(9)
-    run.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
+    tot = doc.add_paragraph(); tot.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    r4 = tot.add_run(f"Total: {data.get('total',0)} China-related articles")
+    r4.font.size = Pt(16); r4.font.color.rgb = RGBColor(0xBB,0x19,0x1F); r4.bold = True
     
     doc.add_page_break()
-    
-    # ===== Table of Contents =====
-    toc_title = doc.add_paragraph()
-    run = toc_title.add_run("CONTENTS  /  目录")
-    run.font.size = Pt(20)
-    run.bold = True
-    run.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
-    
-    doc.add_paragraph("")
     
     articles = data.get("articles", [])
-    
-    # Group by source
     groups = {}
     for a in articles:
-        s = a.get("source", "Other")
-        if s not in groups: groups[s] = []
-        groups[s].append(a)
+        s = a.get("source","Other")
+        groups.setdefault(s, []).append(a)
     
-    # TOC entries
-    for idx, (src, items) in enumerate(groups.items(), 1):
-        p = doc.add_paragraph()
-        run = p.add_run(f"[{idx}]  {SRC_NAMES.get(src, src)}  ({len(items)} articles)")
-        run.font.size = Pt(12)
-        run.font.color.rgb = SRC_COLORS.get(src, RGBColor(0,0,0))
-        run.bold = True
-    
-    doc.add_page_break()
-    
-    # ===== Articles =====
-    global_idx = 0
+    gidx = 0
     for src, items in groups.items():
-        color = SRC_COLORS.get(src, RGBColor(0,0,0))
+        color = SRC_COLORS.get(src,"333333")
         full_name = SRC_NAMES.get(src, src)
         
-        # Section header
-        section_h = doc.add_paragraph()
-        section_h.alignment = WD_ALIGN_PARAGRAPH.LEFT
-        
-        # Colored bar
-        run = section_h.add_run(f"  {full_name}  ")
-        run.font.size = Pt(18)
-        run.bold = True
-        run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
-        run.font.name = 'Arial'
-        # Add shading via run properties
-        rPr = run._element.get_or_add_rPr()
-        shd = OxmlElement('w:shd')
-        shd.set(qn('w:fill'), f'{color:06X}' if hasattr(color, '__str__') else 'BB191F')
-        shd.set(qn('w:val'), 'clear')
-        rPr.append(shd)
-        
-        # Underline separator
-        sep = doc.add_paragraph()
-        sep_run = sep.add_run("_" * 80)
-        sep_run.font.color.rgb = color
-        sep_run.font.size = Pt(8)
+        sh = doc.add_paragraph()
+        sr = sh.add_run(f"  {full_name}  "); sr.font.size = Pt(16)
+        sr.bold = True; sr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
+        shd = OxmlElement("w:shd"); shd.set(qn("w:fill"), color); shd.set(qn("w:val"),"clear")
+        sr._element.get_or_add_rPr().append(shd)
         
         for item in items:
-            global_idx += 1
+            gidx += 1
+            tp = doc.add_paragraph()
+            nr = tp.add_run(f" #{gidx} "); nr.font.size = Pt(10); nr.bold = True
+            nr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
+            shd2 = OxmlElement("w:shd"); shd2.set(qn("w:fill"),color); shd2.set(qn("w:val"),"clear")
+            nr._element.get_or_add_rPr().append(shd2)
+            tr = tp.add_run(f"  {item['title']}"); tr.font.size = Pt(13); tr.bold = True
             
-            # Number + Title
-            title_p = doc.add_paragraph()
+            sp = doc.add_paragraph()
+            sr2 = sp.add_run(f"Source: {src}"); sr2.font.size = Pt(8)
+            sr2.font.color.rgb = RGBColor.from_string(color); sr2.italic = True
             
-            # Number badge
-            num_run = title_p.add_run(f" #{global_idx} ")
-            num_run.font.size = Pt(10)
-            num_run.bold = True
-            num_run.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
-            num_rPr = num_run._element.get_or_add_rPr()
-            num_shd = OxmlElement('w:shd')
-            num_shd.set(qn('w:fill'), f'{color:06X}')
-            num_shd.set(qn('w:val'), 'clear')
-            num_rPr.append(num_shd)
-            
-            # Title text
-            title_text = item.get("title", "Untitled")
-            t_run = title_p.add_run(f"  {title_text}")
-            t_run.font.size = Pt(14)
-            t_run.bold = True
-            t_run.font.color.rgb = RGBColor(0x1A, 0x1A, 0x1A)
-            
-            # Source line
-            src_line = doc.add_paragraph()
-            src_run = src_line.add_run(f"Source: {src}")
-            src_run.font.size = Pt(8)
-            src_run.font.color.rgb = color
-            src_run.italic = True
-            
-            # URL
-            url = item.get("url", "")
+            url = item.get("url","")
             if url and len(url) > 10:
-                url_p = doc.add_paragraph()
-                add_hyperlink(url_p, url[:80] + ("..." if len(url)>80 else ""), url)
+                up = doc.add_paragraph()
+                add_hyperlink(up, url[:90]+("..." if len(url)>90 else ""), url)
             
-            # Summary
-            summary = item.get("summary", "")
-            if summary and len(summary) > 10:
-                sm_p = doc.add_paragraph()
-                sm_run = sm_p.add_run(f"[Summary] {summary}")
-                sm_run.font.size = Pt(10)
-                sm_run.font.color.rgb = RGBColor(0x55, 0x55, 0x55)
-                sm_run.italic = True
+            sm = item.get("summary","")
+            if sm and len(sm) > 10:
+                smp = doc.add_paragraph()
+                smr = smp.add_run(f"[Summary] {sm}"); smr.font.size = Pt(10)
+                smr.font.color.rgb = RGBColor(0x55,0x55,0x55); smr.italic = True
             
-            # Full text
-            ft = item.get("full_text", "")
-            if ft and len(ft) > 20:
-                ft_p = doc.add_paragraph()
-                ft_run = ft_p.add_run(ft[:1800])
-                ft_run.font.size = Pt(10.5)
-                ft_run.font.name = 'Calibri'
+            ft = item.get("full_text","")
+            if ft and len(ft) > 50:
+                fp = doc.add_paragraph()
+                fr = fp.add_run(ft); fr.font.size = Pt(10.5)
             
-            # Separator
-            div = doc.add_paragraph()
-            div_run = div.add_run("─" * 70)
-            div_run.font.size = Pt(6)
-            div_run.font.color.rgb = RGBColor(0xCC, 0xCC, 0xCC)
-        
+            dp = doc.add_paragraph()
+            dr = dp.add_run("─"*70); dr.font.size = Pt(6)
+            dr.font.color.rgb = RGBColor(0xCC,0xCC,0xCC)
         doc.add_page_break()
     
-    # ===== Footer =====
-    footer = doc.add_paragraph()
-    footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = footer.add_run("China News Briefing  ·  涉华新闻日报")
-    run.font.size = Pt(9)
-    run.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
-    run.italic = True
-    
+    fp = doc.add_paragraph(); fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    fr = fp.add_run("China News Briefing · 涉华新闻日报")
+    fr.font.size = Pt(9); fr.font.color.rgb = RGBColor(0x99,0x99,0x99); fr.italic = True
     return doc
 
 if __name__ == "__main__":
-    data = json.load(sys.stdin)
-    doc = from_cn_news(data)
-    out_path = sys.argv[1] if len(sys.argv) > 1 else "China_News_Briefing.docx"
+    in_path = sys.argv[1] if len(sys.argv) > 1 else "china_news_raw.json"
+    out_path = sys.argv[2] if len(sys.argv) > 2 else "China_News_Briefing.docx"
+    with open(in_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    doc = make_doc(data)
     doc.save(out_path)
     print(f"Saved: {out_path}", file=sys.stderr)
