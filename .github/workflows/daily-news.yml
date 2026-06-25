@@ -1,26 +1,32 @@
-name: News + Screenshots
+name: China News Briefing
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {token: '${{ secrets.PAT }}'}
-      - uses: browser-actions/setup-chrome@v1
+        with:
+          token: $${{ secrets.PAT }}
       - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
-      - run: python news_scraper.py > news_latest.json
-      - name: Screenshot
-        run: |
-          chrome --headless --disable-gpu --no-sandbox --screenshot=bbc.png --window-size=1280,900 "https://www.bbc.com/news"
-          chrome --headless --disable-gpu --no-sandbox --screenshot=reuters.png --window-size=1280,900 "https://www.reuters.com"
-          chrome --headless --disable-gpu --no-sandbox --screenshot=bloomberg.png --window-size=1280,900 "https://www.bloomberg.com"
-          chrome --headless --disable-gpu --no-sandbox --screenshot=nyt.png --window-size=1280,900 "https://www.nytimes.com"
-          ls -la *.png
+        with:
+          python-version: '3.12'
+      - run: pip install python-docx
+      - name: Scrape China news
+        run: python news_scraper.py > china_news_raw.json
+      - name: Generate Word doc
+        run: python generate_docx.py china_news_raw.json China_News_Briefing.docx
       - uses: actions/upload-artifact@v4
-        with: {name: screenshots, path: '*.png'}
+        with:
+          name: china-briefing
+          path: China_News_Briefing.docx
       - run: |
-          git config user.name bot; git config user.email bot@n
-          git add news_latest.json || true
-          git commit -m "Update" --allow-empty; git push
+          git config user.name bot
+          git config user.email bot@n
+          cp china_news_raw.json china_news_latest.json
+          git add china_news_latest.json || true
+          git commit -m "Auto update" --allow-empty
+          git push
