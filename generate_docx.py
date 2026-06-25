@@ -34,9 +34,8 @@ def translate(texts):
     results = []
     chunks = [texts[i:i+25] for i in range(0,len(texts),25)]
     for chunk in chunks:
-        q = "Translate to Chinese, one per line:
-" + "
-".join(f"- {t}" for t in chunk)
+        sep = chr(10)
+        q = "Translate to Chinese, one per line:" + sep + sep.join(f"- {t}" for t in chunk)
         try:
             p = json.dumps({"model":"glm-4.7-flash","messages":[{"role":"user","content":q}],"max_tokens":4096}).encode()
             r = json.loads(urllib.request.urlopen(urllib.request.Request(
