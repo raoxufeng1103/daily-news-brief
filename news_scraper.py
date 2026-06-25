@@ -1,105 +1,127 @@
 #!/usr/bin/env python3
-"""每日新闻简报 · BBC/Reuters/Bloomberg/人民网/CGTN 自动抓取"""
-import urllib.request, ssl, json, time, re, xml.etree.ElementTree as ET, sys
+"""China News Aggregator v2 - 10 foreign sources, China articles full text"""
+import urllib.request, ssl, json, time, re, xml.etree.ElementTree as ET, sys, html as html_mod
 
 ctx = ssl.create_default_context()
-ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-def fetch(url, t=15):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; NewsBot/1.0)"})
-    with urllib.request.urlopen(req, timeout=t, context=ctx) as resp:
-        return resp.read().decode('utf-8', errors='replace')
-
-def parse_rss(text):
-    root = ET.fromstring(text)
-    items = []
-    for item in root.findall(".//item"):
-        t = (item.find("title").text or "").strip()
-        d_elem = item.find("description")
-        d = (d_elem.text or "")[:200] if d_elem is not None else ""
-        items.append({"title": t, "desc": d})
-    return items
-
-now = time.time()
-GMB = ['足彩','竞彩','彩票','开奖','投注','赔率','盘口','彩民','刮中','中奖','福彩','体彩']
-sections = {}
-
-# ===== BBC: Try 3 different URLs =====
-bbc_urls = [
-    "https://feeds.bbci.co.uk/news/rss.xml",
-    "https://feeds.bbci.co.uk/news/world/rss.xml",
-    "https://www.bbc.com/news/10628494",
+CKW = [
+    'china','chinese','beijing','xi jinping','li qiang','wang yi',
+    'sino-','taiwan','hong kong','xinjiang','tibet','south china sea',
+    'belt and road','made in china','huawei','tencent','alibaba',
+    'tiktok','shein','temu','cpec','china-pakistan',
+    'shenzhen','shanghai','renminbi','yuan','pboc',
+    'zhipu','deepseek','baidu','xiaomi','didi','meituan',
+    'chinese economy','china economy','chinese market',
+    'chinese official','chinese ambassador','chinese foreign',
 ]
-for url in bbc_urls:
+
+def is_cn(t):
+    tl = t.lower()
+    for k in CKW:
+        if k in tl: return True
+    return False
+
+def fetch(url, t=20):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36"})
+    with urllib.request.urlopen(req, timeout=t, context=ctx) as r:
+        return r.read().decode('utf-8','replace')
+
+def extract(html):
+    html = re.sub(r'<(script|style|nav|footer|header)[^>]*>.*?</\1>', '', html, flags=re.DOTALL|re.IGNORECASE)
+    for pat in [
+        r'<div[^>]*data-component="text-block"[^>]*>(.*?)</div>\s*</div>',
+        r'<article[^>]*>(.*?)</article>',
+        r'<div[^>]*class="[^"]*(?:article-body|story-body|entry-content|content|field-item|body|news-body|article-text|Paywall)[^"]*"[^>]*>(.*?)</div>',
+        r'<body[^>]*>(.*?)</body>',
+    ]:
+        m = re.search(pat, html, re.DOTALL)
+        if m:
+            body = m.group(1)
+            body = re.sub(r'<[^>]+>', ' ', body)
+            body = html_mod.unescape(body)
+            body = re.sub(r'\s+', ' ', body).strip()
+            return body[:2500]
+    return ""
+
+def rss(text):
+    root = ET.fromstring(text)
+    res = []
+    for item in root.findall(".//item"):
+        t = (item.findtext("title") or "").strip()
+        link = (item.findtext("link") or "").strip()
+        d = re.sub(r'<[^>]+>', '', (item.findtext("description") or "")[:200])
+        if t: res.append({"t": t, "l": link, "d": d})
+    return res
+
+def hplinks(html):
+    links = set()
+    for m in re.finditer(r'<a[^>]*href=["\'](https?://[^"\']+)["\'][^>]*>([^<]{25,})</a>', html):
+        links.add((m.group(1), m.group(2).strip()))
+    return list(links)
+
+results = []
+def add(s, t, u, sm, ft):
+    results.append({"source": s, "title": t, "url": u, "summary": sm[:200], "full_text": ft[:2500]})
+
+print("ChinaNewsAgg v2 starting...", file=sys.stderr)
+
+# 1. BBC
+for u in ["https://feeds.bbci.co.uk/news/rss.xml","https://feeds.bbci.co.uk/news/world/rss.xml"]:
     try:
-        text = fetch(url)
-        if "<?xml" in text or "<rss" in text:
-            items = parse_rss(text)
-            sections['bbc'] = [{"title": i['title'], "desc": i['desc'][:150], "source": "BBC"} for i in items[:10]]
-            print(f"BBC: {len(items)} items from {url.split('/')[2]}", file=sys.stderr)
-            break
-        elif len(text) > 500 and ("BBC" in text or "news" in text.lower()):
-            sections['bbc'] = [{"title": "BBC top stories fetched", "source": "BBC"}]
-            break
-    except Exception as e:
-        print(f"BBC {url.split('/')[2]}: {type(e).__name__}", file=sys.stderr)
-
-# ===== Reuters via Google News =====
-try:
-    rss = fetch("https://news.google.com/rss/search?q=site:reuters.com&hl=en-US&gl=US&ceid=US:en")
-    items = parse_rss(rss)
-    sections['reuters'] = [{"title": i['title'], "source": "Reuters"} for i in items[:10]]
-    print(f"Reuters: {len(sections['reuters'])} items", file=sys.stderr)
-except Exception as e:
-    print(f"Reuters: {type(e).__name__}", file=sys.stderr)
-
-# ===== Bloomberg via Google News =====
-try:
-    rss = fetch("https://news.google.com/rss/search?q=site:bloomberg.com&hl=en-US&gl=US&ceid=US:en")
-    items = parse_rss(rss)
-    sections['bloomberg'] = [{"title": i['title'], "source": "Bloomberg"} for i in items[:8]]
-    print(f"Bloomberg: {len(sections['bloomberg'])} items", file=sys.stderr)
-except Exception as e:
-    print(f"Bloomberg: {type(e).__name__}", file=sys.stderr)
-
-# ===== China Daily =====
-try:
-    items = parse_rss(fetch("https://www.chinadaily.com.cn/rss/world_rss.xml"))
-    sections['cd'] = [{"title": i['title'], "source": "China Daily"} for i in items[:10]]
-except: pass
-
-# ===== CGTN =====
-try:
-    items = parse_rss(fetch("https://www.cgtn.com/subscribe/rss/section/world.xml"))
-    sections['cgtn'] = [{"title": i['title'], "source": "CGTN"} for i in items[:10]]
-except: pass
-
-# ===== 人民网 =====
-try:
-    items = parse_rss(fetch("http://www.people.com.cn/rss/politics.xml"))
-    sections['rmw'] = [{"title": i['title'], "source": "人民网"} for i in items[:12]]
-except: pass
-
-# ===== Sina =====
-for lid, cat in [(2515,"科技"),(2512,"体育"),(2516,"财经")]:
-    try:
-        data = json.loads(fetch(f"https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid={lid}&k=&num=50&page=1"))
-        items = data.get("result",{}).get("data",[])
-        key = f"sina_{cat}"
-        sections[key] = [{"title": i['title'], "desc": i.get('intro','')[:120], "source": f"新浪{cat}"}
-            for i in items if (now - int(i['ctime'])) < 86400]
+        for it in rss(fetch(u)):
+            if is_cn(it["t"]+" "+it["d"]):
+                ft = ""
+                if it["l"]:
+                    try: ft = extract(fetch(it["l"]))
+                    except: ft = it["d"]
+                add("BBC", it["t"], it["l"], it["d"], ft)
+        break
     except: pass
 
-# Filter sports (remove gambling)
-if 'sina_体育' in sections:
-    sections['sina_体育'] = [i for i in sections['sina_体育'] if not any(k in i['title'] for k in GMB)][:8]
+# 2-6 Google News
+for s, q in [("Reuters","site:reuters.com+china"),("Bloomberg","site:bloomberg.com+china"),
+             ("AP","site:apnews.com+china"),("AFP","site:afp.com+china"),
+             ("Nikkei Asia","site:asia.nikkei.com+china")]:
+    try:
+        for it in rss(fetch(f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en")):
+            if is_cn(it["t"]):
+                ft = ""
+                if it["l"] and s=="Nikkei Asia":
+                    try: ft = extract(fetch(it["l"],15))
+                    except: pass
+                add(s, it["t"], it.get("l",""), it.get("d",""), ft)
+    except: pass
 
-# ===== Ziyang =====
+# 7. APP Pakistan
 try:
-    html = fetch("https://zigong.scol.com.cn")
-    titles = re.findall(r'<a[^>]*>([^<]{10,60})</a>', html)
-    sections['zigong'] = [{"title": t.strip(), "source": "自贡新闻网"} 
-        for t in titles if any(k in t for k in ['自贡','四川','供电','数据','献血','工会','彩灯'])][:8]
+    for u,t in hplinks(fetch("https://www.app.com.pk/")):
+        if is_cn(t): add("APP (Pakistan)", t, u, "", "")
 except: pass
 
-print(json.dumps(sections, ensure_ascii=False, indent=2))
+# 8. IRNA Iran
+try:
+    for it in rss(fetch("https://en.irna.ir/rss")):
+        if is_cn(it["t"]):
+            ft = ""
+            if it["l"]:
+                try: ft = extract(fetch(it["l"],15))
+                except: pass
+            add("IRNA (Iran)", it["t"], it.get("l",""), it.get("d",""), ft)
+except: pass
+
+# 9. Tanjug Serbia
+try:
+    for u,t in hplinks(fetch("https://www.tanjug.rs/en")):
+        if is_cn(t): add("Tanjug (Serbia)", t, u, "", "")
+except: pass
+
+# 10. SAnews SA
+try:
+    for u,t in hplinks(fetch("https://www.sanews.gov.za/")):
+        if is_cn(t): add("SAnews (S.Africa)", t, u, "", "")
+except: pass
+
+out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results), "articles": results}
+print(json.dumps(out, ensure_ascii=False, indent=2))
