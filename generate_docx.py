@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-"""Generate beautiful Word doc from China news JSON"""
 import json, sys
 from docx import Document
 from docx.shared import Pt, RGBColor, Cm
@@ -12,25 +11,18 @@ SRC_COLORS = {
     "AFP":"003D7A","Nikkei Asia":"8B0000","APP (Pakistan)":"014B1A",
     "IRNA (Iran)":"239B56","Tanjug (Serbia)":"00437C","SAnews (S.Africa)":"006633",
 }
-SRC_NAMES = {
-    "BBC":"BBC News (UK)","Reuters":"Reuters (UK)","Bloomberg":"Bloomberg (US)",
-    "AP":"Associated Press (US)","AFP":"Agence France-Presse (France)",
-    "Nikkei Asia":"Nikkei Asia (Japan)","APP (Pakistan)":"Assoc. Press of Pakistan",
-    "IRNA (Iran)":"IRNA (Iran)","Tanjug (Serbia)":"Tanjug (Serbia)",
-    "SAnews (S.Africa)":"SAnews (South Africa)",
-}
 
-def add_hyperlink(paragraph, text, url):
-    part = paragraph.part
-    r_id = part.relate_to(url, "http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink", is_external=True)
-    hl = OxmlElement("w:hyperlink")
-    hl.set(qn("r:id"), r_id)
-    rn = OxmlElement("w:r")
-    rPr = OxmlElement("w:rPr")
-    c = OxmlElement("w:color"); c.set(qn("w:val"), "0563C1"); rPr.append(c)
-    u = OxmlElement("w:u"); u.set(qn("w:val"), "single"); rPr.append(u)
-    sz = OxmlElement("w:sz"); sz.set(qn("w:val"), "20"); rPr.append(sz)
-    rn.append(rPr); rn.text = text; hl.append(rn); paragraph._p.append(hl)
+def add_url(p, text, url):
+    part = p.part
+    rid = part.relate_to(url, 'http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink', is_external=True)
+    hl = OxmlElement('w:hyperlink')
+    hl.set(qn('r:id'), rid)
+    rn = OxmlElement('w:r')
+    rPr = OxmlElement('w:rPr')
+    c = OxmlElement('w:color'); c.set(qn('w:val'), '0563C1'); rPr.append(c)
+    u = OxmlElement('w:u'); u.set(qn('w:val'), 'single'); rPr.append(u)
+    sz = OxmlElement('w:sz'); sz.set(qn('w:val'), '20'); rPr.append(sz)
+    rn.append(rPr); rn.text = text; hl.append(rn); p._p.append(hl)
 
 def make_doc(data):
     doc = Document()
@@ -39,42 +31,40 @@ def make_doc(data):
     sec.top_margin = Cm(2.5); sec.bottom_margin = Cm(2)
     sec.left_margin = Cm(2.5); sec.right_margin = Cm(2.5)
     
-    for _ in range(4): doc.add_paragraph("")
+    for _ in range(4): doc.add_paragraph('')
     t = doc.add_paragraph(); t.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = t.add_run("China News Briefing"); r.font.size = Pt(32)
+    r = t.add_run('China News Briefing'); r.font.size = Pt(32)
     r.font.color.rgb = RGBColor(0xBB,0x19,0x1F); r.bold = True
     
     t2 = doc.add_paragraph(); t2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r2 = t2.add_run("涉华新闻日报"); r2.font.size = Pt(24)
+    r2 = t2.add_run('涉华新闻日报'); r2.font.size = Pt(24)
     r2.font.color.rgb = RGBColor(0x33,0x33,0x33)
+    doc.add_paragraph('')
     
-    doc.add_paragraph("")
     info = doc.add_paragraph(); info.alignment = WD_ALIGN_PARAGRAPH.CENTER
     r3 = info.add_run(data.get("generated_at","")); r3.font.size = Pt(14)
     r3.font.color.rgb = RGBColor(0x66,0x66,0x66)
+    doc.add_paragraph('')
     
-    doc.add_paragraph("")
     tot = doc.add_paragraph(); tot.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r4 = tot.add_run(f"Total: {data.get('total',0)} China-related articles")
+    r4 = tot.add_run(f"Total: {data.get('total',0)} China articles")
     r4.font.size = Pt(16); r4.font.color.rgb = RGBColor(0xBB,0x19,0x1F); r4.bold = True
-    
     doc.add_page_break()
     
     articles = data.get("articles", [])
     groups = {}
     for a in articles:
         s = a.get("source","Other")
-        groups.setdefault(s, []).append(a)
+        if s not in groups: groups[s] = []
+        groups[s].append(a)
     
     gidx = 0
     for src, items in groups.items():
         color = SRC_COLORS.get(src,"333333")
-        full_name = SRC_NAMES.get(src, src)
-        
         sh = doc.add_paragraph()
-        sr = sh.add_run(f"  {full_name}  "); sr.font.size = Pt(16)
+        sr = sh.add_run(f"  {src}  "); sr.font.size = Pt(16)
         sr.bold = True; sr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
-        shd = OxmlElement("w:shd"); shd.set(qn("w:fill"), color); shd.set(qn("w:val"),"clear")
+        shd = OxmlElement('w:shd'); shd.set(qn('w:fill'),color); shd.set(qn('w:val'),'clear')
         sr._element.get_or_add_rPr().append(shd)
         
         for item in items:
@@ -82,7 +72,7 @@ def make_doc(data):
             tp = doc.add_paragraph()
             nr = tp.add_run(f" #{gidx} "); nr.font.size = Pt(10); nr.bold = True
             nr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
-            shd2 = OxmlElement("w:shd"); shd2.set(qn("w:fill"),color); shd2.set(qn("w:val"),"clear")
+            shd2 = OxmlElement('w:shd'); shd2.set(qn('w:fill'),color); shd2.set(qn('w:val'),'clear')
             nr._element.get_or_add_rPr().append(shd2)
             tr = tp.add_run(f"  {item['title']}"); tr.font.size = Pt(13); tr.bold = True
             
@@ -93,7 +83,7 @@ def make_doc(data):
             url = item.get("url","")
             if url and len(url) > 10:
                 up = doc.add_paragraph()
-                add_hyperlink(up, url[:90]+("..." if len(url)>90 else ""), url)
+                add_url(up, url[:80], url)
             
             sm = item.get("summary","")
             if sm and len(sm) > 10:
@@ -107,20 +97,19 @@ def make_doc(data):
                 fr = fp.add_run(ft); fr.font.size = Pt(10.5)
             
             dp = doc.add_paragraph()
-            dr = dp.add_run("─"*70); dr.font.size = Pt(6)
+            dr = dp.add_run("-" * 60); dr.font.size = Pt(6)
             dr.font.color.rgb = RGBColor(0xCC,0xCC,0xCC)
         doc.add_page_break()
     
     fp = doc.add_paragraph(); fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    fr = fp.add_run("China News Briefing · 涉华新闻日报")
-    fr.font.size = Pt(9); fr.font.color.rgb = RGBColor(0x99,0x99,0x99); fr.italic = True
+    fr = fp.add_run('China News Briefing'); fr.font.size = Pt(9)
+    fr.font.color.rgb = RGBColor(0x99,0x99,0x99); fr.italic = True
     return doc
 
 if __name__ == "__main__":
     in_path = sys.argv[1] if len(sys.argv) > 1 else "china_news_raw.json"
     out_path = sys.argv[2] if len(sys.argv) > 2 else "China_News_Briefing.docx"
-    with open(in_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    doc = make_doc(data)
+    with open(in_path, encoding='utf-8') as f:
+        doc = make_doc(json.load(f))
     doc.save(out_path)
     print(f"Saved: {out_path}", file=sys.stderr)
