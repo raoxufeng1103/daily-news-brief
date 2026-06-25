@@ -24,6 +24,34 @@ def add_url(p, text, url):
     sz = OxmlElement('w:sz'); sz.set(qn('w:val'), '20'); rPr.append(sz)
     rn.append(rPr); rn.text = text; hl.append(rn); p._p.append(hl)
 
+
+def translate(texts):
+    """Translate English titles to Chinese via GLM API"""
+    key = os.environ.get("GLM_API_KEY", "")
+    if not key or key == "***": return [""]*len(texts)
+    import urllib.request, ssl, json, time
+    ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
+    results = []
+    chunks = [texts[i:i+25] for i in range(0,len(texts),25)]
+    for chunk in chunks:
+        q = "Translate to Chinese, one per line:
+" + "
+".join(f"- {t}" for t in chunk)
+        try:
+            p = json.dumps({"model":"glm-4.7-flash","messages":[{"role":"user","content":q}],"max_tokens":4096}).encode()
+            r = json.loads(urllib.request.urlopen(urllib.request.Request(
+                "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+                data=p, headers={"Authorization":f"Bearer {key}","Content-Type":"application/json"}
+            ), timeout=60, context=ctx).read())
+            txt = r["choices"][0]["message"]["content"].strip()
+            lines = [l.strip().lstrip("- ") for l in txt.split("
+") if l.strip()]
+            results.extend(lines[:len(chunk)])
+        except:
+            results.extend([""]*len(chunk))
+        time.sleep(0.5)
+    return results
+
 def make_doc(data):
     doc = Document()
     sec = doc.sections[0]
@@ -53,6 +81,10 @@ def make_doc(data):
     
     articles = data.get("articles", [])
     groups = {}
+    # Translate titles
+    all_titles = [item["title"] for src,items in groups.items() for item in items]
+    cn_titles = translate(all_titles)
+    title_idx = 0
     for a in articles:
         s = a.get("source","Other")
         if s not in groups: groups[s] = []
@@ -74,7 +106,16 @@ def make_doc(data):
             nr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
             shd2 = OxmlElement('w:shd'); shd2.set(qn('w:fill'),color); shd2.set(qn('w:val'),'clear')
             nr._element.get_or_add_rPr().append(shd2)
-            tr = tp.add_run(f"  {item['title']}"); tr.font.size = Pt(13); tr.bold = True
+            tr = tp.add_run(f"  {item['title']}")
+            # Chinese translation
+            cn_title = cn_titles[title_idx] if title_idx < len(cn_titles) else ""
+            title_idx += 1
+            if cn_title:
+                ctp = doc.add_paragraph()
+                ctp.paragraph_format.space_before = Pt(0); ctp.paragraph_format.space_after = Pt(1)
+                ctp.paragraph_format.left_indent = Cm(0.7)
+                cr = ctp.add_run(cn_title); cr.font.size = Pt(10)
+                cr.font.color.rgb = RGBColor(0x66,0x66,0x66); cr.italic = True; tr.font.size = Pt(13); tr.bold = True
             
             sp = doc.add_paragraph()
             sr2 = sp.add_run(f"Source: {src}"); sr2.font.size = Pt(8)
