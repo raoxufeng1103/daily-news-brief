@@ -117,7 +117,10 @@ def build(data):
             nr.font.color.rgb = RGBColor(0xFF,0xFF,0xFF)
             shd = OxmlElement("w:shd"); shd.set(qn("w:fill"),color); shd.set(qn("w:val"),"clear")
             nr._element.get_or_add_rPr().append(shd)
-            tr = tp.add_run(f"  {item['title']}"); tr.font.size = Pt(11)
+            clean_title = item['title'].replace("&lt;","<").replace("&gt;",">").replace("&amp;","&")
+            # Remove HTML if any got through
+            clean_title = __import__("re").sub(r"<[^>]+>","",clean_title)
+            tr = tp.add_run(f"  {clean_title}"); tr.font.size = Pt(11)
             tr.bold = True; tr.font.color.rgb = RGBColor(0x1A,0x1A,0x1A)
             
             if cn_title:
@@ -128,6 +131,8 @@ def build(data):
                 cr.font.color.rgb = RGBColor(0x66,0x66,0x66); cr.italic = True
             
             sm = item.get("summary","")
+            if sm:
+                sm = sm.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&").replace("&#x27;","'").replace("&quot;",'"')
             if sm and len(sm) > 10:
                 sp = doc.add_paragraph()
                 sp.paragraph_format.space_before = Pt(2); sp.paragraph_format.space_after = Pt(1)
@@ -136,6 +141,8 @@ def build(data):
                 sr.font.color.rgb = RGBColor(0x44,0x44,0x44); sr.italic = True
             
             ft = item.get("full_text","")
+            if ft:
+                ft = ft.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&").replace("&#x27;","'").replace("&quot;",'"')
             if ft and len(ft) > 80:
                 fp = doc.add_paragraph()
                 fp.paragraph_format.space_before = Pt(3)
