@@ -210,43 +210,36 @@ for src, query, hint in gn_sources:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
 
-# 7. APP Pakistan - RSS first, then homepage
-app_rss = ["https://www.app.com.pk/feed/","https://www.app.com.pk/feed","https://www.app.com.pk/rss/"]
-app_got = False
-for rss_url in app_rss:
-    try:
-        items = parse_rss(fetch(rss_url, 20))
-        if items:
+# 7. APP Pakistan - WordPress REST API (bypasses 403 blocking)
+try:
+    api_url = "https://www.app.com.pk/wp-json/wp/v2/posts?per_page=50&_embed"
+    data = json.loads(fetch(api_url, 20))
+    for post in data:
+        t = html_mod.unescape(post.get("title",{}).get("rendered","")).strip()
+        t = re.sub(r"<[^>]+>", " ", t).strip()
+        link = post.get("link","")
+        excerpt = html_mod.unescape(post.get("excerpt",{}).get("rendered",""))
+        excerpt = re.sub(r"<[^>]+>", " ", excerpt).strip()
+        if t and is_cn(t + " " + excerpt):
+            if add("APP (Pakistan)", t, link, excerpt[:300], ""):
+                # Fetch full text from the post content
+                content = html_mod.unescape(post.get("content",{}).get("rendered",""))
+                if content:
+                    ft = extract(content, "APP")
+                    if ft:
+                        for r in reversed(results):
+                            if r["source"] == "APP (Pakistan)" and r["title"] == t:
+                                r["full_text"] = ft; break
+except Exception as e:
+    print(f"  APP API: {e}", file=sys.stderr)
+    # Fallback: try RSS
+    for rss_url in ["https://www.app.com.pk/feed/","https://www.app.com.pk/feed"]:
+        try:
+            items = parse_rss(fetch(rss_url, 20))
             for it in items:
                 if is_cn(it["t"] + " " + it.get("d","")):
-                    if add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ""):
-                        if it.get("l"):
-                            try:
-                                ft = extract(fetch(it["l"], 15), "APP")
-                                if ft:
-                                    for r in reversed(results):
-                                        if r["source"] == "APP (Pakistan)" and r["title"] == it["t"]:
-                                            r["full_text"] = ft; break
-                            except: pass
-            app_got = True; break
-    except Exception as e:
-        print(f"  APP RSS {rss_url}: {e}", file=sys.stderr)
-
-if not app_got:
-    try:
-        html = fetch("https://www.app.com.pk/")
-        links = hp_links_container(html)
-        for url, text in links:
-            if is_cn(text):
-                add("APP (Pakistan)", text, url, "", "")
-        if source_counts.get("APP (Pakistan)", 0) == 0:
-            wp_links = re.findall(r'<h[2-4][^>]*class="[^"]*entry-title[^"]*"[^>]*>\s*<a[^>]*href=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)</a>', html)
-            for url, text in wp_links:
-                text = re.sub(r"<[^>]+>", "", text).strip()
-                if len(text) > 10 and is_cn(text):
-                    add("APP (Pakistan)", text, url, "", "")
-    except Exception as e:
-        print(f"  APP homepage: {e}", file=sys.stderr)
+                    add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), "")
+        except: pass
 print(f"APP: {source_counts.get('APP (Pakistan)', 0)}", file=sys.stderr)
 
 # 8. IRNA Iran
@@ -263,76 +256,76 @@ except Exception as e:
     print(f"  IRNA: {e}", file=sys.stderr)
 print(f"IRNA: {source_counts.get('IRNA (Iran)', 0)}", file=sys.stderr)
 
-# 9. Tanjug Serbia - RSS first, then homepage
-tanjug_rss = ["https://www.tanjug.rs/en/feed","https://www.tanjug.rs/feed","https://www.tanjug.rs/en/rss"]
+# 9. Tanjug Serbia - Try multiple approaches
+# Official site may have moved; try Google News RSS + direct URLs
+tanjug_approaches = [
+    ("rss", ["https://www.tanjug.rs/en/feed","https://www.tanjug.rs/feed","https://tanjug.rs/feed"]),
+    ("homepage", ["https://www.tanjug.rs/en","https://www.tanjug.rs","https://tanjug.rs"]),
+]
 tanjug_got = False
-for rss_url in tanjug_rss:
-    try:
-        items = parse_rss(fetch(rss_url, 20))
-        if items:
-            for it in items:
-                if is_cn(it["t"] + " " + it.get("d","")):
-                    if add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ""):
-                        if it.get("l"):
-                            try:
-                                ft = extract(fetch(it["l"], 15), "Tanjug")
-                                if ft:
-                                    for r in reversed(results):
-                                        if r["source"] == "Tanjug (Serbia)" and r["title"] == it["t"]:
-                                            r["full_text"] = ft; break
-                            except: pass
-            tanjug_got = True; break
-    except Exception as e:
-        print(f"  Tanjug RSS {rss_url}: {e}", file=sys.stderr)
+# First try Google News RSS (most reliable)
+try:
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:tanjug.rs&hl=en-US&gl=US&ceid=US:en"))
+    for it in items:
+        if is_cn(it["t"] + " " + it.get("d","")):
+            if add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ""):
+                if it.get("l"):
+                    try:
+                        ft = extract(fetch(it["l"], 15), "Tanjug")
+                        if ft:
+                            for r in reversed(results):
+                                if r["source"] == "Tanjug (Serbia)" and r["title"] == it["t"]:
+                                    r["full_text"] = ft; break
+                    except: pass
+    if source_counts.get("Tanjug (Serbia)", 0) > 0:
+        tanjug_got = True
+except Exception as e:
+    print(f"  Tanjug Google News: {e}", file=sys.stderr)
 
+# Fallback: direct RSS/homepage
 if not tanjug_got:
-    try:
-        html = fetch("https://www.tanjug.rs/en")
-        links = hp_links_container(html)
-        for url, text in links:
-            if is_cn(text):
-                add("Tanjug (Serbia)", text, url, "", "")
-    except Exception as e:
-        print(f"  Tanjug homepage: {e}", file=sys.stderr)
+    for approach, urls in tanjug_approaches:
+        for url in urls:
+            try:
+                if approach == "rss":
+                    items = parse_rss(fetch(url, 20))
+                    for it in items:
+                        if is_cn(it["t"] + " " + it.get("d","")):
+                            add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), "")
+                else:
+                    html = fetch(url, 20)
+                    links = hp_links_container(html)
+                    for link_url, text in links:
+                        if is_cn(text):
+                            add("Tanjug (Serbia)", text, link_url, "", "")
+                if source_counts.get("Tanjug (Serbia)", 0) > 0:
+                    tanjug_got = True; break
+            except Exception as e:
+                print(f"  Tanjug {url}: {e}", file=sys.stderr)
+        if tanjug_got: break
 print(f"Tanjug: {source_counts.get('Tanjug (Serbia)', 0)}", file=sys.stderr)
 
-# 10. SAnews - RSS first, then homepage
-sanews_rss = ["https://www.sanews.gov.za/rss","https://www.sanews.gov.za/feed","https://www.sanews.gov.za/rss.xml"]
-sanews_got = False
-for rss_url in sanews_rss:
+# 10. SAnews South Africa - Correct RSS feeds
+sanews_feeds = [
+    "https://www.sanews.gov.za/south-africa-news-stories.xml",
+    "https://www.sanews.gov.za/features.xml",
+]
+for feed_url in sanews_feeds:
     try:
-        items = parse_rss(fetch(rss_url, 20))
-        if items:
-            for it in items:
-                if is_cn(it["t"] + " " + it.get("d","")):
-                    if add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ""):
-                        if it.get("l"):
-                            try:
-                                ft = extract(fetch(it["l"], 15), "SAnews")
-                                if ft:
-                                    for r in reversed(results):
-                                        if r["source"] == "SAnews (S.Africa)" and r["title"] == it["t"]:
-                                            r["full_text"] = ft; break
-                            except: pass
-            sanews_got = True; break
+        items = parse_rss(fetch(feed_url, 25))
+        for it in items:
+            if is_cn(it["t"] + " " + it.get("d","")):
+                if add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ""):
+                    if it.get("l"):
+                        try:
+                            ft = extract(fetch(it["l"], 20), "SAnews")
+                            if ft:
+                                for r in reversed(results):
+                                    if r["source"] == "SAnews (S.Africa)" and r["title"] == it["t"]:
+                                        r["full_text"] = ft; break
+                        except: pass
     except Exception as e:
-        print(f"  SAnews RSS {rss_url}: {e}", file=sys.stderr)
-
-if not sanews_got:
-    try:
-        html = fetch("https://www.sanews.gov.za/")
-        links = hp_links_container(html)
-        for url, text in links:
-            if is_cn(text):
-                add("SAnews (S.Africa)", text, url, "", "")
-        if source_counts.get("SAnews (S.Africa)", 0) == 0:
-            dru_links = re.findall(r'<div[^>]*class="[^"]*views-row[^"]*"[^>]*>.*?<a[^>]*href=[\"\']([^\"\']+)[\"\'][^>]*>(.*?)</a>', html, re.DOTALL)
-            for url, text in dru_links:
-                text = re.sub(r"<[^>]+>", "", text).strip()
-                if len(text) > 15 and is_cn(text):
-                    add("SAnews (S.Africa)", text, url, "", "")
-    except Exception as e:
-        print(f"  SAnews homepage: {e}", file=sys.stderr)
+        print(f"  SAnews feed {feed_url}: {e}", file=sys.stderr)
 print(f"SAnews: {source_counts.get('SAnews (S.Africa)', 0)}", file=sys.stderr)
 
 # Output
