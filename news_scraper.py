@@ -198,9 +198,11 @@ for src, query, hint in gn_sources:
         items = parse_rss(fetch(f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"))
         for it in items:
             if is_cn(it["t"]):
-                ft = ""
+                ft = it.get("d","")
                 if it["l"]:
-                    try: ft = extract(fetch(it["l"], 15), hint)
+                    try:
+                        article_ft = extract(fetch(it["l"], 15), hint)
+                        if article_ft: ft = article_ft
                     except: pass
                 add(src, it["t"], it.get("l",""), it.get("d",""), ft)
     except Exception as e:
@@ -212,9 +214,11 @@ try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:app.com.pk+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
-            ft = ""
+            ft = it.get("d","")
             if it.get("l"):
-                try: ft = extract(fetch(it["l"], 15), "APP")
+                try:
+                    article_ft = extract(fetch(it["l"], 15), "APP")
+                    if article_ft: ft = article_ft
                 except: pass
             add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
@@ -240,9 +244,11 @@ try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:tanjug.rs+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
-            ft = ""
+            ft = it.get("d","")
             if it.get("l"):
-                try: ft = extract(fetch(it["l"], 15), "Tanjug")
+                try:
+                    article_ft = extract(fetch(it["l"], 15), "Tanjug")
+                    if article_ft: ft = article_ft
                 except: pass
             add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
@@ -254,9 +260,11 @@ try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:sanews.gov.za+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
-            ft = ""
+            ft = it.get("d","")
             if it.get("l"):
-                try: ft = extract(fetch(it["l"], 15), "SAnews")
+                try:
+                    article_ft = extract(fetch(it["l"], 15), "SAnews")
+                    if article_ft: ft = article_ft
                 except: pass
             add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
