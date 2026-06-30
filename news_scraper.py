@@ -35,71 +35,68 @@ def fetch(url, t=20, retries=2):
     raise last_err
 
 def extract(html_text, source_hint=""):
+    """Extract article body text, with source-specific hints and robust fallbacks"""
     if not html_text: return ""
-    h = re.sub(r"<(script|style|nav|footer|header|aside|noscript)[^>]*>.*?</\1>", 
+    
+    # Remove noise
+    h = re.sub(r"<(script|style|nav|footer|header|aside|noscript|iframe|form)[^>]*>.*?</\1>", 
                "", html_text, flags=re.DOTALL|re.IGNORECASE)
     
+    # Build patterns: source-specific first, then generic
     patterns = []
+    
     if source_hint == "BBC":
         patterns = [
-            r'<div[^>]*data-component="text-block"[^>]*>(.*?)</div>\s*</div>',
-            r'<article[^>]*>(.*?)</article>',
+            r'<div[^>]*data-component="text-block"[^>]*>(.*?)</div>',
         ]
-    elif source_hint in ("APP", "app.com.pk"):
+    elif source_hint == "APP":
         patterns = [
             r'<div[^>]*class="[^"]*entry-content[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*post-content[^"]*"[^>]*>(.*?)</div>',
-            r'<article[^>]*>(.*?)</article>',
-        ]
-    elif source_hint in ("Tanjug", "tanjug"):
-        patterns = [
-            r'<div[^>]*class="[^"]*news-content[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*article-body[^"]*"[^>]*>(.*?)</div>',
-            r'<article[^>]*>(.*?)</article>',
-        ]
-    elif source_hint in ("SAnews", "sanews"):
-        patterns = [
-            r'<div[^>]*class="[^"]*field--name-body[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*field-item[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*node__content[^"]*"[^>]*>(.*?)</div>',
-            r'<article[^>]*>(.*?)</article>',
         ]
     elif source_hint == "IRNA":
         patterns = [
-            r'<div[^>]*class="[^"]*body[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*news-body[^"]*"[^>]*>(.*?)</div>',
-            r'<div[^>]*class="[^"]*text[^"]*"[^>]*>(.*?)</div>',
-            r'<article[^>]*>(.*?)</article>',
+            r'<div[^>]*class="[^"]*(?:body|news-body|item-text|text|content)[^"]*"[^>]*>(.*?)</div>',
         ]
     
+    # Generic patterns (same as v2 that worked)
     generic = [
-        r'<article[^>]*>(.*?)</article>',
-        r'<div[^>]*class="[^"]*(?:article-body|story-body|entry-content|content-body|field-item|news-body|article-text|post-content|content__body|Paywall|article__content|article_body|rich-text|post-body)[^"]*"[^>]*>(.*?)</div>',
         r'<div[^>]*data-component="text-block"[^>]*>(.*?)</div>',
-        r'<div[^>]*class="[^"]*body[^"]*"[^>]*>(.*?)</div>',
+        r'<article[^>]*>(.*?)</article>',
+        r'<div[^>]*class="[^"]*(?:article-body|story-body|entry-content|content-body|field-item|news-body|article-text|post-content|content__body|Paywall|article__content|article_body|rich-text|post-body|Article__content)[^"]*"[^>]*>(.*?)</div>',
+        r'<body[^>]*>(.*?)</body>',
     ]
     patterns.extend(generic)
     
     for pat in patterns:
+        # For non-greedy patterns, use findall to collect all matches
         matches = re.findall(pat, h, re.DOTALL)
-        for m in matches:
-            b = m
-            b = re.sub(r"<br\s*/?>", "\n", b)
-            b = re.sub(r"<p[^>]*>", "\n", b)
-            b = re.sub(r"<li[^>]*>", "\n- ", b)
-            b = re.sub(r"</li>", "", b)
-            b = re.sub(r"<[^>]+>", " ", b)
-            b = html_mod.unescape(b)
-            b = re.sub(r"\n\s*\n", "\n", b)
-            b = re.sub(r"[ \t]+", " ", b)
-            b = b.strip()
-            if len(b) > 150:
-                return b[:3000]
+        if matches:
+            # Combine all matched blocks
+            combined = []
+            for m in matches:
+                b = m
+                b = re.sub(r"<br\s*/?>", "\n", b)
+                b = re.sub(r"<p[^>]*>", "\n", b)
+                b = re.sub(r"<li[^>]*>", "\n- ", b)
+                b = re.sub(r"</li>", "", b)
+                b = re.sub(r"<h[1-6][^>]*>", "\n", b)
+                b = re.sub(r"</h[1-6]>", "\n", b)
+                b = re.sub(r"<[^>]+>", " ", b)
+                b = html_mod.unescape(b)
+                combined.append(b)
+            
+            text = "\n".join(combined)
+            text = re.sub(r"\n\s*\n", "\n", text)
+            text = re.sub(r"[ \t]+", " ", text)
+            text = re.sub(r"\n +", "\n", text)
+            text = text.strip()
+            if len(text) > 150:
+                return text[:3000]
     
-    # Last resort: grab all <p> tags
+    # Last resort: all <p> tags
     paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', h, re.DOTALL)
     if paragraphs:
-        text = "\n".join(re.sub(r"<[^>]+>", " ", p).strip() for p in paragraphs)
+        text = "\n".join([re.sub(r"<[^>]+>", " ", p).strip() for p in paragraphs if len(p.strip()) > 10])
         text = html_mod.unescape(text)
         text = re.sub(r"\s+", " ", text).strip()
         if len(text) > 150:
@@ -210,36 +207,18 @@ for src, query, hint in gn_sources:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
 
-# 7. APP Pakistan - WordPress REST API (bypasses 403 blocking)
+# 7. APP Pakistan - Google News RSS (bypasses Cloudflare IP blocking)
 try:
-    api_url = "https://www.app.com.pk/wp-json/wp/v2/posts?per_page=50&_embed"
-    data = json.loads(fetch(api_url, 20))
-    for post in data:
-        t = html_mod.unescape(post.get("title",{}).get("rendered","")).strip()
-        t = re.sub(r"<[^>]+>", " ", t).strip()
-        link = post.get("link","")
-        excerpt = html_mod.unescape(post.get("excerpt",{}).get("rendered",""))
-        excerpt = re.sub(r"<[^>]+>", " ", excerpt).strip()
-        if t and is_cn(t + " " + excerpt):
-            if add("APP (Pakistan)", t, link, excerpt[:300], ""):
-                # Fetch full text from the post content
-                content = html_mod.unescape(post.get("content",{}).get("rendered",""))
-                if content:
-                    ft = extract(content, "APP")
-                    if ft:
-                        for r in reversed(results):
-                            if r["source"] == "APP (Pakistan)" and r["title"] == t:
-                                r["full_text"] = ft; break
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:app.com.pk+china&hl=en-US&gl=US&ceid=US:en"))
+    for it in items:
+        if is_cn(it["t"] + " " + it.get("d","")):
+            ft = ""
+            if it.get("l"):
+                try: ft = extract(fetch(it["l"], 15), "APP")
+                except: pass
+            add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
-    print(f"  APP API: {e}", file=sys.stderr)
-    # Fallback: try RSS
-    for rss_url in ["https://www.app.com.pk/feed/","https://www.app.com.pk/feed"]:
-        try:
-            items = parse_rss(fetch(rss_url, 20))
-            for it in items:
-                if is_cn(it["t"] + " " + it.get("d","")):
-                    add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), "")
-        except: pass
+    print(f"  APP: {e}", file=sys.stderr)
 print(f"APP: {source_counts.get('APP (Pakistan)', 0)}", file=sys.stderr)
 
 # 8. IRNA Iran
@@ -256,76 +235,32 @@ except Exception as e:
     print(f"  IRNA: {e}", file=sys.stderr)
 print(f"IRNA: {source_counts.get('IRNA (Iran)', 0)}", file=sys.stderr)
 
-# 9. Tanjug Serbia - Try multiple approaches
-# Official site may have moved; try Google News RSS + direct URLs
-tanjug_approaches = [
-    ("rss", ["https://www.tanjug.rs/en/feed","https://www.tanjug.rs/feed","https://tanjug.rs/feed"]),
-    ("homepage", ["https://www.tanjug.rs/en","https://www.tanjug.rs","https://tanjug.rs"]),
-]
-tanjug_got = False
-# First try Google News RSS (most reliable)
+# 9. Tanjug Serbia - Google News RSS (official site unreachable)
 try:
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:tanjug.rs&hl=en-US&gl=US&ceid=US:en"))
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:tanjug.rs+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
-            if add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ""):
-                if it.get("l"):
-                    try:
-                        ft = extract(fetch(it["l"], 15), "Tanjug")
-                        if ft:
-                            for r in reversed(results):
-                                if r["source"] == "Tanjug (Serbia)" and r["title"] == it["t"]:
-                                    r["full_text"] = ft; break
-                    except: pass
-    if source_counts.get("Tanjug (Serbia)", 0) > 0:
-        tanjug_got = True
+            ft = ""
+            if it.get("l"):
+                try: ft = extract(fetch(it["l"], 15), "Tanjug")
+                except: pass
+            add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
-    print(f"  Tanjug Google News: {e}", file=sys.stderr)
-
-# Fallback: direct RSS/homepage
-if not tanjug_got:
-    for approach, urls in tanjug_approaches:
-        for url in urls:
-            try:
-                if approach == "rss":
-                    items = parse_rss(fetch(url, 20))
-                    for it in items:
-                        if is_cn(it["t"] + " " + it.get("d","")):
-                            add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), "")
-                else:
-                    html = fetch(url, 20)
-                    links = hp_links_container(html)
-                    for link_url, text in links:
-                        if is_cn(text):
-                            add("Tanjug (Serbia)", text, link_url, "", "")
-                if source_counts.get("Tanjug (Serbia)", 0) > 0:
-                    tanjug_got = True; break
-            except Exception as e:
-                print(f"  Tanjug {url}: {e}", file=sys.stderr)
-        if tanjug_got: break
+    print(f"  Tanjug: {e}", file=sys.stderr)
 print(f"Tanjug: {source_counts.get('Tanjug (Serbia)', 0)}", file=sys.stderr)
 
-# 10. SAnews South Africa - Correct RSS feeds
-sanews_feeds = [
-    "https://www.sanews.gov.za/south-africa-news-stories.xml",
-    "https://www.sanews.gov.za/features.xml",
-]
-for feed_url in sanews_feeds:
-    try:
-        items = parse_rss(fetch(feed_url, 25))
-        for it in items:
-            if is_cn(it["t"] + " " + it.get("d","")):
-                if add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ""):
-                    if it.get("l"):
-                        try:
-                            ft = extract(fetch(it["l"], 20), "SAnews")
-                            if ft:
-                                for r in reversed(results):
-                                    if r["source"] == "SAnews (S.Africa)" and r["title"] == it["t"]:
-                                        r["full_text"] = ft; break
-                        except: pass
-    except Exception as e:
-        print(f"  SAnews feed {feed_url}: {e}", file=sys.stderr)
+# 10. SAnews South Africa - Google News RSS (China-filtered)
+try:
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:sanews.gov.za+china&hl=en-US&gl=US&ceid=US:en"))
+    for it in items:
+        if is_cn(it["t"] + " " + it.get("d","")):
+            ft = ""
+            if it.get("l"):
+                try: ft = extract(fetch(it["l"], 15), "SAnews")
+                except: pass
+            add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
+except Exception as e:
+    print(f"  SAnews: {e}", file=sys.stderr)
 print(f"SAnews: {source_counts.get('SAnews (S.Africa)', 0)}", file=sys.stderr)
 
 # Output
