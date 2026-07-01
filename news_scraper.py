@@ -241,37 +241,37 @@ for src, query, hint in gn_sources:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
 
-# 7. APP Pakistan - Google News RSS (bypasses Cloudflare IP blocking)
+# 7. The Guardian China - Direct RSS with full text
 try:
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:app.com.pk+china&hl=en-US&gl=US&ceid=US:en"))
+    items = parse_rss(fetch("https://www.theguardian.com/world/china/rss"))
     for it in items:
-        if is_cn(it["t"] + " " + it.get("d","")):
+        if is_cn(it["t"] + " " + it.get("d","")) or True:  # China section, filter by section
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = fetch_article_text(it["l"], "APP", 15)
+                    article_ft = fetch_article_text(it["l"], "BBC", 15)  # Guardian similar to BBC
                     if article_ft: ft = article_ft
                 except: pass
-            add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
+            add("The Guardian", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
-    print(f"  APP: {e}", file=sys.stderr)
-print(f"APP: {source_counts.get('APP (Pakistan)', 0)}", file=sys.stderr)
+    print(f"  Guardian: {e}", file=sys.stderr)
+print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 
-# 8. SAnews South Africa - Google News RSS (China-filtered)
+# 8. VOA News China - RSS feed
 try:
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:sanews.gov.za+china&hl=en-US&gl=US&ceid=US:en"))
+    items = parse_rss(fetch("https://www.voanews.com/api/zq$vtekoe_$kymrq"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = fetch_article_text(it["l"], "SAnews", 15)
+                    article_ft = fetch_article_text(it["l"], "BBC", 15)
                     if article_ft: ft = article_ft
                 except: pass
-            add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
+            add("VOA News", it["t"], it.get("l",""), it.get("d",""), ft)
 except Exception as e:
-    print(f"  SAnews: {e}", file=sys.stderr)
-print(f"SAnews: {source_counts.get('SAnews (S.Africa)', 0)}", file=sys.stderr)
+    print(f"  VOA: {e}", file=sys.stderr)
+print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
 
 # Output
 out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results), "articles": results}
