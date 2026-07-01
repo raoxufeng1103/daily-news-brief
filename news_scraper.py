@@ -225,37 +225,7 @@ except Exception as e:
     print(f"  APP: {e}", file=sys.stderr)
 print(f"APP: {source_counts.get('APP (Pakistan)', 0)}", file=sys.stderr)
 
-# 8. IRNA Iran
-try:
-    items = parse_rss(fetch("https://en.irna.ir/rss"))
-    for it in items:
-        if is_cn(it["t"] + " " + it.get("d","")):
-            ft = ""
-            if it.get("l"):
-                try: ft = extract(fetch(it["l"], 15), "IRNA")
-                except: pass
-            add("IRNA (Iran)", it["t"], it.get("l",""), it.get("d",""), ft)
-except Exception as e:
-    print(f"  IRNA: {e}", file=sys.stderr)
-print(f"IRNA: {source_counts.get('IRNA (Iran)', 0)}", file=sys.stderr)
-
-# 9. Tanjug Serbia - Google News RSS (official site unreachable)
-try:
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:tanjug.rs+china&hl=en-US&gl=US&ceid=US:en"))
-    for it in items:
-        if is_cn(it["t"] + " " + it.get("d","")):
-            ft = it.get("d","")
-            if it.get("l"):
-                try:
-                    article_ft = extract(fetch(it["l"], 15), "Tanjug")
-                    if article_ft: ft = article_ft
-                except: pass
-            add("Tanjug (Serbia)", it["t"], it.get("l",""), it.get("d",""), ft)
-except Exception as e:
-    print(f"  Tanjug: {e}", file=sys.stderr)
-print(f"Tanjug: {source_counts.get('Tanjug (Serbia)', 0)}", file=sys.stderr)
-
-# 10. SAnews South Africa - Google News RSS (China-filtered)
+# 8. SAnews South Africa - Google News RSS (China-filtered)
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:sanews.gov.za+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
