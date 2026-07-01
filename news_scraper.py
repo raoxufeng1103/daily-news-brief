@@ -259,7 +259,7 @@ print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 
 # 8. VOA News China - RSS feed
 try:
-    items = parse_rss(fetch("https://www.voanews.com/api/zq$vtekoe_$kymrq"))
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
             ft = it.get("d","")
