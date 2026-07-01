@@ -40,6 +40,66 @@ def translate(texts):
         time.sleep(0.5)
     return results
 
+def translate_full(articles):
+    """Translate full_text for articles that have it. Uses whichever API key is available."""
+    # Try DeepSeek first, then GLM
+    keys = []
+    for env_key in ["DEEPSEEK_API_KEY", "GLM_API_KEY"]:
+        k = os.environ.get(env_key, "")
+        if k and k != "***" and len(k) > 10:
+            keys.append((env_key, k))
+    if not keys:
+        return {}
+    
+    api_name, api_key = keys[0]
+    if api_name == "DEEPSEEK_API_KEY":
+        api_url = "https://api.deepseek.com/v1/chat/completions"
+        model = "deepseek-chat"
+    else:
+        api_url = "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+        model = "glm-4.7-flash"
+    
+    ctx2 = ssl.create_default_context()
+    ctx2.check_hostname = False
+    ctx2.verify_mode = ssl.CERT_NONE
+    
+    # Collect articles with full_text > 80
+    items_to_translate = []
+    for a in articles:
+        ft = a.get("full_text", "")
+        if ft and len(ft) > 80:
+            items_to_translate.append((id(a), ft[:800]))
+    
+    if not items_to_translate:
+        return {}
+    
+    results = {}
+    sep = "\n===NEXT===\n"
+    batch_size = 4
+    
+    for i in range(0, len(items_to_translate), batch_size):
+        chunk = items_to_translate[i:i+batch_size]
+        texts = [t[1] for t in chunk]
+        combined = sep.join(texts)
+        prompt = "Translate these English news excerpts to Chinese. Keep the separator '===NEXT==='. Return ONLY Chinese, one per section, separated by '===NEXT===':\n\n" + combined
+        
+        try:
+            payload = json.dumps({"model":model,"messages":[{"role":"user","content":prompt}],"max_tokens":4096}).encode()
+            req = urllib.request.Request(api_url, data=payload,
+                headers={"Authorization":f"Bearer {api_key}","Content-Type":"application/json"})
+            resp = json.loads(urllib.request.urlopen(req, timeout=90, context=ctx2).read())
+            text = resp["choices"][0]["message"]["content"].strip()
+            parts = text.split("===NEXT===")
+            for j, (aid, _) in enumerate(chunk):
+                if j < len(parts):
+                    results[aid] = parts[j].strip()
+        except:
+            for aid, _ in chunk:
+                results[aid] = ""
+        time.sleep(0.5)
+    
+    return results
+
 def build(data):
     doc = Document()
     s = doc.sections[0]
@@ -95,6 +155,10 @@ def build(data):
             cn_map[id(item)] = cn[idx] if idx < len(cn) else ""
             idx += 1
     
+    # Translate full texts
+    print("Translating full texts to Chinese...", flush=True)
+    ft_cn_map = translate_full(arts)
+    
     gidx = 0
     for src,items in groups.items():
         color,full = SRC_META.get(src,("333333",src))
@@ -143,14 +207,23 @@ def build(data):
             ft = item.get("full_text","")
             if ft:
                 ft = ft.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&").replace("&#x27;","'").replace("&quot;",'"')
+            ft_cn = ft_cn_map.get(id(item), "")
             if ft and len(ft) > 80:
                 fp = doc.add_paragraph()
                 fp.paragraph_format.space_before = Pt(3)
                 fp.paragraph_format.left_indent = Cm(0.7)
-                lb = fp.add_run("Full Text: "); lb.font.size = Pt(8)
+                lb = fp.add_run("[EN] "); lb.font.size = Pt(7)
                 lb.bold = True; lb.font.color.rgb = RGBColor(0x88,0x88,0x88)
-                fr = fp.add_run(ft[:1500]); fr.font.size = Pt(9)
+                fr = fp.add_run(ft[:1200]); fr.font.size = Pt(8)
                 fr.font.color.rgb = RGBColor(0x33,0x33,0x33)
+            if ft_cn:
+                fcp = doc.add_paragraph()
+                fcp.paragraph_format.space_before = Pt(2)
+                fcp.paragraph_format.left_indent = Cm(0.7)
+                lb2 = fcp.add_run("[中文] "); lb2.font.size = Pt(7)
+                lb2.bold = True; lb2.font.color.rgb = RGBColor(0x88,0x88,0x88)
+                fr2 = fcp.add_run(ft_cn); fr2.font.size = Pt(8)
+                fr2.font.color.rgb = RGBColor(0x55,0x55,0x55)
             
             dp = doc.add_paragraph()
             dp.paragraph_format.space_before = Pt(4); dp.paragraph_format.space_after = Pt(0)
