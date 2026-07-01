@@ -113,7 +113,7 @@ def parse_rss(text):
             for ln in item.findall("{http://www.w3.org/2005/Atom}link"):
                 link = ln.get("href", "")
                 break
-        d = re.sub(r"<[^>]+>", "", (item.findtext("description") or "")[:300])
+        d = re.sub(r"<[^>]+>", "", (item.findtext("description") or "")[:2000])
         if t: res.append({"t": t, "l": link, "d": d})
     if not res:
         ns = "{http://www.w3.org/2005/Atom}"
@@ -151,7 +151,7 @@ def add(s, t, u, sm, ft):
     t_norm = t.lower().strip()
     if any(r["title"].lower().strip() == t_norm for r in results):
         return False
-    results.append({"source": s, "title": t, "url": u, "summary": sm[:300], "full_text": ft[:3000]})
+    results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:3000]})
     source_counts[s] = source_counts.get(s, 0) + 1
     return True
 
@@ -174,7 +174,7 @@ for feed_url in bbc_feeds:
                     add("BBC", it["t"], it["l"], it["d"], "")
                     if it["l"]:
                         try:
-                            ft = extract(fetch(it["l"], 15), "BBC")
+                            ft = fetch_article_text(it["l"], "BBC")
                             if ft:
                                 for r in reversed(results):
                                     if r["source"] == "BBC" and r["title"] == it["t"]:
@@ -201,7 +201,7 @@ for src, query, hint in gn_sources:
                 ft = it.get("d","")
                 if it["l"]:
                     try:
-                        article_ft = extract(fetch(it["l"], 15), hint)
+                        article_ft = fetch_article_text(it["l"], hint)
                         if article_ft: ft = article_ft
                     except: pass
                 add(src, it["t"], it.get("l",""), it.get("d",""), ft)
@@ -217,7 +217,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = extract(fetch(it["l"], 15), "APP")
+                    article_ft = fetch_article_text(it["l"], "APP")
                     if article_ft: ft = article_ft
                 except: pass
             add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
@@ -233,7 +233,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = extract(fetch(it["l"], 15), "SAnews")
+                    article_ft = fetch_article_text(it["l"], "SAnews")
                     if article_ft: ft = article_ft
                 except: pass
             add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
