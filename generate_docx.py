@@ -56,11 +56,11 @@ def build(data):
     doc.add_paragraph("")
     
     t = doc.add_paragraph(); t.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = t.add_run("涉 华 新 闻 日 报"); r.font.size = Pt(36); r.bold = True
+    r = t.add_run("参 考 消 息"); r.font.size = Pt(36); r.bold = True
     r.font.color.rgb = RGBColor(0xC4,0x1E,0x3A)
     doc.add_paragraph("")
     t2 = doc.add_paragraph(); t2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r2 = t2.add_run("CHINA NEWS BRIEFING"); r2.font.size = Pt(20)
+    r2 = t2.add_run("国外视角下的中国"); r2.font.size = Pt(20)
     r2.font.color.rgb = RGBColor(0x33,0x33,0x33)
     doc.add_paragraph("")
     b2 = doc.add_paragraph(); b2.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -77,7 +77,7 @@ def build(data):
     arts = data["articles"]
     ft = sum(1 for a in arts if a.get("full_text") and len(a["full_text"])>80)
     sp = doc.add_paragraph(); sp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    r = sp.add_run(f" {len(arts)} articles  ·  10 sources  ·  {ft} with full text")
+    r = sp.add_run(f" {len(arts)} articles  ·  8 sources  ·  {ft} with full text")
     r.font.size = Pt(11); r.font.color.rgb = RGBColor(0x88,0x88,0x88)
     doc.add_page_break()
     
@@ -172,6 +172,6 @@ if __name__ == "__main__":
     from datetime import datetime
     dt = datetime.now()
     cn_date = f"{dt.year}年{dt.month}月{dt.day}日"
-    out = f"{cn_date}_涉华新闻日报.docx"
+    out = f"{cn_date}_参考消息-国外视角下的中国.docx"
     doc.save(out)
     print(f"Saved: {out}", flush=True)
