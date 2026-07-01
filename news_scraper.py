@@ -174,7 +174,7 @@ for feed_url in bbc_feeds:
                     add("BBC", it["t"], it["l"], it["d"], "")
                     if it["l"]:
                         try:
-                            ft = fetch_article_text(it["l"], "BBC")
+                            ft = extract(fetch(it["l"], 15), "BBC")
                             if ft:
                                 for r in reversed(results):
                                     if r["source"] == "BBC" and r["title"] == it["t"]:
@@ -195,13 +195,14 @@ gn_sources = [
 ]
 for src, query, hint in gn_sources:
     try:
+        time.sleep(2)  # Avoid Google rate limiting
         items = parse_rss(fetch(f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"))
         for it in items:
             if is_cn(it["t"]):
                 ft = it.get("d","")
                 if it["l"]:
                     try:
-                        article_ft = fetch_article_text(it["l"], hint)
+                        article_ft = extract(fetch(it["l"], 15), hint)
                         if article_ft: ft = article_ft
                     except: pass
                 add(src, it["t"], it.get("l",""), it.get("d",""), ft)
@@ -217,7 +218,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = fetch_article_text(it["l"], "APP")
+                    article_ft = extract(fetch(it["l"], 15), "APP")
                     if article_ft: ft = article_ft
                 except: pass
             add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
@@ -233,7 +234,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = fetch_article_text(it["l"], "SAnews")
+                    article_ft = extract(fetch(it["l"], 15), "SAnews")
                     if article_ft: ft = article_ft
                 except: pass
             add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
