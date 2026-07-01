@@ -103,6 +103,37 @@ def extract(html_text, source_hint=""):
             return text[:3000]
     return ""
 
+def fetch_article_text(url, hint="", t=20):
+    """Get article body: try direct fetch, then Jina AI proxy"""
+    # Method 1: Direct fetch
+    try:
+        html = fetch(url, t, retries=1)
+        text = extract(html, hint)
+        if text and len(text) > 200:
+            return text
+    except: pass
+    
+    # Method 2: Jina AI reader proxy (free, bypasses paywalls)
+    try:
+        proxy = "https://r.jina.ai/" + url
+        req = urllib.request.Request(proxy, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "text/plain"
+        })
+        ctx2 = ssl.create_default_context()
+        ctx2.check_hostname = False; ctx2.verify_mode = ssl.CERT_NONE
+        with urllib.request.urlopen(req, timeout=30, context=ctx2) as r:
+            text = r.read().decode("utf-8","replace")
+            # Clean Jina AI header lines
+            text = re.sub(r'^Title:.*\n', '', text)
+            text = re.sub(r'^URL Source:.*\n', '', text)
+            text = text.strip()
+            if text and len(text) > 200:
+                return text[:3000]
+    except: pass
+    
+    return ""
+
 def parse_rss(text):
     root = ET.fromstring(text)
     res = []
@@ -174,7 +205,7 @@ for feed_url in bbc_feeds:
                     add("BBC", it["t"], it["l"], it["d"], "")
                     if it["l"]:
                         try:
-                            ft = extract(fetch(it["l"], 15), "BBC")
+                            ft = fetch_article_text(it["l"], "BBC", 15)
                             if ft:
                                 for r in reversed(results):
                                     if r["source"] == "BBC" and r["title"] == it["t"]:
@@ -202,7 +233,7 @@ for src, query, hint in gn_sources:
                 ft = it.get("d","")
                 if it["l"]:
                     try:
-                        article_ft = extract(fetch(it["l"], 15), hint)
+                        article_ft = fetch_article_text(it["l"], hint, 15)
                         if article_ft: ft = article_ft
                     except: pass
                 add(src, it["t"], it.get("l",""), it.get("d",""), ft)
@@ -218,7 +249,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = extract(fetch(it["l"], 15), "APP")
+                    article_ft = fetch_article_text(it["l"], "APP", 15)
                     if article_ft: ft = article_ft
                 except: pass
             add("APP (Pakistan)", it["t"], it.get("l",""), it.get("d",""), ft)
@@ -234,7 +265,7 @@ try:
             ft = it.get("d","")
             if it.get("l"):
                 try:
-                    article_ft = extract(fetch(it["l"], 15), "SAnews")
+                    article_ft = fetch_article_text(it["l"], "SAnews", 15)
                     if article_ft: ft = article_ft
                 except: pass
             add("SAnews (S.Africa)", it["t"], it.get("l",""), it.get("d",""), ft)
