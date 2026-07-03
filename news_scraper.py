@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-"""China News Aggregator v3 - 10 sources, full text, 10-article limit, improved extraction"""
+"""China News Aggregator v4 - 8 sources, full text, 10-article limit, date filtering (last 2 days)"""
 import urllib.request, ssl, json, time, re, xml.etree.ElementTree as ET, sys, html as html_mod
+from datetime import datetime, timedelta, timezone
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36"}
 MAX_PER_SOURCE = 10
+
+# Date cutoff: articles must be published within last 2 days (UTC)
+CUTOFF = datetime.now(timezone.utc) - timedelta(days=2)
 
 CKW = ["china","chinese","beijing","xi jinping","li qiang","wang yi",
        "taiwan","hong kong","xinjiang","tibet","south china sea",
@@ -134,6 +138,31 @@ def fetch_article_text(url, hint="", t=20):
     
     return ""
 
+def parse_date(date_str):
+    """Parse RFC 2822 date from RSS pubDate. Returns datetime or None."""
+    if not date_str:
+        return None
+    # Try common RSS date formats
+    formats = [
+        "%a, %d %b %Y %H:%M:%S %z",   # RFC 2822: Mon, 30 Jun 2026 12:00:00 GMT
+        "%a, %d %b %Y %H:%M:%S %Z",
+        "%Y-%m-%dT%H:%M:%S%z",          # ISO 8601
+        "%Y-%m-%dT%H:%M:%SZ",
+        "%Y-%m-%d %H:%M:%S",
+    ]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str.strip(), fmt)
+        except ValueError:
+            continue
+    # Try parsing with dateutil-style fallback: strip timezone and parse
+    try:
+        clean = re.sub(r"\s+[A-Z]{2,4}$", "", date_str.strip())
+        return datetime.strptime(clean, "%a, %d %b %Y %H:%M:%S")
+    except:
+        pass
+    return None
+
 def parse_rss(text):
     root = ET.fromstring(text)
     res = []
@@ -145,7 +174,8 @@ def parse_rss(text):
                 link = ln.get("href", "")
                 break
         d = re.sub(r"<[^>]+>", "", (item.findtext("description") or "")[:2000])
-        if t: res.append({"t": t, "l": link, "d": d})
+        pub = item.findtext("pubDate") or ""
+        if t: res.append({"t": t, "l": link, "d": d, "pub": pub})
     if not res:
         ns = "{http://www.w3.org/2005/Atom}"
         for entry in root.findall(ns + "entry"):
@@ -155,7 +185,8 @@ def parse_rss(text):
                 link = ln.get("href", "")
                 break
             d = re.sub(r"<[^>]+>", "", (entry.findtext(ns + "summary") or "")[:300])
-            if t: res.append({"t": t, "l": link, "d": d})
+            pub = entry.findtext(ns + "published") or entry.findtext(ns + "updated") or ""
+            if t: res.append({"t": t, "l": link, "d": d, "pub": pub})
     return res
 
 def hp_links_container(html):
@@ -174,7 +205,17 @@ def hp_links_container(html):
 results = []
 source_counts = {}
 
-def add(s, t, u, sm, ft):
+def is_recent(pub_date_str):
+    """Check if article pubDate is within CUTOFF (last 2 days).
+    Returns True if date is recent or unparseable (err on inclusion side)."""
+    if not pub_date_str:
+        return True  # No date → include (likely RSS without pubDate, e.g. Google News sometimes)
+    dt = parse_date(pub_date_str)
+    if dt is None:
+        return True  # Can't parse → include
+    return dt >= CUTOFF
+
+def add(s, t, u, sm, ft, pub=""):
     if source_counts.get(s, 0) >= MAX_PER_SOURCE:
         return False
     if len(results) >= 500:
@@ -202,7 +243,7 @@ for feed_url in bbc_feeds:
             if source_counts.get("BBC", 0) < MAX_PER_SOURCE:
                 # BBC China feed doesn't need keyword filter
                 if "china" in feed_url or is_cn(t_combined):
-                    add("BBC", it["t"], it["l"], it["d"], "")
+                    add("BBC", it["t"], it["l"], it["d"], "", it.get("pub",""))
                     if it["l"]:
                         try:
                             ft = fetch_article_text(it["l"], "BBC", 15)
@@ -236,7 +277,7 @@ for src, query, hint in gn_sources:
                         article_ft = fetch_article_text(it["l"], hint, 15)
                         if article_ft: ft = article_ft
                     except: pass
-                add(src, it["t"], it.get("l",""), it.get("d",""), ft)
+                add(src, it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
     except Exception as e:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
@@ -252,7 +293,7 @@ try:
                     article_ft = fetch_article_text(it["l"], "BBC", 15)  # Guardian similar to BBC
                     if article_ft: ft = article_ft
                 except: pass
-            add("The Guardian", it["t"], it.get("l",""), it.get("d",""), ft)
+            add("The Guardian", it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
 except Exception as e:
     print(f"  Guardian: {e}", file=sys.stderr)
 print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
@@ -268,7 +309,7 @@ try:
                     article_ft = fetch_article_text(it["l"], "BBC", 15)
                     if article_ft: ft = article_ft
                 except: pass
-            add("VOA News", it["t"], it.get("l",""), it.get("d",""), ft)
+            add("VOA News", it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
 except Exception as e:
     print(f"  VOA: {e}", file=sys.stderr)
 print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
