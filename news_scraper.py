@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""China News Aggregator v4 - 8 sources, full text, 10-article limit, date filtering (last 2 days)"""
+"""China News Aggregator v4 - 9 sources, full text, 10-article limit, date filtering (last 2 days)"""
 import urllib.request, ssl, json, time, re, xml.etree.ElementTree as ET, sys, html as html_mod
 from datetime import datetime, timedelta, timezone
 
@@ -265,6 +265,7 @@ gn_sources = [
     ("AP", "site:apnews.com+china", "AP"),
     ("AFP", "site:afp.com+china", "AFP"),
     ("Nikkei Asia", "site:asia.nikkei.com+china", "Nikkei"),
+    ("CNN", "site:cnn.com+china", "CNN"),
 ]
 for src, query, hint in gn_sources:
     try:
@@ -299,7 +300,7 @@ except Exception as e:
     print(f"  Guardian: {e}", file=sys.stderr)
 print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 
-# 8. VOA News China - RSS feed
+# 9. VOA News China - RSS feed
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
