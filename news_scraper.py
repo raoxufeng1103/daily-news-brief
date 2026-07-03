@@ -283,13 +283,17 @@ for src, query, hint in gn_sources:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
 
-# 7. CNN - Google News RSS (paywall, description only)
+# 7. CNN - Google News RSS (short timeout, description only)
 try:
     time.sleep(2)
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:cnn.com+china&hl=en-US&gl=US&ceid=US:en"))
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:cnn.com+china&hl=en-US&gl=US&ceid=US:en", t=15, retries=0))
+    added = 0
     for it in items:
+        if added >= MAX_PER_SOURCE:
+            break
         if is_cn(it["t"] + " " + it.get("d","")):
-            add("CNN", it["t"], it.get("l",""), it.get("d",""), it.get("d",""), it.get("pub",""))
+            if add("CNN", it["t"], it.get("l",""), it.get("d",""), it.get("d",""), it.get("pub","")):
+                added += 1
 except Exception as e:
     print(f"  CNN: {e}", file=sys.stderr)
 print(f"CNN: {source_counts.get('CNN', 0)}", file=sys.stderr)
@@ -310,7 +314,7 @@ except Exception as e:
     print(f"  Guardian: {e}", file=sys.stderr)
 print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 
-# 10. VOA News China - RSS feed
+# 9. VOA News China - RSS feed
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
