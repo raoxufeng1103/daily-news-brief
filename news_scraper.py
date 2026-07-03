@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""China News Aggregator v4 - 10 sources, full text, 10-article limit, date filtering (last 2 days)"""
+"""China News Aggregator v4 - 9 sources, full text, 10-article limit, date filtering (last 2 days)"""
 import urllib.request, ssl, json, time, re, xml.etree.ElementTree as ET, sys, html as html_mod
 from datetime import datetime, timedelta, timezone
 
@@ -107,15 +107,35 @@ def extract(html_text, source_hint=""):
             return text[:3000]
     return ""
 
-def fetch_article_text(url, hint="", t=15):
-    """Get article body via direct fetch only (Jina AI removed for reliability)."""
+def fetch_article_text(url, hint="", t=20):
+    """Get article body: try direct fetch, then Jina AI proxy"""
+    # Method 1: Direct fetch
     try:
-        html = fetch(url, t, retries=0)
+        html = fetch(url, t, retries=1)
         text = extract(html, hint)
         if text and len(text) > 200:
-            return text[:3000]
-    except:
-        pass
+            return text
+    except: pass
+    
+    # Method 2: Jina AI reader proxy (free, bypasses paywalls)
+    try:
+        proxy = "https://r.jina.ai/" + url
+        req = urllib.request.Request(proxy, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "text/plain"
+        })
+        ctx2 = ssl.create_default_context()
+        ctx2.check_hostname = False; ctx2.verify_mode = ssl.CERT_NONE
+        with urllib.request.urlopen(req, timeout=30, context=ctx2) as r:
+            text = r.read().decode("utf-8","replace")
+            # Clean Jina AI header lines
+            text = re.sub(r'^Title:.*\n', '', text)
+            text = re.sub(r'^URL Source:.*\n', '', text)
+            text = text.strip()
+            if text and len(text) > 200:
+                return text[:3000]
+    except: pass
+    
     return ""
 
 def parse_date(date_str):
@@ -245,6 +265,7 @@ gn_sources = [
     ("AP", "site:apnews.com+china", "AP"),
     ("AFP", "site:afp.com+china", "AFP"),
     ("Nikkei Asia", "site:asia.nikkei.com+china", "Nikkei"),
+    ("CNN", "site:cnn.com+china", "CNN"),
 ]
 for src, query, hint in gn_sources:
     try:
@@ -253,8 +274,7 @@ for src, query, hint in gn_sources:
         for it in items:
             if is_cn(it["t"]):
                 ft = it.get("d","")
-                # Only fetch article text for non-paywall sources (BBC, Guardian)
-                if hint in ("BBC", "Guardian", "The Guardian") and it["l"]:
+                if it["l"]:
                     try:
                         article_ft = fetch_article_text(it["l"], hint, 15)
                         if article_ft: ft = article_ft
@@ -264,22 +284,7 @@ for src, query, hint in gn_sources:
         print(f"  {src}: {e}", file=sys.stderr)
     print(f"{src}: {source_counts.get(src, 0)}", file=sys.stderr)
 
-# 7. CNN - Google News RSS (short timeout, description only)
-try:
-    time.sleep(2)
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:cnn.com+china&hl=en-US&gl=US&ceid=US:en", t=15, retries=0))
-    added = 0
-    for it in items:
-        if added >= MAX_PER_SOURCE:
-            break
-        if is_cn(it["t"] + " " + it.get("d","")):
-            if add("CNN", it["t"], it.get("l",""), it.get("d",""), it.get("d",""), it.get("pub","")):
-                added += 1
-except Exception as e:
-    print(f"  CNN: {e}", file=sys.stderr)
-print(f"CNN: {source_counts.get('CNN', 0)}", file=sys.stderr)
-
-# 8. The Guardian China - Direct RSS with full text
+# 7. The Guardian China - Direct RSS with full text
 try:
     items = parse_rss(fetch("https://www.theguardian.com/world/china/rss"))
     for it in items:
@@ -295,7 +300,7 @@ except Exception as e:
     print(f"  Guardian: {e}", file=sys.stderr)
 print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 
-# 9. VOA News China - RSS feed
+# 8. VOA News China - RSS feed
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
     for it in items:
