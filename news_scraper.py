@@ -227,7 +227,8 @@ def add(s, t, u, sm, ft, pub=""):
     source_counts[s] = source_counts.get(s, 0) + 1
     return True
 
-print("ChinaNewsAgg v3 starting...", file=sys.stderr)
+print("ChinaNewsAgg v4 starting...", file=sys.stderr)
+filtered_count = {"by_date": 0, "by_keyword": 0, "by_duplicate": 0, "by_limit": 0}
 
 # 1. BBC - China-specific + Asia RSS
 bbc_feeds = [
@@ -316,6 +317,7 @@ print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
 
 # Output
 out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results), "articles": results}
+print(f"\nFiltered: date={filtered_count["by_date"]} keyword={filtered_count["by_keyword"]} dup={filtered_count["by_duplicate"]} limit={filtered_count["by_limit"]}", file=sys.stderr)
 print(f"\n{'='*50}", file=sys.stderr)
 print(f"TOTAL: {len(results)} articles from {len(source_counts)} sources", file=sys.stderr)
 for src, cnt in sorted(source_counts.items()):
