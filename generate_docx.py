@@ -65,7 +65,7 @@ def translate(texts, batch_size=20):
             payload = json.dumps({"model":model,"messages":[{"role":"user","content":prompt}],"max_tokens":2048}).encode()
             req = urllib.request.Request(api_url, data=payload,
                 headers={"Authorization":f"Bearer {api_key}","Content-Type":"application/json"})
-            resp = json.loads(urllib.request.urlopen(req, timeout=60, context=ctx).read())
+            resp = json.loads(urllib.request.urlopen(req, timeout=30, context=ctx).read())
             text = resp["choices"][0]["message"]["content"].strip()
             lines = [l.strip().lstrip("- ").strip('"').strip("'") for l in text.split("\n") if l.strip()]
             results.extend(lines[:len(chunk)])
@@ -97,7 +97,7 @@ def translate_full(articles):
             payload = json.dumps({"model":model,"messages":[{"role":"user","content":prompt}],"max_tokens":4096}).encode()
             req = urllib.request.Request(api_url, data=payload,
                 headers={"Authorization":f"Bearer {api_key}","Content-Type":"application/json"})
-            resp = json.loads(urllib.request.urlopen(req, timeout=90, context=ctx).read())
+            resp = json.loads(urllib.request.urlopen(req, timeout=30, context=ctx).read())
             text = resp["choices"][0]["message"]["content"].strip()
             parts = text.split("===NEXT===")
             for j, (aid, _) in enumerate(chunk):
