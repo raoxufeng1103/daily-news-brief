@@ -150,11 +150,16 @@ def is_recent(pub_date_str):
 
 def add(s, t, u, sm, ft, pub=""):
     if source_counts.get(s, 0) >= MAX_PER_SOURCE:
+        filtered_count["by_limit"] += 1
         return False
     if len(results) >= 500:
+        filtered_count["by_limit"] += 1
+        return False
+    if not is_recent(pub):
         return False
     t_norm = t.lower().strip()
     if any(r["title"].lower().strip() == t_norm for r in results):
+        filtered_count["by_duplicate"] += 1
         return False
     results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:3000], "pub_date": pub})
     source_counts[s] = source_counts.get(s, 0) + 1
