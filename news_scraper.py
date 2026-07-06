@@ -137,49 +137,6 @@ def parse_date(date_str):
     if m:
         return datetime(*[int(x) for x in m.groups()], tzinfo=timezone.utc)
     return None
-
-def parse_rss(text):
-    root = ET.fromstring(text)
-    res = []
-    for item in root.findall(".//item"):
-        t = (item.findtext("title") or "").strip()
-        link = (item.findtext("link") or "").strip()
-        if not link:
-            for ln in item.findall("{http://www.w3.org/2005/Atom}link"):
-                link = ln.get("href", "")
-                break
-        d = re.sub(r"<[^>]+>", "", (item.findtext("description") or "")[:2000])
-        pub = item.findtext("pubDate") or ""
-        if t: res.append({"t": t, "l": link, "d": d, "pub": pub})
-    if not res:
-        ns = "{http://www.w3.org/2005/Atom}"
-        for entry in root.findall(ns + "entry"):
-            t = (entry.findtext(ns + "title") or "").strip()
-            link = ""
-            for ln in entry.findall(ns + "link"):
-                link = ln.get("href", "")
-                break
-            d = re.sub(r"<[^>]+>", "", (entry.findtext(ns + "summary") or "")[:300])
-            pub = entry.findtext(ns + "published") or entry.findtext(ns + "updated") or ""
-            if t: res.append({"t": t, "l": link, "d": d, "pub": pub})
-    return res
-
-def hp_links_container(html):
-    links = set()
-    for m in re.finditer(r'<(?:h[1-4]|div)[^>]*>\s*<a[^>]*href=[\"\'](https?://[^\"\']+)[\"\'][^>]*>(.*?)</a>', html, re.DOTALL):
-        text = re.sub(r"<[^>]+>", "", m.group(2)).strip()
-        if len(text) > 15 and not any(skip in text.lower() for skip in ["read more","click here","ad","subscribe","cookie","privacy"]):
-            links.add((m.group(1), text))
-    if len(links) < 3:
-        for m in re.finditer(r'<a[^>]*href=[\"\'](https?://[^\"\']+)[\"\'][^>]*>([^<]{20,})</a>', html):
-            text = m.group(2).strip()
-            if not any(skip in text.lower() for skip in ["read more","click here","ad","subscribe","cookie","privacy"]):
-                links.add((m.group(1), text))
-    return list(links)
-
-results = []
-source_counts = {}
-
 def is_recent(pub_date_str):
     """Check if article pubDate is within CUTOFF (last 2 days)."""
     dt = parse_date(pub_date_str)
