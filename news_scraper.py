@@ -119,28 +119,23 @@ def fetch_article_text(url, hint="", t=15):
     return ""
 
 def parse_date(date_str):
-    """Parse RFC 2822 date from RSS pubDate. Returns datetime or None."""
+    """Parse RSS pubDate with regex (avoids strptime timezone issues across platforms).
+    Returns timezone-aware UTC datetime or None."""
     if not date_str:
         return None
-    # Try common RSS date formats
-    formats = [
-        "%a, %d %b %Y %H:%M:%S %z",   # RFC 2822: Mon, 30 Jun 2026 12:00:00 GMT
-        "%a, %d %b %Y %H:%M:%S %Z",
-        "%Y-%m-%dT%H:%M:%S%z",          # ISO 8601
-        "%Y-%m-%dT%H:%M:%SZ",
-        "%Y-%m-%d %H:%M:%S",
-    ]
-    for fmt in formats:
-        try:
-            return datetime.strptime(date_str.strip(), fmt)
-        except ValueError:
-            continue
-    # Try parsing with dateutil-style fallback: strip timezone and parse
-    try:
-        clean = re.sub(r"\s+[A-Z]{2,4}$", "", date_str.strip())
-        return datetime.strptime(clean, "%a, %d %b %Y %H:%M:%S")
-    except:
-        pass
+    s = date_str.strip()
+    # RFC 2822: "Thu, 02 Jul 2026 09:21:31 GMT" or "+0000"
+    m = re.match(r'\w{3}, (\d{1,2}) (\w{3}) (\d{4}) (\d{2}):(\d{2}):(\d{2})', s)
+    if m:
+        day, mon, year, hh, mm, ss = m.groups()
+        months = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,
+                  'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
+        if mon in months:
+            return datetime(int(year), months[mon], int(day), int(hh), int(mm), int(ss), tzinfo=timezone.utc)
+    # ISO 8601
+    m = re.match(r'(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})', s)
+    if m:
+        return datetime(*[int(x) for x in m.groups()], tzinfo=timezone.utc)
     return None
 
 def parse_rss(text):
@@ -186,24 +181,15 @@ results = []
 source_counts = {}
 
 def is_recent(pub_date_str):
-    """Check if article pubDate is within CUTOFF (last 2 days).
-    No date or unparseable → exclude (strict mode)."""
-    if not pub_date_str:
-        filtered_count["by_date"] += 1
-        return False
+    """Check if article pubDate is within CUTOFF (last 2 days)."""
     dt = parse_date(pub_date_str)
     if dt is None:
         filtered_count["by_date"] += 1
         return False
-    # Normalize to UTC for comparison
-    if dt.tzinfo is None:
-        dt = dt.replace(tzinfo=timezone.utc)
-    else:
-        dt = dt.astimezone(timezone.utc)
-    result = dt >= CUTOFF
-    if not result:
+    if dt < CUTOFF:
         filtered_count["by_date"] += 1
-    return result
+        return False
+    return True
 
 def add(s, t, u, sm, ft, pub=""):
     if source_counts.get(s, 0) >= MAX_PER_SOURCE:
