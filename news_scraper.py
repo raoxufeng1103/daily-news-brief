@@ -148,6 +148,11 @@ def is_recent(pub_date_str):
         return False
     return True
 
+
+results = []
+source_counts = {}
+filtered_count = {"by_date": 0, "by_keyword": 0, "by_duplicate": 0, "by_limit": 0}
+
 def add(s, t, u, sm, ft, pub=""):
     if source_counts.get(s, 0) >= MAX_PER_SOURCE:
         filtered_count["by_limit"] += 1
