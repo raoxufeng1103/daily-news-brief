@@ -189,15 +189,21 @@ def is_recent(pub_date_str):
     """Check if article pubDate is within CUTOFF (last 2 days).
     No date or unparseable → exclude (strict mode)."""
     if not pub_date_str:
-        return False  # No date → exclude
+        filtered_count["by_date"] += 1
+        return False
     dt = parse_date(pub_date_str)
     if dt is None:
-        return False  # Can't parse → exclude
-    # Make sure comparison works: ensure dt is timezone-aware
+        filtered_count["by_date"] += 1
+        return False
+    # Normalize to UTC for comparison
     if dt.tzinfo is None:
-        from datetime import timezone
         dt = dt.replace(tzinfo=timezone.utc)
-    return dt >= CUTOFF
+    else:
+        dt = dt.astimezone(timezone.utc)
+    result = dt >= CUTOFF
+    if not result:
+        filtered_count["by_date"] += 1
+    return result
 
 def add(s, t, u, sm, ft, pub=""):
     if source_counts.get(s, 0) >= MAX_PER_SOURCE:
@@ -303,7 +309,9 @@ print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
 # Output
 out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results), "articles": results}
 print(f"\nFiltered: date={filtered_count["by_date"]} keyword={filtered_count["by_keyword"]} dup={filtered_count["by_duplicate"]} limit={filtered_count["by_limit"]}", file=sys.stderr)
-print(f"\n  Date filter: {filtered_count['by_date']} excluded (no date or old)", file=sys.stderr)
+# Debug: show CUTOFF for verification
+print(f"\n  CUTOFF date: {CUTOFF.strftime('%Y-%m-%d %H:%M:%S')} UTC", file=sys.stderr)
+print(f"  Date filter: {filtered_count['by_date']} excluded (no date or old)", file=sys.stderr)
 print(f"\n{'='*50}", file=sys.stderr)
 print(f"TOTAL: {len(results)} articles from {len(source_counts)} sources", file=sys.stderr)
 for src, cnt in sorted(source_counts.items()):
