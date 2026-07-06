@@ -187,12 +187,16 @@ source_counts = {}
 
 def is_recent(pub_date_str):
     """Check if article pubDate is within CUTOFF (last 2 days).
-    Returns True if date is recent or unparseable (err on inclusion side)."""
+    No date or unparseable → exclude (strict mode)."""
     if not pub_date_str:
-        return True  # No date → include (likely RSS without pubDate, e.g. Google News sometimes)
+        return False  # No date → exclude
     dt = parse_date(pub_date_str)
     if dt is None:
-        return True  # Can't parse → include
+        return False  # Can't parse → exclude
+    # Make sure comparison works: ensure dt is timezone-aware
+    if dt.tzinfo is None:
+        from datetime import timezone
+        dt = dt.replace(tzinfo=timezone.utc)
     return dt >= CUTOFF
 
 def add(s, t, u, sm, ft, pub=""):
@@ -203,7 +207,7 @@ def add(s, t, u, sm, ft, pub=""):
     t_norm = t.lower().strip()
     if any(r["title"].lower().strip() == t_norm for r in results):
         return False
-    results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:3000]})
+    results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:3000], "pub_date": pub})
     source_counts[s] = source_counts.get(s, 0) + 1
     return True
 
@@ -299,6 +303,7 @@ print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
 # Output
 out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results), "articles": results}
 print(f"\nFiltered: date={filtered_count["by_date"]} keyword={filtered_count["by_keyword"]} dup={filtered_count["by_duplicate"]} limit={filtered_count["by_limit"]}", file=sys.stderr)
+print(f"\n  Date filter: {filtered_count['by_date']} excluded (no date or old)", file=sys.stderr)
 print(f"\n{'='*50}", file=sys.stderr)
 print(f"TOTAL: {len(results)} articles from {len(source_counts)} sources", file=sys.stderr)
 for src, cnt in sorted(source_counts.items()):
