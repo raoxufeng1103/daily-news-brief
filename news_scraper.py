@@ -94,7 +94,7 @@ def extract(html_text, source_hint=""):
             text = re.sub(r"\n +", "\n", text)
             text = text.strip()
             if len(text) > 150:
-                return text[:3000]
+                return text[:8000]
     
     # Last resort: all <p> tags
     paragraphs = re.findall(r'<p[^>]*>(.*?)</p>', h, re.DOTALL)
@@ -103,7 +103,7 @@ def extract(html_text, source_hint=""):
         text = html_mod.unescape(text)
         text = re.sub(r"\s+", " ", text).strip()
         if len(text) > 150:
-            return text[:3000]
+            return text[:8000]
     return ""
 
 def fetch_article_text(url, hint="", t=15):
@@ -112,7 +112,7 @@ def fetch_article_text(url, hint="", t=15):
         html = fetch(url, t, retries=0)
         text = extract(html, hint)
         if text and len(text) > 200:
-            return text[:3000]
+            return text[:8000]
     except:
         pass
     return ""
@@ -191,7 +191,7 @@ def add(s, t, u, sm, ft, pub=""):
     t_norm = t.lower().strip()
     if any(r["title"].lower().strip() == t_norm for r in results):
         return False
-    results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:3000], "pub_date": pub})
+    results.append({"source": s, "title": t, "url": u, "summary": sm[:2000], "full_text": ft[:8000], "pub_date": pub})
     source_counts[s] = source_counts.get(s, 0) + 1
     return True
 
