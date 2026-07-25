@@ -234,6 +234,7 @@ gn_sources = [
     ("Nikkei Asia", "site:asia.nikkei.com+china", "Nikkei"),
     ("CNN", "site:cnn.com+china", "CNN"),
     ("Les Echos", "site:lesechos.fr+Chine", "Les Echos"),
+    ("Kimi K3", "kimi+k3+moonshot+china", "Kimi K3"),
 ]
 for src, query, hint in gn_sources:
     try:
