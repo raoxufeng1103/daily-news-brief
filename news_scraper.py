@@ -242,6 +242,9 @@ gn_sources = [
     ("MIT Tech Review", "site:technologyreview.com+china", "MIT Tech"),
     ("Electrek EV", "site:electrek.co+china+EV", "Electrek"),
     ("InsideEVs", "site:insideevs.com+china", "InsideEVs"),
+    ("US State Dept", "site:state.gov+china", "State Dept"),
+    ("US DoD", "site:defense.gov+china", "DoD"),
+    ("White House", "site:whitehouse.gov+china", "White House"),
     ("Kimi K3", "site:theverge.com+kimi+k3 OR site:techcrunch.com+kimi+k3 OR site:arstechnica.com+kimi+k3", "Kimi K3"),
 ]
 for src, query, hint in gn_sources:
