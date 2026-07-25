@@ -234,13 +234,15 @@ gn_sources = [
     ("Nikkei Asia", "site:asia.nikkei.com+china", "Nikkei"),
     ("CNN", "site:cnn.com+china", "CNN"),
     ("Les Echos", "site:lesechos.fr+Chine", "Les Echos"),
-    ("Kimi K3", "kimi+k3+moonshot+china", "Kimi K3"),
     ("Financial Times", "site:ft.com+china", "FT"),
     ("New York Times", "site:nytimes.com+china", "NYT"),
     ("The Economist", "site:economist.com+china", "Economist"),
-    ("Defense Weekly", "site:defensenews.com+china", "Defense Weekly"),
-    ("China NEV", "china+new+energy+vehicle+BYD+NIO+XPeng", "NEV"),
-    ("China Science", "china+mathematics+physics+science+breakthrough", "Science"),
+    ("Defense News", "site:defensenews.com+china", "Defense"),
+    ("Nature", "site:nature.com+china", "Nature"),
+    ("MIT Tech Review", "site:technologyreview.com+china", "MIT Tech"),
+    ("Electrek EV", "site:electrek.co+china+EV", "Electrek"),
+    ("InsideEVs", "site:insideevs.com+china", "InsideEVs"),
+    ("Kimi K3", "site:theverge.com+kimi+k3 OR site:techcrunch.com+kimi+k3 OR site:arstechnica.com+kimi+k3", "Kimi K3"),
 ]
 for src, query, hint in gn_sources:
     try:
