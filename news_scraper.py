@@ -238,6 +238,7 @@ gn_sources = [
     ("Financial Times", "site:ft.com+china", "FT"),
     ("New York Times", "site:nytimes.com+china", "NYT"),
     ("The Economist", "site:economist.com+china", "Economist"),
+    ("Defense Weekly", "site:defensenews.com+china", "Defense Weekly"),
 ]
 for src, query, hint in gn_sources:
     try:
