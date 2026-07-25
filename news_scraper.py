@@ -245,6 +245,9 @@ gn_sources = [
     ("US State Dept", "site:state.gov+china", "State Dept"),
     ("US DoD", "site:defense.gov+china", "DoD"),
     ("White House", "site:whitehouse.gov+china", "White House"),
+    ("France Diplomacy", "site:diplomatie.gouv.fr+Chine", "France MFA"),
+    ("Germany MFA", "site:auswaertiges-amt.de+China OR site:bundesregierung.de+China", "Germany"),
+    ("EU External", "site:eeas.europa.eu+China", "EU"),
     ("Kimi K3", "site:theverge.com+kimi+k3 OR site:techcrunch.com+kimi+k3 OR site:arstechnica.com+kimi+k3", "Kimi K3"),
 ]
 for src, query, hint in gn_sources:
