@@ -287,27 +287,6 @@ print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 # 8. VOA News China - RSS feed
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
-    # === B方案: 直接RSS源（绕过Google News限制）===
-    rss_feeds = [
-        ("CNN World", "http://rss.cnn.com/rss/edition_world.rss", "CNN"),
-        ("BBC World", "http://feeds.bbci.co.uk/news/world/rss.xml", "BBC"),
-        ("Guardian World", "https://www.theguardian.com/world/rss", "Guardian"),
-        ("AP Top News", "https://www.apnews.com/apf-topnews", "AP"),
-        ("Reuters World", "https://www.reuters.com/arc/outboundfeeds/v3/all/?outputType=xml", "Reuters"),
-    ]
-    for name, url, tag in rss_feeds:
-        try:
-            items = parse_rss(fetch(url))
-            for it in items:
-                add(name, it["t"], it.get("l", ""), it.get("d", ""), ft, it.get("pub", ""))
-        except Exception as e:
-            print(f"RSS {name} failed: {e}")
-    
-    # === C方案: Les Echos（法语源，专门处理）===
-    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:lesechos.fr+Chine&hl=fr&gl=FR&ceid=FR:fr"))
-    for it in items:
-        add("Les Echos", it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
-
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
             ft = it.get("d","")
