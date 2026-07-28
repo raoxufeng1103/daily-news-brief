@@ -227,28 +227,29 @@ print(f"BBC: {source_counts.get('BBC', 0)}", file=sys.stderr)
 
 # 2-6. Google News RSS sources
 gn_sources = [
+    # === A方案: Google News site:查询（已验证有效的源）===
     ("Reuters", "site:reuters.com+china", "Reuters"),
     ("Bloomberg", "site:bloomberg.com+china", "Bloomberg"),
     ("AP", "site:apnews.com+china", "AP"),
-    ("AFP", "site:afp.com+china", "AFP"),
     ("Nikkei Asia", "site:asia.nikkei.com+china", "Nikkei"),
-    ("CNN", "site:cnn.com+china", "CNN"),
-    ("Les Echos", "site:lesechos.fr+Chine", "Les Echos"),
     ("Financial Times", "site:ft.com+china", "FT"),
     ("New York Times", "site:nytimes.com+china", "NYT"),
-    ("The Economist", "site:economist.com+china", "Economist"),
-    ("Defense News", "site:defensenews.com+china", "Defense"),
+    ("BBC", "site:bbc.com+china", "BBC"),
+    ("The Guardian", "site:theguardian.com+china", "Guardian"),
     ("Nature", "site:nature.com+china", "Nature"),
-    ("MIT Tech Review", "site:technologyreview.com+china", "MIT Tech"),
-    ("Electrek EV", "site:electrek.co+china+EV", "Electrek"),
-    ("InsideEVs", "site:insideevs.com+china", "InsideEVs"),
-    ("US State Dept", "site:state.gov+china", "State Dept"),
-    ("US DoD", "site:defense.gov+china", "DoD"),
-    ("White House", "site:whitehouse.gov+china", "White House"),
-    ("France Diplomacy", "site:diplomatie.gouv.fr+Chine", "France MFA"),
-    ("Germany MFA", "site:auswaertiges-amt.de+China OR site:bundesregierung.de+China", "Germany"),
-    ("EU External", "site:eeas.europa.eu+China", "EU"),
-    ("Kimi K3", "site:theverge.com+kimi+k3 OR site:techcrunch.com+kimi+k3 OR site:arstechnica.com+kimi+k3", "Kimi K3"),
+    # === A方案: 关键词搜索（site:不生效的源改用关键词）===
+    ("CNN China", "CNN+china+news+update", "CNN"),
+    ("AFP China", "AFP+china+news", "AFP"),
+    ("Economist China", "The+Economist+china", "Economist"),
+    ("Defense China", "defense+news+china+military", "Defense"),
+    ("MIT Tech China", "MIT+Technology+Review+china", "MIT Tech"),
+    ("China EV News", "china+electric+vehicle+BYD+NIO", "NEV"),
+    ("China AI News", "china+artificial+intelligence+deepseek+kimi", "AI"),
+    ("China Science", "china+science+physics+mathematics+breakthrough", "Science"),
+    ("Kimi K3 News", "kimi+k3+moonshot+open+source+AI", "Kimi K3"),
+    # === B方案: 直接RSS（绕过Google News限制）===
+    # 这些RSS能直接抓到文章，不需要Google News索引
+    # BBC World RSS会在爬虫中单独处理
 ]
 for src, query, hint in gn_sources:
     try:
@@ -286,6 +287,27 @@ print(f"Guardian: {source_counts.get('The Guardian', 0)}", file=sys.stderr)
 # 8. VOA News China - RSS feed
 try:
     items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
+    # === B方案: 直接RSS源（绕过Google News限制）===
+    rss_feeds = [
+        ("CNN World", "http://rss.cnn.com/rss/edition_world.rss", "CNN"),
+        ("BBC World", "http://feeds.bbci.co.uk/news/world/rss.xml", "BBC"),
+        ("Guardian World", "https://www.theguardian.com/world/rss", "Guardian"),
+        ("AP Top News", "https://www.apnews.com/apf-topnews", "AP"),
+        ("Reuters World", "https://www.reuters.com/arc/outboundfeeds/v3/all/?outputType=xml", "Reuters"),
+    ]
+    for name, url, tag in rss_feeds:
+        try:
+            items = parse_rss(fetch(url))
+            for it in items:
+                add(name, it["t"], it.get("l", ""), it.get("d", ""), ft, it.get("pub", ""))
+        except Exception as e:
+            print(f"RSS {name} failed: {e}")
+    
+    # === C方案: Les Echos（法语源，专门处理）===
+    items = parse_rss(fetch("https://news.google.com/rss/search?q=site:lesechos.fr+Chine&hl=fr&gl=FR&ceid=FR:fr"))
+    for it in items:
+        add("Les Echos", it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
+
     for it in items:
         if is_cn(it["t"] + " " + it.get("d","")):
             ft = it.get("d","")
