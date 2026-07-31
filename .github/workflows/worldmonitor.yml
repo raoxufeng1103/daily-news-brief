@@ -1,0 +1,42 @@
+name: WorldMonitor Daily Brief
+
+on:
+  schedule:
+    - cron: '30 6 * * *'  # UTC 6:30 = 北京时间14:30
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install deps
+        run: pip install asyncpg
+      
+      - name: Pull WorldMonitor engine
+        run: |
+          mkdir -p worldmonitor
+          curl -sL -o worldmonitor/intel_engine.py https://raw.githubusercontent.com/xMikeMickelson/worldmonitor-v2-pro-skill/main/assets/service-template/intel_engine.py
+          curl -sL -o worldmonitor/event_tracker.py https://raw.githubusercontent.com/xMikeMickelson/worldmonitor-v2-pro-skill/main/assets/service-template/event_tracker.py
+          curl -sL -o worldmonitor/threat_classifier.py https://raw.githubusercontent.com/xMikeMickelson/worldmonitor-v2-pro-skill/main/assets/service-template/threat_classifier.py
+      
+      - name: Run Intelligence Engine
+        run: |
+          cd worldmonitor
+          python3 intel_engine.py --section 2>&1 | tee ../worldmonitor_latest.txt || echo "Partial output saved"
+          python3 intel_engine.py --brief 2>&1 | tee -a ../worldmonitor_latest.txt || true
+        timeout-minutes: 15
+      
+      - name: Commit report
+        run: |
+          git config user.name "WorldMonitor Bot"
+          git config user.email "bot@worldmonitor.local"
+          git add worldmonitor_latest.txt
+          git diff --staged --quiet || git commit -m "WorldMonitor daily report $(date +%Y-%m-%d)"
+          git push
