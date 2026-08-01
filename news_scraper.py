@@ -195,6 +195,68 @@ def add(s, t, u, sm, ft, pub=""):
     source_counts[s] = source_counts.get(s, 0) + 1
     return True
 
+
+# ===== WorldMonitor API feeds (NASA EONET, USGS, Fear/Greed, GDACS) =====
+print("Fetching WorldMonitor API feeds...", file=sys.stderr)
+
+def safe_fetch_json(url, name="API"):
+    """安全获取JSON，失败不中断"""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        resp = urllib.request.urlopen(req, timeout=20)
+        return json.loads(resp.read().decode())
+    except Exception as e:
+        print(f"  ⚠️ {name}: {e}", file=sys.stderr)
+        return None
+
+# NASA EONET (自然灾害事件)
+eonet = safe_fetch_json("https://eonet.gsfc.nasa.gov/api/v3/events?status=open&limit=10", "NASA EONET")
+if eonet:
+    for ev in eonet.get("events", []):
+        title = ev.get("title", "?")
+        cat = ev.get("categories", [{}])[0].get("title", "自然灾害")
+        desc = f"{cat}：{title}。来源：NASA EONET全球事件观测系统。"
+        url = f"https://eonet.gsfc.nasa.gov/api/v3/events/{ev.get('id','')}"
+        add("NASA EONET", title, url, desc[:2000], desc[:15000], time.strftime("%Y-%m-%d"))
+    print(f"  NASA EONET: {len(eonet.get('events',[]))} events", file=sys.stderr)
+
+# USGS Earthquakes (全球地震 ≥2.5级)
+usgs = safe_fetch_json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson", "USGS")
+if usgs:
+    for eq in usgs.get("features", [])[:8]:
+        mag = eq["properties"]["mag"]
+        place = eq["properties"]["place"]
+        title = f"M{mag}地震 - {place}"
+        desc = f"美国地质调查局(USGS)记录到{place}发生M{mag}级地震。"
+        url = eq["properties"]["url"]
+        add("USGS", title, url, desc[:2000], desc[:15000], time.strftime("%Y-%m-%d"))
+    print(f"  USGS: {len(usgs.get('features',[]))} quakes", file=sys.stderr)
+
+# Fear & Greed Index (市场情绪)
+fng = safe_fetch_json("https://api.alternative.me/fng/?limit=2", "Fear&Greed")
+if fng and fng.get("data"):
+    d = fng["data"][0]
+    val = d.get("value", "?")
+    cls = d.get("value_classification", "?")
+    title = f"恐惧贪婪指数：{val}（{cls}）"
+    desc = f"加密货币市场恐惧与贪婪指数当前为{val}，处于「{cls}」区间。0=极度恐惧，100=极度贪婪。该指数综合波动率、交易量、社交媒体、市场占比和趋势五个维度计算。"
+    add("Market", title, "https://alternative.me/crypto/fear-and-greed-index/", desc[:2000], desc[:15000], time.strftime("%Y-%m-%d"))
+    print(f"  Fear&Greed: {val} ({cls})", file=sys.stderr)
+
+# GDACS Disasters (全球灾害预警)
+gdacs = safe_fetch_json("https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?fromDate=" + (datetime.datetime.utcnow() - datetime.timedelta(days=3)).strftime("%Y-%m-%d"), "GDACS")
+if gdacs:
+    count = 0
+    for ev in gdacs[:5] if isinstance(gdacs, list) else []:
+        title = ev.get("eventname", ev.get("name", "?"))
+        etype = ev.get("eventtype", "灾害")
+        desc = f"GDACS全球灾害预警系统：{etype}「{title}」正在活跃。严重程度：{ev.get('severity', '?')}。"
+        add("GDACS", str(title), f"https://www.gdacs.org/report.aspx?eventid={ev.get('eventid','')}", desc[:2000], desc[:15000], time.strftime("%Y-%m-%d"))
+        count += 1
+    print(f"  GDACS: {count} disasters", file=sys.stderr)
+
+print("WorldMonitor API feeds done.", file=sys.stderr)
+
 print("ChinaNewsAgg v3 starting...", file=sys.stderr)
 
 # 1. BBC - China-specific + Asia RSS
