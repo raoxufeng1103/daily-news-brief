@@ -9,7 +9,7 @@ ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36"}
 MAX_PER_SOURCE = 10
 
-CUTOFF = datetime.now(timezone.utc) - timedelta(days=2)
+CUTOFF = datetime.now(timezone.utc) - timedelta(days=4)
 
 CKW = ["china","chinese","beijing","xi jinping","li qiang","wang yi",
        "taiwan","hong kong","xinjiang","tibet","south china sea",
@@ -293,7 +293,7 @@ def run():
             time.sleep(2)
             items = parse_rss(fetch(f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"))
             for it in items:
-                if is_cn(it["t"]):
+                if is_cn(it["t"] + " " + it.get("d","")):
                     ft = it.get("d","")
                     if it["l"]:
                         try:
