@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-02 14:29:14",
-  "total": 56,
+  "generated_at": "2026-08-02 14:37:16",
+  "total": 55,
   "articles": [
     {
       "source": "Reuters",
@@ -83,20 +83,12 @@
       "pub_date": "Fri, 31 Jul 2026 17:47:26 GMT"
     },
     {
-      "source": "Bloomberg",
-      "title": "China’s London ‘Super Embassy’ Plan Survives Court Challenge - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdjdtV3JEUHdQZE1ZdEdHTkxPdjItS2xqZHFXaHQ2V1ZZeENLbEFxbjZ2c2VVZUtUbHhUWTgyWm1HT2hoMVRmT3Q2NjFCVDNXd0l5Tk5XMTF0cWtEQ3RnRUF0MFQ2R2w3cW8xTVNxbjhCWmFZaVhJWkw5b0FWaFU1WUE0YUYycjV3dDlTcEc5Umk3ak9meFhSMmpMc1BISG1kNW9TV1FQdWlaMDk5M2gwYlBR?oc=5",
-      "summary": "China’s London ‘Super Embassy’ Plan Survives Court Challenge&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "China’s London ‘Super Embassy’ Plan Survives Court Challenge&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Fri, 31 Jul 2026 14:27:53 GMT"
-    },
-    {
       "source": "AP",
       "title": "China holds military drills near disputed shoal in the South China Sea - AP News",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdVltVTN1VjZFdU05eU9fdEF4aXU3WDVTSVg4blgwRzBNeWRZdll3NmN1ZHNkYy1lUm5jOHBqSHQxRWtPY1g2d29nOFZiU2J5YU44VjZnZkg1cTcyaTBzVXg2eU1oY0xHYVpNdGxPODZJa29ScnJkbUt5OFI4UTRIdWUwOTZreVBiamhzbVV1ZGpXcjRCOElNUV9qTFZGTUtKdlBkSWJURU9VQVphVl9vMQ?oc=5",
       "summary": "China holds military drills near disputed shoal in the South China Sea&nbsp;&nbsp;AP News",
       "full_text": "China holds military drills near disputed shoal in the South China Sea&nbsp;&nbsp;AP News",
-      "pub_date": "Sat, 01 Aug 2026 13:33:30 GMT"
+      "pub_date": "Sat, 01 Aug 2026 12:57:00 GMT"
     },
     {
       "source": "Nikkei Asia",
@@ -453,7 +445,7 @@
   ],
   "source_counts": {
     "Reuters": 9,
-    "Bloomberg": 2,
+    "Bloomberg": 1,
     "AP": 1,
     "Nikkei Asia": 5,
     "Financial Times": 2,
@@ -472,22 +464,6 @@
     [
       "JSON:GDACS",
       "ERR:TimeoutError('The read operation timed out')"
-    ],
-    [
-      "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdnd3MnE0ODJSV0gxckY2QS1rdkFtbU9haTNzcFZiam9xWS0",
-      "ERR:URLError(OSError(101, 'Network is unreachable'))"
-    ],
-    [
-      "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTFdIQXJydlY5NFFfcFl0bXRMWmpvRDVPcGl3QlNVLTZweEx",
-      "ERR:URLError(OSError(101, 'Network is unreachable'))"
-    ],
-    [
-      "https://news.google.com/rss/articles/CBMinwFBVV95cUxQYUVjZUwzd29hdHRTZDZWS2M1eURLRmlxU1VTVGZiYno0LUR",
-      "ERR:URLError(OSError(101, 'Network is unreachable'))"
-    ],
-    [
-      "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVHk2bE0xWUJLa0hmMS03ZFAtb0dad1p2eVFxbzRfQXVMRkg",
-      "ERR:URLError(OSError(101, 'Network is unreachable'))"
     ]
   ]
 }
