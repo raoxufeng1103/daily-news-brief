@@ -309,6 +309,8 @@ gn_sources = [
     ("China AI News", "china+artificial+intelligence+deepseek+kimi", "AI"),
     ("China Science", "china+science+physics+mathematics+breakthrough", "Science"),
     ("Kimi K3 News", "kimi+k3+moonshot+open+source+AI", "Kimi K3"),
+    # === 直接官网聚合（Google News 索引 Atlantic 官网涉华报道）===
+    ("The Atlantic", "site:theatlantic.com+china", "Atlantic"),
     # === B方案: 直接RSS（绕过Google News限制）===
     # 这些RSS能直接抓到文章，不需要Google News索引
     # BBC World RSS会在爬虫中单独处理
