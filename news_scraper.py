@@ -16,12 +16,21 @@ CKW = ["china","chinese","beijing","xi jinping","li qiang","wang yi",
        "belt and road","huawei","tencent","alibaba","tiktok","shein",
        "temu","cpec","renminbi","yuan","pboc","deepseek","baidu",
        "xiaomi","chinese economy","chinese market","chinese official",
-       "sino-","brics","shanghai","shenzhen","guangzhou"]
+       "sino-","brics","shanghai","shenzhen","guangzhou",
+       # 军事/政党类（用户要求：PLA 等涉华军事素材一律纳入）
+       "people's liberation army","chinese military","chinese army",
+       "ccp","chinese communist party","communist party of china",
+       "pla navy","pla air force","eastern theatre command",
+       "south china sea","taiwan strait"]
+
+# PLA 用整词匹配，避免误命中 explain / plans / plateau 等含 "pla" 子串的词
+PLA_RE = re.compile(r"\bpla\b", re.I)
 
 def is_cn(t):
-    tl = t.lower()
+    tl = (t or "").lower()
     for k in CKW:
         if k in tl: return True
+    if PLA_RE.search(tl): return True
     return False
 
 def fetch(url, t=20, retries=2):
@@ -246,20 +255,33 @@ def run():
     for feed_url in bbc_feeds:
         try:
             items = parse_rss(fetch(feed_url))
+            processed = 0
             for it in items:
-                t_combined = it["t"] + " " + it.get("d","")
-                if source_counts.get("BBC", 0) < MAX_PER_SOURCE:
-                    if "china" in feed_url or is_cn(t_combined):
-                        add("BBC", it["t"], it["l"], it["d"], "", it.get("pub",""))
-                        if it["l"]:
-                            try:
-                                ft = fetch_article_text(it["l"], "BBC", 15)
-                                if ft:
-                                    for r in reversed(results):
-                                        if r["source"] == "BBC" and r["title"] == it["t"]:
-                                            r["full_text"] = ft
-                                            break
-                            except: pass
+                if source_counts.get("BBC", 0) >= MAX_PER_SOURCE:
+                    break
+                if processed >= 40:
+                    break
+                processed += 1
+                head = it["t"] + " " + it.get("d", "")
+                passed = ("china" in feed_url) or is_cn(head)
+                ft = it.get("d", "")
+                if passed:
+                    # 头部命中：抓取正文作为素材内容
+                    if it["l"]:
+                        try:
+                            a = fetch_article_text(it["l"], "BBC", 15)
+                            if a: ft = a
+                        except: pass
+                    add("BBC", it["t"], it["l"], it["d"], ft, it.get("pub",""))
+                else:
+                    # 标题/描述未提及中国 → 再查正文
+                    body = ""
+                    if it["l"]:
+                        try:
+                            body = fetch_article_text(it["l"], "BBC", 15)
+                        except: pass
+                    if body and is_cn(body):
+                        add("BBC", it["t"], it["l"], it["d"], body, it.get("pub",""))
         except Exception as e:
             print(f"  BBC feed {feed_url}: {e}", file=sys.stderr)
             fetch_log.append(('BBC', 'ERR:' + repr(e)[:160]))
@@ -292,17 +314,35 @@ def run():
         try:
             time.sleep(2)
             items = parse_rss(fetch(f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"))
+            processed = 0
             for it in items:
-                # Atlantic 等经 Google News `site:X+china` 限定的源，查询本身即涉华，
-                # 不再用 is_cn 过滤标题（其涉华文章标题常不含 china 关键词，否则全被误杀）
-                if src == "The Atlantic" or is_cn(it["t"] + " " + it.get("d","")):
-                    ft = it.get("d","")
+                if source_counts.get(src, 0) >= MAX_PER_SOURCE:
+                    break
+                if processed >= 40:   # 单源处理上限，防止个别源返回过多时请求爆炸
+                    break
+                processed += 1
+                head = it["t"] + " " + it.get("d", "")
+                ft = it.get("d", "")
+                # Atlantic 等 `site:X+china` 限定的源，查询本身即涉华，整体纳入；
+                # 其余源：标题或描述命中中国关键词即采用。
+                if src == "The Atlantic" or is_cn(head):
+                    # 头部已命中：抓取正文作为素材内容
                     if it["l"]:
                         try:
-                            article_ft = fetch_article_text(it["l"], hint, 15)
-                            if article_ft: ft = article_ft
+                            a = fetch_article_text(it["l"], hint, 15)
+                            if a: ft = a
                         except: pass
                     add(src, it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
+                else:
+                    # 标题/描述未提及中国，但正文可能提及（如涉 PLA / 解放军的报道）
+                    # → 再抓取正文判定，命中即纳入素材
+                    body = ""
+                    if it["l"]:
+                        try:
+                            body = fetch_article_text(it["l"], hint, 15)
+                        except: pass
+                    if body and is_cn(body):
+                        add(src, it["t"], it.get("l",""), it.get("d",""), body, it.get("pub",""))
         except Exception as e:
             print(f"  {src}: {e}", file=sys.stderr)
             fetch_log.append((src, 'ERR:' + repr(e)[:160]))
@@ -328,15 +368,31 @@ def run():
     # 8. VOA News China - RSS feed
     try:
         items = parse_rss(fetch("https://news.google.com/rss/search?q=site:voanews.com+china&hl=en-US&gl=US&ceid=US:en"))
+        processed = 0
         for it in items:
-            if is_cn(it["t"] + " " + it.get("d","")):
+            if source_counts.get("VOA News", 0) >= MAX_PER_SOURCE:
+                break
+            if processed >= 40:
+                break
+            processed += 1
+            head = it["t"] + " " + it.get("d", "")
+            if is_cn(head):
                 ft = it.get("d","")
                 if it.get("l"):
                     try:
-                        article_ft = fetch_article_text(it["l"], "BBC", 15)
-                        if article_ft: ft = article_ft
+                        a = fetch_article_text(it["l"], "BBC", 15)
+                        if a: ft = a
                     except: pass
                 add("VOA News", it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
+            else:
+                # 标题/描述未提及中国 → 再查正文
+                body = ""
+                if it.get("l"):
+                    try:
+                        body = fetch_article_text(it["l"], "BBC", 15)
+                    except: pass
+                if body and is_cn(body):
+                    add("VOA News", it["t"], it.get("l",""), it.get("d",""), body, it.get("pub",""))
     except Exception as e:
         print(f"  VOA: {e}", file=sys.stderr)
         fetch_log.append(('VOA', 'ERR:' + repr(e)[:160]))
