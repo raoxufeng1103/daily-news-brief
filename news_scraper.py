@@ -293,7 +293,9 @@ def run():
             time.sleep(2)
             items = parse_rss(fetch(f"https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"))
             for it in items:
-                if is_cn(it["t"] + " " + it.get("d","")):
+                # Atlantic 等经 Google News `site:X+china` 限定的源，查询本身即涉华，
+                # 不再用 is_cn 过滤标题（其涉华文章标题常不含 china 关键词，否则全被误杀）
+                if src == "The Atlantic" or is_cn(it["t"] + " " + it.get("d","")):
                     ft = it.get("d","")
                     if it["l"]:
                         try:
