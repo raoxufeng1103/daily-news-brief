@@ -16,6 +16,7 @@ jobs:
           python-version: '3.12'
       - run: pip install python-docx
       - name: Scrape China news
+        continue-on-error: true
         run: python news_scraper.py > china_news_raw.json
       - name: Generate Word doc with translations
         run: python generate_docx.py china_news_raw.json China_News_Briefing.docx
