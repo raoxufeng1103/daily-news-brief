@@ -316,6 +316,8 @@ def run():
         ("Kimi K3 News", "kimi+k3+moonshot+open+source+AI", "Kimi K3"),
         # 直接官网聚合（Google News 索引 Atlantic 官网涉华报道）
         ("The Atlantic", "site:theatlantic.com+china", "Atlantic"),
+        # 欧亚时报（EurAsian Times，印度地缘/军事媒体，常发中国军事与中印议题）
+        ("EurAsian Times", "site:eurasiantimes.com+china", "EurAsia"),
     ]
     for src, query, hint in gn_sources:
         try:
