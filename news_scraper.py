@@ -405,6 +405,50 @@ def run():
         fetch_log.append(('VOA', 'ERR:' + repr(e)[:160]))
     print(f"VOA: {source_counts.get('VOA News', 0)}", file=sys.stderr)
 
+    # 9. 顶刊官方 RSS 直连兜底（NEJM / PNAS / Lancet）
+    #    Google News 对这三家期刊的 `site:X+china` 索引稀疏（常返回 0 条），
+    #    故直连官方 TOC RSS 全量拉取，再按 is_cn 过滤标题+正文，只保留涉华重磅。
+    #    注意：此处不能用 SITE_CN_SOURCES 跳过过滤（那是给 Google 已限定 china 的查询用的），
+    #    全量 TOC 必须逐条判 China，否则会把非涉华论文全收进来。
+    journal_rss = {
+        "NEJM": "https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm",
+        "PNAS": "https://www.pnas.org/action/showFeed?type=etoc&feed=rss&jc=pnas",
+        "The Lancet": "https://www.thelancet.com/action/showFeed?type=etoc&feed=rss&jc=thelancet",
+    }
+    for src, url in journal_rss.items():
+        try:
+            items = parse_rss(fetch(url))
+            processed = 0
+            for it in items:
+                if source_counts.get(src, 0) >= MAX_PER_SOURCE:
+                    break
+                if processed >= 40:
+                    break
+                processed += 1
+                head = it["t"] + " " + it.get("d", "")
+                ft = it.get("d", "")
+                if is_cn(head):
+                    # 标题/描述已命中中国关键词 → 抓取正文作为素材
+                    if it["l"]:
+                        try:
+                            a = fetch_article_text(it["l"], src, 15)
+                            if a: ft = a
+                        except: pass
+                    add(src, it["t"], it.get("l",""), it.get("d",""), ft, it.get("pub",""))
+                else:
+                    # 标题未提及中国 → 再查正文判定（如涉 PLA / 解放军的研究）
+                    body = ""
+                    if it["l"]:
+                        try:
+                            body = fetch_article_text(it["l"], src, 15)
+                        except: pass
+                    if body and is_cn(body):
+                        add(src, it["t"], it.get("l",""), it.get("d",""), body, it.get("pub",""))
+        except Exception as e:
+            print(f"  {src} RSS: {e}", file=sys.stderr)
+            fetch_log.append((src + ' RSS', 'ERR:' + repr(e)[:160]))
+        print(f"{src} (RSS): {source_counts.get(src, 0)}", file=sys.stderr)
+
     # Output
     out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"), "total": len(results),
            "articles": results, "source_counts": dict(source_counts), "fetch_log": fetch_log[-80:]}
