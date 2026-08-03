@@ -287,6 +287,8 @@ def run():
             fetch_log.append(('BBC', 'ERR:' + repr(e)[:160]))
     print(f"BBC: {source_counts.get('BBC', 0)}", file=sys.stderr)
 
+    # 这些源用 `site:X+china` 限定查询，Google News 已保证涉华相关性，直接纳入，不做 is_cn 硬过滤
+    SITE_CN_SOURCES = {"The Atlantic", "Nature", "Cell", "Science", "The Lancet", "NEJM", "PNAS"}
     # 2-6. Google News RSS sources (聚合各媒体官网涉华报道)
     gn_sources = [
         ("Reuters", "site:reuters.com+china", "Reuters"),
@@ -298,6 +300,11 @@ def run():
         ("BBC", "site:bbc.com+china", "BBC"),
         ("The Guardian", "site:theguardian.com+china", "Guardian"),
         ("Nature", "site:nature.com+china", "Nature"),
+        ("Cell", "site:cell.com+china", "Cell"),
+        ("Science", "site:science.org+china", "Science"),
+        ("The Lancet", "site:thelancet.com+china", "Lancet"),
+        ("NEJM", "site:nejm.org+china", "NEJM"),
+        ("PNAS", "site:pnas.org+china", "PNAS"),
         ("CNN China", "CNN+china+news+update", "CNN"),
         ("AFP China", "AFP+china+news", "AFP"),
         ("Economist China", "The+Economist+china", "Economist"),
@@ -305,7 +312,7 @@ def run():
         ("MIT Tech China", "MIT+Technology+Review+china", "MIT Tech"),
         ("China EV News", "china+electric+vehicle+BYD+NIO", "NEV"),
         ("China AI News", "china+artificial+intelligence+deepseek+kimi", "AI"),
-        ("China Science", "china+science+physics+mathematics+breakthrough", "Science"),
+        # ("China Science" 已并入上方 site:science.org+china 顶刊源)
         ("Kimi K3 News", "kimi+k3+moonshot+open+source+AI", "Kimi K3"),
         # 直接官网聚合（Google News 索引 Atlantic 官网涉华报道）
         ("The Atlantic", "site:theatlantic.com+china", "Atlantic"),
@@ -325,7 +332,7 @@ def run():
                 ft = it.get("d", "")
                 # Atlantic 等 `site:X+china` 限定的源，查询本身即涉华，整体纳入；
                 # 其余源：标题或描述命中中国关键词即采用。
-                if src == "The Atlantic" or is_cn(head):
+                if src in SITE_CN_SOURCES or is_cn(head):
                     # 头部已命中：抓取正文作为素材内容
                     if it["l"]:
                         try:
