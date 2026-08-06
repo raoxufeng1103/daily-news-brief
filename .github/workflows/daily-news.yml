@@ -36,12 +36,9 @@ jobs:
           name: china-briefing
           path: '*.docx'
       - name: Publish latest (guard against empty scrape)
-        env:
-          PAT: ${{ secrets.PAT }}
         run: |
           git config user.name bot
           git config user.email bot@n
-          git remote set-url origin https://x-access-token:${PAT}@github.com/raoxufeng1103/daily-news-brief.git
           python - <<'PY'
           import json, os, sys, shutil
           raw = 'china_news_raw.json'
