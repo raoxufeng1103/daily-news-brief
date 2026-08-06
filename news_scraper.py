@@ -188,76 +188,7 @@ def add(s, t, u, sm, ft, pub=""):
 
 
 def run():
-    
-# ===== Government & Official RSS Feeds =====
-print("Fetching government RSS feeds...", file=sys.stderr)
-
-GOV_RSS_FEEDS = [
-    {
-        "name": "US State Dept",
-        "url": "https://www.state.gov/press-releases/feed/",
-        "filter": ["China", "Chinese", "Beijing", "Taiwan", "South China Sea", "Indo-Pacific"]
-    },
-    {
-        "name": "US DoD",
-        "url": "https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=945&max=20",
-        "filter": ["China", "Chinese", "PLA", "Taiwan", "South China Sea", "Pacific"]
-    },
-    {
-        "name": "EU EEAS",
-        "url": "https://www.eeas.europa.eu/eeas/taxonomy/term/397/feed",
-        "filter": ["China", "Chinese", "Beijing", "Taiwan", "Indo-Pacific"]
-    },
-    {
-        "name": "UK FCDO",
-        "url": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office.atom",
-        "filter": ["China", "Chinese", "Beijing", "Taiwan", "Hong Kong"]
-    },
-]
-
-def fetch_rss_items(url, name="RSS"):
-    """获取RSS/Atom feed并提取title+link+desc"""
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        resp = urllib.request.urlopen(req, timeout=20)
-        raw = resp.read().decode()
-        items = []
-        # 解析 title + link + description
-        entries = re.findall(r'<item>(.*?)</item>', raw, re.S)
-        if not entries:
-            entries = re.findall(r'<entry>(.*?)</entry>', raw, re.S)  # Atom
-        for e in entries:
-            t = re.findall(r'<title>(.*?)</title>', e, re.S)
-            l = re.findall(r'<link>(.*?)</link>', e, re.S)
-            if not l:
-                l = re.findall(r'<link[^>]*href="([^"]*)"', e)
-            d = re.findall(r'<description>(.*?)</description>', e, re.S)
-            if not d:
-                d = re.findall(r'<summary>(.*?)</summary>', e, re.S)
-            title = re.sub(r'<[^>]+>', '', (t[0] if t else '')).strip()
-            link = l[0] if l else ''
-            desc = re.sub(r'<[^>]+>', '', (d[0] if d else title)).strip()
-            if title and link:
-                items.append({"title": title, "link": link, "desc": desc[:2000]})
-        return items
-    except Exception as e:
-        print(f"  ⚠️ {name} RSS: {e}", file=sys.stderr)
-        return []
-
-for feed in GOV_RSS_FEEDS:
-    items = fetch_rss_items(feed["url"], feed["name"])
-    added = 0
-    for it in items:
-        # 检查是否涉华
-        text = it["title"] + " " + it["desc"]
-        if any(kw.lower() in text.lower() for kw in feed["filter"]):
-            if add(feed["name"], it["title"], it["link"], it["desc"][:2000], it["desc"][:15000], time.strftime("%Y-%m-%d")):
-                added += 1
-    print(f"  {feed['name']}: {len(items)} items, {added} China-related", file=sys.stderr)
-
-print("Government RSS feeds done.", file=sys.stderr)
-
-# ===== WorldMonitor API feeds (NASA EONET, USGS, Fear/Greed, GDACS) =====
+    # ===== WorldMonitor API feeds (NASA EONET, USGS, Fear/Greed, GDACS) =====
     print("Fetching WorldMonitor API feeds...", file=sys.stderr)
 
     def safe_fetch_json(url, name="API"):
