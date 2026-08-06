@@ -2,7 +2,7 @@ name: China News Briefing
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 22 * * *''
+    - cron: '0 22 * * *'
 
 jobs:
   run:
@@ -17,7 +17,14 @@ jobs:
       - run: pip install python-docx
       - name: Scrape China news
         continue-on-error: true
-        run: python news_scraper.py > china_news_raw.json
+        run: python news_scraper.py > china_news_raw.json 2> scrape.log || true
+      - name: Scrape diagnostics
+        if: always()
+        run: |
+          echo "=== scrape.log (tail) ==="
+          tail -n 30 scrape.log 2>/dev/null || true
+          echo "=== raw bytes ==="
+          wc -c china_news_raw.json 2>/dev/null || true
       - name: Generate Word doc with translations
         continue-on-error: true
         env:
@@ -28,10 +35,40 @@ jobs:
         with:
           name: china-briefing
           path: '*.docx'
-      - run: |
+      - name: Publish latest (guard against empty scrape)
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
           git config user.name bot
           git config user.email bot@n
-          cp china_news_raw.json china_news_latest.json
-          git add china_news_latest.json || true
-          git commit -m "Auto update" --allow-empty
-          git push
+          git remote set-url origin https://x-access-token:${PAT}@github.com/raoxufeng1103/daily-news-brief.git
+          python - <<'PY'
+          import json, os, sys, shutil
+          raw = 'china_news_raw.json'
+          ok = False
+          n = 0
+          try:
+              if os.path.getsize(raw) > 2:
+                  d = json.load(open(raw, encoding='utf-8'))
+                  arts = d.get('articles') if isinstance(d, dict) else d
+                  n = len(arts) if arts else 0
+                  ok = n > 0
+          except Exception as e:
+              print('PARSE_ERROR', repr(e))
+          if ok:
+              shutil.copy(raw, 'china_news_latest.json')
+              print(f'VALID: {n} articles -> published')
+              sys.exit(0)
+          else:
+              print(f'EMPTY/INVALID (n={n}) -> keep previous china_news_latest.json')
+              sys.exit(3)
+          PY
+          rc=$?
+          if [ "$rc" -eq 0 ]; then
+            git add china_news_latest.json || true
+            git commit -m "Auto update $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
+            git push
+            echo "PUSHED"
+          else
+            echo "SKIPPED push (no new data)"
+          fi
