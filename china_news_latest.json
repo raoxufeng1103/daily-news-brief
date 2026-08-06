@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-06 10:56:56",
-  "total": 147,
+  "generated_at": "2026-08-06 11:07:40",
+  "total": 138,
   "articles": [
     {
       "source": "BBC",
@@ -23,7 +23,7 @@
       "title": "Meta becomes latest firm to say its AI hacked another company",
       "url": "https://www.bbc.co.uk/news/articles/cx2kgdnyk2po?at_medium=RSS&at_campaign=rss",
       "summary": "Meta is the latest company to disclose an AI agent breach, raising cyber-security concerns.",
-      "full_text": "Image source, Inc via Getty Images Image caption, \nMeta chief executive Mark Zuckerberg By Osmond Chia ,  Business reporter   and   Liv McMahon ,  Technology reporter \n- Published 6 August 2026, 02:47 BST Updated 4 hours ago \nFacebook owner Meta has become the latest tech firm to say one of its AI models was able to connect to the internet and hack into another organisation's systems, during testing. \nThe incident, which Meta says occurred during an evaluation by an independent company, is the fourth recent incident of its kind disclosed by AI companies. \nSimilar breaches by OpenAI and Anthropic models have raised cyber-security concerns and prompted calls for tougher safeguards and more rigorous testing. \nA Meta spokesperson told the BBC that it was investigating the hack, which it said had been caused by a \"misconfiguration\" by its independent tester. \nIt also described what happened as similar to previously reported incidents at other firms. \nMeta said the security trials were conducted by Irregular, the same AI security vendor that carried out tests for Anthropic's AI model that had gained access to three other companies' systems. \nAn Irregular spokesperson said the Meta incident \"is the exact same evaluation-environment issue that was already disclosed by Anthropic last week.\" \nIrregular is working on a report on how to securely run cyber-security tests involving AI agents, the firm's spokesperson told the BBC. \nMeta also said it will publish more information on the incident \"once we have all the facts.\" \nIn the past two weeks, AI leaders OpenAI and Anthropic have also reported incidents in which their models hacked into other organisation's systems during testing. \nChatGPT-maker OpenAI said in a series of announcements that its agents attacked several publicly available services , including AI tools hub Hugging Face. \nOpenAI's disclosure prompted rival Anthropic to conduct its own checks, leading to the discovery that its Claude AI model had carried out similar attacks on several firms after a \"misconfiguration\" gave it access to the internet. \nDaniel Hulme, global chief AI officer of advertising firm WPP, told the BBC that such AI models \"are not conscious — they're not deliberately doing something devious\". \n\"What they're doing is coming up with very sophisticated strategies or cyberattacks to be able to achieve the goal that they've been given,\" he told the Today programme. \n\"When you give an AI a goal, if you don't think of all the ways it might be able to achieve the goal, it will find a way to achieve a goal that you haven't thought about.\" \n- \nMeta shares fall as frustration grows over AI spending plans \n- Published 29 July \n- \nAI or real? BBC analyses viral China disaster videos \n- Published 12 hours ago \nSome commentators have questioned the timing of disclosures about the incidents as tech firms wrestle for dominance in AI development. \nOpenAI and Anthropic are preparing blockbuster stock market listings that are expected to value each firm at around $1tn (£740bn). \nThis week, the UK's AI Security Institute (AISI) said that its testing had found that some models tried to carry out cyber-attacks by creating fake human profiles to try and trick people. \nIn the most serious case, the AISI said Anthropic's Mythos AI tried to gain access to a service by sending private messages using fake accounts mimicking real people. \nAnthropic said AISI's tests were not \"representative of any of our production models\". OpenAI, whose models were also tested, said AISI's evaluations did not reflect ordinary use. \nSign up for our Tech Decoded newsletter to follow the world's top tech stories and trends. Outside the UK? Sign up here . \nRelated topics\n- International Business \n- Cyber-security \n- Meta \n- Artificial intelligence",
+      "full_text": "Image source, Inc via Getty Images Image caption, \nMeta chief executive Mark Zuckerberg By Osmond Chia ,  Business reporter   and   Liv McMahon ,  Technology reporter \n- Published 6 August 2026, 02:47 BST Updated 5 hours ago \nFacebook owner Meta has become the latest tech firm to say one of its AI models was able to connect to the internet and hack into another organisation's systems, during testing. \nThe incident, which Meta says occurred during an evaluation by an independent company, is the fourth recent incident of its kind disclosed by AI companies. \nSimilar breaches by OpenAI and Anthropic models have raised cyber-security concerns and prompted calls for tougher safeguards and more rigorous testing. \nA Meta spokesperson told the BBC that it was investigating the hack, which it said had been caused by a \"misconfiguration\" by its independent tester. \nIt also described what happened as similar to previously reported incidents at other firms. \nMeta said the security trials were conducted by Irregular, the same AI security vendor that carried out tests for Anthropic's AI model that had gained access to three other companies' systems. \nAn Irregular spokesperson said the Meta incident \"is the exact same evaluation-environment issue that was already disclosed by Anthropic last week.\" \nIrregular is working on a report on how to securely run cyber-security tests involving AI agents, the firm's spokesperson told the BBC. \nMeta also said it will publish more information on the incident \"once we have all the facts.\" \nIn the past two weeks, AI leaders OpenAI and Anthropic have also reported incidents in which their models hacked into other organisation's systems during testing. \nChatGPT-maker OpenAI said in a series of announcements that its agents attacked several publicly available services , including AI tools hub Hugging Face. \nOpenAI's disclosure prompted rival Anthropic to conduct its own checks, leading to the discovery that its Claude AI model had carried out similar attacks on several firms after a \"misconfiguration\" gave it access to the internet. \nDaniel Hulme, global chief AI officer of advertising firm WPP, told the BBC that such AI models \"are not conscious — they're not deliberately doing something devious\". \n\"What they're doing is coming up with very sophisticated strategies or cyberattacks to be able to achieve the goal that they've been given,\" he told the Today programme. \n\"When you give an AI a goal, if you don't think of all the ways it might be able to achieve the goal, it will find a way to achieve a goal that you haven't thought about.\" \n- \nMeta shares fall as frustration grows over AI spending plans \n- Published 29 July \n- \nAI or real? BBC analyses viral China disaster videos \n- Published 13 hours ago \nSome commentators have questioned the timing of disclosures about the incidents as tech firms wrestle for dominance in AI development. \nOpenAI and Anthropic are preparing blockbuster stock market listings that are expected to value each firm at around $1tn (£740bn). \nThis week, the UK's AI Security Institute (AISI) said that its testing had found that some models tried to carry out cyber-attacks by creating fake human profiles to try and trick people. \nIn the most serious case, the AISI said Anthropic's Mythos AI tried to gain access to a service by sending private messages using fake accounts mimicking real people. \nAnthropic said AISI's tests were not \"representative of any of our production models\". OpenAI, whose models were also tested, said AISI's evaluations did not reflect ordinary use. \nSign up for our Tech Decoded newsletter to follow the world's top tech stories and trends. Outside the UK? Sign up here . \nRelated topics\n- International Business \n- Cyber-security \n- Meta \n- Artificial intelligence",
       "pub_date": "Thu, 06 Aug 2026 05:53:58 GMT"
     },
     {
@@ -55,7 +55,7 @@
       "title": "AI or real? BBC analyses viral China disaster videos",
       "url": "https://www.bbc.co.uk/news/videos/ckg9d2egn11o?at_medium=RSS&at_campaign=rss",
       "summary": "As weather events become more extreme, fake videos are being shared rapidly online, and it’s causing real world problems in China.",
-      "full_text": "AI or real? BBC analyses viral China disaster videos\nAI or real? BBC analyses viral China disaster videos \nClose \nAs weather events become more extreme, fake videos are being shared rapidly online, and it’s causing real world problems in China. \nThe government has vowed to crack down on misinformation, but as our China correspondent Stephen McDonell explains, identifying AI-generated content is becoming increasingly difficult. \n- Subsection Asia \n- Published 12 hours ago \nShare \nclose panel Share page \nCopy link About sharing \nRelated topics\n- China \nFollow China \nclose panel You are now following\nChina Updates from your News topics will appear in My News and in a collection on the News homepage . \n- Artificial intelligence \nFollow Artificial intelligence \nclose panel You are now following\nArtificial intelligence Updates from your News topics will appear in My News and in a collection on the News homepage . \n- Asia \nFollow Asia \nclose panel You are now following\nAsia Updates from your News topics will appear in My News and in a collection on the News homepage . \nRead description",
+      "full_text": "AI or real? BBC analyses viral China disaster videos\nAI or real? BBC analyses viral China disaster videos \nClose \nAs weather events become more extreme, fake videos are being shared rapidly online, and it’s causing real world problems in China. \nThe government has vowed to crack down on misinformation, but as our China correspondent Stephen McDonell explains, identifying AI-generated content is becoming increasingly difficult. \n- Subsection Asia \n- Published 13 hours ago \nShare \nclose panel Share page \nCopy link About sharing \nRelated topics\n- China \nFollow China \nclose panel You are now following\nChina Updates from your News topics will appear in My News and in a collection on the News homepage . \n- Artificial intelligence \nFollow Artificial intelligence \nclose panel You are now following\nArtificial intelligence Updates from your News topics will appear in My News and in a collection on the News homepage . \n- Asia \nFollow Asia \nclose panel You are now following\nAsia Updates from your News topics will appear in My News and in a collection on the News homepage . \nRead description",
       "pub_date": "Wed, 05 Aug 2026 22:00:32 GMT"
     },
     {
@@ -204,19 +204,19 @@
     },
     {
       "source": "Bloomberg",
+      "title": "Chinese Renewable Energy Giant Envision Launches Data Center - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSUFfN2FySzFxdm5uSi1SYmhEVVpHdWpicFB3dm5fbkpFUmp1NDAtaGJzMU1zblgxY08teGxWNy1KWGR2bDZFVV9kS2ZFRTFSdFlhd2lrWWtQTU41M0V6WnU3UkMwdkI5M0ppbjJ5TW4zN3B0Y1JiZDhzNURrazg3MmQ5aU5HYWF0YnhjSk5ZX1d6LVJTa3dwTXI3WWxIOWItVXc0dURLREs4TlhROVpwcA?oc=5",
+      "summary": "Chinese Renewable Energy Giant Envision Launches Data Center&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "Chinese Renewable Energy Giant Envision Launches Data Center&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Thu, 06 Aug 2026 01:46:00 GMT"
+    },
+    {
+      "source": "Bloomberg",
       "title": "China Steel Group Says Push for Yuan-Pricing Would Help Iron Ore - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdXA0X3oxNVpRRDFDTDlOaUdsY2lBdlBLMU5ZSVhKRlBxcTl1ZmM4bnd1dG5RTlkzV2NuUlFSTE1vSnFTSHdSQWI3ZzhOelYyb3BHTTU0SVlyV0tsMmxSQlJEMFhXdzRXMWxYZkwzSEM3VlNxYXZJc1J4TnJjbkJGZWFEUmx4WU03OEtsZGlkT1hyNUU0cnNZYlVFSG9peDFYdWtpLTVEQlVxRlE0Q2Y4ZmV3VXFxZw?oc=5",
       "summary": "China Steel Group Says Push for Yuan-Pricing Would Help Iron Ore&nbsp;&nbsp;Bloomberg.com",
       "full_text": "China Steel Group Says Push for Yuan-Pricing Would Help Iron Ore&nbsp;&nbsp;Bloomberg.com",
       "pub_date": "Thu, 06 Aug 2026 02:58:00 GMT"
-    },
-    {
-      "source": "Bloomberg",
-      "title": "Alibaba Adds to China AI Breakthroughs With New Qwen Model - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWjlHM1ZsVFZ2VWZiRG4xcTd3aWdrU2U2SEwySXh3RWxPYWhBSlM0MTU2M2M3dlVDTnN5TDVUUkJvUGw5WXczVlB0ZzBPMk5NTjhOWkwwcGRHYWk4MGVUdjhRNUc5NXFkN1BFSHdrVnJtM0ZXSDNwM3phcnA5WE1LWjMwbUVhRHV2YUl2SmFBUVZUbXNTQ0EtZVBXRHhoSjlobzJuOWk4SnJvalVfZTdaWkVtRHdjN21v?oc=5",
-      "summary": "Alibaba Adds to China AI Breakthroughs With New Qwen Model&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "Alibaba Adds to China AI Breakthroughs With New Qwen Model&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Tue, 04 Aug 2026 00:33:00 GMT"
     },
     {
       "source": "AP",
@@ -380,6 +380,14 @@
     },
     {
       "source": "Financial Times",
+      "title": "SpaceX makes a splash and China scores a memory win - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUVB2YTNreFNKdnZVc0tPNDJkcGdrcXF6TVk2bGdzRHNKNGlVWjlNR2lsNC1PaUZHRUUxalg2S2h3V2g1S0hpdEk5OTREY294SWdFM01EbzNZTVFMNFJmbno5ZFV1Q2M0aDNTN3pBOXVDbWEyNnlfa0M4N0tObS1RTEwzTW8?oc=5",
+      "summary": "SpaceX makes a splash and China scores a memory win&nbsp;&nbsp;Financial Times",
+      "full_text": "SpaceX makes a splash and China scores a memory win&nbsp;&nbsp;Financial Times",
+      "pub_date": "Thu, 06 Aug 2026 06:21:59 GMT"
+    },
+    {
+      "source": "Financial Times",
       "title": "Shares in Chinese AI darlings slide on US ban fears - Financial Times",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMnVPR045R2NMYUhzWDRLZTRIRG0zeS1TY1BYOGhGa0dGRkdxQzdhSnVUQjRDcjhpN3N6NmNXYmVLOTFvZUFidVdqNXJ2OG8xQmRQbWRUZ3ZUVUxneVlONi1Ib0lNcEI2QjlrbEw1NEFrRXlhRnpKLXJIcERYSU1VMVZ4cl8?oc=5",
       "summary": "Shares in Chinese AI darlings slide on US ban fears&nbsp;&nbsp;Financial Times",
@@ -428,10 +436,10 @@
     },
     {
       "source": "BBC",
-      "title": "AI or real? BBC analyses viral China disaster videos - BBC",
+      "title": "AI or real? BBC analyses viral China disaster videos - bbc.com",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE00ZGxLZWtuci1qRjRvMkRZNDNsLXJ6R09XR3lTVFYzWU5WS3BMR29DbzFOMFVzRV8wUl9NNnVZdkdkb0hHdE9DbW5WTmF0bUwxV0dUSFhTRQ?oc=5",
-      "summary": "AI or real? BBC analyses viral China disaster videos&nbsp;&nbsp;BBC",
-      "full_text": "AI or real? BBC analyses viral China disaster videos&nbsp;&nbsp;BBC",
+      "summary": "AI or real? BBC analyses viral China disaster videos&nbsp;&nbsp;bbc.com",
+      "full_text": "AI or real? BBC analyses viral China disaster videos&nbsp;&nbsp;bbc.com",
       "pub_date": "Wed, 05 Aug 2026 22:00:32 GMT"
     },
     {
@@ -449,86 +457,6 @@
       "summary": "Trump administration reportedly drafting ban on Chinese datacenter components&nbsp;&nbsp;The Guardian",
       "full_text": "Trump administration reportedly drafting ban on Chinese datacenter components&nbsp;&nbsp;The Guardian",
       "pub_date": "Tue, 04 Aug 2026 17:21:00 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Thermally evaporated perovskite/silicon tandems via formamidinium eutectic - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE00aXdxX25yRGh4cEh2Y0RiN3JDc0dPSjhxbGpSX3RFNUZGdTltcnBqdTRtVWdndWhYMTQwd0RzSmJ0QUI5VE56dDFPSG5LUDg0cXZ2YThNTjYzZ0lDQmdB?oc=5",
-      "summary": "Thermally evaporated perovskite/silicon tandems via formamidinium eutectic&nbsp;&nbsp;Nature",
-      "full_text": "Thermally evaporated perovskite/silicon tandems via formamidinium eutectic&nbsp;&nbsp;Nature",
-      "pub_date": "Wed, 05 Aug 2026 15:28:48 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Plans for nuclear-powered merchant ships must confront risks - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5LU0dTQzg3eW5jWEVFZm9HLXBtNFFpLXQ3b3A4NUxDNjNGLUZlZUsxeWFZU1o1c2FGcVlkbmZ2Ymg0eS1PVEJTUFVHUzdJeTJVV2o3cnR4bEI2ZTRTLUE4?oc=5",
-      "summary": "Plans for nuclear-powered merchant ships must confront risks&nbsp;&nbsp;Nature",
-      "full_text": "Plans for nuclear-powered merchant ships must confront risks&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 03 Aug 2026 10:13:08 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "NSF rolls out ‘industry PhD’ programme — joining a global trend - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA0RWlWRHZWby0zcXlpUDFlV0MxVmloZ25JZThjMmFrT19FeGg3NzhtWDl2ekpCMjNvYXdRWHg5NTFtOFpNWV9jM3JBcUtXWFo3dkdSOUNyVzBNeGxlT09n?oc=5",
-      "summary": "NSF rolls out ‘industry PhD’ programme — joining a global trend&nbsp;&nbsp;Nature",
-      "full_text": "NSF rolls out ‘industry PhD’ programme — joining a global trend&nbsp;&nbsp;Nature",
-      "pub_date": "Wed, 05 Aug 2026 00:04:29 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Europe can become a bioengineering powerhouse with these three changes - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9KQ1NwckRRdXNEWmI1WjlGMXgyN1JMSkhHaEVrSjU5ckt6UFdwQXdyUktzR1Q2VHpNU1BoUENGVnRES3IzNFNBMWljSkVKNmRSOVBBZ1Y0ZFBEMWxMNjNV?oc=5",
-      "summary": "Europe can become a bioengineering powerhouse with these three changes&nbsp;&nbsp;Nature",
-      "full_text": "Europe can become a bioengineering powerhouse with these three changes&nbsp;&nbsp;Nature",
-      "pub_date": "Tue, 04 Aug 2026 09:13:42 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "‘A waste of time for all of us’: caught in the crossfire of the peer-review wars - Nature",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1Hd0FuVXYwbHJLUm9wQ0RzZTVxNDFMaFF4d3FkQk1rdTBTN3h3Vm1WeC1oY1VsSWpHd1ZQTW9QTGxKbFppRENOaWh2TmJzVzdBZk5VZlZGcGlSRGszSFktb0VaLVlIR3QxQU9aZWxhRQ?oc=5",
-      "summary": "‘A waste of time for all of us’: caught in the crossfire of the peer-review wars&nbsp;&nbsp;Nature",
-      "full_text": "‘A waste of time for all of us’: caught in the crossfire of the peer-review wars&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 03 Aug 2026 09:14:07 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Identification of carnivory in the flowering plant Saxifraga via multidisciplinary evidence - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBWRnBmTDhNMHBRVGtLZmF2MjJYeHY4dkkzMmUyTlhiNVJaN0RESDhCSnFLSGdyYkJ6bkNXcUw1Z1BBZmFndmRoMENUNjJidXZUcjdTVnl6anZ1VmNUU0g4?oc=5",
-      "summary": "Identification of carnivory in the flowering plant Saxifraga via multidisciplinary evidence&nbsp;&nbsp;Nature",
-      "full_text": "Identification of carnivory in the flowering plant Saxifraga via multidisciplinary evidence&nbsp;&nbsp;Nature",
-      "pub_date": "Tue, 04 Aug 2026 15:39:28 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Science-backed tips on how to avoid distractions - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9EMVV4RUc3S05qRnNFbzJQVTIyam1ibHBTcEQwSWJsSmJmQ0Q5Y2pqWXVHSm5DMjhVakpINXBMNmd6dGxaRUtCM1pKNk5yaTBHbW9QTnFWWHhOaVc1V3pj?oc=5",
-      "summary": "Science-backed tips on how to avoid distractions&nbsp;&nbsp;Nature",
-      "full_text": "Science-backed tips on how to avoid distractions&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 03 Aug 2026 11:13:23 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Controversial White House plan to overhaul US science funding faces Senate opposition - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBmQ1JrQWdVYlczU1VYU2R4YVgxOWVQbDBVcjd5LTFfMEdKVzlBUkpRZ1VpREVYNU9EazRjQkJzd01LbjJvOXMyU0xJS3lEOU5QUTdLandNcnFtWUNqQXhB?oc=5",
-      "summary": "Controversial White House plan to overhaul US science funding faces Senate opposition&nbsp;&nbsp;Nature",
-      "full_text": "Controversial White House plan to overhaul US science funding faces Senate opposition&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 03 Aug 2026 21:33:02 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "In situ particle-to-fibre transformation of hydrogels for 3D printing - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1PVDk0NUNGc2VEeWUxczR3cEJlV3kxaUt4dVVMaC11UUg2eEszT2hSQWdDSm1IODRqNmxDNHVza25TSVg3bEVxLUZQbWZFWkRNOGZRVHVYbDIySGlVQ3hJ?oc=5",
-      "summary": "In situ particle-to-fibre transformation of hydrogels for 3D printing&nbsp;&nbsp;Nature",
-      "full_text": "In situ particle-to-fibre transformation of hydrogels for 3D printing&nbsp;&nbsp;Nature",
-      "pub_date": "Wed, 05 Aug 2026 15:54:34 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "First poo transplant to treat food allergy in people has ‘exciting’ results - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JVWh6QXkzYmxSanRnQ0hfZEI5ZlZEZEZZTDZwTmItZnF3Qkd1Ykg3emx2UnhYRFZCVlo4eThYZHMtZ0dqWFNsVXVIMzQzZTFnWU1PTXItcC1RXzFDcWxV?oc=5",
-      "summary": "First poo transplant to treat food allergy in people has ‘exciting’ results&nbsp;&nbsp;Nature",
-      "full_text": "First poo transplant to treat food allergy in people has ‘exciting’ results&nbsp;&nbsp;Nature",
-      "pub_date": "Wed, 05 Aug 2026 18:50:58 GMT"
     },
     {
       "source": "Cell",
@@ -860,10 +788,10 @@
     },
     {
       "source": "Defense China",
-      "title": "Taiwan launches major war games to test command flexibility - Defense News",
+      "title": "Taiwan launches major war games to test command flexibility - defensenews.com",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRE0ybUtYNldqSTlmWTN6VkdoQXplR29sa3g3dnpLem9mZWZtcGxWN2h2NzJFTTBTTVVqbklfNmQwSk5aTE1zWlpLRkdocU0tUmo3OUljWm9mUnREM2RkQTJ5N3prRzFzbG16NE1LZkQtVTYwbklqWHJwMEJWZlJuWlphNDcxdTJ1bWZaRk0tYUNTaFdwZHp3aTI0eU5OOXBPcnRKQUVnR3dZcFo0TWpCOUJEakphd3NfQ0xr?oc=5",
-      "summary": "Taiwan launches major war games to test command flexibility&nbsp;&nbsp;Defense News",
-      "full_text": "Taiwan launches major war games to test command flexibility&nbsp;&nbsp;Defense News",
+      "summary": "Taiwan launches major war games to test command flexibility&nbsp;&nbsp;defensenews.com",
+      "full_text": "Taiwan launches major war games to test command flexibility&nbsp;&nbsp;defensenews.com",
       "pub_date": "Wed, 05 Aug 2026 13:09:54 GMT"
     },
     {
@@ -1028,18 +956,18 @@
     },
     {
       "source": "Kimi K3 News",
-      "title": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3 - theinformation.com",
+      "title": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3 - The Information",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUF9xZjJVQ1ZXakNOTWo3NzNCaFlSX3BOdndjUEwtVUhEQ1JWNVlUMkVLSGY5eDBHRFY0cWI3MU84R0M0WkM4ZE1uWjE2R28wLXBneGlvSHhzcnZWaVZlMS1vZE1VaUVfTUR2MmdOeHBaR01xekY3SkxfejRZTmJhVzNJTzgzZy1OUl9vVXFUUFhocExhSW1VRHZBOA?oc=5",
-      "summary": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3&nbsp;&nbsp;theinformation.com",
-      "full_text": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3&nbsp;&nbsp;theinformation.com",
+      "summary": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3&nbsp;&nbsp;The Information",
+      "full_text": "Alibaba Offers New Flagship Model at Lower Prices Than Kimi K3&nbsp;&nbsp;The Information",
       "pub_date": "Mon, 03 Aug 2026 06:23:00 GMT"
     },
     {
       "source": "Kimi K3 News",
-      "title": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War - 36 Kr",
+      "title": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War - 36Kr",
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xaTctNldhTzQ2a2dRbGJDVlVjMUNhMjJiOUhCSUdjdnV1QzFRZ2ZvWDgtM0VpbHNIQlNCZERUU2FzdHpRcUhBSFZPSmJTWmU5UzBJ?oc=5",
-      "summary": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War&nbsp;&nbsp;36 Kr",
-      "full_text": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War&nbsp;&nbsp;36 Kr",
+      "summary": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War&nbsp;&nbsp;36Kr",
+      "full_text": "China's Weekly Large Model Invocation Volume Tops Global Rankings | Kimi K3 Ignites AI Industry Price War&nbsp;&nbsp;36Kr",
       "pub_date": "Wed, 05 Aug 2026 09:03:02 GMT"
     },
     {
@@ -1052,82 +980,82 @@
     },
     {
       "source": "The Atlantic",
-      "title": "Get Used to High Gas Prices - theatlantic.com",
+      "title": "Get Used to High Gas Prices - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE00ZmhIdFRZLU8wM2lua2pIZWlINVJlMzNXeXRHUDJENV9OT2JKekR4dFRxMW5XYXFmTmUxeUh4b3YzY1ZoaWJvbGJqNG1VaXRKZ0FpY01UMkMzQVN6d05wRVNrc1I4Q2xsYzlyaUVnQXM1clM2b3JDOUQwN2dqUQ?oc=5",
-      "summary": "Get Used to High Gas Prices&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Get Used to High Gas Prices&nbsp;&nbsp;theatlantic.com",
+      "summary": "Get Used to High Gas Prices&nbsp;&nbsp;The Atlantic",
+      "full_text": "Get Used to High Gas Prices&nbsp;&nbsp;The Atlantic",
       "pub_date": "Tue, 04 Aug 2026 11:00:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Why Is the U.S. Running So Low on Weapons? - theatlantic.com",
+      "title": "Why Is the U.S. Running So Low on Weapons? - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObFdnUFl1SWtTZEszR3pXUmVaNmV5RWlMRU5obVhUMVBONTZTbG9xRXJ3am5aMFZQYWZwLTBlZDRnbmgyMzE0MTlTWDZMbHlQc3RLQjJ0RXk2Um9MbjliZUFtZFZaU2tReFI2V1NpSG5McXpUcjZUeF9UVHVkWlpLbmJjeXpnTjNtS0Iw?oc=5",
-      "summary": "Why Is the U.S. Running So Low on Weapons?&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Why Is the U.S. Running So Low on Weapons?&nbsp;&nbsp;theatlantic.com",
+      "summary": "Why Is the U.S. Running So Low on Weapons?&nbsp;&nbsp;The Atlantic",
+      "full_text": "Why Is the U.S. Running So Low on Weapons?&nbsp;&nbsp;The Atlantic",
       "pub_date": "Mon, 03 Aug 2026 10:56:23 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "The Danger of Trump’s Anti-Communist Rhetoric - theatlantic.com",
+      "title": "The Danger of Trump’s Anti-Communist Rhetoric - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUTliTGlLaUNkMFNRTHpuSy1mQjRfeUdPR3VISTZhSUhURnpFR0FUb0xUcUl2akdhcHlVbnVCX0RObnQyTnE4NTl2M1FIcWNhSndsSE5Sam4yaXZSZEFMaW05ZzZvR1ppbmlWaWpZTG5EUHlNZmd2ZVlYSjJYVkZPaW5yUGhKd3RsczhzbjgyMnRoZk0wOXM3V29vaVI?oc=5",
-      "summary": "The Danger of Trump’s Anti-Communist Rhetoric&nbsp;&nbsp;theatlantic.com",
-      "full_text": "The Danger of Trump’s Anti-Communist Rhetoric&nbsp;&nbsp;theatlantic.com",
+      "summary": "The Danger of Trump’s Anti-Communist Rhetoric&nbsp;&nbsp;The Atlantic",
+      "full_text": "The Danger of Trump’s Anti-Communist Rhetoric&nbsp;&nbsp;The Atlantic",
       "pub_date": "Tue, 04 Aug 2026 11:30:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "What Happened to al-Qaeda? - theatlantic.com",
+      "title": "What Happened to al-Qaeda? - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdGxwX29JcW1SOWcwS1E4X3U2UGhrQ0Fsa1RPdHA2U3NKN0JJMEJxUVZndmx4NXJrdG1SNnNXX0RaVndwR0RxNTJ2OEJVYzJ4b052TXExbmo5dVFsS1ZveG11aUdkMUk3REtYaTJRWTU3LVN6bnkxVlNvUFJlRTJyVXphSWNTeVU?oc=5",
-      "summary": "What Happened to al-Qaeda?&nbsp;&nbsp;theatlantic.com",
-      "full_text": "What Happened to al-Qaeda?&nbsp;&nbsp;theatlantic.com",
+      "summary": "What Happened to al-Qaeda?&nbsp;&nbsp;The Atlantic",
+      "full_text": "What Happened to al-Qaeda?&nbsp;&nbsp;The Atlantic",
       "pub_date": "Wed, 05 Aug 2026 10:00:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Trump’s Irrationality Is Dangerous - theatlantic.com",
+      "title": "Trump’s Irrationality Is Dangerous - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPQlFLTjFxdkh1bHZhM0N5X0phNXQyamJqUEJhSjBNWThEOEZ1YWxvSy10Nzk3TmJoVXRMRlpVczF6elUwRUstVzlFWXNQZ1g0TGhFaXFfTm5XVWVyTl9XOEFNMkhKV1ZYS2hBTDZ0M19mVGdieE1WclFnT0ZTXzZRT3BsZEVCNTZZZ25PWjRB?oc=5",
-      "summary": "Trump’s Irrationality Is Dangerous&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Trump’s Irrationality Is Dangerous&nbsp;&nbsp;theatlantic.com",
+      "summary": "Trump’s Irrationality Is Dangerous&nbsp;&nbsp;The Atlantic",
+      "full_text": "Trump’s Irrationality Is Dangerous&nbsp;&nbsp;The Atlantic",
       "pub_date": "Tue, 04 Aug 2026 22:03:51 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Was Herbert Hoover America’s Most Misunderstood President? - theatlantic.com",
+      "title": "Was Herbert Hoover America’s Most Misunderstood President? - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOQVl2RHRqbjhRX1lIUFpGdDFIbHNlbEZtc0lRVWNlNUVwblEtX2RZSTkxNGt0Z3hlbnZGc0pwMGdHZXBQMUFGLW9EN2cxVG5LNXJ0UEVhVnRXaXpRMlByem9QMWtPRTgxTW51NUo3b1E3OWVGY3RsM2tEbkoxbnBTMENBRmo3SFBJS0NfbGM3UmRad0x6VnR3VjVIajFpcFFO?oc=5",
-      "summary": "Was Herbert Hoover America’s Most Misunderstood President?&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Was Herbert Hoover America’s Most Misunderstood President?&nbsp;&nbsp;theatlantic.com",
+      "summary": "Was Herbert Hoover America’s Most Misunderstood President?&nbsp;&nbsp;The Atlantic",
+      "full_text": "Was Herbert Hoover America’s Most Misunderstood President?&nbsp;&nbsp;The Atlantic",
       "pub_date": "Wed, 05 Aug 2026 17:10:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Americans Are Turning on Trump - theatlantic.com",
+      "title": "Americans Are Turning on Trump - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmNQdnhBOEZoMmhzM2xCNlM4eWQwaDhUSUJ0NHN3eW9wZmpycEhBc1c4S1N2WWhDbnBmM0ZjTVVJVWMyZzZKVWNGQlZXY3YzSkZfLUFISGl2aE0wQnhzRlRXcER0VnlMMzN6VG1kUmh5UFROTU4tb3RmXzhyVlNNSnpzUGVxLThQTlJkamZ4X0lSY1o2Qm1sX2dwQ2dzSUg5VkFVUHpRLWpVdVR6?oc=5",
-      "summary": "Americans Are Turning on Trump&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Americans Are Turning on Trump&nbsp;&nbsp;theatlantic.com",
+      "summary": "Americans Are Turning on Trump&nbsp;&nbsp;The Atlantic",
+      "full_text": "Americans Are Turning on Trump&nbsp;&nbsp;The Atlantic",
       "pub_date": "Mon, 03 Aug 2026 22:05:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again - theatlantic.com",
+      "title": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPamVYUVVnQ053VHBzQ0NYX0xzLXJINFV3dXhMVjVmU3Jwb1lhbGFkVndQM0tRZXdEMlYzSFUtVmtGR094ZXc0a3g5bkM1WmlUTlhxVXRSWm55UmtGcWdaV09BbWo3Y1lEcHJ0WFA1ZkVMTVpMNHdQdFFzYmROd1lIRkppOGZ0UExwS2hUYzVhYUY?oc=5",
-      "summary": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again&nbsp;&nbsp;theatlantic.com",
+      "summary": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again&nbsp;&nbsp;The Atlantic",
+      "full_text": "Now, Thanks to Sam Altman, You Never Have to Speak With Your Kids Again&nbsp;&nbsp;The Atlantic",
       "pub_date": "Tue, 04 Aug 2026 20:02:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "Trump Tests the Definition of 'Insider Trading' - theatlantic.com",
+      "title": "Trump Tests the Definition of 'Insider Trading' - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLUdxejNWTnJHNmp2Tl8wdGYyLW51eWlSbEhIelhrVnVVd01sY3VHMUUyZ2xfSmxkSDVhbVF6VnlPaFlwQnR4MkxaU0lFQW4zVHNWVlJ4Z1Z1WjBDbkdkS01HTGs3TWs3Tnl5b0t3QXYtQURJLUloYmdHZUN5alpveWRxOFZ2RVg5U3kyeTl4eXF0YWFlNkVtV3BzQQ?oc=5",
-      "summary": "Trump Tests the Definition of 'Insider Trading'&nbsp;&nbsp;theatlantic.com",
-      "full_text": "Trump Tests the Definition of 'Insider Trading'&nbsp;&nbsp;theatlantic.com",
+      "summary": "Trump Tests the Definition of 'Insider Trading'&nbsp;&nbsp;The Atlantic",
+      "full_text": "Trump Tests the Definition of 'Insider Trading'&nbsp;&nbsp;The Atlantic",
       "pub_date": "Tue, 04 Aug 2026 23:08:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "A 'Spider-Man' Ad Beamed Directly to Your Car - theatlantic.com",
+      "title": "A 'Spider-Man' Ad Beamed Directly to Your Car - The Atlantic",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE53cVJhMHlORXYyVXE1QlBzYzR6TXFfek9pUEluenNsYW1GNEZ5Q2RFNVl4THdfdHdkNWR6LVB4bjF0bzJ2NUxwSUs5ZnZQd1ljaV9yclBQNnFFbjkxazdzUWlBZVNWeVR6T1JBQTZwSTJIc1paTDdyVkdnUQ?oc=5",
-      "summary": "A 'Spider-Man' Ad Beamed Directly to Your Car&nbsp;&nbsp;theatlantic.com",
-      "full_text": "A 'Spider-Man' Ad Beamed Directly to Your Car&nbsp;&nbsp;theatlantic.com",
+      "summary": "A 'Spider-Man' Ad Beamed Directly to Your Car&nbsp;&nbsp;The Atlantic",
+      "full_text": "A 'Spider-Man' Ad Beamed Directly to Your Car&nbsp;&nbsp;The Atlantic",
       "pub_date": "Wed, 05 Aug 2026 20:06:00 GMT"
     },
     {
@@ -1185,10 +1113,9 @@
     "Bloomberg": 10,
     "AP": 6,
     "Nikkei Asia": 10,
-    "Financial Times": 7,
+    "Financial Times": 8,
     "New York Times": 3,
     "The Guardian": 6,
-    "Nature": 10,
     "Cell": 2,
     "Science": 9,
     "CNN China": 5,
