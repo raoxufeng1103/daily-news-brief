@@ -1,10 +1,10 @@
 Fetching WorldMonitor API feeds...
-  ⚠️ NASA EONET: <urlopen error [Errno 101] Network is unreachable>
-  USGS: 35 quakes
+  NASA EONET: 10 events
+  USGS: 36 quakes
   Fear&Greed: 25 (Extreme Fear)
 /home/runner/work/daily-news-brief/daily-news-brief/news_scraper.py:235: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
   gdacs = safe_fetch_json("https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH?fromDate=" + (datetime.utcnow() - timedelta(days=3)).strftime("%Y-%m-%d"), "GDACS")
-  ⚠️ GDACS: <urlopen error timed out>
+  GDACS: 0 disasters
 WorldMonitor API feeds done.
 ChinaNewsAgg v3 starting...
 BBC: 7
@@ -18,18 +18,18 @@ BBC: 8
 The Guardian: 2
 Nature: 10
 Cell: 2
-Science: 8
+Science: 9
 The Lancet: 0
 NEJM: 0
 PNAS: 0
 CNN China: 5
 AFP China: 10
-Economist China: 10
+Economist China: 9
 Defense China: 10
 MIT Tech China: 2
 China EV News: 1
 China AI News: 10
-Kimi K3 News: 8
+Kimi K3 News: 7
 The Atlantic: 10
 EurAsian Times: 2
 Guardian: 6
@@ -41,7 +41,7 @@ PNAS (RSS): 0
 The Lancet (RSS): 0
 
 ==================================================
-CUTOFF: 2026-08-02 | TOTAL: 148 articles from 21 sources
+CUTOFF: 2026-08-02 | TOTAL: 147 articles from 21 sources
   AFP China: 10 (5 with full text)
   AP: 6 (6 with full text)
   BBC: 8 (7 with full text)
@@ -51,15 +51,15 @@ CUTOFF: 2026-08-02 | TOTAL: 148 articles from 21 sources
   China AI News: 10 (7 with full text)
   China EV News: 1 (1 with full text)
   Defense China: 10 (8 with full text)
-  Economist China: 10 (7 with full text)
+  Economist China: 9 (6 with full text)
   EurAsian Times: 2 (2 with full text)
   Financial Times: 7 (4 with full text)
-  Kimi K3 News: 8 (7 with full text)
+  Kimi K3 News: 7 (6 with full text)
   MIT Tech China: 2 (2 with full text)
   Nature: 10 (8 with full text)
   New York Times: 3 (3 with full text)
   Nikkei Asia: 10 (10 with full text)
   Reuters: 10 (9 with full text)
-  Science: 8 (8 with full text)
+  Science: 9 (9 with full text)
   The Atlantic: 10 (2 with full text)
   The Guardian: 6 (6 with full text)
