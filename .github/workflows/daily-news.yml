@@ -35,37 +35,32 @@ jobs:
         with:
           name: china-briefing
           path: '*.docx'
-      - name: Publish latest (guard against empty scrape)
+      - name: Publish latest (API write, guard empty)
+        env:
+          PAT: ${{ secrets.PAT }}
         run: |
-          git config user.name bot
-          git config user.email bot@n
           python - <<'PY'
-          import json, os, sys, shutil
+          import json, os, base64, sys, urllib.request
+          tok = os.environ.get('PAT','')
+          URL = 'https://api.github.com/repos/raoxufeng1103/daily-news-brief'
           raw = 'china_news_raw.json'
-          ok = False
-          n = 0
           try:
-              if os.path.getsize(raw) > 2:
-                  d = json.load(open(raw, encoding='utf-8'))
-                  arts = d.get('articles') if isinstance(d, dict) else d
-                  n = len(arts) if arts else 0
-                  ok = n > 0
+              d = json.load(open(raw, encoding='utf-8'))
+              arts = d.get('articles') if isinstance(d, dict) else d
           except Exception as e:
-              print('PARSE_ERROR', repr(e))
-          if ok:
-              shutil.copy(raw, 'china_news_latest.json')
-              print(f'VALID: {n} articles -> published')
-              sys.exit(0)
-          else:
-              print(f'EMPTY/INVALID (n={n}) -> keep previous china_news_latest.json')
-              sys.exit(3)
+              print('PARSE_ERROR', repr(e)); sys.exit(0)
+          if not arts:
+              print('EMPTY/INVALID -> keep previous china_news_latest.json'); sys.exit(0)
+          H = {'Authorization': f'Bearer {tok}', 'Accept':'application/vnd.github+json', 'User-Agent':'p', 'Content-Type':'application/json'}
+          try:
+              cur = json.loads(urllib.request.urlopen(urllib.request.Request(f'{URL}/contents/china_news_latest.json', headers=H), timeout=30).read())
+              sha = cur.get('sha')
+          except Exception:
+              sha = None
+          content = open(raw, 'rb').read()
+          b64 = base64.b64encode(content).decode()
+          body = json.dumps({"message": f"Auto update {len(arts)} articles", "content": b64, "sha": sha}).encode()
+          req = urllib.request.Request(f'{URL}/contents/china_news_latest.json', data=body, headers=H, method='PUT')
+          r = urllib.request.urlopen(req, timeout=60)
+          print('API PUT status', r.status, '| articles', len(arts))
           PY
-          rc=$?
-          if [ "$rc" -eq 0 ]; then
-            git add china_news_latest.json || true
-            git commit -m "Auto update $(date -u +%Y-%m-%dT%H:%M:%SZ)" --allow-empty
-            git push
-            echo "PUSHED"
-          else
-            echo "SKIPPED push (no new data)"
-          fi
