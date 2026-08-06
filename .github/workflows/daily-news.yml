@@ -18,13 +18,6 @@ jobs:
       - name: Scrape China news
         continue-on-error: true
         run: python news_scraper.py > china_news_raw.json 2> scrape.log || true
-      - name: Scrape diagnostics
-        if: always()
-        run: |
-          echo "=== scrape.log (tail) ==="
-          tail -n 30 scrape.log 2>/dev/null || true
-          echo "=== raw bytes ==="
-          wc -c china_news_raw.json 2>/dev/null || true
       - name: Upload scrape diagnostics
         if: always()
         env:
