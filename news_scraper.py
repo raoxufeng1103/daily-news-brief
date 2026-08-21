@@ -33,6 +33,18 @@ def is_cn(t):
     if PLA_RE.search(tl): return True
     return False
 
+# 月球探测/月球基地专题（峰哥要求：中国+国外都纳入，不限涉华）
+MOON_KW = ["moon base","lunar base","lunar exploration","moon exploration",
+           "lunar mission","moon mission","artemis","chang'e","lunar lander",
+           "moon landing","lunar outpost","moon outpost","lunar habitat","ilrs","moon station"]
+def is_moon(t):
+    tl = (t or "").lower()
+    return any(k in tl for k in MOON_KW)
+def is_relevant(src, text):
+    # 月球探测源：不限涉华，命中月球关键词即纳入
+    if src == "Moon Lunar": return is_moon(text)
+    return is_cn(text)
+
 def fetch(url, t=20, retries=2):
     last_err = None
     for attempt in range(retries + 1):
@@ -318,6 +330,8 @@ def run():
         ("The Atlantic", "site:theatlantic.com+china", "Atlantic"),
         # 欧亚时报（EurAsian Times，印度地缘/军事媒体，常发中国军事与中印议题）
         ("EurAsian Times", "site:eurasiantimes.com+china", "EurAsia"),
+        # 月球探测/月球基地专题（峰哥要求：不限涉华，中国+国外都纳入）
+        ("Moon Lunar", "moon+base+lunar+exploration+artemis+chang'e+ILRS", "Moon"),
     ]
     for src, query, hint in gn_sources:
         try:
@@ -334,7 +348,7 @@ def run():
                 ft = it.get("d", "")
                 # Atlantic 等 `site:X+china` 限定的源，查询本身即涉华，整体纳入；
                 # 其余源：标题或描述命中中国关键词即采用。
-                if src in SITE_CN_SOURCES or is_cn(head):
+                if src in SITE_CN_SOURCES or is_relevant(src, head):
                     # 头部已命中：抓取正文作为素材内容
                     if it["l"]:
                         try:
@@ -444,7 +458,7 @@ def run():
                         try:
                             body = fetch_article_text(it["l"], src, 15)
                         except: pass
-                    if body and is_cn(body):
+                    if body and is_relevant(src, body):
                         add(src, it["t"], it.get("l",""), it.get("d",""), body, it.get("pub",""))
         except Exception as e:
             print(f"  {src} RSS: {e}", file=sys.stderr)
