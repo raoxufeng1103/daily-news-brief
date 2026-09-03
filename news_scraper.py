@@ -21,7 +21,10 @@ CKW = ["china","chinese","beijing","xi jinping","li qiang","wang yi",
        "people's liberation army","chinese military","chinese army",
        "ccp","chinese communist party","communist party of china",
        "pla navy","pla air force","eastern theatre command",
-       "south china sea","taiwan strait"]
+       "south china sea","taiwan strait",
+       # 中埃军事合作（峰哥 2026-09-03 要求：中埃军事演习/文明之鹰演习一律纳入）
+       "eagle of civilization","china-egypt","china egypt","china-egypt military",
+       "中埃","文明之鹰","中埃军事演习","中埃联合演习"]
 
 # PLA 用整词匹配，避免误命中 explain / plans / plateau 等含 "pla" 子串的词
 PLA_RE = re.compile(r"\bpla\b", re.I)
@@ -332,7 +335,11 @@ def run():
         ("EurAsian Times", "site:eurasiantimes.com+china", "EurAsia"),
         # 月球探测/月球基地专题（峰哥要求：不限涉华，中国+国外都纳入）
         ("Moon Lunar", "moon+base+lunar+exploration+artemis+chang'e+ILRS", "Moon"),
+        # 中埃军事演习/文明之鹰专题（峰哥 2026-09-03 要求：定点搜索，查询本身已限定主题）
+        ("Egypt Drill", "china+egypt+military+exercise+%22eagle+of+civilization%22+OR+%E4%B8%AD%E5%9F%83", "EgyptDrill"),
     ]
+    # 这些源的查询词已锁定主题（如中埃军演），标题含 china/egypt 即纳入
+    SITE_CN_SOURCES.add("Egypt Drill")
     for src, query, hint in gn_sources:
         try:
             time.sleep(2)
