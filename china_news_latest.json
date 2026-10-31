@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-10-30 01:43:48",
-  "total": 160,
+  "generated_at": "2026-10-31 01:32:10",
+  "total": 157,
   "articles": [
     {
       "source": "BBC",
-      "title": "Crypto worth billions frozen after suspected Binance hack",
+      "title": "Crypto giant Binance hit by $6.3bn hack suspected to be largest in history",
       "url": "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o?at_medium=RSS&at_campaign=rss",
-      "summary": "The firm said transactions are suspended while it conducts security checks and will \"cover all losses\".",
-      "full_text": "Image source, Getty Images By Osmond Chia Business reporter \n- Published 30 October 2026, 00:37 GMT Updated 18 minutes ago \nCryptocurrency giant Binance said on Thursday that it has frozen digital assets worth around $3bn (£2.24bn) to prevent them from being stolen while it investigates a security issue. \nThe company said as part of a series of alerts online that all deposits and withdrawals are temporarily suspended while its teams conduct security checks and that the firm will \"cover all losses\". \n\"It does look like a hack on Binance,\" said Binance's former boss Changpeng Zhao, who remains a majority shareholder of the firm. \nTwo other major crypto platforms, Tether and Circle, said they have also frozen a total of about $2.4bn of assets in response to the potential Binance hack. \nBinance said the amount of funds frozen may continue to increase as its teams work closely with law enforcement and other partners to trace and seize additional assets. \n\"We are working around the clock and will share a full post-mortem once the investigation is complete. Please rely only on official Binance channels for updates,\" the firm said, adding that users' funds are safe. \nBinance is the world's largest crypto exchange by daily trading volumes. \nBitcoin dropped by around 5% following the alerts. The price of other major cryptocurrencies including Ethereum and Solana also fell sharply. \nCircle chief executive Jeremy Allaire said his firm is \"closely tracking reports of a potential exploit involving Binance\" and that his company has frozen more than $800m in assets linked to the incident. \nCircle is the issuer and co-creator of the USDC, one of the world's largest US dollar-backed cryptocurrencies. \nTether CEO Paolo Ardoino said his firm has frozen around $1.6bn \"related to a potential Binance exchange hack.\" \n\"Protecting the industry and our partners is our main priority,\" said Ardoino, whose company issues a cryptocurrency known as USDT. \nSeveral crypto industry observers had flagged concerns about a potential hack on Binance hours before the exchange confirmed the attack. \nThe scale of the attack is still unclear. \nIn 2025, hackers stole $1.5bn in crypto from the Dubai-based cryptocurrency exchange Bybit. The record-breaking incident has been attributed to hackers linked with North Korea. \nRelated topics\n- International Business \n- Cryptocurrency \n- Cyber-attacks \nMore on this story\n- \nAI gold rush draws crypto firms away from Bitcoin \n- Published 26 August \n- \nMeet the crypto billionaires building a world where money buys you a vote \n- Published 11 July",
-      "pub_date": "Fri, 30 Oct 2026 01:20:57 GMT"
+      "summary": "Two analytics firms have attributed the incident to a North Korean hacking unit called TraderTraitor.",
+      "full_text": "Image source, Reuters By Osmond Chia ,  Business reporter   and   Angus Thompson \n- Published 30 October 2026 \nCryptocurrency giant Binance said on Thursday that $6.3bn (£4.7bn) of digital assets have been impacted by what is thought to be the biggest crypto hack on record. \nThe world's biggest crypto exchange said about half of those assets had been frozen but that many remained in the hands of the hackers, adding that it will \"cover all losses\". \nThe company said while initial checks suggested an engineer's laptop had been compromised, allowing an attacker to make unauthorised withdrawals, \"our subsequent investigation has uncovered additional points of breach\". \nTwo analytics firms have attributed the incident, which eclipses a record-setting $1.5bn hack on the Bybit exchange in 2025, to a North Korean hacking unit called TraderTraitor. \nCyber-security firm Check Point said the unit is also known in the industry as Lazarus Group, which has been blamed for the 2025 hack. \nCheck Point's chief information security officer Jayant Dave said the losses estimated by Binance made it \"the largest crypto theft on record\". \nAI-powered investigations company TRM Labs said in a report that several elements of the Binance attack resemble earlier North Korean-linked incidents, including the Bybit hack. \nThe lab's global head of policy Ari Redbord told the BBC the Binance hack is a \"watershed moment\" that is unlike anything the industry has seen. \nThe attacker still holds an enormous sum of stolen assets, meaning efforts to trace and recover the funds are far from over, Redbord added. \nBinance, which was founded in China in 2017, allows users to trade digital assets and is estimated to have more than 300 million registered users worldwide. \nThe company said in 2024 that it has more than $160bn in assets under its custody. \nThe exchange has been subject of regulatory scrutiny around the world. \nChainalysis, a crypto analytics firm, also said it has \"high confidence\" that the North Korean group are linked to the hack. \nFor the last few years North Korea-linked operatives have focussed on attacking cryptocurrency companies for large thefts of digital tokens. \nWestern security agencies have previously said stolen funds are used to finance North Korea's nuclear weapons and missile development programs. \nThe regime has denied any involvement in hacks in the past. \nEric Jardine, Chainalysis' Head of Research, urged every exchange to remain vigilant as the platforms are attractive targets for hackers due to the sheer value of assets. \nBinance did not directly respond to BBC questions about the incident's potential links to North Korea but said: \"We are working closely with our law enforcement partners to confirm the identity of these criminals and bring them to justice.\" \nThe incident concerns Binance.com - while much smaller crypto platform Binance.US, which provides trading services specifically for American residents - said its platform is not affected by the issue. \nBinance co-CEO Richard Teng said the company's initial investigation suggested the hack started with a compromised engineer's laptop. \n\"That gave an attacker access to a service container, where they submitted unauthorized withdrawal transactions,\" he said in a statement. \n\"To be clear: the attacker did not simply use one engineer's permissions, and this was not a single 'one-click' action. It involved a more complex attack process. Our investigation has not attributed responsibility to any individual. So far, we have found no evidence of any wallet private key leak.\" \nHe said a detailed \"post-mortem\" would be shared once the investigation was complete. \nIn an update, the company said in a statement on X that another investigation found there had been other breach points: \"We are still gathering the facts, and will share more directly as we have them.\" \nCheck Point's Dave said this attack also resembled a hack on crypto exchange platform Bitget in September in which $388m (£289m) was lost: \"This implies that attackers no longer need the vault keys. They target the systems and people with authority to use them.\" \nIn a series of posts, Yi He, Binance's co-chief executive, thanked various cryptocurrency issuers for freezing the assets. \n\"Safety first: withdrawals are currently disabled until the environment is confirmed to be secure,\" she said. \nTwo other major crypto platforms, Tether and Circle, said they had frozen a total of about $2.4bn of assets in response to the potential Binance hack. \nWorld Liberty Financial, a crypto company linked to US President Donald Trump and his family, said it has worked with its partners to freeze stolen funds. \nCrypto exchange Coinbase said it was unaffected by the incident and was monitoring the situation. \nSeveral crypto industry observers had flagged concerns about a potential hack on Binance hours before the exchange confirmed the security issue. \nBitcoin dropped by more than 4% following the alerts. The price of other major cryptocurrencies including Ethereum and Solana also fell sharply. \nGet in touch\nHave you been affected? \nGet in touch \nRelated topics\n- International Business \n- Cryptocurrency \n- Cyber-attacks \nMore on this story\n- \nAI gold rush draws crypto firms away from Bitcoin \n- Published 26 August \n- \nMeet the crypto billionaires building a world where money buys you a vote \n- Published 11 July",
+      "pub_date": "Fri, 30 Oct 2026 09:33:51 GMT"
     },
     {
       "source": "BBC",
-      "title": "China made Mbappé apologise - but many people don't know exactly what he said",
+      "title": "China made Mbappé apologise - but many don't know exactly what he said",
       "url": "https://www.bbc.co.uk/news/articles/cm3wv36d603yo?at_medium=RSS&at_campaign=rss",
-      "summary": "The footballer's comments about a \"Chinese leader\" sparked outrage but censorship left many wondering what exactly happened.",
-      "full_text": "Image source, CFOTO/Future Publishing via Getty Images By Fan Wang \n- Published 2 hours ago \nOn Monday night, as Kylian Mbappé was attending the Ballon d'Or ceremony in London, he was also becoming the centre of a huge controversy on Chinese social media. \nFootball fans had stumbled upon a clip of him joking about the meme that makes him \"laugh the most\" - where his face is superimposed on a \"Chinese dictator\" resembling Mao Zedong, who oversaw one of the bloodiest chapters in the country's past. \nThe controversy spread like wildfire as Chinese brands cut him off one by one and China Media Group, the parent group of state broadcaster CCTV, suspended broadcasts of La Liga matches. A foreign ministry spokesperson said: \"Words and actions that hurt the feelings of the Chinese people will naturally be met with joint opposition from all sectors of Chinese society.\" \nBut on the Chinese internet, few were explicitly spelling out those words and actions, or even using the name of Mao - who remains a near-sacred figure in the country. \nFigure caption, \nWatch: The Mbappé-Chairman Mao controversy explained \nChina's sophisticated censorship system, which cuts 1.4 billion people off from the global internet, meant many didn't know exactly what had happened. \nThe accusation of \"hurting the feelings of the Chinese people\" alone seemed enough to trigger a tsunami of anger, amplified by social media algorithms and a heavily controlled internet, where people are wary of disagreeing with the majority view. \nIt wasn't long before Mbappé, one of the biggest football stars in the world, said he was \"sincerely sorry\" for his \"ill-judged\" comment . His club, Real Madrid, and the Spanish league La Liga, also issued apologies. China is a huge market for the world's most popular sport. \nBeijing later confirmed it was taking the footballer's apology \"seriously\". China Media Group has yet to say whether broadcasts will resume. \nBut the anger online lingered. \n\"An apology is the least he should do, but I don't forgive him. I support a ban on him,\" read a top comment on Weibo. \nMbappé did not mention Mao by name in the interview, but many felt any joke that involved the founder of Communist China crossed a line. \n\"Do you know who you hurt? He is the spiritual pillar of the Chinese people,\" read one Weibo comment liked by more than 700 users. \n\"He's the most important figure in our history. Do you think a simple apology can make everything okay?\" another wrote. \nImage source, Weibo Image caption, \nWeibo users shared the clip by blurring the meme and redacting references to Mao \nIronically, despite the heavy backlash, many on Chinese social media are still asking what exactly the French forward said. They tried AI chatbots, which are just as censored as the Chinese internet and couldn't provide any answers. Others attempted to explain, but skirted around any mention of Mao. \nReferences were made to \"the person on the 100 yuan note\" and \"the teacher\", a title Mao once used for himself. Screenshots of the meme and interview were shared, with both the word \"dictator\" and Mbappé's face blurred out. \nNeither the Chinese foreign ministry statement nor the apologies issued by Mbappé, Real Madrid and La Liga mentioned Mao directly. \nMao, who led the Chinese Communist Party to victory in the civil war and founded the People's Republic of China, died in 1976. \nDespite the turmoil of his rule, including the Great Leap Forward and the Cultural Revolution, which led to a famine that killed tens of millions and unleashed violent purges across Chinese society, he remains a revered figure in China. \nImage source, AFP via Getty Images Image caption, \nIt is illegal to \"insult\" or \"slander\" Communist Party martyrs and war heroes in China \nA portrait of Mao overlooks Beijing's Tiananmen Square, a symbol of how central he is in the modern Chinese imagination. Unlike other former Chinese leaders, his embalmed body is placed on public display there, drawing tens of thousands of visitors every day. In recent years, there has been a revival of interest in him among young people, who read his works and watch clips of him on social media. \nChinese history books downplay the devastation during Mao's rule. The Chinese Communist Party's verdict on Mao is that his achievements outweigh his mistakes. In their eyes, he is \"a great revolutionary and a great Marxist\". \nImage source, AFP via Getty Images Image caption, \nMbappe's Chinese social media Weibo account was banned from being followed by new users on Tuesday \nBut outside China, history sees Mao as both a revolutionary and a dictator. And so reactions among the diaspora - dissidents as well as people whose families fled China decades ago, in the wake of Mao's rule - was very different. \n\"You don't need to apologise, you are not wrong,\" a highly liked comment written in Chinese under the football star's X statement read. \n\"The ones who should apologise are the CCP; they kidnapped the Chinese people and brainwashed them,\" another Chinese user wrote. \nOn X and Threads, neither of which are accessible in China, the controversy spawned even more memes. Some feature Mbappé's face on other images of Mao, while others go further, placing him on the body of current Chinese leader Xi Jinping. \nImage source, AFP via Getty Images Image caption, \nDairy company Mengniu, an official sponsor of the Fifa World Cup, cut ties with the footballer after the backlash \nAnd then there was the rest of the internet which was simply puzzled. \n\"It's honestly hard to understand... It seems like people aren't allowed to speak out against their leaders. And they expect the whole world to think the same way they do? That's ridiculous,\" read a top comment under Real Madrid's apology on Instagram. \n\"How dare you call a dictator a dictator? Terrible,\" another user on X wrote. \nRelated topics\n- China \nMore on this story\n- \nMbappé sorry for 'ill-judged' Mao remark after backlash in China \n- Published 2 days ago",
+      "summary": "His comment about Chinese leader Mao sparked anger but censorship left many wondering what exactly happened.",
+      "full_text": "Image source, CFOTO/Future Publishing via Getty Images By Fan Wang \n- Published 29 October 2026 \nOn Monday night, as Kylian Mbappé was attending the Ballon d'Or ceremony in London, he was also becoming the centre of a huge controversy on Chinese social media. \nFootball fans had stumbled upon a clip of him joking about the meme that makes him \"laugh the most\" - where his face is superimposed on a \"Chinese dictator\" resembling Mao Zedong, who oversaw one of the bloodiest chapters in the country's past. \nThe controversy spread like wildfire as Chinese brands cut him off one by one and China Media Group, the parent group of state broadcaster CCTV, suspended broadcasts of La Liga matches. A foreign ministry spokesperson said: \"Words and actions that hurt the feelings of the Chinese people will naturally be met with joint opposition from all sectors of Chinese society.\" \nBut on the Chinese internet, few were explicitly spelling out those words and actions, or even using the name of Mao - who remains a near-sacred figure in the country. \nFigure caption, \nWatch: The Mbappé-Chairman Mao controversy explained \nChina's sophisticated censorship system, which cuts 1.4 billion people off from the global internet, meant many didn't know exactly what had happened. \nThe accusation of \"hurting the feelings of the Chinese people\" alone seemed enough to trigger a tsunami of anger, amplified by social media algorithms and a heavily controlled internet, where people are wary of disagreeing with the majority view. \nIt wasn't long before Mbappé, one of the biggest football stars in the world, said he was \"sincerely sorry\" for his \"ill-judged\" comment . His club, Real Madrid, and the Spanish league La Liga, also issued apologies. China is a huge market for the world's most popular sport. \nBeijing later confirmed it was taking the footballer's apology \"seriously\". China Media Group has yet to say whether broadcasts will resume. \nBut the anger online lingered. \n\"An apology is the least he should do, but I don't forgive him. I support a ban on him,\" read a top comment on Weibo. \nMbappé did not mention Mao by name in the interview, but many felt any joke that involved the founder of Communist China crossed a line. \n\"Do you know who you hurt? He is the spiritual pillar of the Chinese people,\" read one Weibo comment liked by more than 700 users. \n\"He's the most important figure in our history. Do you think a simple apology can make everything okay?\" another wrote. \nImage source, Weibo Image caption, \nWeibo users shared the clip by blurring the meme and redacting references to Mao \nIronically, despite the heavy backlash, many on Chinese social media are still asking what exactly the French forward said. They tried AI chatbots, which are just as censored as the Chinese internet and couldn't provide any answers. Others attempted to explain, but skirted around any mention of Mao. \nReferences were made to \"the person on the 100 yuan note\" and \"the teacher\", a title Mao once used for himself. Screenshots of the meme and interview were shared, with both the word \"dictator\" and Mbappé's face blurred out. \nNeither the Chinese foreign ministry statement nor the apologies issued by Mbappé, Real Madrid and La Liga mentioned Mao directly. \nMao, who led the Chinese Communist Party to victory in the civil war and founded the People's Republic of China, died in 1976. \nDespite the turmoil of his rule, including the Great Leap Forward and the Cultural Revolution, which led to a famine that killed tens of millions and unleashed violent purges across Chinese society, he remains a revered figure in China. \nImage source, AFP via Getty Images Image caption, \nIt is illegal to \"insult\" or \"slander\" Communist Party martyrs and war heroes in China \nA portrait of Mao overlooks Beijing's Tiananmen Square, a symbol of how central he is in the modern Chinese imagination. Unlike other former Chinese leaders, his embalmed body is placed on public display there, drawing tens of thousands of visitors every day. In recent years, there has been a revival of interest in him among young people, who read his works and watch clips of him on social media. \nChinese history books downplay the devastation during Mao's rule. The Chinese Communist Party's verdict on Mao is that his achievements outweigh his mistakes. In their eyes, he is \"a great revolutionary and a great Marxist\". \nImage source, AFP via Getty Images Image caption, \nMbappe's Chinese social media Weibo account was banned from being followed by new users on Tuesday \nBut outside China, history sees Mao as both a revolutionary and a dictator. And so reactions among the diaspora - dissidents as well as people whose families fled China decades ago, in the wake of Mao's rule - was very different. \n\"You don't need to apologise, you are not wrong,\" a highly liked comment written in Chinese under the football star's X statement read. \n\"The ones who should apologise are the CCP; they kidnapped the Chinese people and brainwashed them,\" another Chinese user wrote. \nOn X and Threads, neither of which are accessible in China, the controversy spawned even more memes. Some feature Mbappé's face on other images of Mao, while others go further, placing him on the body of current Chinese leader Xi Jinping. \nImage source, AFP via Getty Images Image caption, \nDairy company Mengniu, an official sponsor of the Fifa World Cup, cut ties with the footballer after the backlash \nAnd then there was the rest of the internet which was simply puzzled. \n\"It's honestly hard to understand... It seems like people aren't allowed to speak out against their leaders. And they expect the whole world to think the same way they do? That's ridiculous,\" read a top comment under Real Madrid's apology on Instagram. \n\"How dare you call a dictator a dictator? Terrible,\" another user on X wrote. \nRelated topics\n- China \nMore on this story\n- \nMbappé sorry for 'ill-judged' Mao remark after backlash in China \n- Published 3 days ago",
       "pub_date": "Thu, 29 Oct 2026 23:03:15 GMT"
     },
     {
@@ -31,8 +31,8 @@
       "title": "Record number of purges as Xi emphasises 'party discipline' at China political gathering",
       "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo?at_medium=RSS&at_campaign=rss",
       "summary": "Xi's anti-corruption campaign has become \"an effort to consolidate and maintain authority\", observers say.",
-      "full_text": "Image source, Getty Images Image caption, \nThis is the first time in Xi's 14 years of leadership that plenum attendance fell below 300 By Kelly Ng   and   Ian Tang ,  BBC Monitoring \n- Published 29 October 2026 \nA record 33 members have been expelled from China's Communist Party as it concluded a major annual political gathering, which had the most empty seats ever seen. \nThe fifth plenum was attended by 279 Central Committee members, compared to 315 at the fourth plenum in October 2025 and 364 at the third one in July 2024. \nWhile recent plenums focused on economic reforms or social and development issues, party discipline took centre stage at this week's gathering. \nXi Jinping has made the fight against corruption a central pillar of his rule since he took the reins in 2012, calling it the \"biggest threat\" to the party. \nAnti-corruption purges continue \nSixteen of the 33 members expelled are from the military, according to a communique issued on Thursday, which marked the end of the four-day closed-door gathering held at a hotel in Beijing. \nIt's unclear what specific charges these members face beyond \"serious disciplinary and legal violations\". Such broad allegations have become routine under Xi's anti-corruption campaign. \nIt has now become \"an effort to consolidate and maintain authority\", says Chong Ja Ian, a non-resident scholar with Carnegie China. \n\"In this case, the campaign will continue and expand depending on how secure Xi feels rather than any real issue with corruption.\" \nIn its statement, the party said it has \"squarely confronted the grim reality that party leadership had at times weakened or hollowed out\" and that it will continue to \"enforce strict party self-governance, including turning the knife inwards to... curb disorder\". \nThe latest expulsions bring the total number of members removed under Xi's third term to a record 51, up from 35 and five in his first and second terms respectively. \nBeyond the plenum, China's top anti-corruption watchdog reported that 680,000 people across the party apparatus have been disciplined in the first nine months of this year. \nThis is also the first time in Xi's 14 years of leadership that plenum attendance fell below 300. The current Central Committee started its term in 2022 with more than 370 members. \nObservers argue that Xi views corruption not just as graft but also ideological impurity and, crucially, disloyalty. \nIn January, he warned against \"two-faced cadres\" who profess political loyalty but defy orders and act in their self-interest. \nWho are the key figures purged? \nAmong the high-ranking officials expelled are former Xinjiang party chief Ma Xingrui, and ex-top generals Zhang Youxia and Liu Zhenli. Official statements announcing their removal this year said they \"seriously violating [the party's] discipline and rules\", which is widely read as a euphemism for corruption. \nThe culling of the military's top brass has been particularly significant, with Neil Thomas, Lobsang Tsering and Shengyu Wang from the Asia Society Policy Institute describing it as \"in a category of its own\". \n\"It raises serious questions about organisational leadership and combat readiness, even as China continues to unveil formidable new military hardware,\" they wrote. \nZhang was also vice-chairman of the Central Military Commission, which controls the armed forces. The seven-member commission has since been whittled down to just two members: Xi as chairman and Zhang Shengmin vice-chairman. \nMa and Zhang Youxia were former Politburo members. Their removal, along with former general He Weidong in 2025, meant the powerful 24-man Politburo was at one point left with 21 members. \nZhang Shengmin was promoted to the top decision-making body at the fifth plenum, bringing the number to 22. \nFormer prominent diplomat Liu Jianchao, who disappeared from public view in July last year, was also named among those who have been purged. \n\"Xi has few qualms about removing people he promoted,\" Chong says. \"That he does so at will with little opposition underscores how unassailable his position is at the moment.\" \nXi's plans for the future \nAnalysts believe one reason for the increased empahsis on discipline – which many interpret as loyalty – is next year's Party Congress, when the CCP will vote again for its next leader. \nA leadership reshuffle is due in 2027 and many analysts expect Xi to hold on to the top job for a fourth term and beyond. No leader has served that long except Mao Zedong, the founder Communist China. \nXi has reason to \"scrutinise the next cohort more closely\" given the fall of so many officials from the current committee, Thomas says. \n\"Today's rising stars tend to be relatively young, boast technocratic backgrounds, and have connections to Xi's political network,\" he says, adding that \"provincial leadership ranks are a promising place to look\". \nObservers say that ultimately, Xi is expected to dominate personnel selection at the 21st Party Congress, which will further cement his grip on the party and the country. \n\"Xi's focus is further consolidating power around himself... The readout from the plenum suggests he intends to be at the centre of China and the Communist Party for the foreseeable future,\" Chong says. \n\"However, further down the road, such concentration of power may pave the way for a more serious power vacuum when Xi ages and slows down.\" \nRelated topics\n- Communist Party of China \n- Xi Jinping \n- China \n- Asia \nMore on this story\n- \n'Tigers and flies': Millions of officials later, why is Xi's corruption purge still going? \n- Published 13 March",
-      "pub_date": "Thu, 29 Oct 2026 12:49:17 GMT"
+      "full_text": "Image source, Getty Images Image caption, \nThis is the first time in Xi's 14 years of leadership that plenum attendance fell below 300 By Kelly Ng   and   Ian Tang ,  BBC Monitoring \n- Published 29 October 2026 Updated 30 October 2026 \nA record 33 members have been expelled from China's Communist Party as it concluded a major annual political gathering, which had the most empty seats ever seen. \nThe fifth plenum was attended by 279 Central Committee members, compared to 315 at the fourth plenum in October 2025 and 364 at the third one in July 2024. \nWhile recent plenums focused on economic reforms or social and development issues, party discipline took centre stage at this week's gathering. \nXi Jinping has made the fight against corruption a central pillar of his rule since he took the reins in 2012, calling it the \"biggest threat\" to the party. \nSince then, more than two million individuals have been disciplined for cases related to \"pointless formalities, bureaucratism, hedonism and extravagance\", Zhang Fuhai, from the party's disciplinary commission, told a press briefing on Friday. \nHe also said the party would enhance its efforts to ensure officials \"dare not, cannot, and do not want to be corrupt\". \nAnti-corruption purges continue \nSixteen of the 33 members expelled are from the military, according to a communique issued on Thursday, which marked the end of the four-day closed-door gathering held at a hotel in Beijing. \nIt's unclear what specific charges these members face beyond \"serious disciplinary and legal violations\". Such broad allegations have become routine under Xi's anti-corruption campaign. \nIt has now become \"an effort to consolidate and maintain authority\", says Chong Ja Ian, a non-resident scholar with Carnegie China. \n\"In this case, the campaign will continue and expand depending on how secure Xi feels rather than any real issue with corruption.\" \nIn its statement, the party said it has \"squarely confronted the grim reality that party leadership had at times weakened or hollowed out\" and that it will continue to \"enforce strict party self-governance, including turning the knife inwards to... curb disorder\". \nThe latest expulsions bring the total number of members removed under Xi's third term to a record 51, up from 35 and five in his first and second terms respectively. \nBeyond the plenum, China's top anti-corruption watchdog reported that 680,000 people across the party apparatus have been disciplined in the first nine months of this year. \nThis is also the first time in Xi's 14 years of leadership that plenum attendance fell below 300. The current Central Committee started its term in 2022 with more than 370 members. \nObservers argue that Xi views corruption not just as graft but also ideological impurity and, crucially, disloyalty. \nIn January, he warned against \"two-faced cadres\" who profess political loyalty but defy orders and act in their self-interest. \nImage source, Getty Images Image caption, \nThe party says it's going after \"pointless formalities\", which inlcude \"bureaucratism, hedonism and extravagance\" \nWho are the key figures purged? \nAmong the high-ranking officials expelled are former Xinjiang party chief Ma Xingrui, and ex-top generals Zhang Youxia and Liu Zhenli. Official statements announcing their removal this year said they \"seriously violated [the party's] discipline and rules\", which is widely read as a euphemism for corruption. \nThe culling of the military's top brass has been particularly significant, with Neil Thomas, Lobsang Tsering and Shengyu Wang from the Asia Society Policy Institute describing it as \"in a category of its own\". \n\"It raises serious questions about organisational leadership and combat readiness, even as China continues to unveil formidable new military hardware,\" they wrote. \nZhang was also vice-chairman of the Central Military Commission, which controls the armed forces. The seven-member commission has since been whittled down to just two members: Xi as chairman and Zhang Shengmin vice-chairman. \nMa and Zhang Youxia were former Politburo members. Their removal, along with former general He Weidong in 2025, meant the powerful 24-man Politburo was at one point left with 21 members. \nZhang Shengmin was promoted to the top decision-making body at the fifth plenum, bringing the number to 22. \nFormer prominent diplomat Liu Jianchao, who disappeared from public view in July last year, was also named among those who have been purged. \n\"Xi has few qualms about removing people he promoted,\" Chong says. \"That he does so at will with little opposition underscores how unassailable his position is at the moment.\" \nXi's plans for the future \nAnalysts believe one reason for the increased emphasis on discipline – which many interpret as loyalty – is next year's Party Congress, when the CCP will vote again for its next leader. \nA leadership reshuffle is due in 2027 and many analysts expect Xi to hold on to the top job for a fourth term and beyond. No leader has served that long except Mao Zedong, the founder of Communist China. \nXi has reason to \"scrutinise the next cohort more closely\" given the fall of so many officials from the current committee, Thomas says. \n\"Today's rising stars tend to be relatively young, boast technocratic backgrounds, and have connections to Xi's political network,\" he says, adding that \"provincial leadership ranks are a promising place to look\". \nObservers say that ultimately, Xi is expected to dominate personnel selection at the 21st Party Congress, which will further cement his grip on the party and the country. \n\"Xi's focus is further consolidating power around himself... The readout from the plenum suggests he intends to be at the centre of China and the Communist Party for the foreseeable future,\" Chong says. \n\"However, further down the road, such concentration of power may pave the way for a more serious power vacuum when Xi ages and slows down.\" \nRelated topics\n- Communist Party of China \n- Xi Jinping \n- China \n- Asia \nMore on this story\n- \n'Tigers and flies': Millions of officials later, why is Xi's corruption purge still going? \n- Published 13 March",
+      "pub_date": "Fri, 30 Oct 2026 03:24:12 GMT"
     },
     {
       "source": "BBC",
@@ -68,14 +68,6 @@
     },
     {
       "source": "BBC",
-      "title": "China's big political meeting could see Xi 'tighten discipline' in party",
-      "url": "https://www.bbc.co.uk/news/articles/c6n8djd1078ro?at_medium=RSS&at_campaign=rss",
-      "summary": "The highly secretive four-day Plenum starts Monday in Beijing.",
-      "full_text": "Image source, Getty Images Image caption, \nPlenums are essentially closed door meetings of the Party's central committee that happen at least once a year By Stephen McDonell \nChina correspondent \n- Published 26 October 2026 \nA major political gathering is under way in the Chinese capital, with a closed-door meeting of senior figures that could shape the look of the ruling Communist Party in the years to come. \nThe Fifth Plenum brings together around 300 members of the Central Committee and state media said it would pave the way for a \"tightening of discipline\" within the Party's ranks. \nThe four-day session that started on Monday will give Xi Jinping an opportunity to further consolidate his grip on power following recent purges. \nThe normally annual plenums are highly secretive, but a summary of decisions and a more detailed document will be made public after. \nWhat is a plenum? \nThey are essentially closed door meetings of the Party's central committee that happen at least once a year. \nThere are usually seven plenums during each five-year Central Committee term and they are watched from afar because they are meant to signal the leadership's priorities. \nThe timing for this year's gathering is important because it is a year away from the next Party Congress, where a new set of priorities is set up and a new central committee appointed. \nOfficially, the Central Committee selects the Party's top leadership but the real processes leading to the selection are kept secret within the Party elite. \nThe next Party Congress will almost certainly reappoint Xi as the country's leader, following the abolition of term limits. \nWhat is on the agenda this year? \nPast plenum sessions have been used to declare Xi as \"the core\" of the Party, abolish term limits which cleared the way for him to remain in power indefinitely, and elevate his personal philosophy – branded as \"Xi Jinping Thought\" – to the same level as Chairman Mao. \nThis year's plenum is an opportunity for Xi to dictate strategy in the run up to the Congress, ensuring that views are aligned and delegates loyal. \nEven the location of the meeting, which will wrap up on Thursday, has not been announced. Past plenums have been held inside Beijing's Jingxi Hotel. \nAccording to a readout from the powerful 21-member Politburo this September, the plenum will adopt a decision on \"several major issues persistently advancing the comprehensive strict governance of the Party\", which is being read as a way to further ensure obedience and effectiveness from distant party officials. \nThis means it would also be a time of nervousness for delegates as they look around the room with its \"empty chairs\" following the scale of recent purges within the Party. \nAllegations of corruption, even \"moral corruption\", have seen large swathes of senior figures culled. \n\"Moral corruption\" has been seen by experts as a way of cracking down on perceived disloyalty to Xi because overall disloyalty to the Party can be interpreted as a breach of \"morality\". \nThe Asia Society Policy Institute has estimated that of 44 military members appointed to the Central Committee in 2022 only two have not been taken down. \nThe all-powerful seven-man Central Military Commission, which runs the armed forces in China, has also been whittled down to only two people, Xi Jinping and one other general. \nThis plenum is an opportunity for him to appoint new officers to this body. \nRelated topics\n- Asia \n- China \nMore on this story\n- \n'Tigers and flies': Millions of officials later, why is Xi's corruption purge still going? \n- Published 13 March \n- \nChina removes nine military officials ahead of key political meeting \n- Published 27 February \n- \nChina has purged its highest-ranked military general. Why? \n- Published 26 January \n- \nThree things we learned from China's big political meeting this week \n- Published 24 October 2025",
-      "pub_date": "Mon, 26 Oct 2026 07:40:57 GMT"
-    },
-    {
-      "source": "BBC",
       "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
       "url": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
       "summary": "The Villa Vie Odyssey suspended its voyage and is working with passengers on \"temporary living arrangements\".",
@@ -83,20 +75,68 @@
       "pub_date": "Wed, 28 Oct 2026 10:31:22 GMT"
     },
     {
-      "source": "Reuters",
-      "title": "FCC votes to ban all Chinese labs from testing US electronics - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTWwwSGZXVUdWRlY3d3FPckZwOEp5alZQcWZ1OVh5ZDdwM0l1WWl6dV9mdWpaR3MyeVVFREsxckVEZDlBYU83alN1SDdsbUVvd3NPUTB3NE1CRG5HVEJkM0lGa1BJWEJwRFBocUNRdG5BbnUwM0xaVnNyWWc5NGhOVm1OblhleDB0ZHRqaHl5OUhNUVRoSGIyQWpKbE9ONWZzZlFNSWc3aXE5enEtRWpNNFZ3?oc=5",
-      "summary": "FCC votes to ban all Chinese labs from testing US electronics&nbsp;&nbsp;Reuters",
-      "full_text": "FCC votes to ban all Chinese labs from testing US electronics&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 16:05:41 GMT"
+      "source": "BBC",
+      "title": "Watch: The Mbappé-Chairman Mao controversy explained",
+      "url": "https://www.bbc.co.uk/news/videos/cqy43w2wpy3vo?at_medium=RSS&at_campaign=rss",
+      "summary": "Kylian Mbappé has apologised for \"ill-judged\" comments he made about late Chinese leader Mao Zedong.",
+      "full_text": "Watch: The Mbappé-Chairman Mao controversy explained\nWatch: The Mbappé-Chairman Mao controversy explained \nClose \nFootballer Kylian Mbappé has apologised for \"ill-judged\" comments he made about late Chinese leader Mao Zedong, which led to him being dropped by several Chinese brands. \nChina's foreign ministry has also criticised the player. \nThe BBC's China correspondent Stephen McDonell explains the controversy. \nRead more here. \n- Subsection Asia \n- Published 3 days ago \nShare \nclose panel Share page \nCopy link About sharing \nRelated topics\n- China \nFollow China \nRead description",
+      "pub_date": "Tue, 27 Oct 2026 17:11:27 GMT"
     },
     {
       "source": "Reuters",
-      "title": "China's Communist Party confirms expulsion of 33 officials - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPblFZUFd0QWlTQ1ItUmJ6cXJKck9UdTE5X2JXMWJxUHY5Qk9MTWt2eGV1NGtaSFlwV2FyMTk0cmZoMWtBOGtqcmFidm56TGhBYjl5U3J0NnNWZ3hhb1ZJQUM2YU9OVkZ3R1FFWmR0OVRpUE1VOG5OYklNcllPWGRTNWRUWW0xSVBpcEVfYXhkUm10VVhZT082NTBXWTBNbFlsZ3VsdA?oc=5",
-      "summary": "China's Communist Party confirms expulsion of 33 officials&nbsp;&nbsp;Reuters",
-      "full_text": "China's Communist Party confirms expulsion of 33 officials&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 10:17:44 GMT"
+      "title": "China's Xi calls on EU to work with China, says Beijing handles ties with sincerity, goodwill - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeUJSUmlkMEFPVXdGR3QwUUVoWXk4Smo4MjNOeThtNWMxR19hcHhkSmI5d0p4MGstOGd3dVNselZaUmE4NHgyS1dDYlp2QUFUaUU4bWt5OGZiTmdWVEpicndNUlNTR3BYSDRyRmhIT1gxcUt2VHVpYkY3eFY1RUtKa1hLTlRLUW1aT1RwMjZFMDlKSk9JeTZuTlR4SGVqalJ5U0VFcG0tNkRfRWt5dDlZMHpaTHpoMDJ6QWNXWUF3QXM?oc=5",
+      "summary": "China's Xi calls on EU to work with China, says Beijing handles ties with sincerity, goodwill&nbsp;&nbsp;Reuters",
+      "full_text": "China's Xi calls on EU to work with China, says Beijing handles ties with sincerity, goodwill&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 12:15:07 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "China's Xi hails new chapter with Germany, urges friendly policy towards Beijing - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcXVrYU5aZnNQc2p4R2ZDOEVtdmtqb3lQWTIyQVFVb1MtSldsZWJFT2FwcUV6eXpaTmlvdERVZ2Y5WlRISnBwbDNtZE9LSTVMOEloWlVla0RjTGxCam0yZ0ZEV091dDEyRHFZQmp4bjdEVnhmUUlkTHRkUWhWZ3J1YV9PMUsyaGNNQTBTQmVmcGV1UUFGRGpaaEJ0SEExMXljQkU1ZE9QUEVSVFNiOVdJ?oc=5",
+      "summary": "China's Xi hails new chapter with Germany, urges friendly policy towards Beijing&nbsp;&nbsp;Reuters",
+      "full_text": "China's Xi hails new chapter with Germany, urges friendly policy towards Beijing&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 15:41:38 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "China says stealth attack drone makes first takeoff, landing on amphibious ship - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPa2VWQy1ja0pYZnMwNjRsalVpOWNRdW1haW42N19VLU1PMlpMUVpkWHlKY3laUjRqQkdqRHJ5RW9reGxKQ0sxSkJGcDdPanZLWk5RM1A1ZEpka2pfR0xMazlUYmU0cFVQdEVZU2JydDNuSmVXOE1veDVkdWdjLUluUkxra2hIUzNyS0kxemU4Sk43SWc2elVhTERXSEpFM1BqTVh3dm13RFdIZVNvSFM1RE9PU2dJRDlMeVdKckg3WEw?oc=5",
+      "summary": "China says stealth attack drone makes first takeoff, landing on amphibious ship&nbsp;&nbsp;Reuters",
+      "full_text": "China says stealth attack drone makes first takeoff, landing on amphibious ship&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 15:49:43 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "EXCLUSIVE: EU fees that hit cheap Shein, Temu parcels could raise €6 billion, document shows - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPX2Q1NnkxWE1pQUYzVHYxTW4yNURDb3paTTRGdG1xRXJxc0lGNUlkZ2czNFFiOVIzT3M4dUMySW5UbzY3V3VJbTBISnZQT3V5a1NJYlBLWDZ1aXhneFkwaE5jWmxFSE12MlRxMGZETy1qZGRJSXBHQXJsbm93TnBxNUNPTTkwVE95MTQ1S0oxUGoySkFFdHJNMjB5ZThWZnEzc2VreUlEY2FQaEtTc19jdmdEZ3ZDNkFSSTVOZDQwY3ZEZEs3N0NwUDBYVmhIT25V?oc=5",
+      "summary": "EXCLUSIVE: EU fees that hit cheap Shein, Temu parcels could raise €6 billion, document shows&nbsp;&nbsp;Reuters",
+      "full_text": "EXCLUSIVE: EU fees that hit cheap Shein, Temu parcels could raise €6 billion, document shows&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 13:19:39 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "US plans to ban Chinese telecom firms from direct access to US phone numbers - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbmkxUGhMdkg5VlhUSUtxUkN2cFFlb2tzcG81Rzk0YUhVQTNrR0gzcVBweVQxZlA3dDRRaHlCS1hTWnpIWUtfelBoQXRiUmd3OHYwNlBvOVFtWENOMDlaUUZMOElsb3VwMUVKQmZIUmpMUmE3cEtBcnZsZDlHZXJrZlpnWUNENHZyVExzM3hhUC1YWjFBaDROZzJnd3BjSDJUdjhSQWlXTjFTYlJ5Sk1veXc2UGRCQUlyN1YtNA?oc=5",
+      "summary": "US plans to ban Chinese telecom firms from direct access to US phone numbers&nbsp;&nbsp;Reuters",
+      "full_text": "US plans to ban Chinese telecom firms from direct access to US phone numbers&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 03:44:00 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "China trade accord with Swiss bucks wider trend towards protectionism - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQNkQ4YmJ3dHdaYVYzcXlkcUQ1V19QMU9mQ2tFd1RuQ1NEckN3ZTIxSFMzSkJxQzQ1UjdXTDVjRzlwdHNpUE13dUJKS19hQ0hndHlTdThtOEpLU1g5NXcxWnphT0RMME5TVDZLa2MySGZGMGdPVDF2QWdGVmpsN05fRk9jRmJZOFBsakdiT2I1X1lVYkpSUTFROHU0RFZGdnRvOXdYRlc4VnZRTzIyWG4xUU50SzRVRl8zaEZJS2lUaS1EZw?oc=5",
+      "summary": "China trade accord with Swiss bucks wider trend towards protectionism&nbsp;&nbsp;Reuters",
+      "full_text": "China trade accord with Swiss bucks wider trend towards protectionism&nbsp;&nbsp;Reuters",
+      "pub_date": "Thu, 29 Oct 2026 23:06:00 GMT"
+    },
+    {
+      "source": "Reuters",
+      "title": "Chinese EVs win over some in South Korea, but Japan is proving to be a rougher road - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQeHUyYjM0LWdIc1R1UmFmY1NCYkQ1YTB4eWVlSFdqNTVUZFZ5X2dSbWp3cXRKTENxZmRzQjRyZ0dYbHVzTmVpZXUtcjltTEtKWXRkcTRrYXZiWDFLWjFXN0ZPVWxBajhRVmRZTlRXNWtfNkpfalAwU19jRFA1T2FTVHA5RU5JSFV4OHlJc1h3MmhKaXdKclpIQTNqekMwV1h1ek1aMkg3dDgwc1RucUI0LVdYaXBIUEFSc0Q5MzdKSGJQS28?oc=5",
+      "summary": "Chinese EVs win over some in South Korea, but Japan is proving to be a rougher road&nbsp;&nbsp;Reuters",
+      "full_text": "Chinese EVs win over some in South Korea, but Japan is proving to be a rougher road&nbsp;&nbsp;Reuters",
+      "pub_date": "Thu, 29 Oct 2026 23:02:00 GMT"
     },
     {
       "source": "Reuters",
@@ -108,38 +148,6 @@
     },
     {
       "source": "Reuters",
-      "title": "Volkswagen posts deepest loss since Dieselgate on Porsche writedown, China woes - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPME5ta3ZpdnRTQXdPNzgwZ0pkYVEtX1N1OGR2SzRpV2o4V2RDMWJLY1YxQ3VXZ2M3b2JTWTAxUHRmNlhPa3FVQ1A3TUVzSFhLVWJqMXVFX0k3Z050Y2dMdEVJbTF0eVowNG4yUlZUd3VKYXg2MkR6aS1fOHdDbVprLWFnOU5tRXNzVGdNQVN6R0QteXB4SXdIMVozVTFoelF3aExzMXRpczJkZTExSHAtbHpFaVlNWW5NTnlZUHJn?oc=5",
-      "summary": "Volkswagen posts deepest loss since Dieselgate on Porsche writedown, China woes&nbsp;&nbsp;Reuters",
-      "full_text": "Volkswagen posts deepest loss since Dieselgate on Porsche writedown, China woes&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 06:46:00 GMT"
-    },
-    {
-      "source": "Reuters",
-      "title": "Hello Kitty maker Sanrio cuts ties with TV spy show after China backlash - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPRlJ2VXVOdFlqN2JLVUdxWXlTRl9aZjBHSGQyWjFvYXdOMlNkU2lBQ21GOEJOdGtidFVmMXZrenMtUV9ZbmVObkR0R2RfZmRGV2V0aVZoWV9XTnZmUlJVZ082dXgwTVMzNktzM1BzUHg0RFZaaS1nVlNqZ1ZiVXhDdEhGR1RpdGdNTTFnbEpHUnFPQ1plemozXzdoZmhKSmgxSnZQRW4tM2pGUi10NXlBN1VybGYzZ2NuT2RibmI0bWZvYWs1Q0N5bWd3TjBMZw?oc=5",
-      "summary": "Hello Kitty maker Sanrio cuts ties with TV spy show after China backlash&nbsp;&nbsp;Reuters",
-      "full_text": "Hello Kitty maker Sanrio cuts ties with TV spy show after China backlash&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 04:52:00 GMT"
-    },
-    {
-      "source": "Reuters",
-      "title": "Taiwan flags 'obvious' threat from 50 Chinese vessels in wide sweep of waters - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNelRKZ21DWjJBX09xRTJyZnBicWsyLWJTQk1CcmVoVFJYLXBIcWt6LWpwdDRyeGhzbFpNaUFmV0ZhM0NuWmNVRXpKd2s2QnY3bTdwTUFJSFBoUEVUNjlWbThFLXpxN0dkRklMYy1JQVZhWW5abUNtQlZYc21la2htWWVzUWVBMjhTMHc5OF80V3EzLWVPQmFhZnFyOExtWEVfeFhsMnVOYzdfakc1NHdIMjN3?oc=5",
-      "summary": "Taiwan flags 'obvious' threat from 50 Chinese vessels in wide sweep of waters&nbsp;&nbsp;Reuters",
-      "full_text": "Taiwan flags 'obvious' threat from 50 Chinese vessels in wide sweep of waters&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 02:24:00 GMT"
-    },
-    {
-      "source": "Reuters",
-      "title": "Hong Kong leader apologises for deadly Tai Po fire, pledges reform - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMG5CSk5rbFRVazFYVEpXdWU2cTE2R2h4OFZaZUI5VU81Y3JFQzVPenJybnhDeUlNWGNuSl9MdVlSbmU4bXRYaVB1aTZyLWliQTBCaE5ka0F2elN1XzllVVZRSGFXUnJOdXlqTkRFVUhGSWNfTGJ5N0VpdUpQQlBqQXZUU3BJY0dMYTd3Yk9YN1UxZ1lmV1hoejNn?oc=5",
-      "summary": "Hong Kong leader apologises for deadly Tai Po fire, pledges reform&nbsp;&nbsp;Reuters",
-      "full_text": "Hong Kong leader apologises for deadly Tai Po fire, pledges reform&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 15:13:48 GMT"
-    },
-    {
-      "source": "Reuters",
       "title": "Welcome to the new ‘Made in China’ - Reuters",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5jWXRwMFJHeWNSdnlCLUVvNXNmTWV1bHRkS1Y4Y25vVzlZR2p6UjJEQmhNeklKSWx5eG5PV2t4VVdETTdZb0hkTW1qMHBTaTN1VWhYams1Q28yMWYwWjl1cGJ2NHBkWV9mTDlYWlhDbGVCUWcyVXA1SE9RQjFodw?oc=5",
       "summary": "Welcome to the new ‘Made in China’&nbsp;&nbsp;Reuters",
@@ -148,27 +156,59 @@
     },
     {
       "source": "Reuters",
-      "title": "Chinese AI model carries out complex cyberattacks in controlled tests, researchers say - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5MN2Rib1hrX3Z1VDhFWlZiSTUyc0oydVhxNW5OZ1RBOElfamxQWUVBcTFyd3NVbmxBNjd3QW9sYll4U1lfUDE5bGJMVXZXZW1CVS1NV3FHaTFSQ3VCanUtYXZRcm1ZWnJCazBzUWVCakZLaUVoTV9MV1BCblBzeWlIX3A2OWNiNXdYRG5JSlYwakpZdDdRUjdYajQtcXBERVdJSHYyRVIyT0lLOEIxVGg2WnFmREM2LWp5ajA3aVIxTUVx?oc=5",
-      "summary": "Chinese AI model carries out complex cyberattacks in controlled tests, researchers say&nbsp;&nbsp;Reuters",
-      "full_text": "Chinese AI model carries out complex cyberattacks in controlled tests, researchers say&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 03:28:00 GMT"
-    },
-    {
-      "source": "Reuters",
-      "title": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZWxreXdWZGhvNFRiam1WcVA1WGMtNnl3NVpEWjIyVV9IR0xReTYwTFU2Ulhnek5QbVlzc1prUlBwYlVYNmpFaXJLdTNRU3NnbkhWSFlzZllyN1lma0RydHM5bEFab2xIRW5aOUllWGtiMzRaOG1HT1M3Z3ZIN1NwVmFFZ2NlUFo5WUNYaTRZSm9waDl6cE03bE1NMEtIM2VORTVVUDN3Y01ER3drXzFwNkMyNFZ0N3F5MC1idTVR?oc=5",
-      "summary": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports&nbsp;&nbsp;Reuters",
-      "full_text": "DeepSeek, Moonshot used OpenAI's GPT-6 Astra to train latest models, The Information reports&nbsp;&nbsp;Reuters",
-      "pub_date": "Thu, 29 Oct 2026 02:11:00 GMT"
+      "title": "China conducts combat readiness patrols around disputed shoal in South China Sea - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOLVZHNlp6YnVjYmw4N0c2cjlxQ3hCcEZuR1pLUko3aXp3SE9jdEtiVXZqeC1UZTRhMzZaTTdWTVo2Rmdyck1scDFMVk5Ga1U5WkZVZm4zUWVzZVptV09zUVhHdUdQYnJ0YlVzV3NmWVVna3IwRVhBOU5BcHRyUHk0eDh5bUhTaWVpMlhvNG9CU0h2OG9vWWhtdmFhdnVLbzRtTVk0MkNFM1lXVWtTUmZOQ0Zwcnpld2lkU0kwa1oyeGNQRlE?oc=5",
+      "summary": "China conducts combat readiness patrols around disputed shoal in South China Sea&nbsp;&nbsp;Reuters",
+      "full_text": "China conducts combat readiness patrols around disputed shoal in South China Sea&nbsp;&nbsp;Reuters",
+      "pub_date": "Fri, 30 Oct 2026 08:53:06 GMT"
     },
     {
       "source": "Bloomberg",
-      "title": "China Makes First Inquiry for US Wheat Since Trump-Xi Summit - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNno1U1dZRUM1RmlvS1h0Ul92R19WM0xzLXlnNnNpV0w5anZMX3AtU0w2RDVNTVNMSmx2OEdEQ05Yd0VqSzBZRWxqMG5oakRrbUhtdlE2ZVBlMmotWURDb0pwQlpOYlZQMHM2T18zTTdhWnpUTXl1RE1IdVZKWkFkdllsVjFSeVZnZklhc0x6Q1hkeG5rX0N5M0hnM0k3a0duSWdvTzhKXzNuUkJqdkxjYg?oc=5",
-      "summary": "China Makes First Inquiry for US Wheat Since Trump-Xi Summit&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "China Makes First Inquiry for US Wheat Since Trump-Xi Summit&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 15:21:59 GMT"
+      "title": "Xi Urges Germany to Maintain ‘Pragmatic’ Policy Toward China - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPME1wUUozV1NTZnFpU2pZZUtTRXlBUmVJVHNDZWw0MnBtaEhmazVFNjdldTRncEpzUWUtTmxwWkdIbVpheG9TQmdSUE02a1lsMTNBUENTblNMaktWUFBCVWdBOFBGaGVoNlJoQ1B4Vnk4RU9LbkszUnhnOURZanpPYnVVeWpXTml1UnlTNTVWSGZqUVlYSWRUMVF3cERNSlYzcHVaOTh6U0NBQW9tQ2c?oc=5",
+      "summary": "Xi Urges Germany to Maintain ‘Pragmatic’ Policy Toward China&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "Xi Urges Germany to Maintain ‘Pragmatic’ Policy Toward China&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Fri, 30 Oct 2026 12:55:19 GMT"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "China’s Hottest Night Club Is Bringing In $150 Million a Year - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdjVoSlotMm1XeHRoQ2ZPZlBmZjNTdWRJV2l6NXd6SG9UbmsybE80bzEwZ2VCNGUwSjNVZ3cxZ0VXcnFvWm9sUUVrc29NcFRiWWtGR25PczRKZ2FVXy1qVU1xMFhBXy1MZDdjXzhOZTc3dE5PUXdQTkh3eFExaFFfdDF1NExVR0ZWei01RnBOejV6Q0xBSHdKLURZWQ?oc=5",
+      "summary": "China’s Hottest Night Club Is Bringing In $150 Million a Year&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "China’s Hottest Night Club Is Bringing In $150 Million a Year&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Thu, 29 Oct 2026 23:00:10 GMT"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "China Upends Global Drug Development With Cheap and Rapid Human Trials - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNd3liZ1B6Ym5aR1dLdkIyZjZidEFTUzZDd3haUGhXRkVFYXczNjQ3QW1ZeW1EWDRXaXdZbHNrR0c4aUdTd1NaN1FqV3pXWEt4WEotdHhFVjk0UGVmU1BhZG5relNSVmtwQVVfOUdZWFM2Y1ZxQWlMTlVnSE1fc2Z0TDVES0oxc2E3VmNwbXExV2Vodko0YmMxdDd3aUU1NkVUandKLVFuYzJFTUF0VEdVeUN3RmhVM3ktR0VjSnB0aWJ0X2owZ3c?oc=5",
+      "summary": "China Upends Global Drug Development With Cheap and Rapid Human Trials&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "China Upends Global Drug Development With Cheap and Rapid Human Trials&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Thu, 29 Oct 2026 21:00:10 GMT"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "China’s Mega Banks Report Profit Jumps as Margins Recover - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUk5NZFJBS29USUZDdUR0T1g5dTdlOWROeUJVUDB6ZUlZVWxsYm9SNnRlLXIwdXNDUnJlNGVFRzVBSDV1TEt3X0VHMlU1VlpPb3VLVldvRXRwc0FsRUpaYWhycHFpWElBdDRGakVKYmdjdGsyZW5Rc2Q4TUdYdGdLSDhSVzVyWEd3RkdqUl9KOFRZNGVfSWN3ZHJHU0RGTlBGM2lxc3UwRnVnaVhP?oc=5",
+      "summary": "China’s Mega Banks Report Profit Jumps as Margins Recover&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "China’s Mega Banks Report Profit Jumps as Margins Recover&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Fri, 30 Oct 2026 10:08:45 GMT"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "China Elevates Key Figure in Purges With Rare Politburo Pick - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTTFEUkJPS1RkTnVsMk9zLVFGcUhpRkc2Y0F5QVktSFp1MUp3ZFRZcU1iWmU1eGR5RDllN3RTMHI2aTZPbk5Ic25UajdrZjktTWlwdmFSMXc3YVgzZnZvUGl2d1Z2ME5wNlFhSUVaWDBweTA2ZXRIcXEyTjgtVHpTMkVTT2dvNVEtRzdQeWUtLU5EbjNGNkFHbUdhaEhTNXRwdW90VkdzSDlWQQ?oc=5",
+      "summary": "China Elevates Key Figure in Purges With Rare Politburo Pick&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "China Elevates Key Figure in Purges With Rare Politburo Pick&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Fri, 30 Oct 2026 03:47:00 GMT"
+    },
+    {
+      "source": "Bloomberg",
+      "title": "China Warns of Retaliation Over US Test Lab Restrictions - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa0hUcGk2LUZiU1VzSTFvazhSLXB6VUw0cWFtNDN3NTlMVUxfTWFLTmk3Z01PWGtEcnNyNHdtTFZXMWc3NFBzanJ2N21aY0RDLTRrVUZmRklUckhNTUU4c2dQNnlYV3F3c3RSSk5ZSU41TFRUdXNMeVlta3NEbnBZNEY5OUNHVEYtbFVsRFdVSmtfdUV5ZXNkNE9Qc0FfUk1XRFpGb2czTGhBUTQ?oc=5",
+      "summary": "China Warns of Retaliation Over US Test Lab Restrictions&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "China Warns of Retaliation Over US Test Lab Restrictions&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Fri, 30 Oct 2026 16:44:56 GMT"
     },
     {
       "source": "Bloomberg",
@@ -180,22 +220,6 @@
     },
     {
       "source": "Bloomberg",
-      "title": "China and the US Are Competing for Space Dominance - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeTVsX3luU3N4cm5XRm9JQzBERjM0MkowaUYyZ01RSXRpN0pfUU1OZHdQSFItb2x5TEhVLWtaMHZybXppeTh5ajBNRi13V2tQR0ZkVnRCbEN4bFBxbW9VTko4RkVCY09GZlZuek9JaS01Q2g0bXBBN1R1b1BFUUwyX2pmbTFJZ1hHQUtLckhGMWlOVWJiczRvY0ptQ19od3NYLUVVbnczb1ZJa0E?oc=5",
-      "summary": "China and the US Are Competing for Space Dominance&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "China and the US Are Competing for Space Dominance&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 05:01:00 GMT"
-    },
-    {
-      "source": "Bloomberg",
-      "title": "Copper ‘Sold Out Everywhere’ as Key China Gauge Flashes Warning - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNVZDQTFiNUJfWk9mb1VZS2E1VkpIU0tMOVVzMC1ySS1LYjJFTHJ6VGF5a0dicERoemxzdTc4eUstVEtlb0t3d2lkdldVSV9DLVFRN05uOVVMQlB0aDZxVTVmRmVEQk9lZkhFYk8tRjRWbmYxS0U0NGVkUlB6ZkFFdmtUVHAyeVhFNVBScTJSaEZnb1N1ZkJTdDFnUGxOWnV5Sl9KalRFOC16SE56bEx1RktR?oc=5",
-      "summary": "Copper ‘Sold Out Everywhere’ as Key China Gauge Flashes Warning&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "Copper ‘Sold Out Everywhere’ as Key China Gauge Flashes Warning&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 15:35:14 GMT"
-    },
-    {
-      "source": "Bloomberg",
       "title": "Xi’s Corruption Purges Upend Hunt for China’s Next Top Leaders - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNS2dRZFl6cDA0VlVpZ2phbllDdHVyWEpyeTBZcG5uc1pDM0N4U252QmpTYmd4MDgwdG53ZHg0cHIwY0pqVlNDUFNJVlU3NjJ4OVh4RlZjaVotMVdIN3c2eGVULTliLWotb3lNemNmN3hPcjhhUVBrWEZ3LVcxeVUyazVXaWQ2dWVnUzkzZUlLVmJXc21QMmdpUUZmR0xUX0ZNSlRfT2s3eVlYeFJzQWFpa0xKNA?oc=5",
       "summary": "Xi’s Corruption Purges Upend Hunt for China’s Next Top Leaders&nbsp;&nbsp;Bloomberg.com",
@@ -204,43 +228,27 @@
     },
     {
       "source": "Bloomberg",
-      "title": "China Elevates Key Actor in Xi’s Purges With Rare Politburo Pick - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTTFEUkJPS1RkTnVsMk9zLVFGcUhpRkc2Y0F5QVktSFp1MUp3ZFRZcU1iWmU1eGR5RDllN3RTMHI2aTZPbk5Ic25UajdrZjktTWlwdmFSMXc3YVgzZnZvUGl2d1Z2ME5wNlFhSUVaWDBweTA2ZXRIcXEyTjgtVHpTMkVTT2dvNVEtRzdQeWUtLU5EbjNGNkFHbUdhaEhTNXRwdW90VkdzSDlWQQ?oc=5",
-      "summary": "China Elevates Key Actor in Xi’s Purges With Rare Politburo Pick&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "China Elevates Key Actor in Xi’s Purges With Rare Politburo Pick&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 13:25:00 GMT"
+      "title": "Chinese Junk Dollar Bonds Head for Worst Week in a Year on Huafa - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPa0tWT2ZTRjloNGtnY1VlM0NiM3N2Vm9vVENPTHYwMVhzLW04X1VCa2dHZE80LVM2cFhvMmdJOTBvMTdFU0dmazN6UnMyaG1KM2ZuU1JoN2ZoVVhBR1E5SUpqWnhOWTlnY0FUTHI1OGtJQTNaU0NmQ1ZkSVZXajNNU1NrdzI3NUU1T0g0cmxJR0JnUk90ME1xNGVlU21weTRnUkRnUHpCNVI2UzRsSTZnY0lxMy1aQQ?oc=5",
+      "summary": "Chinese Junk Dollar Bonds Head for Worst Week in a Year on Huafa&nbsp;&nbsp;Bloomberg.com",
+      "full_text": "Chinese Junk Dollar Bonds Head for Worst Week in a Year on Huafa&nbsp;&nbsp;Bloomberg.com",
+      "pub_date": "Fri, 30 Oct 2026 03:46:00 GMT"
     },
     {
       "source": "Bloomberg",
-      "title": "Kylian Mbappe Learns the Value of Silence on China - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNEthSjlKdkpWNU53cXM4OExVYkQ4NVZsVXJ5YVgxYmpDQmlvSVo3eUJEOU9uVWRJdWFldXpXSHFEU3dIZmFiMTRUVmpGZy13YXRDdzgtNW9yLXFXamdRYWVsbDJ0Y09iTDlXTmlwYnlhSXNjNkxPSTdzOGNyRHZqM2Z0TXJraGI0ZFJVRWh3U2todk9BUDhHaW1ONDBPaFRTNXhBTm9zRQ?oc=5",
-      "summary": "Kylian Mbappe Learns the Value of Silence on China&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "Kylian Mbappe Learns the Value of Silence on China&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Wed, 28 Oct 2026 07:15:11 GMT"
-    },
-    {
-      "source": "Bloomberg",
-      "title": "Volkswagen Swings to Loss After Writedown, China Market Slump - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZUE4TGRWTGpFTnZkWlVCWWZ3THY5eHdGZ042MkpoUVk0VmJwRElUNUhfSDVaZFE0Y1JKN0FtR001dlpCaWpNdU4xRnJ1WXpCMUlMUUFOazNFRWYzejlyVHZGYUQ0NlctWG9YYTJqTFhSR2cyVF9vbmpmNlk0Tm41eURQR2FZb1U1aWlMbllaS3FyYzdqVUt5Y3BsQkNtc29hRk5OQzZhZ3V0YzVsSm5xYQ?oc=5",
-      "summary": "Volkswagen Swings to Loss After Writedown, China Market Slump&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "Volkswagen Swings to Loss After Writedown, China Market Slump&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 10:02:57 GMT"
-    },
-    {
-      "source": "Bloomberg",
-      "title": "Mbappé Apologizes for Perceived Mao Insult After China Backlash - Bloomberg.com",
+      "title": "Mbappé Apologizes for Perceived Mao Insult After China Backlash - Bloomberg",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPTEozYkVLU1c1QzJqVkVnbTJXOUFVS3plcms3RHNscVZYV2pxek8tSHZPa1NhNmtLTV8xY0hXTnFXa0NWSFJySjdsbm9KQWsxZTlham5QeFl4bno4ek13SVo2UVZxSUVPRVFjeUdZbXRvdDFCa1hRZzY5ejFzNTB0MThPbm5xUVM2ZGJrT0NnNDFBMVg3VURQdHJnYmFoWXU3emtVRVhPQ2pPZXRqeVYtN2JVYkw2aW4wMWpPZVdBNHhNTGxXNzBr?oc=5",
-      "summary": "Mbappé Apologizes for Perceived Mao Insult After China Backlash&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "Mbappé Apologizes for Perceived Mao Insult After China Backlash&nbsp;&nbsp;Bloomberg.com",
+      "summary": "Mbappé Apologizes for Perceived Mao Insult After China Backlash&nbsp;&nbsp;Bloomberg",
+      "full_text": "Mbappé Apologizes for Perceived Mao Insult After China Backlash&nbsp;&nbsp;Bloomberg",
       "pub_date": "Tue, 27 Oct 2026 18:01:40 GMT"
     },
     {
-      "source": "Bloomberg",
-      "title": "World’s Biggest Brewer Volumes Lag Estimates on China Demand Slump - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbjBuU3NtekpEaV9Tc1hhandTeVVYenN5VWxENkxGS2ZLLUp1WklRbjJXLXl6SzEzWTM4NGVwOTNZZGxHV1pOSmlfRjFiTEpHQ2lHNWJtYzBQQlpuc3BpNEo5YlhGR0JaV2U0R0Zrb3lfR0NQQ25zX1dxV0RiNkNjTGs2UEdGd2dCVUZJeXUxUHVzYk5zbjQ2WDdkbVJBb3U3Rlhjc2lBWFgtYTFNcEJVZHBTN2lDV2lPTkI2dEtBSFlRdw?oc=5",
-      "summary": "World’s Biggest Brewer Volumes Lag Estimates on China Demand Slump&nbsp;&nbsp;Bloomberg.com",
-      "full_text": "World’s Biggest Brewer Volumes Lag Estimates on China Demand Slump&nbsp;&nbsp;Bloomberg.com",
-      "pub_date": "Thu, 29 Oct 2026 15:09:00 GMT"
+      "source": "AP",
+      "title": "Graphika finds China-linked Spamouflage accounts posing as US voters on X - AP News",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOZ3FDNW9WTmY5U1NndTFkaFRXVjJZSElBcWxTVnQtUWEzR21sTmVGZWVDV2t3NUtJQm0xeER2R2dCMV91VHVicWItWFhnREE5VU0wN2tURk4tSnNCNUFlY1RkT091OWdNUjdncUN4NzY4dEYwcC1Vd3QxOG00WklmVHY0ajhHTm9qbHN6VVZwMjU1QUxZQ0lpbTNLaXM?oc=5",
+      "summary": "Graphika finds China-linked Spamouflage accounts posing as US voters on X&nbsp;&nbsp;AP News",
+      "full_text": "Graphika finds China-linked Spamouflage accounts posing as US voters on X&nbsp;&nbsp;AP News",
+      "pub_date": "Fri, 30 Oct 2026 23:51:00 GMT"
     },
     {
       "source": "AP",
@@ -252,6 +260,14 @@
     },
     {
       "source": "AP",
+      "title": "Mongolian mining company says copper exports have dropped due to China border restrictions - AP News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWmx4Wno2RDJMaVkyaW1OYjgyU2U3SFhaUkN2XzF2RU1XeFl0d2xaeERPa1R4eHBhTElqUHM0U2tfalFDam8weHVsQjVmeUlQaTAzMnZNMHRIWV9TSmNnNFRlV3FqMXNzbFVCaWFpeHNHc0tlREVCRjlZV2dvd2p3R1gzUmI1cWE2aDFwLU50TEZvOGZRTlE3cFZyTGNQb0dycjNDalBXN0R6dw?oc=5",
+      "summary": "Mongolian mining company says copper exports have dropped due to China border restrictions&nbsp;&nbsp;AP News",
+      "full_text": "Mongolian mining company says copper exports have dropped due to China border restrictions&nbsp;&nbsp;AP News",
+      "pub_date": "Thu, 29 Oct 2026 09:51:28 GMT"
+    },
+    {
+      "source": "AP",
       "title": "China elevates a military general to the Politburo and seeks to strengthen party discipline - AP News",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNER6WXc1bGVpUXhQNE94WTNEOHhPRkxFMzFCaVNBNTZ6N09qVTBacFhTd0gyM1VBdVR2SHdMRUNmNWMyQVJXVEUzMkNHOVplUVlkci1YZlhVZ05KcklGbXlZZVVpbUVvWndoZHZCNjB4YjFjNTN3R1NPWlRsbDhEMGFiQzZjMFEwSXlkTE9FTklxd0hhcUI5UjNRRzhZemVzVDRaV1BZWUp0dw?oc=5",
       "summary": "China elevates a military general to the Politburo and seeks to strengthen party discipline&nbsp;&nbsp;AP News",
@@ -260,11 +276,19 @@
     },
     {
       "source": "AP",
-      "title": "Mongolian mining company says copper exports have dropped due to China border restrictions - AP News",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWmx4Wno2RDJMaVkyaW1OYjgyU2U3SFhaUkN2XzF2RU1XeFl0d2xaeERPa1R4eHBhTElqUHM0U2tfalFDam8weHVsQjVmeUlQaTAzMnZNMHRIWV9TSmNnNFRlV3FqMXNzbFVCaWFpeHNHc0tlREVCRjlZV2dvd2p3R1gzUmI1cWE2aDFwLU50TEZvOGZRTlE3cFZyTGNQb0dycjNDalBXN0R6dw?oc=5",
-      "summary": "Mongolian mining company says copper exports have dropped due to China border restrictions&nbsp;&nbsp;AP News",
-      "full_text": "Mongolian mining company says copper exports have dropped due to China border restrictions&nbsp;&nbsp;AP News",
-      "pub_date": "Thu, 29 Oct 2026 11:14:00 GMT"
+      "title": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments - AP News",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWEx2MVZ4bm1WY3RYLXNBT2VTVUpJR0k3MzRNTVhkaE5HcFNPcXBMb3Q0bjFhUmcxR29Eb29TcmZGMUdkTTRXTDBmNEpKNzE3d3Z5UGVsYUJvNDJzcDJ3U0VHTGJhOHE2WWxrZEQ5ckdEWXBlZDItRFN5YllSS25rSEtjeHdYb3pDb01SU2lpVWVGMGhTQ0c1VHpOdjZ5Y0NS?oc=5",
+      "summary": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments&nbsp;&nbsp;AP News",
+      "full_text": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments&nbsp;&nbsp;AP News",
+      "pub_date": "Wed, 28 Oct 2026 10:39:00 GMT"
+    },
+    {
+      "source": "AP",
+      "title": "China’s plenum backs tighter party discipline, a priority for Xi. Here’s why it matters - AP News",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNU084UkpObDVKWlBpdHNjdWpRc241OVc2T0s1dlo0WUJVekVxR1FlbUQtZWNDeEo4eDJPM2Itb1dOT21wYUNSUTgyR29iRmIwQzQxc0hJTWVnNGw4RDByei1xN19xZG11bUxYOGozRzRNRGdJUUxtaWw5UkFBQ05iTzc0UWdVeDV4UmxRTWtMYTBnMS1fdzFHZktvOW5nd0VCUm56Nw?oc=5",
+      "summary": "China’s plenum backs tighter party discipline, a priority for Xi. Here’s why it matters&nbsp;&nbsp;AP News",
+      "full_text": "China’s plenum backs tighter party discipline, a priority for Xi. Here’s why it matters&nbsp;&nbsp;AP News",
+      "pub_date": "Fri, 30 Oct 2026 08:55:00 GMT"
     },
     {
       "source": "AP",
@@ -273,14 +297,6 @@
       "summary": "US bans imports from 3 Chinese biotech companies over forced labor allegations&nbsp;&nbsp;AP News",
       "full_text": "US bans imports from 3 Chinese biotech companies over forced labor allegations&nbsp;&nbsp;AP News",
       "pub_date": "Thu, 29 Oct 2026 05:45:00 GMT"
-    },
-    {
-      "source": "AP",
-      "title": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments - AP News",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWEx2MVZ4bm1WY3RYLXNBT2VTVUpJR0k3MzRNTVhkaE5HcFNPcXBMb3Q0bjFhUmcxR29Eb29TcmZGMUdkTTRXTDBmNEpKNzE3d3Z5UGVsYUJvNDJzcDJ3U0VHTGJhOHE2WWxrZEQ5ckdEWXBlZDItRFN5YllSS25rSEtjeHdYb3pDb01SU2lpVWVGMGhTQ0c1VHpOdjZ5Y0NS?oc=5",
-      "summary": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments&nbsp;&nbsp;AP News",
-      "full_text": "Real Madrid issues public apology to China over Mbappé’s Mao Zedong comments&nbsp;&nbsp;AP News",
-      "pub_date": "Wed, 28 Oct 2026 10:39:00 GMT"
     },
     {
       "source": "AP",
@@ -296,55 +312,39 @@
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQT2kwbFVkNzZHNVJNU25yam4xRWRPaU1sLWdHQUthVHJqWTdKbFRYZUJBcUVmaHBOQTZaQUZTeXk1Y2dmeUpvSlVRd2lGMm1IME9VYkJ5dmtzOFJuTjZhYlZOOGNoMFdoYmRBRnZaakxkVGNQZUVFR2F6dGhSb1pIOEZMSk9hNTcxYV9wd0V5aEs4elMwOFpOQlV3?oc=5",
       "summary": "ByteDance founder Zhang Yiming reclaims top spot in China’s rich list, thanks to his firm's AI push&nbsp;&nbsp;AP News",
       "full_text": "ByteDance founder Zhang Yiming reclaims top spot in China’s rich list, thanks to his firm's AI push&nbsp;&nbsp;AP News",
-      "pub_date": "Tue, 27 Oct 2026 07:43:00 GMT"
+      "pub_date": "Tue, 27 Oct 2026 07:50:20 GMT"
     },
     {
       "source": "AP",
-      "title": "What to know about China’s plenum as Xi seeks stronger Communist Party discipline - AP News",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWE9NbzRMSEY4YkVVMHhZWkVVTWJ5a3RESm1IdUZfelkyNDF4TVBkWjl3eTlPcWh2Y3JWdnZzMk13cTIta01EWGg4VXlmX0NuRE1peE1iSnJqQnAwdlNodHByYk9yclR6QTFfNThwdXVIbGRvalBaMFpVYUtkMV93WVJobV9Za2NGRl85dzlyU1RLTlc2NHhkcHU0MnBOcWJl?oc=5",
-      "summary": "What to know about China’s plenum as Xi seeks stronger Communist Party discipline&nbsp;&nbsp;AP News",
-      "full_text": "What to know about China’s plenum as Xi seeks stronger Communist Party discipline&nbsp;&nbsp;AP News",
-      "pub_date": "Mon, 26 Oct 2026 04:54:00 GMT"
-    },
-    {
-      "source": "AP",
-      "title": "Japan’s former PM Yasuo Fukuda, proponent of ties with China, dies at 90 - AP News",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQekFiVDhhNVdFazdUNjBOSGJrOVlOM1hpOEJrY2MzbVZLRXRiQnhUa0JvSXk1aXlFYmtXd25lWnRyZ3cyRTBPS0p5a1hUUXlZU2RiMjE5b0pwM28wQWhoN0hhbDcyWHZ0TDVUdFoyczdOalRfT0JPRWZFdkNCYmFGMk9qSlJJWlJlcnlldUp4enlveExlUkxYeE85TQ?oc=5",
-      "summary": "Japan’s former PM Yasuo Fukuda, proponent of ties with China, dies at 90&nbsp;&nbsp;AP News",
-      "full_text": "Japan’s former PM Yasuo Fukuda, proponent of ties with China, dies at 90&nbsp;&nbsp;AP News",
-      "pub_date": "Tue, 27 Oct 2026 00:35:00 GMT"
-    },
-    {
-      "source": "AP",
-      "title": "As the US and China form AI blocs, countries are increasingly torn between them - AP News",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPakhwUzlHbnJOemg0S0x1WlNQSUZIaEtpZlNSd0JtZmszRlg2S3QtTzZla3o2WjdDdTlhUFk0M0UteG84UTA4TndIbUgycFJrTFhlTG4yRXQ2STNDOFBuWE10eDhfcVRuLTNJbWRTRkhMSDZzSXVrcGdCZmpkVG9jS3loUQ?oc=5",
-      "summary": "As the US and China form AI blocs, countries are increasingly torn between them&nbsp;&nbsp;AP News",
-      "full_text": "As the US and China form AI blocs, countries are increasingly torn between them&nbsp;&nbsp;AP News",
-      "pub_date": "Mon, 26 Oct 2026 02:55:00 GMT"
+      "title": "Volkswagen posts $6.5 billion quarterly loss as China slump, Porsche writedown weigh on bottom line - AP News",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWHNhUjNjV0NxSmJ5YloxQzNNNzROM1lrdXQ5ejFvSkRVbUliRUpIblBJSVU3dUFaUTJkQ0h6RmV3XzNfWUtlcVliWnRvVFNKaWtZMVcydVNneE5qbTBBRTdtemc1eHpoaGpSd3RPMVlacnNWM2ppWE1Ybm1mU0VrQkx4RHljUkl0RkVqaVRjMGphc00?oc=5",
+      "summary": "Volkswagen posts $6.5 billion quarterly loss as China slump, Porsche writedown weigh on bottom line&nbsp;&nbsp;AP News",
+      "full_text": "Volkswagen posts $6.5 billion quarterly loss as China slump, Porsche writedown weigh on bottom line&nbsp;&nbsp;AP News",
+      "pub_date": "Thu, 29 Oct 2026 08:44:00 GMT"
     },
     {
       "source": "Nikkei Asia",
-      "title": "Confusion over Pakistan policy on Taiwan airlines fuels China squeeze fears - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxONF9KbHFXWmJRRlMxOGQ0VEpnMUJXRFlCSFFweWloaDNOc3JWbFJJb3BDTFVNT2J2aDE4dnJRR09YQlpYdGNoS2tUVk9WWV9wb1hmQksyV08wNmJIX0NPaV9nS3RvZGNCaUR3Q3BXLVl4cXc2U3AyM0U1RHZnbF9yendlZVVINGVscFN0eUEwdldwdGVxLVBZOUdEZk83U1QzREZwa2ZQeXZkWnJlZTZjUGg2U19FWWtiZmI4bFRkM2FLcGQtWlNVVzM3Nmw4dnNFUUc0cGF5UUo2alFFWk5HXy13?oc=5",
-      "summary": "Confusion over Pakistan policy on Taiwan airlines fuels China squeeze fears&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "Confusion over Pakistan policy on Taiwan airlines fuels China squeeze fears&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Thu, 29 Oct 2026 04:20:00 GMT"
+      "title": "Who fell and who rose at China's fifth plenum - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQWIxOHRQQ0xkQ1F6NWc5c0ZQSjZxSnlMUkt1bEcwUFdPeVhYTTBsVXpNX2czdTJaYnpQMnlJWHBoUWxEekEtOEtmUDFnLWpEcVNSTlBfUGp3S1BWdmhuc0pJSEdvcUN3TVQ1LTF1QVZNLU92UHU0MG1uM184ZjVnLUJNYWE?oc=5",
+      "summary": "Who fell and who rose at China's fifth plenum&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "Who fell and who rose at China's fifth plenum&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Fri, 30 Oct 2026 07:28:00 GMT"
     },
     {
       "source": "Nikkei Asia",
-      "title": "HP and Asus shift some PC making back to China due to AI-driven cost hikes - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQc1NqYzVESkVHNEZQTXoxX2d4WmNNdlNkaUFxM1htOXFDdk5mWEE3MFhRcFRYWml1b0RhcEhxT1BSTnFxUFJEVjJrZjlveUZua2hMRFJRaUxaalJCZzNSOEdtOXRzSW9hc2pSTFRzdml0RVlfcmJJRnA4YkY1aXRoVW9pc1AxTG1MUklBVkNkQ1Z5R2VpVXVsUE5SWlJULUZaaDlCc0tOM1Jpd1M4WlFGMk9SUnNseWpTTDFkc3Nfc0ZIREV4dTl3?oc=5",
-      "summary": "HP and Asus shift some PC making back to China due to AI-driven cost hikes&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "HP and Asus shift some PC making back to China due to AI-driven cost hikes&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Tue, 27 Oct 2026 19:00:00 GMT"
+      "title": "PAG to buy 51% of China Evergrande services arm for $510m - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQMXRBdmF6eEFoS0Y3MXVQZWRObEJyU2RaS1RwbTRNaEJJVU9sQkRKX1UxY2Z3UTFBVllXdGgyQlBuNEo2T2Jfb3BLalJucEh1bzNYTEtSR0lDY3hnOWRXbzFaWWNIUGozRUhkM2dPM2lTVHZSRGkwY05nR0ViWjRIbFVtWEMxbDEtLTNkUXBfX2RsY3JNQ0FnS01LUWxmaFRkdmlDSDlQYkpFTGFobUJ4UU9RcUc?oc=5",
+      "summary": "PAG to buy 51% of China Evergrande services arm for $510m&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "PAG to buy 51% of China Evergrande services arm for $510m&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Fri, 30 Oct 2026 03:08:00 GMT"
     },
     {
       "source": "Nikkei Asia",
-      "title": "China elevates key military official as expulsions remove 'hidden dangers' - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxON0lYOFJSV2owajh4UHR3c01vcWZHVW1TRjNNeTFRcFh1VE00aWNmaVFuVm1HdzE2aGZUQTBnQkwzSGVFQllVc1l1aVVHOUF0R1NIOEhrT3dnZndkOGNnSDdqRHlLVEJCUGoyMzBvYWUwWC1WNWFtY0F0eHBvdDZqbTFCQy13SzlaNEZMR1VOanU0ZFZYeU82WEM2MnBWLUJ2eHB2eEZYNUk?oc=5",
-      "summary": "China elevates key military official as expulsions remove 'hidden dangers'&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "China elevates key military official as expulsions remove 'hidden dangers'&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Thu, 29 Oct 2026 12:09:00 GMT"
+      "title": "Chinese shipping, coal stocks outperform AI as earnings outlooks diverge - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZnp0MGViN0NIcXBlRGIzUjhMU0FCRWxZZDYxNDN3MUh3dzNhb1VtU0FFa3MycGRNOXd5RG9Ebl9fNFNnSk9SVEFzN2U4akdjaUNva1l0Ymhydi1JWEgybVlYZWVEclJvVVo5Tm1ieFRiUWpyMDY4MGhCUjhjdDc1eklhLXA3Q0hDQXZrUVpSRllvbXpxTEN4ZHFFNTl2WGlKUFlFODltZTEyRThWbkl6V2o4dlI?oc=5",
+      "summary": "Chinese shipping, coal stocks outperform AI as earnings outlooks diverge&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "Chinese shipping, coal stocks outperform AI as earnings outlooks diverge&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Fri, 30 Oct 2026 09:42:00 GMT"
     },
     {
       "source": "Nikkei Asia",
@@ -356,11 +356,11 @@
     },
     {
       "source": "Nikkei Asia",
-      "title": "China issues fade in US as midterm voters focus on prices - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeVZfdktQdDE1eDU2emVrWXlZRVJmSGxvdEZmZXN1a0NodmF3TERNQTRsLU45MDZvbGFESkRuTlk1YmpoSzN0ejloV016QTNMRnYxUnlpbW5HMEo3Q0VpbHB4TlJFdDFGbEpORmhDNWxVUUJ5OUJmRnF6LW91UEdJUWRhajlmQndiSWlLX2tOWlNHemlzZVJIUEV4SHlCRVJHay1kTUZuXzBaOGpRZkxjVjJ6NA?oc=5",
-      "summary": "China issues fade in US as midterm voters focus on prices&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "China issues fade in US as midterm voters focus on prices&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Thu, 29 Oct 2026 07:09:00 GMT"
+      "title": "China elevates key military official as expulsions remove 'hidden dangers' - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxON0lYOFJSV2owajh4UHR3c01vcWZHVW1TRjNNeTFRcFh1VE00aWNmaVFuVm1HdzE2aGZUQTBnQkwzSGVFQllVc1l1aVVHOUF0R1NIOEhrT3dnZndkOGNnSDdqRHlLVEJCUGoyMzBvYWUwWC1WNWFtY0F0eHBvdDZqbTFCQy13SzlaNEZMR1VOanU0ZFZYeU82WEM2MnBWLUJ2eHB2eEZYNUk?oc=5",
+      "summary": "China elevates key military official as expulsions remove 'hidden dangers'&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "China elevates key military official as expulsions remove 'hidden dangers'&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Thu, 29 Oct 2026 12:09:00 GMT"
     },
     {
       "source": "Nikkei Asia",
@@ -372,6 +372,22 @@
     },
     {
       "source": "Nikkei Asia",
+      "title": "China issues fade in US as midterm voters focus on prices - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeVZfdktQdDE1eDU2emVrWXlZRVJmSGxvdEZmZXN1a0NodmF3TERNQTRsLU45MDZvbGFESkRuTlk1YmpoSzN0ejloV016QTNMRnYxUnlpbW5HMEo3Q0VpbHB4TlJFdDFGbEpORmhDNWxVUUJ5OUJmRnF6LW91UEdJUWRhajlmQndiSWlLX2tOWlNHemlzZVJIUEV4SHlCRVJHay1kTUZuXzBaOGpRZkxjVjJ6NA?oc=5",
+      "summary": "China issues fade in US as midterm voters focus on prices&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "China issues fade in US as midterm voters focus on prices&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Thu, 29 Oct 2026 07:09:00 GMT"
+    },
+    {
+      "source": "Nikkei Asia",
+      "title": "Ford says it will take on Chinese rivals by 'going into their price point' - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNc25fU0JRSDk2WEpicXFIY3JrMmlXVDhSV3ZzWXA5Q3Nta0hvTVZnblNTb1hzSm9lSGNPYW1qVWM2UURrellUaGVhNTNXX0x3dXRKdmNWZTFLckV3Y2dHTjF5dlZDS0pGYmU0NWVYSVFrQk9qOXN4elk3bGVuRUhRN21BbDNwaklhZXJJeVlVYTZCMjJEQzhJQUlSOHR5QTJVeHcxNEs4ZFhlZnhybE9LTmpZZXdXTGNG?oc=5",
+      "summary": "Ford says it will take on Chinese rivals by 'going into their price point'&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "Ford says it will take on Chinese rivals by 'going into their price point'&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Thu, 29 Oct 2026 04:38:00 GMT"
+    },
+    {
+      "source": "Nikkei Asia",
       "title": "Toyota's six-month sales in China sink to nine-year low as market slumps - Nikkei Asia",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZVpsRjJOX2xHX05UNXcyQ3A1aFRfdXY3NHRfbUNIdnMyRmk3MnFMM3l6bXdicXhGOUdfSmNNdFN1ZzJHbC02cUVhdlE1ZnJoY21hVTZSc211VEtaWm1fUkdCYWh4UkpMaFVJQnJEem5NWFp2bjdvTlNtS003Y2RzQjB0NGpFQ1czZzQ5NzBRd1FhLWZwSV9WRWhISWVtRUY0bW5ydzZwRWtBRnJ0T2tPbWR5dUVHa1h5?oc=5",
       "summary": "Toyota's six-month sales in China sink to nine-year low as market slumps&nbsp;&nbsp;Nikkei Asia",
@@ -380,35 +396,11 @@
     },
     {
       "source": "Nikkei Asia",
-      "title": "With China having fewer kids, dairies rethink milk for adults - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOFcxYmdFTVprYnU5dXJRV2pYSDFDWDJ2MmRFTlluZjZieTZ2N3VubjVaSVlacU1RYUVRU1hjVC15QzdXRHlXOFY4RURHZlNHbWtPY3JBNG1vaTFLd203SE9kUjhKMjZlMU5XWjdERU5KbXVoTjlHbm1JaUhsazZ3NGllaXdOcU1wdmZrN1h3eXhZc2lqUDVXU3E1NmpoY2hONG13eEpiM0tJSm8?oc=5",
-      "summary": "With China having fewer kids, dairies rethink milk for adults&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "With China having fewer kids, dairies rethink milk for adults&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Tue, 27 Oct 2026 22:11:00 GMT"
-    },
-    {
-      "source": "Nikkei Asia",
-      "title": "BYD rolls out public test tracks to promote China's car culture - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNU2RZRjNCVWRMWU9WUGtZVzVsTnlpN0lXRnVfWmEzUWNzeWdNTjJ3WTdMZ091dHBrMkxTU2dmWk5RZVItQll4ejVCU0hNOVFzY0ItRjk2bl9KeGRKY1NRVk5SN1NUSXBIQWgxTk03ZnhtckJxYkhlUGpYZWxGajQ2clE1ZGNfYTJFdTlUbk5HYXk0aGN0UDNOWXUyOE1BRGxKd1Z0enJGZDZHZS1haUg5X1lUeW5pR3U0QzV6TA?oc=5",
-      "summary": "BYD rolls out public test tracks to promote China's car culture&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "BYD rolls out public test tracks to promote China's car culture&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Tue, 27 Oct 2026 17:38:00 GMT"
-    },
-    {
-      "source": "Nikkei Asia",
-      "title": "UAE bank Mashreq injects $125m into Hong Kong business as China ties deepen - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOb3loM01RNUowZEszdjBJMWFQQmdsX21ELUNwZXN2NEhXY2JJTk1LSVpNLUE5NU9Xd044NEk3NndCbkFmM3drMFFoY21lUkIyd3ZsUzdIc09Hc3ZfM2daQnhuSGx1dmpzakxwSGJKNTl5c1J5WUt3MjJGOTlVdmVrQ3BiVlBHMFkzdTVrTU1qeGdjYlh0QlAyVDNaX3dFdGo3a3RFTjdrN3hmYXlXMHZvU1VqTDRyRjFsRkpiT2tSblU?oc=5",
-      "summary": "UAE bank Mashreq injects $125m into Hong Kong business as China ties deepen&nbsp;&nbsp;Nikkei Asia",
-      "full_text": "UAE bank Mashreq injects $125m into Hong Kong business as China ties deepen&nbsp;&nbsp;Nikkei Asia",
-      "pub_date": "Wed, 28 Oct 2026 05:02:00 GMT"
-    },
-    {
-      "source": "Financial Times",
-      "title": "Starbucks to resume share buybacks but China shift clouds growth outlook - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOFNHTjcxZjVQM0llOVI0d0xScWNTSXJnaEswOUkxOGFqUFJJOGxrbkxjNkgxeGtMMEN1Z3lRUVZJOEZjYWtaZG1TS0d5ZU1hVkRWc2JtWjJRMWNaNmR4SVppbDZabE1DZDNNeFIxc3R5dzRobVdpMkZFbXJDdjdGR1lLaFc?oc=5",
-      "summary": "Starbucks to resume share buybacks but China shift clouds growth outlook&nbsp;&nbsp;Financial Times",
-      "full_text": "Starbucks to resume share buybacks but China shift clouds growth outlook&nbsp;&nbsp;Financial Times",
-      "pub_date": "Thu, 29 Oct 2026 21:54:08 GMT"
+      "title": "Alphabet spells out more AI capex, China+1 doesn't add up - Nikkei Asia",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMF9RU2lsU1hmSGRuMDdDaDNmZXBnblc3cjRuRnlvVTF2bnhJZmpHc0FIZmRma3d1MzhRUjNrTnlIdkhFcXpEVk9MczIzMkFLc1NpdUVHSG5mcUxZR2VjUnlLbEN5VHJKTkRFci1aNWdyb3RySWNPLTNyUGsybDNQOWlFQUktSF9VcDNmQWU5Y3gwS0k?oc=5",
+      "summary": "Alphabet spells out more AI capex, China+1 doesn't add up&nbsp;&nbsp;Nikkei Asia",
+      "full_text": "Alphabet spells out more AI capex, China+1 doesn't add up&nbsp;&nbsp;Nikkei Asia",
+      "pub_date": "Thu, 29 Oct 2026 08:54:00 GMT"
     },
     {
       "source": "Financial Times",
@@ -420,35 +412,11 @@
     },
     {
       "source": "Financial Times",
-      "title": "Hello Kitty gets caught up in Japan-China spat - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMVVmMThieUJydnhnaENpczBTRWNrdHN3UTFvc2NxcFloYWgyU2tlNE40QmNBOEM0SS1qU0tTQm8ycG9mRGMxVkdNYlV3SlpDQV9MN3gwblhoNkgtOGNmV3N5VWZsaDJ5ZkhCT2JUckRZSVloLU5pZzM0S1A1UU9xd1RrUGE?oc=5",
-      "summary": "Hello Kitty gets caught up in Japan-China spat&nbsp;&nbsp;Financial Times",
-      "full_text": "Hello Kitty gets caught up in Japan-China spat&nbsp;&nbsp;Financial Times",
-      "pub_date": "Thu, 29 Oct 2026 06:04:40 GMT"
-    },
-    {
-      "source": "Financial Times",
-      "title": "BYD’s export surge helps offset sales weakness in China - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTEpuelBlNjZGc3E0Q1M4dWlKbFdMbngwbldHU3F4bWdOWlBWOUlkV1BjRGZKd2p5WUF4aWF2MkNvWExOamwteXk1STh1ejctdjlvV01Sdjh6SF9Cck1tRlFXcTNyWU9uSE5BX1JGMGpQYUtzaFN2R2JXWXo1b1hwY2NmRjI?oc=5",
-      "summary": "BYD’s export surge helps offset sales weakness in China&nbsp;&nbsp;Financial Times",
-      "full_text": "BYD’s export surge helps offset sales weakness in China&nbsp;&nbsp;Financial Times",
-      "pub_date": "Thu, 29 Oct 2026 10:51:23 GMT"
-    },
-    {
-      "source": "Financial Times",
       "title": "The AI bubble already popped — in China - Financial Times",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQa1loUTBCZ3N2WlVpZGtNd3hLMUVPb3NRLU1TRmQzbWJYdVdZMnpCMExwS2xZTUY5am5pZ0NhT3lzSzBCSFl2Z3JldExUUmZWUjczYkdwN3Y1aWNnU3RpZkV2OUp0eHNYMEQyNElWY1BWUll3eG9INktSaWtpUFVhUERybFM?oc=5",
       "summary": "The AI bubble already popped — in China&nbsp;&nbsp;Financial Times",
       "full_text": "The AI bubble already popped — in China&nbsp;&nbsp;Financial Times",
       "pub_date": "Wed, 28 Oct 2026 10:39:11 GMT"
-    },
-    {
-      "source": "Financial Times",
-      "title": "Alphabet spells out more AI capex, China+1 doesn’t add up - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaEJLbWUyMWlVWXlsYzVLRmpUYmRyZGE0T3dVanRaeHRwUE14aFZXdV9iUmZDUV9QS1BGUDlZMTFQODJrNzJoR29lT1R4T2lCWWFxLU50d2FiWFFRekhSbndVbXI2TTdNVmtKN1JCYk95czBQYnJON3pwVVdXT2l4ZW9sZmg?oc=5",
-      "summary": "Alphabet spells out more AI capex, China+1 doesn’t add up&nbsp;&nbsp;Financial Times",
-      "full_text": "Alphabet spells out more AI capex, China+1 doesn’t add up&nbsp;&nbsp;Financial Times",
-      "pub_date": "Thu, 29 Oct 2026 07:43:23 GMT"
     },
     {
       "source": "Financial Times",
@@ -460,27 +428,67 @@
     },
     {
       "source": "Financial Times",
-      "title": "Mercedes-Benz vows to stay in China as sales slump - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQazJiT1NocTA3d3lFYi1QYzlfckR3SHJxZ2hPQUYyLWQ4VXZ1N3hlZk90Y2c3UkRueW9UcHVNRVVMU2VXRXhVS0NzV0pTYnRlS2ZKZW91QXBrc3gzZ0FlRzh4OVEyUGNWZHBmUVpJcXAtSmZkTFJYbXlpVWVZNVRkMllZeko?oc=5",
-      "summary": "Mercedes-Benz vows to stay in China as sales slump&nbsp;&nbsp;Financial Times",
-      "full_text": "Mercedes-Benz vows to stay in China as sales slump&nbsp;&nbsp;Financial Times",
-      "pub_date": "Wed, 28 Oct 2026 09:36:11 GMT"
+      "title": "Gates-backed miner says China is frustrating DR Congo exploration efforts - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPa2RzWnE5QVNnX3VhRmgyRWhLU3NLNEhsbkY0a2pnU2JXYzBBdFA0al9kTmJvY0JQdHRYUTl5cHhzejJWUHZKT2xYUm5zX0IxNW9Cczg3SC1PMVQ0ZEtjOEtPek1sbGs5em1PU1poWGNmdlAxWHZhTFAtaVI1VUgxXzM1MGY?oc=5",
+      "summary": "Gates-backed miner says China is frustrating DR Congo exploration efforts&nbsp;&nbsp;Financial Times",
+      "full_text": "Gates-backed miner says China is frustrating DR Congo exploration efforts&nbsp;&nbsp;Financial Times",
+      "pub_date": "Fri, 30 Oct 2026 05:00:13 GMT"
     },
     {
       "source": "Financial Times",
-      "title": "Chinese brands put boot into Kylian Mbappé after viral ‘dictator’ meme - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPU1hyZldwQjd4b0doQnRJVzU5V3BKcE9MWjJ6ZHJKQVRkUTlCRU9pU01sSndlX25aT1JRWUcyaDB2YlhGclhYbmJxLVFUakZrVjAxd3ExdlcyRUFxcHhGWHlxbnFVeFVSQWttZV85WU51WlhEd2Y4WE9JYVZFcU9wZnh0QUQ?oc=5",
-      "summary": "Chinese brands put boot into Kylian Mbappé after viral ‘dictator’ meme&nbsp;&nbsp;Financial Times",
-      "full_text": "Chinese brands put boot into Kylian Mbappé after viral ‘dictator’ meme&nbsp;&nbsp;Financial Times",
-      "pub_date": "Tue, 27 Oct 2026 09:37:23 GMT"
+      "title": "Starbucks to resume share buybacks but China shift clouds growth outlook - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOFNHTjcxZjVQM0llOVI0d0xScWNTSXJnaEswOUkxOGFqUFJJOGxrbkxjNkgxeGtMMEN1Z3lRUVZJOEZjYWtaZG1TS0d5ZU1hVkRWc2JtWjJRMWNaNmR4SVppbDZabE1DZDNNeFIxc3R5dzRobVdpMkZFbXJDdjdGR1lLaFc?oc=5",
+      "summary": "Starbucks to resume share buybacks but China shift clouds growth outlook&nbsp;&nbsp;Financial Times",
+      "full_text": "Starbucks to resume share buybacks but China shift clouds growth outlook&nbsp;&nbsp;Financial Times",
+      "pub_date": "Thu, 29 Oct 2026 21:54:08 GMT"
     },
     {
       "source": "Financial Times",
-      "title": "Reckitt cuts sales outlook on disinfectant shortage and China hit - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQnZNOEZ4QkZkaEJhaHA5SUpaVHEzclFtNThNUkppc0Vmd3czVW1YN3RPdjF2QjFydlZ2UEZPRHphVnpCOFlVZ2t2LVA2UVRmV0NKcEpvSjh5YjNBblBZNFBtUjY3bFNZMGZ2RHJwVUlxdEhGS2d5WkJ1SThBckdOSXBrWmk?oc=5",
-      "summary": "Reckitt cuts sales outlook on disinfectant shortage and China hit&nbsp;&nbsp;Financial Times",
-      "full_text": "Reckitt cuts sales outlook on disinfectant shortage and China hit&nbsp;&nbsp;Financial Times",
-      "pub_date": "Tue, 27 Oct 2026 08:33:59 GMT"
+      "title": "Hello Kitty gets caught up in Japan-China spat - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMVVmMThieUJydnhnaENpczBTRWNrdHN3UTFvc2NxcFloYWgyU2tlNE40QmNBOEM0SS1qU0tTQm8ycG9mRGMxVkdNYlV3SlpDQV9MN3gwblhoNkgtOGNmV3N5VWZsaDJ5ZkhCT2JUckRZSVloLU5pZzM0S1A1UU9xd1RrUGE?oc=5",
+      "summary": "Hello Kitty gets caught up in Japan-China spat&nbsp;&nbsp;Financial Times",
+      "full_text": "Hello Kitty gets caught up in Japan-China spat&nbsp;&nbsp;Financial Times",
+      "pub_date": "Thu, 29 Oct 2026 06:05:42 GMT"
+    },
+    {
+      "source": "Financial Times",
+      "title": "Private equity firm swoops on China Evergrande unit in rare win for creditors - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaGN0SUE3UEZEZmR2aEFBaWdZX09rZFJOYXY0T1oxZ3lvekxTNWRHQWVFdjhKZENkNDZ6ZVhkTUJRRDNpMmZjNG56dHNkSUFVTGdNUXNGYXlaSVZ6b25FSHhHSVRjbENoZnVxMHFuZHN3bHpOak10RU93ZGdiSm54OU1vdnA?oc=5",
+      "summary": "Private equity firm swoops on China Evergrande unit in rare win for creditors&nbsp;&nbsp;Financial Times",
+      "full_text": "Private equity firm swoops on China Evergrande unit in rare win for creditors&nbsp;&nbsp;Financial Times",
+      "pub_date": "Fri, 30 Oct 2026 06:36:35 GMT"
+    },
+    {
+      "source": "Financial Times",
+      "title": "BYD’s export surge helps offset sales weakness in China - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTEpuelBlNjZGc3E0Q1M4dWlKbFdMbngwbldHU3F4bWdOWlBWOUlkV1BjRGZKd2p5WUF4aWF2MkNvWExOamwteXk1STh1ejctdjlvV01Sdjh6SF9Cck1tRlFXcTNyWU9uSE5BX1JGMGpQYUtzaFN2R2JXWXo1b1hwY2NmRjI?oc=5",
+      "summary": "BYD’s export surge helps offset sales weakness in China&nbsp;&nbsp;Financial Times",
+      "full_text": "BYD’s export surge helps offset sales weakness in China&nbsp;&nbsp;Financial Times",
+      "pub_date": "Thu, 29 Oct 2026 10:51:23 GMT"
+    },
+    {
+      "source": "Financial Times",
+      "title": "China’s homegrown cosmetics contenders face battle to glow up - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOekQtbDNKaXctUHVMbTRobzJtRVVManc3ZlZDelI4UWFjTDk5SzB3ZVhKNF9ORVM5bXQ5WXU0RUxIWWVXUFFGVkFvWjBsNFlCdmYtQjZUMFduel9faUdxQTNJS0tJZjRvYzM2QnZsaXNTdkVrdm9PWDNLNzNrM2lLYl81TGI?oc=5",
+      "summary": "China’s homegrown cosmetics contenders face battle to glow up&nbsp;&nbsp;Financial Times",
+      "full_text": "China’s homegrown cosmetics contenders face battle to glow up&nbsp;&nbsp;Financial Times",
+      "pub_date": "Fri, 30 Oct 2026 02:46:31 GMT"
+    },
+    {
+      "source": "Financial Times",
+      "title": "Alphabet spells out more AI capex, China+1 doesn’t add up - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPaEJLbWUyMWlVWXlsYzVLRmpUYmRyZGE0T3dVanRaeHRwUE14aFZXdV9iUmZDUV9QS1BGUDlZMTFQODJrNzJoR29lT1R4T2lCWWFxLU50d2FiWFFRekhSbndVbXI2TTdNVmtKN1JCYk95czBQYnJON3pwVVdXT2l4ZW9sZmg?oc=5",
+      "summary": "Alphabet spells out more AI capex, China+1 doesn’t add up&nbsp;&nbsp;Financial Times",
+      "full_text": "Alphabet spells out more AI capex, China+1 doesn’t add up&nbsp;&nbsp;Financial Times",
+      "pub_date": "Thu, 29 Oct 2026 07:43:23 GMT"
+    },
+    {
+      "source": "New York Times",
+      "title": "How a Japanese Spy Drama Became the Target of China’s Anger - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdXV2cWkwdW9JX1dRcmRaZ1R4M2xPZ29wMWtMZXFkUnF3ZFZmVHlsZHNjbmQ1a3JyaWJQbzBEZm5nNGZ1bmhXeXJDUE54NXY4d0NPcEZLelk3U3ZSRmRveDJwNGNNUDRqc2txU2xLYzFHRVAtVXB1QW13em5JVF9LX05WcDA?oc=5",
+      "summary": "How a Japanese Spy Drama Became the Target of China’s Anger&nbsp;&nbsp;The New York Times",
+      "full_text": "How a Japanese Spy Drama Became the Target of China’s Anger&nbsp;&nbsp;The New York Times",
+      "pub_date": "Fri, 30 Oct 2026 06:15:29 GMT"
     },
     {
       "source": "New York Times",
@@ -496,7 +504,7 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmIwejFRbkRpX2JibzE0S1NHWjdlS2lSWUJKTXVTNWYxRnVfS0ZDODhGcHdhRFBiamplX2lWSUlMRGZtdU12XzYxaUlRUGRzdmR4SU5saFJJZ3BrNUltdERoRWdoWlZuME9RMndwUi1jRmdRbzROenB0bG4wU0MtU1EtcnNyaU5lRDdz?oc=5",
       "summary": "Nvidia Chief, Jensen Huang, Is Seen as Target of Chinese Spy Plot&nbsp;&nbsp;The New York Times",
       "full_text": "Nvidia Chief, Jensen Huang, Is Seen as Target of Chinese Spy Plot&nbsp;&nbsp;The New York Times",
-      "pub_date": "Thu, 29 Oct 2026 19:27:01 GMT"
+      "pub_date": "Thu, 29 Oct 2026 09:01:52 GMT"
     },
     {
       "source": "New York Times",
@@ -504,15 +512,7 @@
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQN0dONjM1TWMtclN4S0RKcENwekcyWl9OQ2RvUUVFenliZVdZMmFhSjN1czlBRmxjVVJuYVFsRXBMREVXNE51MG1yN3hNWmR3eGZzbXZwUDJTc1Q2V05SRzZQQlFUcElER1IwdjVCZzdXbzVNbzc2a3c0bFY0YVlvMHdndFpoV1hZRlFyZUJBRlM?oc=5",
       "summary": "China Is Not Happy About Fan-made A.I. Videos of Sun Wukong and Lin Daiyu&nbsp;&nbsp;The New York Times",
       "full_text": "China Is Not Happy About Fan-made A.I. Videos of Sun Wukong and Lin Daiyu&nbsp;&nbsp;The New York Times",
-      "pub_date": "Thu, 29 Oct 2026 09:09:01 GMT"
-    },
-    {
-      "source": "New York Times",
-      "title": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcktkOWZOWFFuWTBCeGY2X2VSTHlMNmllZ01SX2IwVUN5a1VsUWdKempNYXpWa3UzeVFBR3dYQmhnME1xakh4eGtJMFBlQTZqbjFNLTFaemk5ZENHQ21zTnh5cUhhY01UVGZVYUMwd19qa2dRSG5kMWdIa2lMR016Tm54RDVTQ3RpRW5GQ1ZtSU1QMjBrZTlicm1jdHVsZEdH?oc=5",
-      "summary": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga&nbsp;&nbsp;The New York Times",
-      "full_text": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga&nbsp;&nbsp;The New York Times",
-      "pub_date": "Wed, 28 Oct 2026 08:35:35 GMT"
+      "pub_date": "Fri, 30 Oct 2026 06:24:00 GMT"
     },
     {
       "source": "New York Times",
@@ -524,11 +524,27 @@
     },
     {
       "source": "New York Times",
+      "title": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcktkOWZOWFFuWTBCeGY2X2VSTHlMNmllZ01SX2IwVUN5a1VsUWdKempNYXpWa3UzeVFBR3dYQmhnME1xakh4eGtJMFBlQTZqbjFNLTFaemk5ZENHQ21zTnh5cUhhY01UVGZVYUMwd19qa2dRSG5kMWdIa2lMR016Tm54RDVTQ3RpRW5GQ1ZtSU1QMjBrZTlicm1jdHVsZEdH?oc=5",
+      "summary": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga&nbsp;&nbsp;The New York Times",
+      "full_text": "Why Kylian Mbappe angered China – and the possible consequences for him, Madrid and La Liga&nbsp;&nbsp;The New York Times",
+      "pub_date": "Wed, 28 Oct 2026 08:35:35 GMT"
+    },
+    {
+      "source": "New York Times",
       "title": "U.S. Restricts Trade With Chinese Genomics Company - The New York Times",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQOTRzdFQxSHZIbmVzTlMtUmk0NHNjN3o5elI3U3ctZjlvLTc5UEJoWUYtbDlyN21HSnpQSGtRVjVnWTM5SUpqWDdraUlhOXNVb1duZXF6VUJQMVZTcXZlNnEzTTBNNFMzWlBQYVpBZWxxWURTVExPS19EdDhHREVLUw?oc=5",
       "summary": "U.S. Restricts Trade With Chinese Genomics Company&nbsp;&nbsp;The New York Times",
       "full_text": "U.S. Restricts Trade With Chinese Genomics Company&nbsp;&nbsp;The New York Times",
-      "pub_date": "Thu, 29 Oct 2026 06:42:00 GMT"
+      "pub_date": "Wed, 28 Oct 2026 13:05:11 GMT"
+    },
+    {
+      "source": "New York Times",
+      "title": "What China’s Patriotic Stock Buying Tells Us About Its Economy - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbUVXYUQxZUhYNnBqZ2lQbjlZLVRyTkphZVhyRDlLWHI3RGk3U3NJTWNOMXEyVG8xVkQtU2wtNGRDUDVrcEc4ZlJVem5heHlWUVExYmtOOVE2MFBNX1kyYm90RHp4OTNaWEJVanhlTm1rVC1zUEFQYVBKSHpPS2M0QzZxM2g2d1RRNDNSV3NxNlh5amZZZ2tv?oc=5",
+      "summary": "What China’s Patriotic Stock Buying Tells Us About Its Economy&nbsp;&nbsp;The New York Times",
+      "full_text": "What China’s Patriotic Stock Buying Tells Us About Its Economy&nbsp;&nbsp;The New York Times",
+      "pub_date": "Tue, 27 Oct 2026 14:15:17 GMT"
     },
     {
       "source": "New York Times",
@@ -540,11 +556,27 @@
     },
     {
       "source": "New York Times",
-      "title": "China Steps In to Rescue Stocks, But the Market Continues to Fall - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbUVXYUQxZUhYNnBqZ2lQbjlZLVRyTkphZVhyRDlLWHI3RGk3U3NJTWNOMXEyVG8xVkQtU2wtNGRDUDVrcEc4ZlJVem5heHlWUVExYmtOOVE2MFBNX1kyYm90RHp4OTNaWEJVanhlTm1rVC1zUEFQYVBKSHpPS2M0QzZxM2g2d1RRNDNSV3NxNlh5amZZZ2tv?oc=5",
-      "summary": "China Steps In to Rescue Stocks, But the Market Continues to Fall&nbsp;&nbsp;The New York Times",
-      "full_text": "China Steps In to Rescue Stocks, But the Market Continues to Fall&nbsp;&nbsp;The New York Times",
-      "pub_date": "Tue, 27 Oct 2026 14:15:17 GMT"
+      "title": "Where to Eat, Sleep and Shop in Taipei, Taiwan - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMHFyQ3dQalhQeGlzVVpCY2ItWmt4TmVkQkRLNUpkOGo0RzNiSE1CSHNpMnFSakxtcnd2Znp4M2poR1QtQ0JHLVBTdDJIV090S3NrMHF6YUJKS3JUcndlbWl0WmpWVkFBZzRuNHNFNkR1NU5HcEhqdU1uYnZDekw0Q1FFLWdheTNaSW5r?oc=5",
+      "summary": "Where to Eat, Sleep and Shop in Taipei, Taiwan&nbsp;&nbsp;The New York Times",
+      "full_text": "Where to Eat, Sleep and Shop in Taipei, Taiwan&nbsp;&nbsp;The New York Times",
+      "pub_date": "Fri, 30 Oct 2026 16:02:19 GMT"
+    },
+    {
+      "source": "The Guardian",
+      "title": "Beijing Queer film festival cancelled after harassment from authorities - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPc0NPZ1RxOXRId054dlJLSTlKTlBNWnh6N3JhT2tFM2p2RHl2VXVfMkdYUlZuX2hjbVllSTRQd0M1aVRpUU9idVIxa2hqSHNFNGNHMTdOYkIxNnBZQlVpQ2lBNF95N1RZR3ZTZmdDZU9ENXJXV2JJQTV3TGgyUlpGeDZQWFBrSzJNX3lDNGFiWUUwTndQN2p4c05JdXZJVnZWSWVIRDBvV0ZtVWM?oc=5",
+      "summary": "Beijing Queer film festival cancelled after harassment from authorities&nbsp;&nbsp;The Guardian",
+      "full_text": "Beijing Queer film festival cancelled after harassment from authorities&nbsp;&nbsp;The Guardian",
+      "pub_date": "Fri, 30 Oct 2026 11:40:00 GMT"
+    },
+    {
+      "source": "The Guardian",
+      "title": "China expels a record number from Communist party amid Xi’s intensified purges of top officials - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQUW1fNEkyLUg4X0xSb3JvcFhReFR1SlA0M0tTaF9QWHhZS1dZOG9ucEhoM3c2ZG1hd3U4elN2RUQzWnlUemRUeGJ2NnhPR1BseHpjOElLWGhvdHdUMmk0Z3NsTXp6MHMwcGZocVRwLWRQQXVkNmRrVWNtRDVham9rVW9NVDA2OHVmbVJwSlRxbno1TTNCdUEyOHZkV0l0cUhkcXdKVGdjMWRudnVZRDlXeTJZRjZwcndWNDFLOTNWY3hDelE5WXkzQQ?oc=5",
+      "summary": "China expels a record number from Communist party amid Xi’s intensified purges of top officials&nbsp;&nbsp;The Guardian",
+      "full_text": "China expels a record number from Communist party amid Xi’s intensified purges of top officials&nbsp;&nbsp;The Guardian",
+      "pub_date": "Fri, 30 Oct 2026 15:00:00 GMT"
     },
     {
       "source": "The Guardian",
@@ -553,6 +585,22 @@
       "summary": "Nvidia CEO reportedly targeted by an alleged Chinese spy&nbsp;&nbsp;The Guardian",
       "full_text": "Nvidia CEO reportedly targeted by an alleged Chinese spy&nbsp;&nbsp;The Guardian",
       "pub_date": "Thu, 29 Oct 2026 21:02:00 GMT"
+    },
+    {
+      "source": "The Guardian",
+      "title": "Chinese markets lose trillions as race for AI supremacy with US takes its toll - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbzM2ekpCRDItOWdneU1qVVdIMlpNeVJLLWpUZDYtc2FPclJCM0JLTEVGc2JGS0NDbFpldXlaZlBFclJwTnFfSmFQUU0tLWRXaFI1NlFXRW1Bd1ZkbkwxdHQzcDJQOTIzOVFOZzFXLTNXVWI1T1pRd0hrQVRFdVplV3ZGb2xrYW84SXN2cUM1eWVXZEdPQVZN?oc=5",
+      "summary": "Chinese markets lose trillions as race for AI supremacy with US takes its toll&nbsp;&nbsp;The Guardian",
+      "full_text": "Chinese markets lose trillions as race for AI supremacy with US takes its toll&nbsp;&nbsp;The Guardian",
+      "pub_date": "Tue, 27 Oct 2026 14:09:00 GMT"
+    },
+    {
+      "source": "The Guardian",
+      "title": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk - The Guardian",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUjJxZVhoTEdteGVkRUE1Z1NRdy03TWFKYW1QSXJyRWU2bzdjRWFHcDlTUjMybkJ3bGNJaWZhMk5iTTVNcTZMdjdubzROdlhPUzZKcXVzalRHTVNDN3BPR29JcmRBSzlFMW5mZW5FcjdhUUpRa29xU3pJTU1sWUhLVGthTVN4NVFXajZzLU03c3RlMnlBN0QzWFc4NEI?oc=5",
+      "summary": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk&nbsp;&nbsp;The Guardian",
+      "full_text": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk&nbsp;&nbsp;The Guardian",
+      "pub_date": "Tue, 27 Oct 2026 16:17:00 GMT"
     },
     {
       "source": "The Guardian",
@@ -580,67 +628,11 @@
     },
     {
       "source": "The Guardian",
-      "title": "Chinese markets lose trillions as race for AI supremacy with US takes its toll - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbzM2ekpCRDItOWdneU1qVVdIMlpNeVJLLWpUZDYtc2FPclJCM0JLTEVGc2JGS0NDbFpldXlaZlBFclJwTnFfSmFQUU0tLWRXaFI1NlFXRW1Bd1ZkbkwxdHQzcDJQOTIzOVFOZzFXLTNXVWI1T1pRd0hrQVRFdVplV3ZGb2xrYW84SXN2cUM1eWVXZEdPQVZN?oc=5",
-      "summary": "Chinese markets lose trillions as race for AI supremacy with US takes its toll&nbsp;&nbsp;The Guardian",
-      "full_text": "Chinese markets lose trillions as race for AI supremacy with US takes its toll&nbsp;&nbsp;The Guardian",
-      "pub_date": "Tue, 27 Oct 2026 14:09:00 GMT"
-    },
-    {
-      "source": "The Guardian",
-      "title": "‘Zero-energy companionship’: bizarre hobby takes seed among China’s stressed young adults - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQVExod052dkRRamlRMkR4VHVuOFpqRzNzUWR3M2VaSkdFSnFNVDBWVnlySk5IbE5qcnF2WHBfZDM0Qm5kMFpfTGpsN21NdTNQUnpPU2tLc0trY2FYUksyaTZ0WkFUT1ZXTTBkcm9VOEo2WVpUeHB3R1d6ZlMyNGZMenFjZFFGc1k0Ylc4ODZ1N0tFYjFSal8yM1FodDl1OWhzSklPcVJuWldrUkNZMEhldzZORk9EenMtMDRZaVVFQVJEaVVvWkV2a2lDOA?oc=5",
-      "summary": "‘Zero-energy companionship’: bizarre hobby takes seed among China’s stressed young adults&nbsp;&nbsp;The Guardian",
-      "full_text": "‘Zero-energy companionship’: bizarre hobby takes seed among China’s stressed young adults&nbsp;&nbsp;The Guardian",
-      "pub_date": "Mon, 26 Oct 2026 14:37:00 GMT"
-    },
-    {
-      "source": "The Guardian",
-      "title": "From a seed in China to the ‘backdrop for countless love stories’: a ginkgo’s 167-year journey to Victorian tree of the year - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOc1NJSjR4MnhlbXJTZ2UwYmxMekJadGdJRHVMd192blY5WGM1WllrXzIwcEtTMXUxM05fTnVLX3VxSGpwY01CbmZBTXB6NVdua1dCVWp4SkZqaUpPY21ZbGJyVjZjQ3F5bEhoWjZBOWJ2UjVhN002bEplX01WN3MxTEdyYzgySlMyS0RSNGZQUzBMbEhsMkxaWjJsa1RoSVpPMTVZY0w0TGVuRTF3QUU0TmdjUU5FN1RXY1pvZHFrcm9JSGxjb1U0WUl2dmZpN1RhX1k4RkhrQVVuSkd2?oc=5",
-      "summary": "From a seed in China to the ‘backdrop for countless love stories’: a ginkgo’s 167-year journey to Victorian tree of the year&nbsp;&nbsp;The Guardian",
-      "full_text": "From a seed in China to the ‘backdrop for countless love stories’: a ginkgo’s 167-year journey to Victorian tree of the year&nbsp;&nbsp;The Guardian",
-      "pub_date": "Wed, 28 Oct 2026 03:23:00 GMT"
-    },
-    {
-      "source": "The Guardian",
       "title": "Kylian Mbappé apologises after being dropped by Chinese brands for Mao Zedong comment - The Guardian",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSzdEd3ljN1pmWEUySExDRGFYajUtWWlJcGtuZDNKNjVsOGNrRHFJcFRTdVRJdUpxUzhQWUV3NkZuQUk4MTQzNHNtVV9IS05yTll1MDFnUnlJVkxNcVRNZzc2N2hzODFSMjQzdmxhTUwxZHEtaU0wV012V1RkbFhpWTVPZm5HaF8xbXBtRHpoY2kwM1FzOVBjdWJvdUVjclNtd19TY1RGSXVpUVBTWVZvTC13?oc=5",
       "summary": "Kylian Mbappé apologises after being dropped by Chinese brands for Mao Zedong comment&nbsp;&nbsp;The Guardian",
       "full_text": "Kylian Mbappé apologises after being dropped by Chinese brands for Mao Zedong comment&nbsp;&nbsp;The Guardian",
       "pub_date": "Tue, 27 Oct 2026 06:24:00 GMT"
-    },
-    {
-      "source": "The Guardian",
-      "title": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUjJxZVhoTEdteGVkRUE1Z1NRdy03TWFKYW1QSXJyRWU2bzdjRWFHcDlTUjMybkJ3bGNJaWZhMk5iTTVNcTZMdjdubzROdlhPUzZKcXVzalRHTVNDN3BPR29JcmRBSzlFMW5mZW5FcjdhUUpRa29xU3pJTU1sWUhLVGthTVN4NVFXajZzLU03c3RlMnlBN0QzWFc4NEI?oc=5",
-      "summary": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk&nbsp;&nbsp;The Guardian",
-      "full_text": "US bans vehicles from China’s BYD at Japan military base, calling them ‘unacceptable’ risk&nbsp;&nbsp;The Guardian",
-      "pub_date": "Tue, 27 Oct 2026 16:17:00 GMT"
-    },
-    {
-      "source": "The Guardian",
-      "title": "Xi Jinping’s corruption crackdown in the spotlight as China prepares for meeting of top leaders - The Guardian",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeDRFc3AxTEo4WkdsTmE5RzVMcEhkOWlsUGoxVDJBVlNCaVJIeWRSN0tjMDdHOVV1MVlGLUhJX3ViNFhjYnZQQVlveUM3S1ZleFBWWkpJRTdtUjJNZ2hmR0h4NHhKN21vbVN0VjluV2JSUkNCcHgwNHN3aVdtTXcyMXFSd1VwNThlTHVRMnF0SUF1bGNYUHRZM0V3ZHQ?oc=5",
-      "summary": "Xi Jinping’s corruption crackdown in the spotlight as China prepares for meeting of top leaders&nbsp;&nbsp;The Guardian",
-      "full_text": "Xi Jinping’s corruption crackdown in the spotlight as China prepares for meeting of top leaders&nbsp;&nbsp;The Guardian",
-      "pub_date": "Mon, 26 Oct 2026 23:03:00 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "A fully marine stem amphibian from the Late Triassic of China - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9iX1Zram1mNURaVFRfeU9tNXQ4N3oxbnM1dF9hZXFHeGpoWmZCMXRvemN3N2xJeVRGdTRCVU00RUhRcXJ3RGc2TDQ2UXpJRkRDRGw1RGdYallBQ1RNSHM4?oc=5",
-      "summary": "A fully marine stem amphibian from the Late Triassic of China&nbsp;&nbsp;Nature",
-      "full_text": "A fully marine stem amphibian from the Late Triassic of China&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 16:09:35 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Short-term academic visits to China could sustain ties - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkUHlnTkVDYU1FUGxaOWQ2MzJIWDNXX0w5cm5CYjV6dXduUGNDWVdUODNxdHgtekMtekU0VDlVLVAzMDhudnE4ZUl6OGxHTTdOc0Znd0tLaXlRSEZINEY0?oc=5",
-      "summary": "Short-term academic visits to China could sustain ties&nbsp;&nbsp;Nature",
-      "full_text": "Short-term academic visits to China could sustain ties&nbsp;&nbsp;Nature",
-      "pub_date": "Tue, 27 Oct 2026 17:56:16 GMT"
     },
     {
       "source": "Nature",
@@ -652,59 +644,75 @@
     },
     {
       "source": "Nature",
-      "title": "An Early Jurassic soft eggshell provides insights into the evolutionary history of dinosaur eggs - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBRUlFUeFFRRkNrY3pmYnpKTGh6ckFXZVZ1UGY2cS1Jai1PaXJ3bFdRTWY3RDYyZnI4NTdvNlVJc0t2V3J6ZEhzdzVoOGM5TnF4Z1k5d0s3OUdDNXpJVTVJ?oc=5",
-      "summary": "An Early Jurassic soft eggshell provides insights into the evolutionary history of dinosaur eggs&nbsp;&nbsp;Nature",
-      "full_text": "An Early Jurassic soft eggshell provides insights into the evolutionary history of dinosaur eggs&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 11:23:29 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Retraction Note: Engineered outer membrane vesicles enhance solid tumour CAR-T cell therapy - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3T0NJWjFSX1RiVThTSnFQMWlBZHQwVEE3djV5dldCcVllWk1FVnFUZjNRUl9NNFk2a3ktd0NsMU12czhDRXg5SHRTSjJUTmRBUzY4YlRkaHV5ZEtKTkI4?oc=5",
-      "summary": "Retraction Note: Engineered outer membrane vesicles enhance solid tumour CAR-T cell therapy&nbsp;&nbsp;Nature",
-      "full_text": "Retraction Note: Engineered outer membrane vesicles enhance solid tumour CAR-T cell therapy&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 14:32:52 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "-triggered Fenton-like reaction by secondary coordination sphere in iron-based metal-organic frameworks - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Ld2dtTUYxZEcxb2FSejFlTFlGbnB6cTRtdXhZQi1lcUxjWE1mRVc1RmtOcE5IdjBSVHM2am1tLURMUkhaTkRneDVjb3VDUFFnWkVtOThRSzhTWGM0Uzdn?oc=5",
-      "summary": "-triggered Fenton-like reaction by secondary coordination sphere in iron-based metal-organic frameworks&nbsp;&nbsp;Nature",
-      "full_text": "-triggered Fenton-like reaction by secondary coordination sphere in iron-based metal-organic frameworks&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 02:17:39 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Are salaries getting worse? Many scientists think so - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5GdGVMSjkxUmN2VVJ5RVlHV2pDMVJqZ0wyTDBvNURTa1hrb3NQTnpzbTQ2UHhXek1YVGlHcnZYODFaTWpaNGpETUtlU0FVQVlOMV91S2o1TVJuS1dhV0pJ?oc=5",
-      "summary": "Are salaries getting worse? Many scientists think so&nbsp;&nbsp;Nature",
-      "full_text": "Are salaries getting worse? Many scientists think so&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 18:58:42 GMT"
-    },
-    {
-      "source": "Nature",
-      "title": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ITENWaERfWTBaMS03eGx6azdYNFVlSU5lSnZTeHpxQlF6TnplVm8wT0tveE45WmY0MzZKcEhqYzVUY3pra2dLSG11N042MGtXVTl2MEFOY3ZoYWV5eWgw?oc=5",
-      "summary": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas&nbsp;&nbsp;Nature",
-      "full_text": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 19:13:52 GMT"
+      "title": "Short-term academic visits to China could sustain ties - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkUHlnTkVDYU1FUGxaOWQ2MzJIWDNXX0w5cm5CYjV6dXduUGNDWVdUODNxdHgtekMtekU0VDlVLVAzMDhudnE4ZUl6OGxHTTdOc0Znd0tLaXlRSEZINEY0?oc=5",
+      "summary": "Short-term academic visits to China could sustain ties&nbsp;&nbsp;Nature",
+      "full_text": "Short-term academic visits to China could sustain ties&nbsp;&nbsp;Nature",
+      "pub_date": "Tue, 27 Oct 2026 17:56:16 GMT"
     },
     {
       "source": "Nature",
       "title": "Switchable Chlorine Atom Transfer Radical Reactions - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5wajhCMmNGcnNWWVVHSGY2U2RvXzFIR2plQ3FMWm01UW10MlJidjUtaVNQMkpmTmFGQTVpbHhQNXF2WU85U1B1aTVjdHA2ZGF0dHJpaGhZWGRaNndrU3Zz?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5rZzd1TGlpSjE0SUdQU3ZYajRvTVZubUsyOUJJT0IwdnpxelI2eEgyX2FudklnZFVqQ1BIbEF5TXBja1hEZmtnVlVYLVhDT2pRcXRVSGNyVUtkQUtyMkU4SV8wTXY?oc=5",
       "summary": "Switchable Chlorine Atom Transfer Radical Reactions&nbsp;&nbsp;Nature",
       "full_text": "Switchable Chlorine Atom Transfer Radical Reactions&nbsp;&nbsp;Nature",
       "pub_date": "Wed, 28 Oct 2026 22:35:54 GMT"
     },
     {
       "source": "Nature",
-      "title": "Daily briefing: The Selfish Gene , 50 years on - Nature",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5QSFdWX0hLZ0lMcElYYTNFX0VMZ2lRcTJVY0RTSmRRX1VPaEZSMDd0a1NnSjlBRklvaUhfcEtkQjJRZFVRWW9iUncyWDhmQ2dGMlg4M3pnUUVUdm9ZelFN?oc=5",
-      "summary": "Daily briefing: The Selfish Gene , 50 years on&nbsp;&nbsp;Nature",
-      "full_text": "Daily briefing: The Selfish Gene , 50 years on&nbsp;&nbsp;Nature",
-      "pub_date": "Mon, 26 Oct 2026 07:00:00 GMT"
+      "title": "Ribbon made of carbon pentagons and heptagons has metallic properties - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE81dTdRSlF4dmU5NmpHZGxnTVZHc1UwUGJ0Z3B0YXhXUU1JZ2RIaWc1eEkwVlhTWWNKZzhoN3JwcUM0RDFhN01mUnhzUl80M21MQlNWaWZ4aTVPckF4SGJv?oc=5",
+      "summary": "Ribbon made of carbon pentagons and heptagons has metallic properties&nbsp;&nbsp;Nature",
+      "full_text": "Ribbon made of carbon pentagons and heptagons has metallic properties&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 16:43:24 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "Possible plague lab leak shows global biosecurity gaps - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1FZW1KREF1SWxtcjhEZUpYYWoyMjR5N3VYOW5YYjNrdU5PMnlHUVQxZGZvRjBVV3dsTl9EMnpPcXQ0MnhqTHNoNkNBLVY4NHYwYk9KUVdSekp0UGdZZ1Bj?oc=5",
+      "summary": "Possible plague lab leak shows global biosecurity gaps&nbsp;&nbsp;Nature",
+      "full_text": "Possible plague lab leak shows global biosecurity gaps&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 18:17:59 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "Translating sulfur flow batteries into deployable systems - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SejQ4SE9zMmZWOTNEN1JBN0N1LUJUNzRLUnRqMDdWR0d1bFpIOTVoNXI0a1NRVk0xTmFpN2o5UjBsV3JNeUNqUEdnUXNYbktQMDJzOWxNYnQ2S2Y4NlNV?oc=5",
+      "summary": "Translating sulfur flow batteries into deployable systems&nbsp;&nbsp;Nature",
+      "full_text": "Translating sulfur flow batteries into deployable systems&nbsp;&nbsp;Nature",
+      "pub_date": "Thu, 29 Oct 2026 11:45:19 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "These three red flags could unmask dodgy journals - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE04Z21mWmxqcm5jU3BjOXBfVXB1X2pjazIxODFqc3M0NlFPVTJZVHFkWl93T3lzOHpUVk5oS05aaVROdEVCR0NjMVlQRkVJa2xKNFRUZnJTM3RZOHVhY0Rz?oc=5",
+      "summary": "These three red flags could unmask dodgy journals&nbsp;&nbsp;Nature",
+      "full_text": "These three red flags could unmask dodgy journals&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 18:56:17 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "Accounting of Africa’s water reveals a management gap - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5LZk1XWGhjSnZyQXZwb3BMS3JkU2FELW1YNkxBNjVTWnIwVl92Rm1hT2xYMk1VMTBiTGFURWxaNjRGRnVCd3JNV05CejVSdzVwbWpCSTB3SmtTVEpvck9J?oc=5",
+      "summary": "Accounting of Africa’s water reveals a management gap&nbsp;&nbsp;Nature",
+      "full_text": "Accounting of Africa’s water reveals a management gap&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 18:17:59 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "Vegetation increasingly controlled by atmospheric dryness rather than soil moisture - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBoYlVRbFFncDByMU04V0xaVjBRLVFTZFp2ODYzdjR1NE1NLWJaWmdzNEx2b1hJQWxpMlZmaS1JZFF5MlVYSndPYlBoRXBGWlJxQUY4UWVHY1hSeHEwUEJZ?oc=5",
+      "summary": "Vegetation increasingly controlled by atmospheric dryness rather than soil moisture&nbsp;&nbsp;Nature",
+      "full_text": "Vegetation increasingly controlled by atmospheric dryness rather than soil moisture&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 10:28:37 GMT"
+    },
+    {
+      "source": "Nature",
+      "title": "Volume 658 Issue 8138, 29 October 2026 - Nature",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5xX3BRc3ZtWjZKTDMwMVFJWEo1elNJWUdOWkRGSTRUVUlGekdXR0t5d2YydVhtcjE1R0l2aTRiejlNQVNwTDhDV2c2LWN3MUFDOVk1c2Y0blYydUVtZVpxMDFwRQ?oc=5",
+      "summary": "Volume 658 Issue 8138, 29 October 2026&nbsp;&nbsp;Nature",
+      "full_text": "Volume 658 Issue 8138, 29 October 2026&nbsp;&nbsp;Nature",
+      "pub_date": "Wed, 28 Oct 2026 16:51:19 GMT"
     },
     {
       "source": "Cell",
@@ -716,11 +724,27 @@
     },
     {
       "source": "Science",
+      "title": "Contents | Science 394, 6823 - Science | AAAS",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB2eTAyY29hYUFjc19zbmdiNzJsLUI1eEdHS2otZkZSNVc0d0xDbEJwZG9NR21DemJZR0xXaVJYaVcwV3J0NUNZS2tTcm1kRVFwMnBJTGYyYw?oc=5",
+      "summary": "Contents | Science 394, 6823&nbsp;&nbsp;Science | AAAS",
+      "full_text": "Contents | Science 394, 6823&nbsp;&nbsp;Science | AAAS",
+      "pub_date": "Thu, 29 Oct 2026 18:07:47 GMT"
+    },
+    {
+      "source": "Science",
       "title": "The global geography of threats to freshwater biodiversity - Science | AAAS",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1jZ2N3cmhxMnR6alM3M2syM1hVRWs2QWNYeldTN2VOWnpvaDJqUlRGbjhYbnhLcnVvUVgxRFBUMGdIVTdCc1VfeFlIOVF1YU1QRFhBX0QxVlBrZ0xnX0lZdw?oc=5",
       "summary": "The global geography of threats to freshwater biodiversity&nbsp;&nbsp;Science | AAAS",
       "full_text": "The global geography of threats to freshwater biodiversity&nbsp;&nbsp;Science | AAAS",
       "pub_date": "Thu, 29 Oct 2026 18:23:54 GMT"
+    },
+    {
+      "source": "Science",
+      "title": "T cell–mediated depletion of intratumoral regulatory T cells using a CCR8xCD3 T cell–engaging bispecific antibody (TCB) promotes antitumor immunity in preclinical mouse models - Science | AAAS",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBER2tBNmwtNFhqRWZsdlVrYzFKTVk3ZWJ3aW1NWFZNVHRmNEc5UmRMRkFjSUhwMFJwVmh6RTFBUGRUTkxuRkJxZTM0WnJjS3hIMXVmQ1FNV0tNLVVwMEdLTkM2a1FuNVU?oc=5",
+      "summary": "T cell–mediated depletion of intratumoral regulatory T cells using a CCR8xCD3 T cell–engaging bispecific antibody (TCB) promotes antitumor immunity in preclinical mouse models&nbsp;&nbsp;Science | AAAS",
+      "full_text": "T cell–mediated depletion of intratumoral regulatory T cells using a CCR8xCD3 T cell–engaging bispecific antibody (TCB) promotes antitumor immunity in preclinical mouse models&nbsp;&nbsp;Science | AAAS",
+      "pub_date": "Wed, 28 Oct 2026 18:11:56 GMT"
     },
     {
       "source": "Science",
@@ -740,11 +764,19 @@
     },
     {
       "source": "Science",
-      "title": "AI is shaking up math. But can its proofs be trusted? - Science | AAAS",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPeTFsLXFTTWhOOXFtX0N3S1VlWlU4Wkt1bUtJc1A0dllWQl9XY3FPejdBc2Z6aDJ5V09naEkxNmN3UFN1V3pCbHlZMUJtVjdDNmQwaHJrdW1oSUotckJRbExXSnRLeEgwXzM1YXZQQ0Uzd0h5Y1JnRmYzajFSdUlIdUJQNzREQmp1?oc=5",
-      "summary": "AI is shaking up math. But can its proofs be trusted?&nbsp;&nbsp;Science | AAAS",
-      "full_text": "AI is shaking up math. But can its proofs be trusted?&nbsp;&nbsp;Science | AAAS",
-      "pub_date": "Tue, 27 Oct 2026 21:10:00 GMT"
+      "title": "A colleague hated my AI-polished emails—so he set a trap - Science | AAAS",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOaEQ5b3F3WUhMTWx5Z1YzZ2FxTUFhbkdaSU9CdmtCRF9pUmVpT0U5aktpenYyazVFZVYxV1lWQ1lHQlVRaDZfcmtrR3FoMG5QZlNmRHpKZUJRS2VkYWNqNjZrUHBGSkhCZk92d2ZWMmIxN25TaDVXeTUzVFNuQldRbG1BaTNUY2tKbDd1SFRQaF9hRHp4Y3NZ?oc=5",
+      "summary": "A colleague hated my AI-polished emails—so he set a trap&nbsp;&nbsp;Science | AAAS",
+      "full_text": "A colleague hated my AI-polished emails—so he set a trap&nbsp;&nbsp;Science | AAAS",
+      "pub_date": "Thu, 29 Oct 2026 19:00:00 GMT"
+    },
+    {
+      "source": "Science",
+      "title": "Bones may release proteins that slow aging and extend life span - Science | AAAS",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdlBaN2ZoN1I3cjlwSVFpX241Rk1mYWE4LWpFTjFWZ3hzYXF0dUFHSXJMNm9DQWxWUU5keGxaY3NlRzA2Z0NPNmdDQ2Fsd1YyRUloSVQ1X1J1TS1DNExFWG5xZE0yU3llUW53eEFkNTZHYjRmV19BZWdTdllmclNacXM4azVVd05nR2hZUThnWWdhb2ZhMzZzZnFwVjZlNTA?oc=5",
+      "summary": "Bones may release proteins that slow aging and extend life span&nbsp;&nbsp;Science | AAAS",
+      "full_text": "Bones may release proteins that slow aging and extend life span&nbsp;&nbsp;Science | AAAS",
+      "pub_date": "Fri, 30 Oct 2026 19:23:06 GMT"
     },
     {
       "source": "Science",
@@ -771,38 +803,6 @@
       "pub_date": "Wed, 28 Oct 2026 17:33:59 GMT"
     },
     {
-      "source": "Science",
-      "title": "Milestone cancer vaccine success leaves hard questions unanswered - Science | AAAS",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbmp2dUliS1VXLTlxNFRESkNySnFhSUxKelVZRjlQMVBnYW50dzJxR19ydWtlcElPd2JVaURfc0lSWnV6R3oyVW8xX0dacENtaFhuZ0ZmVDh5bVpBc0xWUEt6aTFNNVIyRWJTX0Faa1FiQ1l4U2s3M2Z3OHI2dTZRN1R1WklMeG41X1hnOGtpcmJxZlBvQnZVZ0Z1X2UxOV9yOXEwcjJXMDk?oc=5",
-      "summary": "Milestone cancer vaccine success leaves hard questions unanswered&nbsp;&nbsp;Science | AAAS",
-      "full_text": "Milestone cancer vaccine success leaves hard questions unanswered&nbsp;&nbsp;Science | AAAS",
-      "pub_date": "Mon, 26 Oct 2026 22:25:00 GMT"
-    },
-    {
-      "source": "Science",
-      "title": "Wind turbines kill ‘shocking’ number of bats each year - Science | AAAS",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOM1NtWUNTcXVMSFJvenFqNjFOakdxYWNBcmQxa0RXNWNIdl91SUJIRzRZYWNyU3F5M3VuZWxQWkU2Qm5SNDEtdDdWR0xvMG4tWWFoSzZYaUxYdzNzcnZhUXlQa0t5M1UxNy1fNUNjS0JNeFJBSnJlUXZJUWYtSlh2LTdmaWZKRTZQMXpWUGVxczRYT1E?oc=5",
-      "summary": "Wind turbines kill ‘shocking’ number of bats each year&nbsp;&nbsp;Science | AAAS",
-      "full_text": "Wind turbines kill ‘shocking’ number of bats each year&nbsp;&nbsp;Science | AAAS",
-      "pub_date": "Mon, 26 Oct 2026 20:45:00 GMT"
-    },
-    {
-      "source": "Science",
-      "title": "In Science Journals - Science | AAAS",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84c2hiaGRRbXBnWlFldXhIeVBOMDh2TzdSTGJRWk95WjBnS3U1RjhHeXUxNkN1MTBqYWFodERnUDltSU9peGRRMmlBem1uOGtSMUpMbE1ZZ2owZDFqa1pjOQ?oc=5",
-      "summary": "In Science Journals&nbsp;&nbsp;Science | AAAS",
-      "full_text": "In Science Journals&nbsp;&nbsp;Science | AAAS",
-      "pub_date": "Thu, 29 Oct 2026 18:23:48 GMT"
-    },
-    {
-      "source": "The Lancet",
-      "title": "First-line pembrolizumab versus carboplatin plus paclitaxel in participants with mismatch repair-deficient advanced or recurrent endometrial cancer (KEYNOTE-C93/GOG-3064/ENGOT-en15): interim analysis of a multicentre, open-label, randomised, active-co - The Lancet",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOUZTQlpsQmRIbXFYTXRLVHBGaTNjSzFpR014QmVOOGhRRmxjUlByYWtVTFV1RnY3S1NkbUZQODFEcDVzZ1JTVUN3MzhScXFXR2V5Ym9MNXhZRHl1Sm0wMEx5MXR3LWtldU15eWRrbXVIbVlkSlBRR3dMS005ZUhNSjJuRlF3Zi1ETkU0?oc=5",
-      "summary": "First-line pembrolizumab versus carboplatin plus paclitaxel in participants with mismatch repair-deficient advanced or recurrent endometrial cancer (KEYNOTE-C93/GOG-3064/ENGOT-en15): interim analysis of a multicentre, open-label, randomised, active-co&nbsp;&nbsp;The Lancet",
-      "full_text": "First-line pembrolizumab versus carboplatin plus paclitaxel in participants with mismatch repair-deficient advanced or recurrent endometrial cancer (KEYNOTE-C93/GOG-3064/ENGOT-en15): interim analysis of a multicentre, open-label, randomised, active-co&nbsp;&nbsp;The Lancet",
-      "pub_date": "Mon, 26 Oct 2026 20:55:30 GMT"
-    },
-    {
       "source": "The Lancet",
       "title": "The 2026 report of the Lancet Countdown on health and climate change: a decade of escalating health harms and a decisive moment for all - The Lancet",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb3cwNzItb1hCOUQ4WEVfNUZQTmp6aUFiRF9BVUlhdEFHY1lFWWJldE0tUy1ITnBIazlfTmJhS2J0Q3l2VVRsTU9od0txdk81bW94ZXVXd0hXZ3A2RzBmSWFfS09kdkJrVW9KNDZCNUVKMjN5VTJWTmhNRUcwcEJURTdOS1pBOFNvaUxV?oc=5",
@@ -811,28 +811,20 @@
       "pub_date": "Wed, 28 Oct 2026 00:39:22 GMT"
     },
     {
-      "source": "The Lancet",
-      "title": "Sacituzumab tirumotecan versus treatment of physician's choice in previously treated endometrial cancer (TroFuse-005/ENGOT-en23/GOG-3095): a randomised, open-label, phase 3 trial - The Lancet",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQampwLTZBcXVRSEk3TDZ3LXQtNUYtUHZ4ZVNzaEVnUW9KUWhmOG9VeGVya3J1SVRPZDZTV1B4UTVDd213TThja3VCVmlXUkdsQWVWNENIYld3eUlwaTBxalBSR2dSbWxRQnN0VzBiR0FWZ3FtTElianBLSTFPWS1tS25JT3l2ZUJydllN?oc=5",
-      "summary": "Sacituzumab tirumotecan versus treatment of physician's choice in previously treated endometrial cancer (TroFuse-005/ENGOT-en23/GOG-3095): a randomised, open-label, phase 3 trial&nbsp;&nbsp;The Lancet",
-      "full_text": "Sacituzumab tirumotecan versus treatment of physician's choice in previously treated endometrial cancer (TroFuse-005/ENGOT-en23/GOG-3095): a randomised, open-label, phase 3 trial&nbsp;&nbsp;The Lancet",
-      "pub_date": "Mon, 26 Oct 2026 18:26:01 GMT"
-    },
-    {
       "source": "NEJM",
-      "title": "Gram-Negative Bacterial Resistance - The New England Journal of Medicine",
+      "title": "Gram-Negative Bacterial Resistance - NEJM",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5aWkpZaVpWbHlWYTFWMWZOZ1RCcGoxellYSTg5dGRfZENibmY5Rkp6QjRzbU5xSC13VXd2dmR3MG1ZLXBiaWwyN2tYQkxwTXpzTXFVdTdiMS1MSGR6X0ZZUg?oc=5",
-      "summary": "Gram-Negative Bacterial Resistance&nbsp;&nbsp;The New England Journal of Medicine",
-      "full_text": "Gram-Negative Bacterial Resistance&nbsp;&nbsp;The New England Journal of Medicine",
+      "summary": "Gram-Negative Bacterial Resistance&nbsp;&nbsp;NEJM",
+      "full_text": "Gram-Negative Bacterial Resistance&nbsp;&nbsp;NEJM",
       "pub_date": "Wed, 28 Oct 2026 21:31:00 GMT"
     },
     {
-      "source": "PNAS",
-      "title": "Revised estimates of types and duration of long COVID symptoms based on claims records from 245 million US patients - PNAS",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBYcWppYTUtQzltSEJUalBwWnl3ZG5oNmQ0akwzUVJEZnlSZDBXemtNUGR2Q1NSbUUtMG5nLXY3RHhzdTdYdFJjbElycTF3MkVEeWs2SURHSEd4U2ZsSGhGT0lR?oc=5",
-      "summary": "Revised estimates of types and duration of long COVID symptoms based on claims records from 245 million US patients&nbsp;&nbsp;PNAS",
-      "full_text": "Revised estimates of types and duration of long COVID symptoms based on claims records from 245 million US patients&nbsp;&nbsp;PNAS",
-      "pub_date": "Wed, 28 Oct 2026 09:43:44 GMT"
+      "source": "NEJM",
+      "title": "Driving Quality Improvement in Gynecology — A Quality Indicator System for China’s County-Level Hospitals - NEJM Catalyst Innovations in Care Delivery",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1nOW5zaE5HcjNyVlN0MjlJSExMbUY0UE83VnFwcXRFT1NQc2VicnpFMHJOTld2bGpCbFp4T01kRmR6ZEJaZGs0dGVyVU5GMnVmZlRXM2xVYXk0SFRQd1BRanI3R3E?oc=5",
+      "summary": "Driving Quality Improvement in Gynecology — A Quality Indicator System for China’s County-Level Hospitals&nbsp;&nbsp;NEJM Catalyst Innovations in Care Delivery",
+      "full_text": "Driving Quality Improvement in Gynecology — A Quality Indicator System for China’s County-Level Hospitals&nbsp;&nbsp;NEJM Catalyst Innovations in Care Delivery",
+      "pub_date": "Tue, 27 Oct 2026 15:40:45 GMT"
     },
     {
       "source": "CNN China",
@@ -841,6 +833,14 @@
       "summary": "It can be lonely at the top. And that’s just how China’s leader likes it&nbsp;&nbsp;CNN",
       "full_text": "It can be lonely at the top. And that’s just how China’s leader likes it&nbsp;&nbsp;CNN",
       "pub_date": "Wed, 28 Oct 2026 04:01:15 GMT"
+    },
+    {
+      "source": "CNN China",
+      "title": "Why isn’t China’s AI and tech boom saving its stock markets? - CNN",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9YdU1UN0YxR2F6VEtwY2NvTzBRZFNWa2U1Z2NDUkxQclRHX2NkVzZ2MExucGI5QmZuMk5ZLU0tTGNrNFoyVTFDREhDMzFYWU8wbFdfcjhUdHFYeE4xeTJkOVowRHBsTGxiTXhUMHBjaHZVTDQwZjVYQ1ozaw?oc=5",
+      "summary": "Why isn’t China’s AI and tech boom saving its stock markets?&nbsp;&nbsp;CNN",
+      "full_text": "Why isn’t China’s AI and tech boom saving its stock markets?&nbsp;&nbsp;CNN",
+      "pub_date": "Fri, 30 Oct 2026 05:05:20 GMT"
     },
     {
       "source": "CNN China",
@@ -860,19 +860,27 @@
     },
     {
       "source": "AFP China",
-      "title": "Mbappe dropped by Chinese brands for 'offending national sentiments' - AFP.com",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUDBVLWRRN25UQS05OVlOV1lVSEZvT08yS3Y5c2VjZHRxeHA1WkFYYjdYRGprbkthdkhtZzJEcGNyS045dEdjMTl0VEtoQ3FpVnZUck1sOEN1UzhWTWhoQ2hwSWwxZWtvNHRRb1lrWmlOeUxYYjZ0VldHMDl2bEt0dVFCalJ0OExtV3c?oc=5",
-      "summary": "Mbappe dropped by Chinese brands for 'offending national sentiments'&nbsp;&nbsp;AFP.com",
-      "full_text": "Mbappe dropped by Chinese brands for 'offending national sentiments'&nbsp;&nbsp;AFP.com",
-      "pub_date": "Tue, 27 Oct 2026 04:06:08 GMT"
+      "title": "Carmaker Audi cuts outlook again on China, US woes - AFP.com",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5hZlhjTDdZYkw2czVqdUlqZVFvbUtpeUVBWTdoa1FGdnp2OTV2SWRZQnlvQ2NVZ2hzUDVvNXNjUEFlQkdzY2RJbVgzUnExTVBoRWxyQVJpZnlLdDhrNUNGMlJ0MTJIRW1TQklOdk5kd09tZXZ3WVVpcQ?oc=5",
+      "summary": "Carmaker Audi cuts outlook again on China, US woes&nbsp;&nbsp;AFP.com",
+      "full_text": "Carmaker Audi cuts outlook again on China, US woes&nbsp;&nbsp;AFP.com",
+      "pub_date": "Fri, 30 Oct 2026 12:04:09 GMT"
     },
     {
       "source": "AFP China",
-      "title": "Mbappe, Real Madrid and La Liga face long road to redemption in China - AFP.com",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPQmwxdmN0d2ZFVGx6OEh2aDJybGw0bmI3ZmFHTDFRVkxEODJQLXU1OTM4eEgwX3ZjZzcwZHM0MTRsUVhhaDBONFNoeXNPMnFTQi1FRmJqaFNWczZvSFJqcVV0ZEZoYTQxRVZaR2xyWExuZjlBcFFvUGYxNElGdHF0dXFJeFZqMF9qQkgtWVpB?oc=5",
-      "summary": "Mbappe, Real Madrid and La Liga face long road to redemption in China&nbsp;&nbsp;AFP.com",
-      "full_text": "Mbappe, Real Madrid and La Liga face long road to redemption in China&nbsp;&nbsp;AFP.com",
-      "pub_date": "Thu, 29 Oct 2026 06:08:14 GMT"
+      "title": "China denies spying on Nvidia's Jensen Huang - AFP.com",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZV2R2UWpWQ1JZYjRLNXlFZWdLUDdKTHVUQS1DeHRrRU9ZVVBmVEhMV3R3T2Y4QmhEZjdreGw1Rlhjdm80M1p5RWhVempHd05HdmtHWkVGUVZFb05BU1JHaUc4b3piWHhIQXhXTHRlYUQ?oc=5",
+      "summary": "China denies spying on Nvidia's Jensen Huang&nbsp;&nbsp;AFP.com",
+      "full_text": "China denies spying on Nvidia's Jensen Huang&nbsp;&nbsp;AFP.com",
+      "pub_date": "Fri, 30 Oct 2026 09:05:23 GMT"
+    },
+    {
+      "source": "AFP China",
+      "title": "AFP sees no cause for alarm over China carrier group's passage in PH waters #ANCHeadlines - Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUUF5c201enRQUFFmWktCbEg1a1AzMUNXOGYyQ3Q5R3I1c1lLbWpKUlhPMnQ4ZHFMZFR3clFHaV8xMkNTZG9ZRUxtLVl5S0tXS1dVcWVSQkkzN010NnVXOEdLdTV6UG9nOEZ3cGl1NDRDcmVpSmt3ZEtfS1Z5MGN1ZFBYemQ5ZHRrbU1XV3paUVlkeXJid1dtczlVZDZnZzF1RllDM0dxdGNXRVJDcGZGTkZ5Q2JBMXptS0l4ak1VY1R1V0NPQk1SaGZMTVlJTlEtTVUza01ZMDc?oc=5",
+      "summary": "AFP sees no cause for alarm over China carrier group's passage in PH waters #ANCHeadlines&nbsp;&nbsp;Facebook",
+      "full_text": "AFP sees no cause for alarm over China carrier group's passage in PH waters #ANCHeadlines&nbsp;&nbsp;Facebook",
+      "pub_date": "Thu, 29 Oct 2026 03:40:07 GMT"
     },
     {
       "source": "AFP China",
@@ -884,27 +892,27 @@
     },
     {
       "source": "AFP China",
-      "title": "#PTVNewsTonight | AFP, PCG not discounting possibility that China’s carrier group passage through southern Mindanao waters was a show of force - Facebook",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZHJPZ21sLXVpTVp0Q054RldjZVFwRkkwWFRVV0RSS1EzNFJubmNwd04xSlVzUVNVUWdBMDFIUGJOQ3UtVDREM3RSX21HNjNpR0hwWE5GNnNydTl3M2hEaXlGRzJqU3BzY1RQQVI1VEc5cnNYeVkxSk1lNlI0OFIxdXFYTm5GMW53a0N3N1dQc3NmZUxOYUJGLUJ5R3JlUWl2R2pwQVBCWHBoVnJpRjBRLTNHaHA0UExLeHJPRXJ4OWV1Yk1uVTFzMnVZNmRiS0tr?oc=5",
-      "summary": "#PTVNewsTonight | AFP, PCG not discounting possibility that China’s carrier group passage through southern Mindanao waters was a show of force&nbsp;&nbsp;Facebook",
-      "full_text": "#PTVNewsTonight | AFP, PCG not discounting possibility that China’s carrier group passage through southern Mindanao waters was a show of force&nbsp;&nbsp;Facebook",
-      "pub_date": "Wed, 28 Oct 2026 14:42:01 GMT"
+      "title": "Mercedes-Benz cuts 2026 profit outlook on tough China market - France 24",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPc1dQcGVBYk5Nd0habkZwYWh0Z19odHE2MjlnblF4blF5d1ZGMGJUYkxFZl8tRVdCeFFiSmpBMUJiQlAzeGh4b2ZpeE01bzRhcWVJVWRZOWFqbTl5cy1QS2dGMDI5dmNxRFI1RUtwMlg0ay10am5kTmpKQkpIaTZyUWRLWHNLWmRoZlRJeExXUXNsbFN0SmE2UWc5cW11ZDlMSEd5S3FVVEdsY28?oc=5",
+      "summary": "Mercedes-Benz cuts 2026 profit outlook on tough China market&nbsp;&nbsp;France 24",
+      "full_text": "Mercedes-Benz cuts 2026 profit outlook on tough China market&nbsp;&nbsp;France 24",
+      "pub_date": "Tue, 27 Oct 2026 11:02:53 GMT"
     },
     {
       "source": "AFP China",
-      "title": "Mbappé apologises over Mao Zedong joke as Chinese brands drop sponsorship deals - France 24",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRWdDTXZrMUplc3ZLajZTdXFVaVNfYUdkcGVKdHZXN2NLYTVsdmM3M3hPRHplMXY2NUlQZ3QwcW00bGVOc2JveVR2X19wMjV4OEU2ZUxiWXNCbFBxRnhyM0NNWUtLVTZFejJZZ2FEZHlYRnFCWmlQNkR0WmRTZnZkdXV2UnR0elZ0RkV5dWpndTVnNHVU?oc=5",
-      "summary": "Mbappé apologises over Mao Zedong joke as Chinese brands drop sponsorship deals&nbsp;&nbsp;France 24",
-      "full_text": "Mbappé apologises over Mao Zedong joke as Chinese brands drop sponsorship deals&nbsp;&nbsp;France 24",
-      "pub_date": "Tue, 27 Oct 2026 03:54:02 GMT"
+      "title": "China ruling party says 'eliminated dangers' after 33 expelled - The Standard (HK)",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMWJEYWE0aWxTU2xkT2ZlOXRBczBwZkhJZGxVWnRjcHBGbUU1aGpaQ3ZoMnNzVHphckgzdUhMZVhLSnRWdE1GSndlWF9SQ1lPTC00dGtNX0w4dTQ0SE9IMHBsUVIxbEtBbWVMRjNYVkFaSkU2ZWN1a3UzOGRxSGljdlQ3WmNEUlpSTkJta0xSWC1JNzdJVmRwTTQxM09CSVF3TmN6OUd3RkUydGVINHZmcFZB?oc=5",
+      "summary": "China ruling party says 'eliminated dangers' after 33 expelled&nbsp;&nbsp;The Standard (HK)",
+      "full_text": "China ruling party says 'eliminated dangers' after 33 expelled&nbsp;&nbsp;The Standard (HK)",
+      "pub_date": "Fri, 30 Oct 2026 08:06:13 GMT"
     },
     {
       "source": "AFP China",
-      "title": "AFP: Chinese aircraft carrier passage off Mindanao ‘not a cause for alarm’ - ABS-CBN",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOS0EzN1hNNVZRUUlvY0R5LTRMVG9iOHEwWWpRRmZlZ2xlNi1oT01nWTl0MVVFX3NETEFtbDdqMHl3bXVrWjllR3UwZnJqMDljTV9vLTdyUl9Vd1BXWlhTWl9xZi1oaVdVYl9vTlcwd1RUUkxsV2k4ZmU5WWVwSjVnb1lXMzZTcndrclY5ajBLQWU3cGlyZkR4OVVwTEhYQ2Raa2EzelBsQVFZT0pQejRJeHFzc1lyOTA2am5hTDZYeUY?oc=5",
-      "summary": "AFP: Chinese aircraft carrier passage off Mindanao ‘not a cause for alarm’&nbsp;&nbsp;ABS-CBN",
-      "full_text": "AFP: Chinese aircraft carrier passage off Mindanao ‘not a cause for alarm’&nbsp;&nbsp;ABS-CBN",
-      "pub_date": "Mon, 26 Oct 2026 07:19:12 GMT"
+      "title": "Taiwan says Pakistan briefly closed airspace to Taiwanese flights - The Japan Times",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPb1lFMUhaQnFKdF9tcVBHWUNWdjhPajFWOVR5cTNVengyWXc4eFllcURMRzJBaDhMWm5HZWE0QXVBc2NtbWRFMUNqTDhQaHU4eGlZVVdaeUtFbE1RQ1ZzamVwa3FsWWh1cF90NGpHT1VUZWtkMmJyOGwtS0tDMDlUSkp5ekJ6YWR1N2c0?oc=5",
+      "summary": "Taiwan says Pakistan briefly closed airspace to Taiwanese flights&nbsp;&nbsp;The Japan Times",
+      "full_text": "Taiwan says Pakistan briefly closed airspace to Taiwanese flights&nbsp;&nbsp;The Japan Times",
+      "pub_date": "Thu, 29 Oct 2026 08:06:00 GMT"
     },
     {
       "source": "AFP China",
@@ -924,27 +932,11 @@
     },
     {
       "source": "AFP China",
-      "title": "Chinese vessels ignore AFP radio challenges - Daily Tribune",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQajBTcEJFV0FkanNRaFp3ZzdiNm9PMnNXbHVuMUkwbld5bjQ3R0syNXk1dmRFb2ZVRFNfRHUxTzRYbnNUMTFpd2ZZZ3dyaVpFSTdIV1NLWVQ4S2h4RHhVbV9KN0ZKbUZjVUtuZ1pSc2VNbnVVLWFSTUVTWGxld2RaaVAwOA?oc=5",
-      "summary": "Chinese vessels ignore AFP radio challenges&nbsp;&nbsp;Daily Tribune",
-      "full_text": "Chinese vessels ignore AFP radio challenges&nbsp;&nbsp;Daily Tribune",
-      "pub_date": "Tue, 27 Oct 2026 15:03:44 GMT"
-    },
-    {
-      "source": "AFP China",
-      "title": "Mbappe’s Mao Zedong controversy puts Real Madrid’s China millions at risk as boycott hits Spanish football - Malay Mail",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMkhDQ25LQnQxMmlTTXR0UmFtNzUwQWpGMTRXS3FhTjFQUGdoS1N6Ri1vbmNSX2hoVWUzcTBoUE01cm5Tc21Gbm9xV1dHYkpqS2M4cEM3M3UyN1hya2tjaERoeXRhR1lTNk9aRVJLTEVjVGNyWDB5RTJZajZUY3pjcDZKVm5sazZ3R3l1bGFRTXZsNVd6RWdKcEh5eXdhS2JmYjllSW54eTA4ZUFtdHFjUnRQSFBhd0FEMk9SSGR4QmxqeDdXOFU3TUtEVnh5eHlqM3BWSXF3a2xEZVlmTktwSDAwSkhVck5KN0lfRXNEczF1UdIB9wFBVV95cUxOZ2szR3lnVnhjUjk0VFBQX1VvMGFqTC1ld0VWcUhtYk9VZXM5aUQ3bGl4c3lSemRfRWMwcmZUMzVxRm9FWUxNeWxiYXdWVmtQUTM2aWFpa2VzMU1RV3Jxa2NJZ0hicS1RSElpcG92OE9YMGtiOUdqdXJYU2RkNWlVMU5CMDhkSGJFYld5Yks0UWhKR0pDUm9tOUlxU3RfS3I3VDQzMktuQ09FcWNscWpNaEpkbHNFejdQVUw1ZnU0VGJXeE85a3NHX09meUxaalQ2amtwVG9zUlQzNXJwdjBQSExkRGQwSnQzdjlmTkFmemU3ejh3UlYw?oc=5",
-      "summary": "Mbappe’s Mao Zedong controversy puts Real Madrid’s China millions at risk as boycott hits Spanish football&nbsp;&nbsp;Malay Mail",
-      "full_text": "Mbappe’s Mao Zedong controversy puts Real Madrid’s China millions at risk as boycott hits Spanish football&nbsp;&nbsp;Malay Mail",
-      "pub_date": "Thu, 29 Oct 2026 01:08:45 GMT"
-    },
-    {
-      "source": "Economist China",
-      "title": "China’s stock markets are the great global exception - The Economist",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUHp6ajdhVDZUMl85TS1mb2FwRThEUTBZOUVmc3dhdUJid1NyaGlHNXI2TDQwcWliOW0zWXFBS0NlM1BIYmpCZlNHeFBlNnBaaGZIWjBpNkt5WU5ndmhvWkxBUzd3SWFpUnFBVkJwemlvUWptT3VVS2IwakFrWVA1dDMyaWgyMWUwbEdqWGM4bndMcWlaeElkZFFqTzRiUG5qUGpibjhRN0RhYnh0ZWFV?oc=5",
-      "summary": "China’s stock markets are the great global exception&nbsp;&nbsp;The Economist",
-      "full_text": "China’s stock markets are the great global exception&nbsp;&nbsp;The Economist",
-      "pub_date": "Wed, 28 Oct 2026 19:48:19 GMT"
+      "title": "Mbappe dropped by Chinese brands for 'offending national sentiments' - AFP.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUDBVLWRRN25UQS05OVlOV1lVSEZvT08yS3Y5c2VjZHRxeHA1WkFYYjdYRGprbkthdkhtZzJEcGNyS045dEdjMTl0VEtoQ3FpVnZUck1sOEN1UzhWTWhoQ2hwSWwxZWtvNHRRb1lrWmlOeUxYYjZ0VldHMDl2bEt0dVFCalJ0OExtV3c?oc=5",
+      "summary": "Mbappe dropped by Chinese brands for 'offending national sentiments'&nbsp;&nbsp;AFP.com",
+      "full_text": "Mbappe dropped by Chinese brands for 'offending national sentiments'&nbsp;&nbsp;AFP.com",
+      "pub_date": "Tue, 27 Oct 2026 04:06:08 GMT"
     },
     {
       "source": "Economist China",
@@ -953,6 +945,14 @@
       "summary": "The countries making a fortune from the US-China rivalry&nbsp;&nbsp;The Economist",
       "full_text": "The countries making a fortune from the US-China rivalry&nbsp;&nbsp;The Economist",
       "pub_date": "Thu, 29 Oct 2026 10:41:27 GMT"
+    },
+    {
+      "source": "Economist China",
+      "title": "China’s stock markets are the great global exception - The Economist",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUHp6ajdhVDZUMl85TS1mb2FwRThEUTBZOUVmc3dhdUJid1NyaGlHNXI2TDQwcWliOW0zWXFBS0NlM1BIYmpCZlNHeFBlNnBaaGZIWjBpNkt5WU5ndmhvWkxBUzd3SWFpUnFBVkJwemlvUWptT3VVS2IwakFrWVA1dDMyaWgyMWUwbEdqWGM4bndMcWlaeElkZFFqTzRiUG5qUGpibjhRN0RhYnh0ZWFV?oc=5",
+      "summary": "China’s stock markets are the great global exception&nbsp;&nbsp;The Economist",
+      "full_text": "China’s stock markets are the great global exception&nbsp;&nbsp;The Economist",
+      "pub_date": "Wed, 28 Oct 2026 19:48:19 GMT"
     },
     {
       "source": "Economist China",
@@ -972,14 +972,6 @@
     },
     {
       "source": "Economist China",
-      "title": "Kim Jong Un’s curious visit to China - The Economist",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNemNJaGxMR0YtdTlrVjVYR1NRVHl5QkFLdmVvNkNacHZTbTJOUnVsdmVkZ0lXbWxIUkFVN1ItandrYXBybDRSUWVGZDBSQzVtM3RHNkZjRlY1RWxubmhNelk4MHZ1SEJvU05sSW5jYkhObHdvV3NVTDdLd25BTnFLOHhMQkY?oc=5",
-      "summary": "Kim Jong Un’s curious visit to China&nbsp;&nbsp;The Economist",
-      "full_text": "Kim Jong Un’s curious visit to China&nbsp;&nbsp;The Economist",
-      "pub_date": "Tue, 27 Oct 2026 16:17:18 GMT"
-    },
-    {
-      "source": "Economist China",
       "title": "China loves to rank its cities. The government wants it to stop - The Economist",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRXQ4QXAzdWlLNEY4VmxCUTJBV2lPQzBHcG5hdzV4NGV6QWFFeEttTnZrYWp0VmdXeUF1c09ZOHhxNGsyNHRFNUdOY1l6S3Jjd2w4NGkwdnNHc0FoWVA0Z0FwXzFpbHFWS3pOR3ZJVjJOTFM1ZEo2OTN0eGRENmREVVNaQWJ6TmVHZUgwVU8tLWNGNUU2NnlTNEpkNFpfZlU1TDhXWE9CMmw?oc=5",
       "summary": "China loves to rank its cities. The government wants it to stop&nbsp;&nbsp;The Economist",
@@ -988,19 +980,27 @@
     },
     {
       "source": "Economist China",
-      "title": "China’s most successful Astroturf operation: grassroots football - The Economist",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZ0FTNlpuZ2tqWHNCX0UzZW5XallrNVdyeVlLM0lUNVdRVGxoZlJfQzRUSnBjeEJzR2tMVDRFT2xuYTVoVklXRkNjSGRzX1pZMEdyQWtvem9ldExlWlFlcnBZa0R0ZGczcmlLaVd6dVUyQ1Bha1ZHc1E2T3JYVlV6dVduQlRZcG5BSThXdkJfUUMzVkJxb0IwOW9waVprd0tTOF8wRGl1YTc?oc=5",
-      "summary": "China’s most successful Astroturf operation: grassroots football&nbsp;&nbsp;The Economist",
-      "full_text": "China’s most successful Astroturf operation: grassroots football&nbsp;&nbsp;The Economist",
-      "pub_date": "Mon, 26 Oct 2026 15:24:25 GMT"
+      "title": "Chinese spy or chump? The case of the Fed economist - The Economist",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMkJPUnVWMnJka3Z0VkpNeUpKTFJzdktiM09Cd1VDd1VjQU1xUC1INW5tZF9sVjduX1cybV9QMW1zaTNMa19mejNGUzhBY1g3NHo2TkJ1WmlRUzJXSGh4ZWVuckM2WDRFOTlrVWN6dDBpOU1OaUdWdEdCYUFRMTMzWkdxc0hVZG1TTWI0VGRBbEZMMGk5ZExr?oc=5",
+      "summary": "Chinese spy or chump? The case of the Fed economist&nbsp;&nbsp;The Economist",
+      "full_text": "Chinese spy or chump? The case of the Fed economist&nbsp;&nbsp;The Economist",
+      "pub_date": "Fri, 30 Oct 2026 08:41:05 GMT"
     },
     {
       "source": "Economist China",
-      "title": "Economist: China's competitive exports help counter global inflation - CGTN",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNlptSXEtTjBrSGxWV2hCZkVmMl9uWWFPY2p3TEV6ZHF5VzZCTXR2dnJJZWxzd2hZZDFnQXdVcXNGQXRCLU1TQ1lMbUNjSUI1eWFrTUgwQnJVNGk5RkVmRUFNWFNNZFBXblc0eHFGZjR1cDQ1cWxvQVp6N2k4dnRsRnFXX1ZrSjdDVWNObGp2QllydVRpb1drSmpoTC1BeHRzSzBqaXplWWE4RlBVOXVKOVFxSmd6azJpc0t0UGdLUHY5Zw?oc=5",
-      "summary": "Economist: China's competitive exports help counter global inflation&nbsp;&nbsp;CGTN",
-      "full_text": "Economist: China's competitive exports help counter global inflation&nbsp;&nbsp;CGTN",
-      "pub_date": "Wed, 28 Oct 2026 08:50:23 GMT"
+      "title": "Kim Jong Un’s curious visit to China - The Economist",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNemNJaGxMR0YtdTlrVjVYR1NRVHl5QkFLdmVvNkNacHZTbTJOUnVsdmVkZ0lXbWxIUkFVN1ItandrYXBybDRSUWVGZDBSQzVtM3RHNkZjRlY1RWxubmhNelk4MHZ1SEJvU05sSW5jYkhObHdvV3NVTDdLd25BTnFLOHhMQkY?oc=5",
+      "summary": "Kim Jong Un’s curious visit to China&nbsp;&nbsp;The Economist",
+      "full_text": "Kim Jong Un’s curious visit to China&nbsp;&nbsp;The Economist",
+      "pub_date": "Tue, 27 Oct 2026 16:17:18 GMT"
+    },
+    {
+      "source": "Defense China",
+      "title": "China’s Military Build-up Has Created ‘Pressure’ in Southeast Asia, Australian Defense Chief Says - The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcTkzOHVoZVNCVThJTU54NGg3elBlY3hHRjJVcWhJM2M3aXo1TjZKcmhhZTdwWk5fOTl6YTdtNDBnZjhwc09JRlRmbkhEVE13VXpWRlNyaXhXelBlNWJyeEx6Uml1ZWJXdGhCb1NZN09rZTdxNEY4QkVVemR6bXoxaks5RVlyWFlPZWxGdEFrZkpGNG1ydjhKTlVjWktLajhRYTloSzFwN2dqUFB5NWRGSUJ2V21Nb3dsZmp4OHdfNlBkdVZo?oc=5",
+      "summary": "China’s Military Build-up Has Created ‘Pressure’ in Southeast Asia, Australian Defense Chief Says&nbsp;&nbsp;The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "full_text": "China’s Military Build-up Has Created ‘Pressure’ in Southeast Asia, Australian Defense Chief Says&nbsp;&nbsp;The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "pub_date": "Fri, 30 Oct 2026 05:20:32 GMT"
     },
     {
       "source": "Defense China",
@@ -1020,11 +1020,19 @@
     },
     {
       "source": "Defense China",
-      "title": "United States and Japan forge missile production alliance to counter China's power - Yahoo News New Zealand",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1nd0taZDdrRGVyUjdzR2RSam5jVVlCZU8tYm5tSll5amtWaXFBMUFEUGQyejNQcVhadk10ck5aTGNFV3Z6NllIWFdsNkdGUnFDNFJnRmdFSTFpVlZ0bEZ0alV2aHUta0paZDRyNFNNeFBqSm5FSVdSeGZSYjh1SVU?oc=5",
-      "summary": "United States and Japan forge missile production alliance to counter China's power&nbsp;&nbsp;Yahoo News New Zealand",
-      "full_text": "United States and Japan forge missile production alliance to counter China's power&nbsp;&nbsp;Yahoo News New Zealand",
-      "pub_date": "Thu, 29 Oct 2026 16:16:46 GMT"
+      "title": "“Strengthening Deterrence Against China Through Joint Weapons Production”: U.S.-Japan Defense Industry Cooperation Accelerates, Heightening Military Tensions in Northeast Asia - https://economy.ac/",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9LUTNxS09DX3NUWkJ4LW9vQzhHVlJ1RS1wN3E2NjNZeGdCV1lVU1lZOG9uZThUS1VJd3I0ZnZfX1dKUDh3WVg1Zk9SN1BMLVkteVFTV19PTQ?oc=5",
+      "summary": "“Strengthening Deterrence Against China Through Joint Weapons Production”: U.S.-Japan Defense Industry Cooperation Accelerates, Heightening Military Tensions in Northeast Asia&nbsp;&nbsp;https://economy.ac/",
+      "full_text": "“Strengthening Deterrence Against China Through Joint Weapons Production”: U.S.-Japan Defense Industry Cooperation Accelerates, Heightening Military Tensions in Northeast Asia&nbsp;&nbsp;https://economy.ac/",
+      "pub_date": "Fri, 30 Oct 2026 04:22:25 GMT"
+    },
+    {
+      "source": "Defense China",
+      "title": "US Army looks to high-flying balloons to help see, strike along front lines with China - Army Times",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVlVGMGtHVUNXd3F0eUlPbjVEUlJ0cUlnTUR2WThwRnUwb3MzLTMzSlJwQU5JQjQ0d0NjcWd3dmRUREZuU0dGQlVVbFZ4TGd4a0xVSHJLSVE2LTJMUHVPWl96VE10WVh6Z3ViNDE2bzh1b1pXV2YyUFBwa25TMmRJdG85Ynp0dVZrbXJDb1RfNDFQajRPS1ZKQXBmbHh2VFRLU01BUkFRQ3RHMUlXd3ZuWTlra3c0RHluTC1ZRlk4QUM3OVk4dHV3?oc=5",
+      "summary": "US Army looks to high-flying balloons to help see, strike along front lines with China&nbsp;&nbsp;Army Times",
+      "full_text": "US Army looks to high-flying balloons to help see, strike along front lines with China&nbsp;&nbsp;Army Times",
+      "pub_date": "Tue, 27 Oct 2026 17:22:47 GMT"
     },
     {
       "source": "Defense China",
@@ -1044,14 +1052,6 @@
     },
     {
       "source": "Defense China",
-      "title": "China has tripled its satellite fleet since 2018 as expansion continues: DIA - Breaking Defense",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORXNwN0ZmWmthQUlGQUN2N0dickFQeldFWTdIdnczWEwxMVM5bUR3N3dXU1NIUXlxZ0E3RWNHd2dHV0h2OXFDU0hxZmlYbmVEcEh2dFFXbzZhVFdFa2lzcFRoNllQbWdlRGhSMFVsTC1MVnlVNHVZYzRLRVAwNHE2cHdCS2JubUFzWHZYRTlQaXFhVHlUNHhVVGp2NGp0dFUtbFBNT3pCMEJOeURJUEpnRlZ3?oc=5",
-      "summary": "China has tripled its satellite fleet since 2018 as expansion continues: DIA&nbsp;&nbsp;Breaking Defense",
-      "full_text": "China has tripled its satellite fleet since 2018 as expansion continues: DIA&nbsp;&nbsp;Breaking Defense",
-      "pub_date": "Tue, 27 Oct 2026 21:14:23 GMT"
-    },
-    {
-      "source": "Defense China",
       "title": "Reconnaissance setup boosts carrier situational awareness: Chinese expert - Global Times",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE55akIxb1lFYXhybXRTR3Zra05Jb19yX2g1dFQ3dTE1VnFWUUM4RGlYdElfUzEwcVpERm5abVBMTXNRYVdiSy14LXhHVnlMWkJvNnpITHRRSEVYS3o0SGpaWjl3?oc=5",
       "summary": "Reconnaissance setup boosts carrier situational awareness: Chinese expert&nbsp;&nbsp;Global Times",
@@ -1060,27 +1060,19 @@
     },
     {
       "source": "Defense China",
-      "title": "New Defense Intelligence Report Reveals Growing Threats in Space—and China's Secretive Spaceplane - The Debrief",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPLW5LU2dhSW9udl9OUXpnTkVUVXhBRkNGWjU1U2gwRVF1QVZIV3hudm96UW1FY3J6MzhVaXFKaWF5OVY1a01xLXhzYlJYbmM0dUJULUJrSWFmVmQ0OUVzRHhqVmxockpxZUdsMWg4MXVsRHpTS3Q4V2lkdU5EUVc0N1U2RnJtSUJnaVRabUVxLVdXdkV4TG02SGMwWnVxS0w0Nmh2dWY2cFJEMk5ITjFkNzEtOFF6UUc5X2xidA?oc=5",
-      "summary": "New Defense Intelligence Report Reveals Growing Threats in Space—and China's Secretive Spaceplane&nbsp;&nbsp;The Debrief",
-      "full_text": "New Defense Intelligence Report Reveals Growing Threats in Space—and China's Secretive Spaceplane&nbsp;&nbsp;The Debrief",
-      "pub_date": "Thu, 29 Oct 2026 15:16:31 GMT"
+      "title": "United States and Japan forge missile production alliance to counter China's power - Yahoo News New Zealand",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1nd0taZDdrRGVyUjdzR2RSam5jVVlCZU8tYm5tSll5amtWaXFBMUFEUGQyejNQcVhadk10ck5aTGNFV3Z6NllIWFdsNkdGUnFDNFJnRmdFSTFpVlZ0bEZ0alV2aHUta0paZDRyNFNNeFBqSm5FSVdSeGZSYjh1SVU?oc=5",
+      "summary": "United States and Japan forge missile production alliance to counter China's power&nbsp;&nbsp;Yahoo News New Zealand",
+      "full_text": "United States and Japan forge missile production alliance to counter China's power&nbsp;&nbsp;Yahoo News New Zealand",
+      "pub_date": "Thu, 29 Oct 2026 16:16:46 GMT"
     },
     {
       "source": "Defense China",
-      "title": "Defense Secretary Gilberto Teodoro Jr. did not directly address the Chinese allegation of obstruction but said Beijing had been given the opportunity to present its views. https://tinyurl.com/3khfa9ea - Facebook",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNNjFrT1V6NVVDU2NYZlZJeUJ1MnNJUmE5OVNCMTI0cnBKSUswTDhCakpQNjEwVFlZaWFybGxwMUZJdUthZUU4NFQtcnJTc0ptcXN1RHZja09EMjM3cEdkQkg4bW9yTmY5VzljU3VGc3ItbDliLUNDNHBlSEVCNndvRENlR3VBYkwwd3R6SkYtUDN4dlU0QlpWeHZrMFhVX2VFVjgzUE42Yk9Rb0sxZ21Zenk2LUloNWZXVmx3bTJZY0lzV0N2MXZfNWtWOVdSWmN5NFJNSmRiZGRackpw?oc=5",
-      "summary": "Defense Secretary Gilberto Teodoro Jr. did not directly address the Chinese allegation of obstruction but said Beijing had been given the opportunity to present its views. https://tinyurl.com/3khfa9ea&nbsp;&nbsp;Facebook",
-      "full_text": "Defense Secretary Gilberto Teodoro Jr. did not directly address the Chinese allegation of obstruction but said Beijing had been given the opportunity to present its views. https://tinyurl.com/3khfa9ea&nbsp;&nbsp;Facebook",
-      "pub_date": "Thu, 29 Oct 2026 23:29:05 GMT"
-    },
-    {
-      "source": "Defense China",
-      "title": "US Army looks to high-flying balloons to help see, strike along front lines with China - Army Times",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPVlVGMGtHVUNXd3F0eUlPbjVEUlJ0cUlnTUR2WThwRnUwb3MzLTMzSlJwQU5JQjQ0d0NjcWd3dmRUREZuU0dGQlVVbFZ4TGd4a0xVSHJLSVE2LTJMUHVPWl96VE10WVh6Z3ViNDE2bzh1b1pXV2YyUFBwa25TMmRJdG85Ynp0dVZrbXJDb1RfNDFQajRPS1ZKQXBmbHh2VFRLU01BUkFRQ3RHMUlXd3ZuWTlra3c0RHluTC1ZRlk4QUM3OVk4dHV3?oc=5",
-      "summary": "US Army looks to high-flying balloons to help see, strike along front lines with China&nbsp;&nbsp;Army Times",
-      "full_text": "US Army looks to high-flying balloons to help see, strike along front lines with China&nbsp;&nbsp;Army Times",
-      "pub_date": "Tue, 27 Oct 2026 17:22:47 GMT"
+      "title": "Australian defense chief says China military buildup creating 'pressure' in SE Asia - ABS-CBN",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTmtSNjdCX3ViSDM5U0M4N3YyNE1YYk96aXFaZEJ3WTYxUnd5TkJNczRoNVdaS3M1RldBbVd5bkI4ZWdGVEhNRUFVaXhVY3k2bms3dnpYRjhybUtjSWVDcFdnRGtPQzFhZFRoNEdQM2xoUnpycHlIdW1wRWhCczVocDNKd2tnMk02MjdUc0dmNVlxUXNyeGtlYjlRcTJrY2JjSFAzcV9XRDBQNG1fYl9HaXFDdTFJTTBJdDBaQkF5WktWeUZIcDFhMVhXMEg?oc=5",
+      "summary": "Australian defense chief says China military buildup creating 'pressure' in SE Asia&nbsp;&nbsp;ABS-CBN",
+      "full_text": "Australian defense chief says China military buildup creating 'pressure' in SE Asia&nbsp;&nbsp;ABS-CBN",
+      "pub_date": "Fri, 30 Oct 2026 00:01:19 GMT"
     },
     {
       "source": "China EV News",
@@ -1116,27 +1108,11 @@
     },
     {
       "source": "China AI News",
-      "title": "Chinese AI Closes In on US Rivals: Kimi K3.1 Pro Ranks 4th Overall, DeepSeek 2nd in Cybersecurity - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ndDRMWkhiZkxxdEJULUFwajZzQ1B3ak43X1VnU1dESV8ydXZyS2VQdkQ3TzRYTFF4WDktUHZxNkZJbHNBOEdLMlZvbi04MG1ZNE1JcW9mM0xFdHJ6MHF3bEZtWWphYWlscnlYNkZWcFZmNWRRRWc?oc=5",
-      "summary": "Chinese AI Closes In on US Rivals: Kimi K3.1 Pro Ranks 4th Overall, DeepSeek 2nd in Cybersecurity&nbsp;&nbsp;BigGo Finance",
-      "full_text": "Chinese AI Closes In on US Rivals: Kimi K3.1 Pro Ranks 4th Overall, DeepSeek 2nd in Cybersecurity&nbsp;&nbsp;BigGo Finance",
-      "pub_date": "Mon, 26 Oct 2026 06:35:00 GMT"
-    },
-    {
-      "source": "China AI News",
       "title": "China's AI advances offer new growth opportunities for Pakistan - The Nation (Pakistan )",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdkJQRVN1YkdtejFqSUtBLVpDbzJWeklKZWkwRUVQd1hzMWduVlpFeWJqdVhzQ0x6bldPamU1Q3pjYUk1NkpMVnRTNnNaZmFKXzNjckFvUjMzRWFjamxydlFyX0Y2QjVWRkpQU1Q5R2J1RGQ3VjdKRnFsSkJJbGM0N0d6ejVLck1OUTNka2JDMWNuNXZ4YnlqeXdjUmVlbkhXSWRLOFhVZUk?oc=5",
       "summary": "China's AI advances offer new growth opportunities for Pakistan&nbsp;&nbsp;The Nation (Pakistan )",
       "full_text": "China's AI advances offer new growth opportunities for Pakistan&nbsp;&nbsp;The Nation (Pakistan )",
       "pub_date": "Thu, 29 Oct 2026 07:34:00 GMT"
-    },
-    {
-      "source": "Kimi K3 News",
-      "title": "Moonshot AI launches upgraded Kimi model - China Daily",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rUnF3WWotOThlcWhUeUZlV2FTdVBwUGhWblVfS0hzcDhxM0JXXzU2YmdUVS1mYnZ6dWVqNk41cWVadmdmMDFaZWs0ZFc0WGlLaThzSVpRT0JNU2NvZEU1WkFqU2drWTF2OXRvbEdNV0FhdWlrVU9jMnhHOVJDdw?oc=5",
-      "summary": "Moonshot AI launches upgraded Kimi model&nbsp;&nbsp;China Daily",
-      "full_text": "Moonshot AI launches upgraded Kimi model&nbsp;&nbsp;China Daily",
-      "pub_date": "Tue, 27 Oct 2026 00:43:44 GMT"
     },
     {
       "source": "Kimi K3 News",
@@ -1148,19 +1124,35 @@
     },
     {
       "source": "The Atlantic",
-      "title": "The Costume I Can’t Persuade My Husband to Throw Away - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPS2J5OUJhV1dxVExnX0J4VHBEMkM1RXNyTmJyQnp3RXVwQ1pVYnB3TlJsNnZUUVJXVndMT214emg5cnZmbV81SkVtc01PeTRRMEZ5em15TVpYR2doNTlLclVZaUkyajRIRVFzN3hKQ3FJLWNVYWNwRjd3eWM4bGpZRWV4TUN4dE5fWE13MmxJaw?oc=5",
-      "summary": "The Costume I Can’t Persuade My Husband to Throw Away&nbsp;&nbsp;The Atlantic",
-      "full_text": "The Costume I Can’t Persuade My Husband to Throw Away&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Tue, 27 Oct 2026 12:00:00 GMT"
+      "title": "The Real Threat of Election Interference - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPX3E1eHBlcUhEYUxlVDZaTmFzQjl4TGxENjRySUhaZk5kZDdoT3diSjR0R2pyMjVJMHh2cXI0M2N5RTNISFNBbkVFZzA3U3hLUllrdmxvNkVlZlVpYXhxS2V0bFBadG9VUEdRYW5fR0Fhcnp4RWZIMC1aRG5OaXRtUlJtS1NtRXJrTmlUUW1ya0RZUTRJd19XcUExc1h0UGNqb0pwbQ?oc=5",
+      "summary": "The Real Threat of Election Interference&nbsp;&nbsp;The Atlantic",
+      "full_text": "The Real Threat of Election Interference&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Fri, 30 Oct 2026 11:00:00 GMT"
     },
     {
       "source": "The Atlantic",
-      "title": "What Should You Do With Your Money in the Age of AI? - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZktXMm92WTRPRWV1MUNZOXlmQmt4d2FBSFV3cGRTN2JFNzhhRmYtdk8yMUtPSmRoNFhFNlBLZEI3YnBfQy1tU1Y5emE2ZGJwNGNHOWEzRWpiWkJRVUhQWlRSdGlWWk1JSFhkc2VqaDZBODE3NEdRbTh6VnJVWUswdmVpVkg?oc=5",
-      "summary": "What Should You Do With Your Money in the Age of AI?&nbsp;&nbsp;The Atlantic",
-      "full_text": "What Should You Do With Your Money in the Age of AI?&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Wed, 28 Oct 2026 17:26:45 GMT"
+      "title": "The Internet Might Need to Be Rebuilt From Scratch - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTkFmbDJmbUhNOFJ0eU8yVWs0TjVsSnU4eUNjZHBtXy1jeXE5LUpCZ2hyQ2lVQXdxOWhib0d2dVdLNDFDQW5GSExMYjBzRlhXcGtNTGNjbk1JbUh6Q1ZxM1plcWxyTjg2U1NzT0R4NnAxNExMUG43Z0x6SEhXaGRFWjI0bVlYQ1E0Qm1ta1dMckI?oc=5",
+      "summary": "The Internet Might Need to Be Rebuilt From Scratch&nbsp;&nbsp;The Atlantic",
+      "full_text": "The Internet Might Need to Be Rebuilt From Scratch&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Fri, 30 Oct 2026 17:00:00 GMT"
+    },
+    {
+      "source": "The Atlantic",
+      "title": "Winners of the European Wildlife Photographer of the Year 2026 - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbmJZNEkxaTFndHBwTHc3c0oyUUgwQWRKajRaNE94WVM3SFpuRC1uWEEzNHAtVDJkbGpxeExGRzlvNWpFemFKMGxMbk8xdVJhdnNhTkhncEluUV9YUnJfcDFwYi1TVVF1c0FwbHFkWDFnS2taZ1ZJNW1pZkRadk8yOEE0Q2F0SXdISzRJMm0tUWZ1Ny1ZZ2dCZElBRUxEZk9fNHF2RkF3aw?oc=5",
+      "summary": "Winners of the European Wildlife Photographer of the Year 2026&nbsp;&nbsp;The Atlantic",
+      "full_text": "Winners of the European Wildlife Photographer of the Year 2026&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Tue, 27 Oct 2026 16:14:24 GMT"
+    },
+    {
+      "source": "The Atlantic",
+      "title": "Redistricting Isn’t Going as Republicans Planned - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMng1alBtSUg2ZVlzNlJySmlHa1pyLU1BMGZhS0ZwUjlKOUROMjl3Rlo5YTkyckJxSzdoVTJLdVdSNzRhUmtoVE1rWHNsUUkySjRjNmFxWTVtUE9pMjdPRmthTF9SbE11b0RPSnNxTWdSSHctRmJIY2tmS1AyTW04dnFSUzhmZm1BR2t6ZkI4SQ?oc=5",
+      "summary": "Redistricting Isn’t Going as Republicans Planned&nbsp;&nbsp;The Atlantic",
+      "full_text": "Redistricting Isn’t Going as Republicans Planned&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Fri, 30 Oct 2026 14:04:15 GMT"
     },
     {
       "source": "The Atlantic",
@@ -1172,11 +1164,19 @@
     },
     {
       "source": "The Atlantic",
-      "title": "Why India Is Erupting - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYXVMMDEzV1BMc0pFemJJNTFuMDlXbWRQN2xrVlpsT0V2M1NiRHItaFZGLXYwY2ttY1pUM3NSSVpjS1ZFNUhkLVNUM2Z4b1N5WEk3djBCQmpiWDZLMEZlT0JfTmdOZTFrZ1JTdnhQUENyOFF2bS1MYTlJMGdwaWpTVzhFMEZOSG5za2R2RjZoSUlQWU1s?oc=5",
-      "summary": "Why India Is Erupting&nbsp;&nbsp;The Atlantic",
-      "full_text": "Why India Is Erupting&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Wed, 28 Oct 2026 15:54:01 GMT"
+      "title": "Israel’s Latest Last Chance to Save Itself - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMEdKU0ZlZ0FfWUc2Y0hWMmRTTWpIbUY5Z0dFQXczZWFLWUZZOGxhT2diaEhVSWp4aFRwbEkwSEFUNlZOVU00V052aEo1dUVzWmZnTDBzbHA2X0IxMjFxRjgxMVZyOUFteW1kZUw3b2tWYWQ0YlROYmFtdjFpalYtRndZaGd1ckdNSHgtNndYSVRYaGxYa1R3?oc=5",
+      "summary": "Israel’s Latest Last Chance to Save Itself&nbsp;&nbsp;The Atlantic",
+      "full_text": "Israel’s Latest Last Chance to Save Itself&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Fri, 30 Oct 2026 16:24:11 GMT"
+    },
+    {
+      "source": "The Atlantic",
+      "title": "What Should You Do With Your Money in the Age of AI? - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZktXMm92WTRPRWV1MUNZOXlmQmt4d2FBSFV3cGRTN2JFNzhhRmYtdk8yMUtPSmRoNFhFNlBLZEI3YnBfQy1tU1Y5emE2ZGJwNGNHOWEzRWpiWkJRVUhQWlRSdGlWWk1JSFhkc2VqaDZBODE3NEdRbTh6VnJVWUswdmVpVkg?oc=5",
+      "summary": "What Should You Do With Your Money in the Age of AI?&nbsp;&nbsp;The Atlantic",
+      "full_text": "What Should You Do With Your Money in the Age of AI?&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Wed, 28 Oct 2026 17:26:45 GMT"
     },
     {
       "source": "The Atlantic",
@@ -1196,43 +1196,11 @@
     },
     {
       "source": "The Atlantic",
-      "title": "The Collapse of Cuba - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYWJiQllqNzkwa0E3MlZoTTRCRmh0OHdZRnNrMnY2N2JSeVdyRTBSVXBHMEEycngta0JsNVpldktmZ0hZZGZjSlV2TW5Cc192dG1wMll2SnAyQ3hZWVI5STJMa2N6RWtiNGJTZ3Q1SWJVMUtZZW42b1p0bTNSM3I3S0R2eDRFNUtIVWZBYm5LUHJKZFVCcnAxOQ?oc=5",
-      "summary": "The Collapse of Cuba&nbsp;&nbsp;The Atlantic",
-      "full_text": "The Collapse of Cuba&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Mon, 26 Oct 2026 13:00:00 GMT"
-    },
-    {
-      "source": "The Atlantic",
-      "title": "Winners of the European Wildlife Photographer of the Year 2026 - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbmJZNEkxaTFndHBwTHc3c0oyUUgwQWRKajRaNE94WVM3SFpuRC1uWEEzNHAtVDJkbGpxeExGRzlvNWpFemFKMGxMbk8xdVJhdnNhTkhncEluUV9YUnJfcDFwYi1TVVF1c0FwbHFkWDFnS2taZ1ZJNW1pZkRadk8yOEE0Q2F0SXdISzRJMm0tUWZ1Ny1ZZ2dCZElBRUxEZk9fNHF2RkF3aw?oc=5",
-      "summary": "Winners of the European Wildlife Photographer of the Year 2026&nbsp;&nbsp;The Atlantic",
-      "full_text": "Winners of the European Wildlife Photographer of the Year 2026&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Tue, 27 Oct 2026 16:14:24 GMT"
-    },
-    {
-      "source": "The Atlantic",
-      "title": "Flying Across the World to Vote - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQmVJMVczWEI3aDlydkRlczNZYkM2TUxmNjIwaURkaGVEVHpvcC1laGM4dkQ3czFvWWF3N1VuejFReC11bEZDV1h2ZDd1Y3BWZkhTR21GZlpvTXJSSVQtYU9meUUxaV9KSGZWRE44ZTVTNkJsUXVOMlpLblNZYkJuMVNB?oc=5",
-      "summary": "Flying Across the World to Vote&nbsp;&nbsp;The Atlantic",
-      "full_text": "Flying Across the World to Vote&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Tue, 27 Oct 2026 21:21:12 GMT"
-    },
-    {
-      "source": "The Atlantic",
-      "title": "The Real Culprit Behind High Grocery Prices - The Atlantic",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQMHRzRkY4dmtLRmxBTjl0R3VVX3VmS0VKUFFNRlBZQm92ZXFiajdmcHFzNE9tOWdZeTBkLTM5OHVEbHVKZ3BTeklGNG1yd2p2aDUzYlFXdHAwdjFmZlUwcm9pU0xxcHhhaVJNLXZpR1hEMU1ZOTc5ZWN5eTFMOGVxY2lidDQ?oc=5",
-      "summary": "The Real Culprit Behind High Grocery Prices&nbsp;&nbsp;The Atlantic",
-      "full_text": "The Real Culprit Behind High Grocery Prices&nbsp;&nbsp;The Atlantic",
-      "pub_date": "Mon, 26 Oct 2026 11:00:00 GMT"
-    },
-    {
-      "source": "EurAsian Times",
-      "title": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF? - EurAsian Times",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOM0VWSFlkeE9RSG5nRmVYZkNNYnFQbXNGa0RlR3I4UlRPYmgxVW51aGZrYmNjYXlNRW1tWG8ybmI5RHFsUlJ0OUZiZUhJNW1kUjBlSGl5cmhQSEhkcUpUWEZSbERyVWQ5SmVCdHBhYklDblFjcWFVRFdremlpeFlOa1kxY2Z1VExweWhqdmRDd9IBjwFBVV95cUxOM0VWSFlkeE9RSG5nRmVYZkNNYnFQbXNGa0RlR3I4UlRPYmgxVW51aGZrYmNjYXlNRW1tWG8ybmI5RHFsUlJ0OUZiZUhJNW1kUjBlSGl5cmhQSEhkcUpUWEZSbERyVWQ5SmVCdHBhYklDblFjcWFVRFdremlpeFlOa1kxY2Z1VExweWhqdmRDdw?oc=5",
-      "summary": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF?&nbsp;&nbsp;EurAsian Times",
-      "full_text": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF?&nbsp;&nbsp;EurAsian Times",
-      "pub_date": "Wed, 28 Oct 2026 04:33:24 GMT"
+      "title": "Why India Is Erupting - The Atlantic",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQYXVMMDEzV1BMc0pFemJJNTFuMDlXbWRQN2xrVlpsT0V2M1NiRHItaFZGLXYwY2ttY1pUM3NSSVpjS1ZFNUhkLVNUM2Z4b1N5WEk3djBCQmpiWDZLMEZlT0JfTmdOZTFrZ1JTdnhQUENyOFF2bS1MYTlJMGdwaWpTVzhFMEZOSG5za2R2RjZoSUlQWU1s?oc=5",
+      "summary": "Why India Is Erupting&nbsp;&nbsp;The Atlantic",
+      "full_text": "Why India Is Erupting&nbsp;&nbsp;The Atlantic",
+      "pub_date": "Wed, 28 Oct 2026 15:54:01 GMT"
     },
     {
       "source": "EurAsian Times",
@@ -1252,11 +1220,19 @@
     },
     {
       "source": "EurAsian Times",
-      "title": "India-China Clash: How Beijing’s Industrial Edge Makes Its Drone Threat Bigger Than the Drones Themselves: OPED - EurAsian Times",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE16bURFUHlueVl0c3RxTmVXT0YwSVVwckU1eG1ONFhrTFlTT3dEYnBrMTBoQk1JWVg1UHJkdjRKU2xuWFVPN29FQlF6XzU3SFFTdGN2a1paMjlGU0JTRmgxV21DM3dIc2hObFBKR1dMZDcxQktP0gF0QVVfeXFMTXptREVQeW55WXRzdHFOZVdPRjBJVXByRTV4bU40WGtMWVNPd0RicGsxMGhCTUlZWDVQcmR2NEpTbG5YVU83b0VCUXpfNTdIUVN0Y3ZrWloyOUZTQlNGaDFXbUMzd0hzaE5sUEpHV0xkNzFCS08?oc=5",
-      "summary": "India-China Clash: How Beijing’s Industrial Edge Makes Its Drone Threat Bigger Than the Drones Themselves: OPED&nbsp;&nbsp;EurAsian Times",
-      "full_text": "India-China Clash: How Beijing’s Industrial Edge Makes Its Drone Threat Bigger Than the Drones Themselves: OPED&nbsp;&nbsp;EurAsian Times",
-      "pub_date": "Mon, 26 Oct 2026 03:26:35 GMT"
+      "title": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF? - EurAsian Times",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOM0VWSFlkeE9RSG5nRmVYZkNNYnFQbXNGa0RlR3I4UlRPYmgxVW51aGZrYmNjYXlNRW1tWG8ybmI5RHFsUlJ0OUZiZUhJNW1kUjBlSGl5cmhQSEhkcUpUWEZSbERyVWQ5SmVCdHBhYklDblFjcWFVRFdremlpeFlOa1kxY2Z1VExweWhqdmRDd9IBjwFBVV95cUxOM0VWSFlkeE9RSG5nRmVYZkNNYnFQbXNGa0RlR3I4UlRPYmgxVW51aGZrYmNjYXlNRW1tWG8ybmI5RHFsUlJ0OUZiZUhJNW1kUjBlSGl5cmhQSEhkcUpUWEZSbERyVWQ5SmVCdHBhYklDblFjcWFVRFdremlpeFlOa1kxY2Z1VExweWhqdmRDdw?oc=5",
+      "summary": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF?&nbsp;&nbsp;EurAsian Times",
+      "full_text": "1,800 Jets, Nearly 500 Stealth Fighters — Why China’s Air Force May Still Struggle to Dominate the IAF?&nbsp;&nbsp;EurAsian Times",
+      "pub_date": "Wed, 28 Oct 2026 04:33:24 GMT"
+    },
+    {
+      "source": "The Guardian",
+      "title": "Beijing Queer film festival cancelled after harassment from authorities",
+      "url": "https://www.theguardian.com/world/2026/oct/30/beijing-queer-film-festival-cancelled-after-police-harassment",
+      "summary": "Forums for discussion of feminist and LGBTQ+ views face growing intolerance from Chinese state, say expertsBeijing’s annual independent queer film festival has been cancelled after what is understood to have been a campaign of sustained harassment from authorities.Beijing Queer film festival, which was due to begin on Friday in China’s capital, is one of the country’s oldest independent film festivals. Continue reading...",
+      "full_text": "Police had increased pressure on the festival through repeated phone calls in recent weeks, it is understood. Photograph: Ng Han Guan/AP \nView image in fullscreen \nPolice had increased pressure on the festival through repeated phone calls in recent weeks, it is understood. Photograph: Ng Han Guan/AP \nBeijing Queer film festival cancelled after harassment from authorities\nForums for discussion of feminist and LGBTQ+ views face growing intolerance from Chinese state, say experts \nBeijing’s annual independent queer film festival has been cancelled after what is understood to have been a campaign of sustained harassment from authorities. \nBeijing Queer film festival, which was due to begin on Friday in China’s capital, is one of the country’s oldest independent film festivals. \nIn a statement posted on Instagram late on Thursday, the organisers said: “We regret to inform you that the Love Queer Film Week … has been cancelled. We sincerely apologise for any inconvenience and disappointment that the cancellation of this event may cause to those who planned to participate or had been looking forward to the film week.” \nPolice had increased pressure on the festival through repeated phone calls in recent weeks, it is understood. \nFounded in 2001 by a group of Peking University students, the festival grew to become the only film festival in mainland China to offer a public forum for films and discussions exploring LGBTQ+ issues. \nThe Chinese authorities have grown increasingly intolerant of open discussion of feminist or LGBTQ+ issues. Film festivals in particular attract particular scrutiny because they provide an opportunity to platform narratives that sit outside the Communist party’s worldview. \nBeijing Independent film festival, China’s most prominent independent film festival, was closed down in 2014 after the authorities detained the founders and shut off the electricity supply to the venue. Last year, an independent Chinese film festival that was due to be held in New York was cancelled after harassment from the Chinese authorities, an incident which raised concern about transnational repression. \nMaya Wang, the deputy Asia director for Human Rights Watch, said: “The Chinese government under Xi has been relentlessly tightening social and ideological control, and so any activities outside of those sanctioned by the party-state are subjected to intensifying scrutiny and often also official harassment. \n“The authorities have put more pressure on what little is left of China’s civil society, as well as the LGBT communities and independent film-makers. A queer film festival basically faces all of these overlapping pressures.” \nHongwei Bao, a professor of Chinese studies at the University of St Andrews who focuses on LGBT issues, said that the festival was “a beacon for LGBT resilience” in China. \n“The shutdown of the Love Queer Cinema Week has a chilling affect on the Chinese queer community,” Bao said. \nIn June this year, screenings of films with LGBTQ+ themes that were scheduled to be held in Beijing during Pride month at the Institut Français, a French cultural centre, were cancelled because of police harassment. \nDespite the increased pressure, Beijing Queer film festival remains a popular event. Several international film-makers whose work had been selected for the festival had travelled to China to participate. Last year, the festival received 200 volunteer applications, four times the number received in 2024. \nBeijing’s public security bureau could not be reached for comment. \n- \n- \n- \n- Explore more on these topics \n- China \n- LGBTQ+ rights \n- Asia Pacific \n- Human rights \n- news Share \nReuse this content",
+      "pub_date": "Fri, 30 Oct 2026 11:04:12 GMT"
     },
     {
       "source": "VOA News",
@@ -1290,23 +1266,22 @@
     "AP": 10,
     "Nikkei Asia": 10,
     "Financial Times": 10,
-    "New York Times": 8,
+    "New York Times": 10,
     "The Guardian": 10,
     "Nature": 10,
     "Cell": 1,
     "Science": 10,
-    "The Lancet": 3,
-    "NEJM": 1,
-    "PNAS": 1,
-    "CNN China": 3,
+    "The Lancet": 1,
+    "NEJM": 2,
+    "CNN China": 4,
     "AFP China": 10,
-    "Economist China": 8,
+    "Economist China": 7,
     "Defense China": 10,
     "China EV News": 1,
-    "China AI News": 5,
-    "Kimi K3 News": 2,
+    "China AI News": 4,
+    "Kimi K3 News": 1,
     "The Atlantic": 10,
-    "EurAsian Times": 4,
+    "EurAsian Times": 3,
     "VOA News": 3
   },
   "fetch_log": [
